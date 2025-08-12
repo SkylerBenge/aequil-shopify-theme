@@ -612,11 +612,6 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;
-  pointer-events: auto;
-  overscroll-behavior: contain;
-  height: 100%;
-  width: 100%;
-  isolation: isolate;
 }
 
 .has-hover-overlay .card-hover-content {
@@ -627,29 +622,7 @@
   font-weight: 300;
   font-size: 12px;
   line-height: 1.4;
-  width: 100%;
-  max-height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  z-index: 1;
-}
-
-.has-hover-overlay .card-hover-content::-webkit-scrollbar {
-  width: 6px;
-}
-
-.has-hover-overlay .card-hover-content::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.has-hover-overlay .card-hover-content::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
+  max-width: 90%;
 }
 
 .has-hover-overlay:hover .card-hover-overlay {
@@ -665,61 +638,7 @@
   opacity: 1 !important;
 }
 
-/* Hide card content when card has media */
-.has-hover-overlay.card--media .card__inner .card__content {
-  display: none;
-}
-
 /* Hide card content for ratio cards with hover overlay */
 .has-hover-overlay .ratio .card__content {
   display: none;
-}
-
-/* Prevent links from interfering with overlay scroll */
-.has-hover-overlay .card-hover-overlay .full-unstyled-link,
-.has-hover-overlay .card-hover-overlay a {
-  pointer-events: none;
-}
-
-.has-hover-overlay:hover .card-hover-overlay .full-unstyled-link,
-.has-hover-overlay:hover .card-hover-overlay a {
-  pointer-events: none;
-}
-
-/* Make overlay content more inspectable */
-.has-hover-overlay .card-hover-overlay {
-  pointer-events: auto;
-}
-
-.has-hover-overlay .card-hover-content {
-  pointer-events: auto;
-  user-select: text;
-  -webkit-user-select: text;
-}
-
-/* Override ratio flex behavior for hover overlay cards */
-.has-hover-overlay .card__inner.ratio {
-  display: block !important;
-  height: auto !important;
-}
-
-.has-hover-overlay .card__media {
-  position: relative !important;
-  height: auto !important;
-  min-height: 300px;
-}
-
-.has-hover-overlay .card__media .media {
-  position: relative !important;
-  height: 100% !important;
-  min-height: 300px;
-  top: auto !important;
-  bottom: auto !important;
-}
-
-.has-hover-overlay .card__media .media.media--transparent {
-  height: 100% !important;
-  min-height: 300px;
-  top: auto !important;
-  bottom: auto !important;
 }
