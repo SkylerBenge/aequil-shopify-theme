@@ -13,12 +13,61 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   `;
 
-  // Add lightbox to body
+    // Add lightbox to body
   document.body.insertAdjacentHTML('beforeend', lightboxHTML);
 
   const lightbox = document.getElementById('mobile-lightbox');
   const lightboxText = document.getElementById('mobile-lightbox-text');
   const closeButton = document.querySelector('.mobile-lightbox-close');
+
+  // Add direct click handlers to all mobile info icons
+  function addIconHandlers() {
+    const infoIcons = document.querySelectorAll('.mobile-info-icon');
+    infoIcons.forEach(icon => {
+      // Use capture phase to intercept clicks before they reach card links
+      icon.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
+        const content = this.getAttribute('data-content');
+        if (content) {
+          lightboxText.innerHTML = content;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+
+        return false;
+      }, true); // Use capture phase
+      
+      // Also add pointer and mouse events to catch all interactions
+      ['mousedown', 'mouseup', 'pointerdown', 'pointerup', 'touchstart', 'touchend'].forEach(eventType => {
+        icon.addEventListener(eventType, function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          return false;
+        }, true);
+      });
+    });
+  }
+
+  // Initial setup
+  addIconHandlers();
+
+  // Watch for new icons (in case of dynamic content)
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.addedNodes.length) {
+        addIconHandlers();
+      }
+    });
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
 
         // Open lightbox
   document.addEventListener('click', function(e) {
