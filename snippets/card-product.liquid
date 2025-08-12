@@ -753,18 +753,26 @@
     width: 100%;
   }
 
-  /* Override flex layout for cards */
+    /* Override flex layout for cards */
   .card {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .card__inner {
     display: block !important;
+    width: 100% !important;
   }
 
   .card__media {
     width: 100% !important;
     flex: none !important;
+    position: relative !important;
+  }
+
+  .card__media .media {
+    height: 100% !important;
+    position: relative !important;
   }
 
   .card__content {
