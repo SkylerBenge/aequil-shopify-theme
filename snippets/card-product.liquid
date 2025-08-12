@@ -741,9 +741,35 @@
     opacity: 1 !important;
   }
 
-  /* Ensure overlay works with ratio/flex containers */
+    /* Ensure overlay works with ratio/flex containers */
   .card.ratio .card__media {
     position: relative;
+    flex: 1;
+    width: 100%;
+  }
+
+  .card.ratio .card__content {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Override flex layout for cards */
+  .card {
+    display: block !important;
+  }
+
+  .card__inner {
+    display: block !important;
+  }
+
+  .card__media {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .card__content {
+    width: 100% !important;
+    flex: none !important;
   }
 
   .card.ratio .card__media .media {
