@@ -668,12 +668,6 @@
   text-decoration: none !important;
 }
 
-/* Prevent card links from interfering with icon clicks */
-.has-hover-overlay .mobile-info-icon {
-  position: relative;
-  z-index: 10;
-}
-
 /* Ensure icon clicks don't bubble to parent elements */
 .has-hover-overlay .mobile-info-icon:active,
 .has-hover-overlay .mobile-info-icon:focus {
