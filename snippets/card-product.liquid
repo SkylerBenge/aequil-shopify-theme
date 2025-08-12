@@ -737,11 +737,16 @@
     opacity: 1 !important;
   }
 
-  .card-wrapper:hover .media.media--hover-effect > img + img {
+    .card-wrapper:hover .media.media--hover-effect > img + img {
     opacity: 1 !important;
   }
 
-    /* Ensure overlay works with ratio/flex containers */
+  /* Hide card content when card has media */
+  .card--media .card__inner .card__content {
+    display: none;
+  }
+
+  /* Ensure overlay works with ratio/flex containers */
   .card.ratio .card__media {
     position: relative;
     flex: 1;
