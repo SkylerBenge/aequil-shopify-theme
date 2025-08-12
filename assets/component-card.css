@@ -658,6 +658,14 @@
   cursor: pointer;
   z-index: 5;
   color: #000;
+  pointer-events: auto;
+}
+
+/* Prevent icon from being affected by link styles */
+.mobile-info-icon,
+.mobile-info-icon * {
+  pointer-events: auto !important;
+  text-decoration: none !important;
 }
 
 /* Mobile Lightbox */

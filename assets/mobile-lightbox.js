@@ -20,11 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const lightboxText = document.getElementById('mobile-lightbox-text');
   const closeButton = document.querySelector('.mobile-lightbox-close');
 
-  // Open lightbox
+    // Open lightbox
   document.addEventListener('click', function(e) {
     if (e.target.closest('.mobile-info-icon')) {
       e.preventDefault();
       e.stopPropagation();
+      e.stopImmediatePropagation();
 
       const icon = e.target.closest('.mobile-info-icon');
       const content = icon.getAttribute('data-content');
@@ -34,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
+
+      return false;
     }
   });
 
