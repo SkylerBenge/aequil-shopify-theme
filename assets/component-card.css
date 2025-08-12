@@ -616,6 +616,7 @@
   overscroll-behavior: contain;
   height: 100%;
   width: 100%;
+  isolation: isolate;
 }
 
 .has-hover-overlay .card-hover-content {
@@ -670,6 +671,17 @@
 /* Hide card content for ratio cards with hover overlay */
 .has-hover-overlay .ratio .card__content {
   display: none;
+}
+
+/* Prevent links from interfering with overlay scroll */
+.has-hover-overlay .card-hover-overlay .full-unstyled-link,
+.has-hover-overlay .card-hover-overlay a {
+  pointer-events: none;
+}
+
+.has-hover-overlay:hover .card-hover-overlay .full-unstyled-link,
+.has-hover-overlay:hover .card-hover-overlay a {
+  pointer-events: none;
 }
 
 /* Override ratio flex behavior for hover overlay cards */
