@@ -107,7 +107,7 @@
               {%- if card_product.metafields.custom.rkwo_product_image_points_content_1 != blank -%}
                 <div class="card-hover-overlay">
                   <div class="card-hover-content">
-                    {{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '•<br>' }}
+                    {{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' }}
                   </div>
                 </div>
               {%- endif -%}
@@ -722,8 +722,8 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 1.4;
-    max-width: 90%;
-    max-height: 80%;
+    width: 100%;
+    height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
