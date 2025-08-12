@@ -693,8 +693,9 @@
     overflow: hidden;
   }
 
-  .card__media .media {
+    .card__media .media {
     position: relative;
+    height: 100%;
   }
 
   .card-hover-overlay {
@@ -728,15 +729,6 @@
   }
 
   .card-wrapper:hover .card-hover-overlay {
-    opacity: 1 !important;
-  }
-
-  /* Override existing hover effects when overlay is present */
-  .card-wrapper:hover .media.media--hover-effect > img:first-child:not(:only-child) {
-    opacity: 0 !important;
-  }
-
-  .card-wrapper:hover .media.media--hover-effect > img + img {
     opacity: 1 !important;
   }
 
