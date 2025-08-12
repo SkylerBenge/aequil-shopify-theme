@@ -574,6 +574,13 @@
     </div>
 
     {%- if card_product.metafields.custom.rkwo_product_image_points_content_1 != blank -%}
+      <!-- Desktop Hover Overlay - Outside the card wrapper -->
+      <div class="card-hover-overlay">
+        <div class="card-hover-content">
+          {{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' }}
+        </div>
+      </div>
+
       <!-- Mobile Info Icon - Outside the card wrapper -->
       <button class="mobile-info-icon" aria-label="Product information" data-product-id="{{ card_product.id }}" data-content="{{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' | escape }}">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
