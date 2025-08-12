@@ -99,8 +99,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, true); // Use capture phase
 
-  // Also add a global handler to stop any clicks on card links when icon is clicked
+  // Comprehensive click interceptor for card links
   document.addEventListener('click', function(e) {
+    // Check if we should open lightbox instead of following link
+    if (shouldOpenLightbox && lightboxContent) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      
+      // Open lightbox
+      lightboxText.innerHTML = lightboxContent;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Reset flags
+      shouldOpenLightbox = false;
+      lightboxContent = null;
+      
+      return false;
+    }
+
     // If clicking on a card link and there's an icon inside, check if we're near it
     if (e.target.closest('.full-unstyled-link')) {
       const cardLink = e.target.closest('.full-unstyled-link');
@@ -111,9 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const clickX = e.clientX;
         const clickY = e.clientY;
         
-        // If click is within 10px of the icon, prevent the link
-        if (clickX >= rect.left - 10 && clickX <= rect.right + 10 &&
-            clickY >= rect.top - 10 && clickY <= rect.bottom + 10) {
+        // If click is within 15px of the icon, prevent the link
+        if (clickX >= rect.left - 15 && clickX <= rect.right + 15 &&
+            clickY >= rect.top - 15 && clickY <= rect.bottom + 15) {
           e.preventDefault();
           e.stopPropagation();
           e.stopImmediatePropagation();
@@ -130,6 +148,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     }
+
+    // Reset flags on any other click
+    shouldOpenLightbox = false;
+    lightboxContent = null;
   }, true);
 
   // Close lightbox
