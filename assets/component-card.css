@@ -733,16 +733,4 @@
   .mobile-info-icon {
     display: none !important;
   }
-
-  /* Desktop-only media positioning for hover overlay cards */
-  .has-hover-overlay .media > *:not(.zoom):not(.deferred-media__poster-button),
-  .has-hover-overlay .media model-viewer {
-    display: block;
-    max-width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
 }
