@@ -720,13 +720,23 @@
   line-height: 1.4;
 }
 
-/* Show mobile elements only on mobile */
+/* Hide hover overlay on mobile */
+@media (max-width: 768px) {
+  .has-hover-overlay .card-hover-overlay {
+    display: none !important;
+  }
+}
+
+/* Show mobile info icon only on mobile */
 @media (max-width: 768px) {
   .mobile-info-icon {
     display: flex;
   }
+}
 
-  .has-hover-overlay .card-hover-overlay {
-    display: none;
+/* Hide mobile info icon on desktop */
+@media (min-width: 769px) {
+  .mobile-info-icon {
+    display: none !important;
   }
 }
