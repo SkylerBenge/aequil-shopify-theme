@@ -635,6 +635,8 @@
   scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: 1;
 }
 
 .has-hover-overlay .card-hover-content::-webkit-scrollbar {
@@ -682,6 +684,16 @@
 .has-hover-overlay:hover .card-hover-overlay .full-unstyled-link,
 .has-hover-overlay:hover .card-hover-overlay a {
   pointer-events: none;
+}
+
+/* Make overlay content more inspectable */
+.has-hover-overlay .card-hover-overlay {
+  pointer-events: auto;
+}
+
+.has-hover-overlay .card-hover-content {
+  pointer-events: auto;
+  user-select: text;
 }
 
 /* Override ratio flex behavior for hover overlay cards */
