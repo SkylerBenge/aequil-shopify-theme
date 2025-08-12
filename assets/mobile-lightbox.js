@@ -69,28 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
     subtree: true
   });
 
-        // Open lightbox
+        // Global click handler as backup (using capture phase)
   document.addEventListener('click', function(e) {
     if (e.target.closest('.mobile-info-icon')) {
       e.preventDefault();
       e.stopPropagation();
       e.stopImmediatePropagation();
-
-      // Prevent any parent link clicks
-      const parentLink = e.target.closest('a');
-      if (parentLink) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-      }
-
-      // Prevent card wrapper clicks
-      const cardWrapper = e.target.closest('.card-wrapper');
-      if (cardWrapper) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-      }
 
       const icon = e.target.closest('.mobile-info-icon');
       const content = icon.getAttribute('data-content');
@@ -103,7 +87,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
       return false;
     }
-  });
+  }, true); // Use capture phase
+
+  // Also add a global handler to stop any clicks on card links when icon is clicked
+  document.addEventListener('click', function(e) {
+    // If clicking on a card link and there's an icon inside, check if we're near it
+    if (e.target.closest('.full-unstyled-link')) {
+      const cardLink = e.target.closest('.full-unstyled-link');
+      const icon = cardLink.querySelector('.mobile-info-icon');
+      
+      if (icon) {
+        const rect = icon.getBoundingClientRect();
+        const clickX = e.clientX;
+        const clickY = e.clientY;
+        
+        // If click is within 10px of the icon, prevent the link
+        if (clickX >= rect.left - 10 && clickX <= rect.right + 10 &&
+            clickY >= rect.top - 10 && clickY <= rect.bottom + 10) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          
+          // Trigger the lightbox
+          const content = icon.getAttribute('data-content');
+          if (content) {
+            lightboxText.innerHTML = content;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+          
+          return false;
+        }
+      }
+    }
+  }, true);
 
   // Close lightbox
   function closeLightbox() {
