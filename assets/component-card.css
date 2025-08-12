@@ -650,20 +650,14 @@
   right: 10px;
   width: 32px;
   height: 32px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
   border: none;
-  border-radius: 50%;
   display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 5;
-  color: #000000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-info-icon:hover {
-  background-color: rgba(255, 255, 255, 1);
+  color: #000;
 }
 
 /* Mobile Lightbox */
