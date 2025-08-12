@@ -723,3 +723,60 @@
   }
 </style>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile lightbox functionality
+  const infoIcons = document.querySelectorAll('.mobile-info-icon');
+  const lightboxes = document.querySelectorAll('.mobile-lightbox');
+  const closeButtons = document.querySelectorAll('.mobile-lightbox-close');
+
+  // Open lightbox
+  infoIcons.forEach(icon => {
+    icon.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const productId = this.getAttribute('data-product-id');
+      const lightbox = document.getElementById(`lightbox-${productId}`);
+      if (lightbox) {
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  // Close lightbox
+  closeButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const lightbox = this.closest('.mobile-lightbox');
+      if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // Close lightbox when clicking outside
+  lightboxes.forEach(lightbox => {
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // Close lightbox with escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      const activeLightbox = document.querySelector('.mobile-lightbox.active');
+      if (activeLightbox) {
+        activeLightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+});
+</script>
+
