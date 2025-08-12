@@ -713,7 +713,8 @@
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 10;
-    pointer-events: none;
+    pointer-events: auto;
+    overflow: hidden;
   }
 
   .card-hover-content {
@@ -725,13 +726,14 @@
     font-size: 12px;
     line-height: 1.4;
     max-width: 90%;
-    height: 100%;
+    max-height: 90%;
     pointer-events: auto;
     white-space: normal;
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+    overscroll-behavior: contain;
   }
 
   .card-hover-content::-webkit-scrollbar {
