@@ -110,6 +110,27 @@
                     {{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' }}
                   </div>
                 </div>
+
+                <!-- Mobile Info Icon -->
+                <button class="mobile-info-icon" aria-label="Product information" data-product-id="{{ card_product.id }}">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15h-2v-6h2v6zm0-8h-2V5h2v2z" fill="currentColor"/>
+                  </svg>
+                </button>
+
+                <!-- Mobile Lightbox -->
+                <div class="mobile-lightbox" id="lightbox-{{ card_product.id }}">
+                  <div class="mobile-lightbox-content">
+                    <button class="mobile-lightbox-close" aria-label="Close">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+                      </svg>
+                    </button>
+                    <div class="mobile-lightbox-text">
+                      {{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' }}
+                    </div>
+                  </div>
+                </div>
               {%- endif -%}
             </div>
           </div>
