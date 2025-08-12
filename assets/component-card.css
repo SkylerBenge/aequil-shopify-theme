@@ -614,12 +614,6 @@
   pointer-events: auto;
 }
 
-/* Make overlay height match the card media area only */
-.has-hover-overlay .card-hover-overlay {
-  height: 0;
-  padding-bottom: 100%; /* This will match the ratio container */
-}
-
 .has-hover-overlay .card-hover-content {
   padding: 4px;
   text-align: left;
