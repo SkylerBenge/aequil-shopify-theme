@@ -643,6 +643,11 @@
   display: none;
 }
 
+/* Ensure card wrapper has relative positioning for icon placement */
+.card-wrapper {
+  position: relative;
+}
+
 /* Mobile Info Icon */
 .mobile-info-icon {
   position: absolute;
@@ -650,28 +655,35 @@
   right: 10px;
   width: 32px;
   height: 32px;
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0.9);
   border: none;
+  border-radius: 50%;
   display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 5;
-  color: #000;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
   pointer-events: auto;
+}
+
+.mobile-info-icon:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.mobile-info-icon svg {
+  width: 18px;
+  height: 18px;
+  color: #333;
+  pointer-events: none;
 }
 
 /* Prevent icon from being affected by link styles */
 .mobile-info-icon,
 .mobile-info-icon * {
-  pointer-events: auto !important;
   text-decoration: none !important;
-}
-
-/* Ensure icon clicks don't bubble to parent elements */
-.has-hover-overlay .mobile-info-icon:active,
-.has-hover-overlay .mobile-info-icon:focus {
-  outline: none;
 }
 
 /* Mobile Lightbox */
