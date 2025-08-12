@@ -710,6 +710,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     z-index: 10;
     pointer-events: auto;
     overflow: hidden;
@@ -745,6 +747,19 @@
   .card-hover-content::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3px;
+  }
+
+    .card-wrapper:hover .card-hover-overlay {
+    opacity: 1 !important;
+  }
+
+  /* Override existing hover effects to prevent images from having 0 opacity */
+  .card-wrapper:hover .media.media--hover-effect > img:first-child:not(:only-child) {
+    opacity: 1 !important;
+  }
+
+    .card-wrapper:hover .media.media--hover-effect > img + img {
+    opacity: 1 !important;
   }
 
   /* Hide card content when card has media */
