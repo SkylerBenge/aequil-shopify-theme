@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Global flag to track if lightbox should be opened
+  let shouldOpenLightbox = false;
+  let lightboxContent = null;
   // Create single lightbox element
   const lightboxHTML = `
     <div class="mobile-lightbox" id="mobile-lightbox">
@@ -46,6 +49,13 @@ document.addEventListener('DOMContentLoaded', function() {
           e.preventDefault();
           e.stopPropagation();
           e.stopImmediatePropagation();
+          
+          // Set flags for opening lightbox
+          if (eventType === 'mousedown' || eventType === 'pointerdown' || eventType === 'touchstart') {
+            shouldOpenLightbox = true;
+            lightboxContent = this.getAttribute('data-content');
+          }
+          
           return false;
         }, true);
       });
