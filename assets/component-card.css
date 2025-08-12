@@ -593,3 +593,74 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+/* Card Hover Overlay Styles */
+.has-hover-overlay .card__media {
+  position: relative;
+}
+
+.has-hover-overlay .card-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: auto;
+  overscroll-behavior: contain;
+}
+
+.has-hover-overlay .card-hover-content {
+  padding: 20px;
+  text-align: left;
+  color: #000000;
+  font-family: 'Endurance Pro', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.4;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+
+.has-hover-overlay:hover .card-hover-overlay {
+  opacity: 1 !important;
+}
+
+/* Override existing hover effects to prevent images from having 0 opacity */
+.has-hover-overlay:hover .media.media--hover-effect > img:first-child:not(:only-child) {
+  opacity: 1 !important;
+}
+
+.has-hover-overlay:hover .media.media--hover-effect > img + img {
+  opacity: 1 !important;
+}
+
+/* Hide card content when card has media */
+.has-hover-overlay.card--media .card__inner .card__content {
+  display: none;
+}
