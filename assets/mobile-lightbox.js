@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const lightboxText = document.getElementById('mobile-lightbox-text');
   const closeButton = document.querySelector('.mobile-lightbox-close');
 
-      // Open lightbox
+        // Open lightbox
   document.addEventListener('click', function(e) {
     if (e.target.closest('.mobile-info-icon')) {
       e.preventDefault();
@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
       // Prevent any parent link clicks
       const parentLink = e.target.closest('a');
       if (parentLink) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }
+
+      // Prevent card wrapper clicks
+      const cardWrapper = e.target.closest('.card-wrapper');
+      if (cardWrapper) {
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation();
