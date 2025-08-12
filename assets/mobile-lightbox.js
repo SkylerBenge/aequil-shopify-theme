@@ -1,11 +1,12 @@
+// Mobile lightbox functionality
 document.addEventListener('DOMContentLoaded', function() {
-  // Create single lightbox element
+  // Create lightbox HTML structure
   const lightboxHTML = `
     <div class="mobile-lightbox" id="mobile-lightbox">
       <div class="mobile-lightbox-content">
-        <button class="mobile-lightbox-close" aria-label="Close">
+        <button class="mobile-lightbox-close" id="mobile-lightbox-close">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
         <div class="mobile-lightbox-text" id="mobile-lightbox-text"></div>
@@ -13,38 +14,66 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   `;
 
-  // Add lightbox to body
+  // Append lightbox to body
   document.body.insertAdjacentHTML('beforeend', lightboxHTML);
 
-  const lightbox = document.getElementById('mobile-lightbox');
-  const lightboxText = document.getElementById('mobile-lightbox-text');
-  const closeButton = document.querySelector('.mobile-lightbox-close');
+  // Position hover overlays to match card media area
+  function positionHoverOverlays() {
+    const cards = document.querySelectorAll('.has-hover-overlay');
 
-  // Add click handlers to all mobile info icons
-  function addIconHandlers() {
-    const infoIcons = document.querySelectorAll('.mobile-info-icon');
-    infoIcons.forEach(icon => {
-      icon.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const content = this.getAttribute('data-content');
-        if (content) {
-          lightboxText.innerHTML = content;
-          lightbox.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        }
-      });
+    cards.forEach(card => {
+      const media = card.querySelector('.card__media');
+      const overlay = card.parentElement.querySelector('.card-hover-overlay');
+
+      if (media && overlay) {
+        const mediaRect = media.getBoundingClientRect();
+        const cardRect = card.getBoundingClientRect();
+
+        // Position overlay to match media dimensions
+        overlay.style.height = mediaRect.height + 'px';
+        overlay.style.top = (mediaRect.top - cardRect.top) + 'px';
+      }
     });
   }
 
-  // Initial setup
-  addIconHandlers();
+  // Position overlays on load and resize
+  positionHoverOverlays();
+  window.addEventListener('resize', positionHoverOverlays);
 
-  // Watch for new icons (in case of dynamic content)
+  // Mobile info icon click handlers
+  function attachMobileIconHandlers() {
+    const mobileIcons = document.querySelectorAll('.mobile-info-icon');
+
+    mobileIcons.forEach(icon => {
+      if (!icon.hasAttribute('data-listener-attached')) {
+        icon.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          const content = this.getAttribute('data-content');
+          const lightbox = document.getElementById('mobile-lightbox');
+          const textContainer = document.getElementById('mobile-lightbox-text');
+
+          if (content && lightbox && textContainer) {
+            textContainer.innerHTML = content;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+
+        icon.setAttribute('data-listener-attached', 'true');
+      }
+    });
+  }
+
+  // Initial attachment
+  attachMobileIconHandlers();
+
+  // Observer for dynamically added content
   const observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      if (mutation.addedNodes.length) {
-        addIconHandlers();
+      if (mutation.addedNodes.length > 0) {
+        attachMobileIconHandlers();
+        positionHoverOverlays();
       }
     });
   });
@@ -54,29 +83,31 @@ document.addEventListener('DOMContentLoaded', function() {
     subtree: true
   });
 
-  // Close lightbox
-  function closeLightbox() {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
+  // Close lightbox handlers
+  const lightbox = document.getElementById('mobile-lightbox');
+  const closeButton = document.getElementById('mobile-lightbox-close');
+
+  if (closeButton) {
+    closeButton.addEventListener('click', function() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    });
   }
 
-  // Close button click
-  closeButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    closeLightbox();
-  });
+  if (lightbox) {
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 
-  // Close when clicking outside
-  lightbox.addEventListener('click', function(e) {
-    if (e.target === this) {
-      closeLightbox();
-    }
-  });
-
-  // Close with escape key
+  // Close with Escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-      closeLightbox();
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
     }
   });
 });
