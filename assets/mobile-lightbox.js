@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Global flag to track if lightbox should be opened
-  let shouldOpenLightbox = false;
-  let lightboxContent = null;
   // Create single lightbox element
   const lightboxHTML = `
     <div class="mobile-lightbox" id="mobile-lightbox">
@@ -16,48 +13,26 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   `;
 
-    // Add lightbox to body
+  // Add lightbox to body
   document.body.insertAdjacentHTML('beforeend', lightboxHTML);
 
   const lightbox = document.getElementById('mobile-lightbox');
   const lightboxText = document.getElementById('mobile-lightbox-text');
   const closeButton = document.querySelector('.mobile-lightbox-close');
 
-  // Add direct click handlers to all mobile info icons
+  // Add click handlers to all mobile info icons
   function addIconHandlers() {
     const infoIcons = document.querySelectorAll('.mobile-info-icon');
     infoIcons.forEach(icon => {
-      // Use capture phase to intercept clicks before they reach card links
       icon.addEventListener('click', function(e) {
         e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-
+        
         const content = this.getAttribute('data-content');
         if (content) {
           lightboxText.innerHTML = content;
           lightbox.classList.add('active');
           document.body.style.overflow = 'hidden';
         }
-
-        return false;
-      }, true); // Use capture phase
-      
-      // Also add pointer and mouse events to catch all interactions
-      ['mousedown', 'mouseup', 'pointerdown', 'pointerup', 'touchstart', 'touchend'].forEach(eventType => {
-        icon.addEventListener(eventType, function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-          
-          // Set flags for opening lightbox
-          if (eventType === 'mousedown' || eventType === 'pointerdown' || eventType === 'touchstart') {
-            shouldOpenLightbox = true;
-            lightboxContent = this.getAttribute('data-content');
-          }
-          
-          return false;
-        }, true);
       });
     });
   }
@@ -79,81 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
     subtree: true
   });
 
-        // Global click handler as backup (using capture phase)
-  document.addEventListener('click', function(e) {
-    if (e.target.closest('.mobile-info-icon')) {
-      e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-
-      const icon = e.target.closest('.mobile-info-icon');
-      const content = icon.getAttribute('data-content');
-
-      if (content) {
-        lightboxText.innerHTML = content;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-
-      return false;
-    }
-  }, true); // Use capture phase
-
-  // Comprehensive click interceptor for card links
-  document.addEventListener('click', function(e) {
-    // Check if we should open lightbox instead of following link
-    if (shouldOpenLightbox && lightboxContent) {
-      e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
-      
-      // Open lightbox
-      lightboxText.innerHTML = lightboxContent;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      
-      // Reset flags
-      shouldOpenLightbox = false;
-      lightboxContent = null;
-      
-      return false;
-    }
-
-    // If clicking on a card link and there's an icon inside, check if we're near it
-    if (e.target.closest('.full-unstyled-link')) {
-      const cardLink = e.target.closest('.full-unstyled-link');
-      const icon = cardLink.querySelector('.mobile-info-icon');
-      
-      if (icon) {
-        const rect = icon.getBoundingClientRect();
-        const clickX = e.clientX;
-        const clickY = e.clientY;
-        
-        // If click is within 15px of the icon, prevent the link
-        if (clickX >= rect.left - 15 && clickX <= rect.right + 15 &&
-            clickY >= rect.top - 15 && clickY <= rect.bottom + 15) {
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-          
-          // Trigger the lightbox
-          const content = icon.getAttribute('data-content');
-          if (content) {
-            lightboxText.innerHTML = content;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-          }
-          
-          return false;
-        }
-      }
-    }
-
-    // Reset flags on any other click
-    shouldOpenLightbox = false;
-    lightboxContent = null;
-  }, true);
-
   // Close lightbox
   function closeLightbox() {
     lightbox.classList.remove('active');
@@ -163,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Close button click
   closeButton.addEventListener('click', function(e) {
     e.preventDefault();
-    e.stopPropagation();
     closeLightbox();
   });
 
