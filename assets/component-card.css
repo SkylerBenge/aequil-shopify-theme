@@ -604,7 +604,6 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
@@ -612,6 +611,13 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;
+  pointer-events: auto;
+}
+
+/* Make overlay height match the card media area only */
+.has-hover-overlay .card-hover-overlay {
+  height: 0;
+  padding-bottom: 100%; /* This will match the ratio container */
 }
 
 .has-hover-overlay .card-hover-content {
