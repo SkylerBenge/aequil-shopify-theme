@@ -707,6 +707,100 @@
       padding: 10px;
     }
   }
+
+  /* Mobile Info Icon Styles */
+  .mobile-info-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    pointer-events: all !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+  }
+
+  .mobile-info-icon:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+  }
+
+  .mobile-info-icon svg {
+    width: 18px;
+    height: 18px;
+    color: #333;
+    pointer-events: none;
+  }
+
+  /* Ensure the media container has relative positioning */
+  .media {
+    position: relative;
+  }
+
+  /* Mobile Lightbox Styles */
+  .mobile-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    padding: 20px;
+  }
+
+  .mobile-lightbox.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-lightbox-content {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 80%;
+    position: relative;
+    overflow-y: auto;
+  }
+
+  .mobile-lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-lightbox-close:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-lightbox-text {
+    font-family: 'Endurance Pro', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #333;
+  }
 </style>
 
 
