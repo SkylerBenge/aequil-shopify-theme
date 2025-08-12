@@ -20,12 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
   const lightboxText = document.getElementById('mobile-lightbox-text');
   const closeButton = document.querySelector('.mobile-lightbox-close');
 
-    // Open lightbox
+      // Open lightbox
   document.addEventListener('click', function(e) {
     if (e.target.closest('.mobile-info-icon')) {
       e.preventDefault();
       e.stopPropagation();
       e.stopImmediatePropagation();
+
+      // Prevent any parent link clicks
+      const parentLink = e.target.closest('a');
+      if (parentLink) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }
 
       const icon = e.target.closest('.mobile-info-icon');
       const content = icon.getAttribute('data-content');
