@@ -103,6 +103,14 @@
                   height="{{ card_product.media[1].height }}"
                 >
               {%- endif -%}
+
+              {%- if card_product.metafields.custom.rkwo_product_image_points_content_1 != blank -%}
+                <div class="card-hover-overlay">
+                  <div class="card-hover-content">
+                    {{ card_product.metafields.custom.rkwo_product_image_points_content_1 }}
+                  </div>
+                </div>
+              {%- endif -%}
             </div>
           </div>
         {%- endif -%}
@@ -664,7 +672,7 @@
       width: 70%;
     }
   }
-  
+
   @media (max-width: 480px) {
     .card__information h3.card__heading a {
       font-size: 12px !important;
@@ -672,6 +680,60 @@
     .card__information .rkwo-button {
       padding: 5px 10px;
       font-size: 14px;
+    }
+  }
+
+  /* Card hover overlay styles */
+  .card-wrapper {
+    position: relative;
+  }
+
+  .card__media {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+  }
+
+  .card-hover-content {
+    padding: 20px;
+    text-align: center;
+    color: #000000;
+    font-family: 'Endurance Pro', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  .card-wrapper:hover .card-hover-overlay {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .card-hover-content {
+      font-size: 12px;
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-hover-content {
+      font-size: 11px;
+      padding: 10px;
     }
   }
 </style>
