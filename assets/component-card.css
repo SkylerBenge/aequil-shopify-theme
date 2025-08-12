@@ -694,6 +694,7 @@
 .has-hover-overlay .card-hover-content {
   pointer-events: auto;
   user-select: text;
+  -webkit-user-select: text;
 }
 
 /* Override ratio flex behavior for hover overlay cards */
