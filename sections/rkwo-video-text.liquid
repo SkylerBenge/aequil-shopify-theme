@@ -1,0 +1,135 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign content = section.settings.content
+  assign image = section.settings.image
+  assign video_url = section.settings.video_url
+  assign section_id = section.id
+-%}
+
+<section class="rkwo-video-text" id="section-{{ section_id }}">
+      <!-- Left Side -->
+      {%- if image -%}
+      <div class="rkwo-video-text-image" style="background-image: url({{ image | img_url: '1000x1000' }});"></div>
+      {%- endif -%}
+
+      <!-- Right Side -->
+      <div class="rkwo-video-text-content">
+        <div>
+          {%- if heading != blank -%}
+              <h2 class="rkwo-video-text-content-heading rkwo-aequil-heading">
+                {% assign words = heading | split: ' ' %}
+                {% if words.size > 1 %}
+                  {% assign last_index = words.size | minus: 1 %}
+                  {% assign first_words = words | slice: 0, last_index %}
+                  {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
+                {% else %}
+                  {{ heading }}
+                {% endif %}
+              </h2>
+            {%- endif -%}
+            {%- if content != blank -%}
+              <div class="rkwo-video-text-content-content">
+                {{ content }}
+              </div>
+            {%- endif -%}
+        </div>
+  </div>
+</section>
+
+<style>
+  .rkwo-video-text {
+    width: 100%;
+    display: table;
+    background-color: #ffffff;
+  }
+  .rkwo-video-text-image,
+  .rkwo-video-text-content {
+    width: 50%;
+    display: table-cell !important;
+    vertical-align: top;
+  }
+  .rkwo-video-text-content {
+    padding: 50px 200px 50px 50px;
+  }
+  .rkwo-video-text-image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @media (max-width: 1700px) {
+    .rkwo-video-text-content {
+      padding: 50px 100px 50px 50px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .rkwo-video-text,
+    .rkwo-video-text-image,
+    .rkwo-video-text-content {
+      display: block !important;
+      width: 100%;
+    }
+    .rkwo-video-text-image {
+      min-height: 400px;
+    }
+    .rkwo-video-text-content h2 {
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rkwo-video-text-image {
+      min-height: 300px;
+    }
+    .rkwo-video-text-content {
+      padding: 35px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rkwo-video-text-image {
+      min-height: 250px;
+    }
+    .rkwo-video-text-content {
+      padding: 35px 25px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RKWO Video Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading", 
+      "label": "Main Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Content</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image",
+      "info": "Upload an image"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "Enter a video URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RKWO Video Text"
+    }
+  ]
+}
+{% endschema %}

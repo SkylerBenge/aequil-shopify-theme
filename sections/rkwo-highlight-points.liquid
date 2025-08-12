@@ -1,0 +1,283 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign content = section.settings.content
+  assign cta_text = section.settings.cta_text
+  assign cta_url = section.settings.cta_url
+  assign image = section.settings.image
+  assign section_id = section.id
+-%}
+
+<section class="rkwo-highlight-points" id="section-{{ section_id }}">
+  <div class="rkwo-highlight-points-container">
+    <!-- Left Side -->
+    <div class="rkwo-highlight-points-content">
+      <div>
+        {%- if heading != blank -%}
+          <h2 class="rkwo-highlight-points-content-heading rkwo-aequil-heading">
+            {% assign words = heading | split: ' ' %}
+            {% if words.size > 1 %}
+              {% assign last_index = words.size | minus: 1 %}
+              {% assign first_words = words | slice: 0, last_index %}
+              {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
+            {% else %}
+              {{ heading }}
+            {% endif %}
+          </h2>
+        {%- endif -%}
+        {%- if content != blank -%}
+          <div class="rkwo-highlight-points-content-content">
+            {{ content }}
+          </div>
+        {%- endif -%}
+        {%- if cta_text != blank -%}
+            <a class="rkwo-button" href="{{ cta_url }}">{{ cta_text }}</a>
+          {%- endif -%}
+      </div>
+    </div>
+  
+    <!-- Middle Image -->
+    {%- if image -%}
+    <div class="rkwo-highlight-points-image" style="background-image: url({{ image | img_url: '600x600' }});"></div>
+    {%- endif -%}
+  
+    <!-- Right Side -->
+    <div class="rkwo-highlight-points-points">
+      {%- for block in section.blocks -%}
+        <div class="rkwo-highlight-points-point">
+          {%- if block.settings.point_heading != blank -%}
+            <h3 class="rkwo-highlight-points-point-heading">{{ block.settings.point_heading }}</h3>
+          {%- endif -%}
+          {%- if block.settings.point_content != blank -%}
+            <div class="rkwo-highlight-points-point-content"><p>{{ block.settings.point_content }}</p></div>
+          {%- endif -%}
+          {%- if block.settings.point_cta_text != blank -%}
+            <a class="rkwo-button" href="{{ block.settings.point_cta_url }}">{{ block.settings.point_cta_text }}</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    
+    {%- if cta_text != blank -%}
+      <a class="rkwo-button" href="{{ cta_url }}" style="display: none;">{{ cta_text }}</a>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  .rkwo-highlight-points {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 100px 0;
+  }
+  .rkwo-highlight-points-container {
+    width: 100%;
+    max-width: 1100px;
+    display: table;
+    background-color: #f9f8f6;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  .rkwo-highlight-points-content,
+  .rkwo-highlight-points-image,
+  .rkwo-highlight-points-points {
+    display: table-cell !important;
+    vertical-align: middle;
+  }
+  .rkwo-highlight-points-content {
+    padding: 0 50px 0 75px;
+    width: 40%;
+  }
+  .rkwo-highlight-points-image {
+    width: 10%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .rkwo-highlight-points-points {
+    padding: 0 75px 0 50px;
+    width: 40%;
+  }
+  .rkwo-highlight-points-point {
+    border-bottom: 2px solid #cec6b9;
+    margin-bottom: 0;
+  }
+  .rkwo-highlight-points-point:last-of-type {
+    border-bottom: none;
+  }
+  section[class^=rkwo-] .rkwo-highlight-points-point-heading {
+    font-weight: 400 !important;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: left;
+    font-size: 20px;
+  }
+  .rkwo-highlight-points-point-content p {
+    margin-bottom: 10px;
+  }
+
+
+  @media (max-width: 1024px) {
+    .rkwo-highlight-points-content,
+    .rkwo-highlight-points-points {
+      padding: 35px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rkwo-highlight-points {
+      padding: 0 !important;
+    }
+    .rkwo-highlight-points-container,
+    .rkwo-highlight-points-content {
+      display: block !important;
+      width: 100%;
+    }
+    .rkwo-highlight-points-container {
+      padding: 35px;
+    }
+    .rkwo-highlight-points-content,
+    .rkwo-highlight-points-points {
+      padding: 0;
+    }
+    .rkwo-highlight-points-content {
+      padding-bottom: 35px;
+    }
+    .rkwo-highlight-points-content .rkwo-button {
+      display: none;
+    }
+    .rkwo-highlight-points-content h2 {
+      margin-top: 0;
+    }
+
+    .rkwo-highlight-points-point-content p {margin-bottom: .5em !important;}
+    
+    .rkwo-highlight-points-image {
+      display: inline-block;
+      width: 15%;
+    }
+    .rkwo-highlight-points-points {
+      display: inline-block;
+      width: 85%;
+      padding-left: 35px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .rkwo-highlight-points-container {
+      padding: 35px 25px;
+    }
+    .rkwo-highlight-points-content {
+      padding-bottom: 1em;
+    }
+    .rkwo-highlight-points-image {
+      width: 25%;
+    }
+    .rkwo-highlight-points-points {
+      padding-left: 25px;
+      width: 75%;
+    }
+    .rkwo-highlight-points-container > .rkwo-button {
+      display: block !important;
+      margin-top: 2em;
+    }
+    section[class^=rkwo-] .rkwo-highlight-points-point-heading {
+      font-size: 16px;
+    }
+    .rkwo-highlight-points-point-content p {
+      font-size: 11px !important;
+    }
+  }
+  @media (max-width: 300px) {
+    .rkwo-highlight-points-points {
+      padding-left: 15px;
+    }
+    .rkwo-highlight-points-point-content p {
+      font-size: 10px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RKWO Highlight Points",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+    },
+    {
+      "type": "text",
+      "id": "cta_text", 
+      "label": "CTA Text",
+      "default": "Enter a CTA text anchor"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL",
+      "info": "Enter a CTA URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image",
+      "info": "Upload an image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "point_heading",
+          "label": "Point Heading",
+          "default": "Point 1"
+        },
+        {
+          "type": "text",
+          "id": "point_content",
+          "label": "Point Content",
+          "default": "Content 1"
+        },
+        {
+          "type": "text",
+          "id": "point_cta_text", 
+          "label": "CTA Text",
+        },
+        {
+          "type": "url",
+          "id": "point_cta_url",
+          "label": "CTA URL",
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RKWO Highlight Points",
+      "blocks": [
+        {
+          "type": "point"
+        },
+        {
+          "type": "point"
+        },
+        {
+          "type": "point"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

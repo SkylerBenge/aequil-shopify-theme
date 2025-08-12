@@ -1,0 +1,173 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "rkwo_hero_jjcEHF": {
+      "type": "rkwo-hero",
+      "name": "RKWO Hero",
+      "settings": {
+        "heading": "{{ collection.title }}",
+        "content": "",
+        "highlight": "",
+        "image": "shopify:\/\/shop_images\/Aequil-Group_Render.jpg"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "rkwo_highlight_points_jJrkeH": {
+      "type": "rkwo-highlight-points",
+      "blocks": {
+        "point_qbtfL7": {
+          "type": "point",
+          "settings": {
+            "point_heading": "THE DEEP RESET",
+            "point_content": "A 12-week structured journey for long-term complaints, deeper toxicity, and long-standing deficiencies.Designed for those who have been feeling off for more than six months.This Reset works gently but deeply, giving your body time to restore what has been missing and clear what has been stored.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_Tdwwym": {
+          "type": "point",
+          "settings": {
+            "point_heading": "THE DAILY RESET",
+            "point_content": "A two-month lifestyle reset for more recent stress, seasonal shifts or ongoing balance. Perfect for clearing stored stress, preparing for a new season, or recovering from burnout. Many people begin with the Daily Reset and only later realise deeper toxins are still stored. If that happens, you can switch to the Deep Reset and complete it over three months instead of one.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "point_qbtfL7",
+        "point_Tdwwym"
+      ],
+      "name": "RKWO Highlight Points",
+      "settings": {
+        "heading": "WHICH RESET IS RIGHT FOR YOU?",
+        "content": "<p><em><strong>Everyone should do a Reset at some point in their life.<\/strong><\/em><strong> <\/strong>It helps clear what has been stored and restore what has been missing. Both versions use the same three formulas: 01 Reset, 02 Recharge and 03 Maintain. The difference lies in the dosage, duration and depth of the protocol. Choose the Reset that supports your current needs and meets you where you are.<\/p>",
+        "cta_text": "",
+        "cta_url": ""
+      }
+    },
+    "rkwo_pagebreak_cta_rE9yNb": {
+      "type": "rkwo-pagebreak-cta",
+      "disabled": true,
+      "name": "RKWO Pagebreak CTA",
+      "settings": {
+        "cta_text": "LEARN MORE ABOUT LIQUID INTELLIGENCE™ HERE",
+        "cta_url": ""
+      }
+    },
+    "rkwo_image_text_h_cta_b7cc69": {
+      "type": "rkwo-image-text-h-cta",
+      "name": "RKWO Image Text H-CTA",
+      "settings": {
+        "heading": "",
+        "heading2": "Our Aequil Products",
+        "content": "<p>AEQUIL meet you where you are. By offering dynamised solutions that cleanse, nourish, maintain and support the foundations of your health. Our range is simple. RESET removes toxicity. RECHARGE restores what is missing. MAINTAIN keeps your systems balanced. PLUS supports specific needs like sleep, mood, energy and immunity. We offer two delivery formats; fast acting dynamized supplements, and slow release patches for daily support.<\/p>",
+        "cta_text": "",
+        "cta_url": "",
+        "cta_text2": "NEED HELP WITH CHOOSING YOUR PRODUCTS?",
+        "cta_url2": "shopify:\/\/pages\/contact",
+        "image": "shopify:\/\/shop_images\/Aequil_Boxes_R1.jpg"
+      }
+    },
+    "rkwo_image_text_h_cta_HBcMBq": {
+      "type": "rkwo-image-text-h-cta",
+      "disabled": true,
+      "name": "RKWO Image Text H-CTA",
+      "settings": {
+        "heading": "",
+        "heading2": "WHICH RESET IS RIGHT FOR ME?",
+        "content": "<p>The Reset is available in two formats:<\/p><p>The Daily Reset for lifestyle support, and The Deep Reset for a more intensive foundational cleanse.<\/p><p><strong>THE DEEP RESET<\/strong><\/p><p>A 12-week version for those carrying deeper toxicity, long-term complaints or long-standing deficiencies.<br\/>Choose this reset if your symptoms have lasted more than six months. <br\/><\/p><p><strong>THE DAILY RESET<\/strong><\/p><p>A two-month version for everyday lifestyle support. Choose this reset if your symptoms are more recent or you want to stay well and resilient day to day.<br\/><br\/><\/p>",
+        "cta_text": "",
+        "cta_url": "",
+        "cta_text2": "Need Help Deciding?",
+        "cta_url2": "shopify:\/\/pages\/contact",
+        "image": "shopify:\/\/shop_images\/Aequil-Bundle_R1.jpg"
+      }
+    },
+    "image_with_text_nqW77W": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_e88Bmr": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "text_wEgtEc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_qzgLwt": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_e88Bmr",
+        "text_wEgtEc",
+        "button_qzgLwt"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "rkwo_hero_jjcEHF",
+    "product-grid",
+    "rkwo_highlight_points_jJrkeH",
+    "rkwo_pagebreak_cta_rE9yNb",
+    "rkwo_image_text_h_cta_b7cc69",
+    "rkwo_image_text_h_cta_HBcMBq",
+    "image_with_text_nqW77W"
+  ]
+}

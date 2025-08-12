@@ -1,0 +1,143 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign content = section.settings.content
+  assign cta_text = section.settings.cta_text
+  assign cta_url = section.settings.cta_url
+  assign section_id = section.id
+-%}
+
+<section class="rkwo-heading-text" id="section-{{ section_id }}">
+  <div class="rkwo-heading-text-container">
+    <!-- Left Side -->
+    {%- if heading != blank -%}
+      <h2 class="rkwo-heading-text-heading rkwo-aequil-heading">
+        {% assign words = heading | split: ' ' %}
+        {% if words.size > 1 %}
+          {% assign last_index = words.size | minus: 1 %}
+          {% assign first_words = words | slice: 0, last_index %}
+          {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
+        {% else %}
+          {{ heading }}
+        {% endif %}
+      </h2>
+    {%- endif -%}
+    <!-- Right Side -->
+    {%- if content != blank -%}
+      <div class="rkwo-heading-text-content">
+        {{ content }}
+        {%- if cta_text != blank -%}
+          <a class="rkwo-button" href="{{ cta_url }}">{{ cta_text }}</a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  .rkwo-heading-text {
+    background-color: #f9f8f6;
+    padding: 75px 0 50px 0;
+  }
+  .rkwo-heading-text-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: table;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .rkwo-heading-text-heading,
+  .rkwo-heading-text-content {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .rkwo-heading-text-heading {
+    width: 30%;
+  }
+  .rkwo-heading-text-content {
+    width: 70%;
+    padding-left: 35px;
+  }
+  
+  @media (max-width: 1700px) {
+     
+  }
+
+  @media (max-width: 1024px) {
+    .rkwo-heading-text {
+      padding: 50px 0 35px 0;
+    }
+    .rkwo-heading-text-container,
+    .rkwo-heading-text-heading,
+    .rkwo-heading-text-content {
+      width: 100% !important;;
+      display: block !important;
+      padding: 0 50px !important;
+    }
+    .rkwo-heading-text-container {
+      padding: 0 !important;
+    }
+    .rkwo-heading-text-heading {
+      margin-top: 0;
+    }
+    .rkwo-heading-text-content .rkwo-button {
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .rkwo-heading-text {
+      padding: 35px 0;
+    }
+    .rkwo-heading-text-heading,
+    .rkwo-heading-text-content {
+      padding: 0 35px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rkwo-heading-text-heading,
+    .rkwo-heading-text-content {
+      padding: 0 25px !important;
+    }
+  
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RKWO Heading Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading", 
+      "label": "Main Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Content</p>"
+    },
+    {
+      "type": "text",
+      "id": "cta_text", 
+      "label": "CTA Text",
+      "default": "Enter a CTA text anchor"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL",
+      "info": "Enter a CTA URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RKWO Heading Text"
+    }
+  ]
+}
+{% endschema %}

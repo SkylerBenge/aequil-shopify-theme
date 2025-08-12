@@ -1,0 +1,126 @@
+{%- liquid
+  assign cta_text = section.settings.cta_text
+  assign cta_url = section.settings.cta_url
+  assign image = section.settings.image
+  assign section_id = section.id
+-%}
+
+<section class="rkwo-pagebreak-cta rkwo-content-white" id="section-{{ section_id }}">
+      <!-- Left Side -->
+      {%- if image -%}
+      <div class="rkwo-pagebreak-cta-image" style="background-image: url({{ image | img_url: '600x600' }});"></div>
+      {%- endif -%}
+
+      <!-- Right Side -->
+      <div class="rkwo-pagebreak-cta-content">
+        <div>
+          {%- if cta_text != blank -%}
+            <a class="rkwo-button" href="{{ cta_url }}">{{ cta_text }}</a>
+          {%- endif -%}
+        </div>
+  </div>
+</section>
+
+<style>
+  .rkwo-pagebreak-cta {
+    width: 100%;
+    display: table;
+  }
+  .rkwo-pagebreak-cta-image,
+  .rkwo-pagebreak-cta-content {
+    width: 50%;
+    display: table-cell !important;
+    vertical-align: top;
+  }
+  .rkwo-pagebreak-cta-content {
+    padding: 75px 50px 75px 50px;
+    background-color: #416fa3;
+  }
+  .rkwo-pagebreak-cta-image {
+    height: 100%;
+    background-color: #6f9fcf;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  section[class^='rkwo-'].rkwo-pagebreak-cta.rkwo-content-white .rkwo-button {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+  }
+  section[class^='rkwo-'].rkwo-pagebreak-cta.rkwo-content-white .rkwo-button:hover {
+    color: #ffffff !important;
+    border-color: #000000 !important;
+  }
+  
+  @media (max-width: 1700px) {
+    .rkwo-pagebreak-cta-content {
+      padding: 75px 50px 75px 50px;
+    }  
+  }
+
+ @media (max-width: 1024px) {
+    .rkwo-pagebreak-cta-content {
+        padding: 50px;
+    }
+    .rkwo-pagebreak-cta-image {
+      background-size: 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rkwo-pagebreak-cta-content {
+        padding: 35px 25px;
+    }
+    .rkwo-pagebreak-cta-image {
+      background-size: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rkwo-pagebreak-cta,
+    .rkwo-pagebreak-cta-image,
+   .rkwo-pagebreak-cta-content {
+      display: block !important;
+      width: 100%;
+    }
+    .rkwo-pagebreak-cta-image {
+      background-size: 70%;
+      min-height: 100px;
+    }
+    .rkwo-pagebreak-cta-image {
+      display: none !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RKWO Pagebreak CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cta_text", 
+      "label": "CTA Text",
+      "default": "Enter a CTA text anchor"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL",
+      "info": "Enter a CTA URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image",
+      "info": "Upload an image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RKWO Pagebreak CTA"
+    }
+  ]
+}
+{% endschema %}

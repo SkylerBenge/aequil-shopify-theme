@@ -1,0 +1,218 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign heading2 = section.settings.heading2
+  assign content = section.settings.content
+  assign cta_text = section.settings.cta_text
+  assign cta_url = section.settings.cta_url
+  assign cta_text2 = section.settings.cta_text2
+  assign cta_url2 = section.settings.cta_url2
+  assign image = section.settings.image
+  assign section_id = section.id
+-%}
+
+<section class="rkwo-image-text-highlighted-cta rkwo-content-white" id="section-{{ section_id }}">
+      <!-- Left Side -->
+      {%- if image -%}
+      <div class="rkwo-image-text-highlighted-cta-image" style="background-image: url({{ image | img_url: '600x600' }});">
+        <div>
+          <h2 class="rkwo-image-text-highlighted-cta-content-heading rkwo-aequil-heading">
+            {% assign words = heading | split: ' ' %}
+            {% if words.size > 1 %}
+              {% assign last_index = words.size | minus: 1 %}
+              {% assign first_words = words | slice: 0, last_index %}
+              {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span><br /> Shots
+            {% else %}
+              {{ heading }}
+            {% endif %}
+          </h2>
+          {%- if cta_text != blank -%}
+            <a class="rkwo-button" href="{{ cta_url }}">{{ cta_text }}</a>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- endif -%}
+
+      <!-- Right Side -->
+      <div class="rkwo-image-text-highlighted-cta-content">
+        <div>
+          {%- if heading2 != blank -%}
+              <h2 class="rkwo-image-text-highlighted-cta-content-heading rkwo-aequil-heading">
+                {% assign words = heading2 | split: ' ' %}
+                {% if words.size > 1 %}
+                  {% assign last_index = words.size | minus: 1 %}
+                  {% assign first_words = words | slice: 0, last_index %}
+                  {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
+                {% else %}
+                  {{ heading2 }}
+                {% endif %}
+              </h2>
+            {%- endif -%}
+            {%- if content != blank -%}
+              <div class="rkwo-image-text-highlighted-cta-content-content">
+                {{ content }}
+              </div>
+            {%- endif -%}
+        </div>
+        <div>
+          {%- if cta_text2 != blank -%}
+            <a class="rkwo-button" href="{{ cta_url2 }}">{{ cta_text2 }}</a>
+          {%- endif -%}
+        </div>
+    </div>
+</section>
+
+<style>
+  .rkwo-image-text-highlighted-cta {
+    width: 100%;
+    display: table;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+  }
+  .rkwo-image-text-highlighted-cta-image,
+  .rkwo-image-text-highlighted-cta-content {
+    width: 50%;
+    display: table-cell !important;
+    vertical-align: top;
+  }
+  .rkwo-image-text-highlighted-cta-content > div:first-of-type {
+    padding: 50px 200px 50px 50px;
+  }
+  .rkwo-image-text-highlighted-cta-content > div:last-of-type {
+    padding: 50px 50px 50px 50px;
+  }
+  .rkwo-image-text-highlighted-cta-image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .rkwo-image-text-highlighted-cta-image > div {
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    justify-content: center;
+    padding: 50px;
+  }
+  .rkwo-image-text-highlighted-cta-image > div > h2 {
+    text-align: center;
+  }
+  .rkwo-image-text-highlighted-cta-content > div:first-of-type {
+    background-color: #6f9fcf;
+  }
+  section[class^='rkwo-'].rkwo-image-text-highlighted-cta.rkwo-content-white .rkwo-image-text-highlighted-cta-content .rkwo-button {
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+  section[class^='rkwo-'].rkwo-image-text-highlighted-cta.rkwo-content-white .rkwo-image-text-highlighted-cta-content .rkwo-button:hover {
+    color: #ffffff !important;
+    border-color: #000000 !important;
+  }
+  
+  @media (max-width: 1700px) {
+    .rkwo-image-text-highlighted-cta-content > div:first-of-type {
+      padding: 50px 100px 50px 50px;
+    }
+    .rkwo-image-text-highlighted-cta-content > div:last-of-type {
+      padding: 50px 50px 50px 50px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .rkwo-image-text-highlighted-cta,
+    .rkwo-image-text-highlighted-cta-image,
+    .rkwo-image-text-highlighted-cta-content {
+      display: block !important;
+      width: 100%;
+    }
+    .rkwo-image-text-highlighted-cta-image > div {
+      min-height: 400px;
+    }
+    .rkwo-image-text-highlighted-cta-image h2,
+    .rkwo-image-text-highlighted-cta-content h2 {
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rkwo-image-text-highlighted-cta-image > div {
+      min-height: 300px;
+    }
+    .rkwo-image-text-highlighted-cta-image > div,
+    .rkwo-image-text-highlighted-cta-content > div {
+      padding: 35px !important;
+    }
+    section[class^='rkwo-'].rkwo-content-white .rkwo-image-text-highlighted-cta-content-content p {
+      color: #ffffff !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rkwo-image-text-highlighted-cta-image > div {
+      min-height: 250px;
+    }
+    .rkwo-image-text-highlighted-cta-image > div,
+    .rkwo-image-text-highlighted-cta-content > div {
+      padding: 35px 25px !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RKWO Image Text H-CTA",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading", 
+      "label": "Left Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading2", 
+      "label": "Right Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Content</p>"
+    },
+    {
+      "type": "text",
+      "id": "cta_text", 
+      "label": "CTA Text",
+      "default": "Enter a CTA text anchor"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL",
+      "info": "Enter a CTA URL"
+    },
+    {
+      "type": "text",
+      "id": "cta_text2", 
+      "label": "CTA Text",
+      "default": "Enter a CTA text anchor"
+    },
+    {
+      "type": "url",
+      "id": "cta_url2",
+      "label": "CTA URL",
+      "info": "Enter a CTA URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image",
+      "info": "Upload an image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RKWO Image Text H-CTA"
+    }
+  ]
+}
+{% endschema %}

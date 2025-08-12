@@ -1,0 +1,153 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign image = product.metafields.custom.rkwo_product_image_points_image
+  assign section_id = section.id
+-%}
+
+{% if product.metafields.custom.rkwo_product_image_points_heading_1 and product.metafields.custom.rkwo_product_image_points_content_1 %}
+<section class="rkwo-product-image-points" id="section-{{ section_id }}">
+      <!-- Left Side -->
+      {%- if image -%}
+      <div class="rkwo-product-image-points-image" style="background-image: url({{ image | img_url: '1000x1000' }});"></div>
+      {%- endif -%}
+
+      <!-- Right Side -->
+      <div class="rkwo-product-image-points-content">
+        <div>
+          {%- if heading != blank -%}
+              <h2 class="rkwo-product-image-points-content-heading rkwo-aequil-heading">
+                {% assign words = heading | split: ' ' %}
+                {% if words.size > 1 %}
+                  {% assign last_index = words.size | minus: 1 %}
+                  {% assign first_words = words | slice: 0, last_index %}
+                  {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
+                {% else %}
+                  {{ heading }}
+                {% endif %}
+              </h2>
+            {%- endif -%}
+
+              <div class="rkwo-product-image-points-content-content">
+
+                  <div class="rkwo-product-image-points-point">
+                    {% if product.metafields.custom.rkwo_product_image_points_heading_1 and product.metafields.custom.rkwo_product_image_points_content_1 %}
+                      <h3 class="rkwo-product-image-points-point-heading">{{ product.metafields.custom.rkwo_product_image_points_heading_1 }}</h3>
+                      <div class="rkwo-product-image-points-point-content">{{ product.metafields.custom.rkwo_product_image_points_content_1 | metafield_tag }}</div>
+                    {%- endif -%}
+                    {% if product.metafields.custom.rkwo_product_image_points_heading_2 and product.metafields.custom.rkwo_product_image_points_content_2 %}
+                      <h3 class="rkwo-product-image-points-point-heading">{{ product.metafields.custom.rkwo_product_image_points_heading_2 }}</h3>
+                      <div class="rkwo-product-image-points-point-content">{{ product.metafields.custom.rkwo_product_image_points_content_2 | metafield_tag }}</div>
+                    {%- endif -%}
+                    {% if product.metafields.custom.rkwo_product_image_points_heading_3 and product.metafields.custom.rkwo_product_image_points_content_3 %}
+                      <h3 class="rkwo-product-image-points-point-heading">{{ product.metafields.custom.rkwo_product_image_points_heading_3 }}</h3>
+                      <div class="rkwo-product-image-points-point-content">{{ product.metafields.custom.rkwo_product_image_points_content_3 | metafield_tag }}</div>
+                    {%- endif -%}
+                    {% if product.metafields.custom.rkwo_product_image_points_heading_4 and product.metafields.custom.rkwo_product_image_points_content_4 %}
+                      <h3 class="rkwo-product-image-points-point-heading">{{ product.metafields.custom.rkwo_product_image_points_heading_4 }}</h3>
+                      <div class="rkwo-product-image-points-point-content">{{ product.metafields.custom.rkwo_product_image_points_content_4 | metafield_tag }}</div>
+                    {%- endif -%}
+                    {% if product.metafields.custom.rkwo_product_image_points_heading_5 and product.metafields.custom.rkwo_product_image_points_content_5 %}
+                      <h3 class="rkwo-product-image-points-point-heading">{{ product.metafields.custom.rkwo_product_image_points_heading_5 }}</h3>
+                      <div class="rkwo-product-image-points-point-content">{{ product.metafields.custom.rkwo_product_image_points_content_5 | metafield_tag }}</div>
+                    {%- endif -%}
+                  </div>
+
+              </div>
+
+        </div>
+  </div>
+</section>
+{%- endif -%}
+
+<style>
+  .rkwo-product-image-points {
+    width: 100%;
+    display: table;
+    background-color: #ffffff;
+  }
+  .rkwo-product-image-points-image,
+  .rkwo-product-image-points-content {
+    width: 50%;
+    display: table-cell !important;
+    vertical-align: top;
+  }
+  .rkwo-product-image-points-content {
+    padding: 50px 200px 100px 50px;
+  }
+  .rkwo-product-image-points-image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  .rkwo-product-image-points-point h3,
+  .rkwo-product-image-points-point .rkwo-product-image-points-point-content {
+    font-size: 14px;
+  }
+  
+  section[class^=rkwo-] .rkwo-product-image-points-point h3 {
+    font-weight: 600 !important;
+  }
+  .rkwo-product-image-points-point > .rkwo-product-image-points-point-content {
+    border-bottom: 1px solid #666;
+    padding-bottom: 15px;
+  }
+  
+  @media (max-width: 1700px) {
+    .rkwo-product-image-points-content {
+      padding: 50px 100px 75px 50px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .rkwo-product-image-points,
+    .rkwo-product-image-points-image,
+    .rkwo-product-image-points-content {
+      display: block !important;
+      width: 100%;
+    }
+    .rkwo-product-image-points-image {
+      min-height: 400px;
+    }
+    .rkwo-product-image-points-content h2 {
+      margin-top: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rkwo-product-image-points-image {
+      min-height: 300px;
+    }
+    .rkwo-product-image-points-content {
+      padding: 35px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rkwo-product-image-points-image {
+      min-height: 250px;
+    }
+    .rkwo-product-image-points-content {
+      padding: 35px 25px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "RKWO Product Image Points",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading", 
+      "label": "Main Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image",
+      "info": "Upload an image"
+    }
+  ]
+}
+{% endschema %}

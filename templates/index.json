@@ -1,0 +1,666 @@
+{
+  "sections": {
+    "rkwo_hero_rdceqU": {
+      "type": "rkwo-hero",
+      "name": "RKWO Hero",
+      "settings": {
+        "heading": "NOT A SUPPLEMENT. A HOLISTIC SOLUTION.",
+        "content": "<p>Aequil offers biotech health solutions powered by our double patent-pending technology, Liquid Intelligence™—a precise combination of structured, dynamized water with botanicals, minerals, vitamins and electrolytes. Every formula is engineered to support the essential systems that regulate how you feel, think and function, enabling you to perform at your best physically, mentally, spiritually and emotionally—so you can cope with anything and thrive.<\/p>",
+        "highlight": "<p><strong>Trusted by +10,000 customers<\/strong><\/p>",
+        "image": "shopify:\/\/shop_images\/IMG_5414_2.jpg"
+      }
+    },
+    "custom_liquid_rMXKd7": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".custom-logo-banner {padding: 2.5em 0 2em 0;}",
+        ".custom-logo-banner__inner {display: flex; justify-content: space-evenly; align-items: center; flex-wrap: nowrap; gap: 1rem; overflow: hidden; padding-left: 2rem; padding-right: 2rem;}",
+        ".custom-logo-banner__item {flex: 1 1 auto; max-width: 160px; padding: 0 10px;}",
+        ".custom-logo-banner__item img {width: 100%; height: auto; max-height: 60px; object-fit: contain; display: block; margin: 0 auto;}",
+        "@media (max-width: 480px) {.custom-logo-banner {padding: 1.5em 0; } .custom-logo-banner__item {padding: 0; }}"
+      ],
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"custom-logo-banner\">\n  <div class=\"custom-logo-banner__inner\">\n\n    <div class=\"custom-logo-banner__item\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0652\/1860\/9385\/files\/WELLBEING_STARTUP.png?v=1748591636\" alt=\"Wellbeing Startup Award\">\n    <\/div>\n\n    <div class=\"custom-logo-banner__item\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0652\/1860\/9385\/files\/Tatler_as_seen.png?v=1742832217\" alt=\"Tatler Logo\">\n    <\/div>\n\n    <div class=\"custom-logo-banner__item\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0652\/1860\/9385\/files\/healf.png?v=1748591737\" alt=\"Healf Logo\">\n    <\/div>\n\n    <div class=\"custom-logo-banner__item\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0652\/1860\/9385\/files\/daily_mail_copy.png?v=1743089330\" alt=\"Daily Mail Logo\">\n    <\/div>\n\n    <div class=\"custom-logo-banner__item\">\n      <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0652\/1860\/9385\/files\/OSTEOPATH.png?v=1748591652\" alt=\"Osteopath Award\">\n    <\/div>\n  <\/div>\n<\/div>",
+        "color_scheme": "scheme-5",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rkwo_video_text_aCHKL7": {
+      "type": "rkwo-video-text",
+      "name": "RKWO Video Text",
+      "settings": {
+        "heading": "WHAT IS AEQUIL?",
+        "content": "<p>Aequil is a pioneering biotech brand built with purpose. Founded in 1999 by renowned osteopath Frédéric Roscop, it combines 27 years of clinical experience with cutting-edge biophysical research. Our dynamized health solutions are powered by Liquid Intelligence™, our double patent-pending technology, precisely engineered to clear stored stress, reset your foundations of wellbeing, and support lasting balance across body, mind, energy. <\/p><p>Each formula is complemented by our digital wellbeing platform, activating both physical and energetic dimensions of healing through daily practices, sound, and movement, to help your body find its rhythm. We focus on the foundations of wellbeing because your body keeps score. To feel well, stay well, and live fully, your essential systems and functions need to return to a state of rhythm, rest, and dynamic balance. Resetting the foundations of wellbeing creates the opportunity to stay in balance, handle stress, and grow through life’s challenges as your true self. This is what allows true wellbeing, and real longevity, to take root. Our mission is to help you be well, stay balanced, and become who you truly are.<\/p><p><\/p>",
+        "image": "shopify:\/\/shop_images\/IMG_2330_2.jpg",
+        "video_url": ""
+      }
+    },
+    "rkwo_pagebreak_cta_Kb78Hd": {
+      "type": "rkwo-pagebreak-cta",
+      "custom_css": [],
+      "name": "RKWO Pagebreak CTA",
+      "settings": {
+        "cta_text": "SHOP OUR PRODUCTS",
+        "cta_url": "shopify:\/\/collections\/products",
+        "image": "shopify:\/\/shop_images\/aequil.svg"
+      }
+    },
+    "rkwo_highlight_points_LeM8CW": {
+      "type": "rkwo-highlight-points",
+      "blocks": {
+        "point_9FRepW": {
+          "type": "point",
+          "settings": {
+            "point_heading": "ENERGY",
+            "point_content": "You feel wired, tired or flat. Your body struggles to make and use energy. Cellular detox slows and toxins build up. ",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_PMazXU": {
+          "type": "point",
+          "disabled": true,
+          "settings": {
+            "point_heading": "METABOLISM",
+            "point_content": "You feel wired, tired or flat. Your body struggles to make and use energy. Cellular detox slows and toxins build up. ",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_RLJGpt": {
+          "type": "point",
+          "settings": {
+            "point_heading": "MOOD & NERVOUS SYSTEM",
+            "point_content": "Mood becomes harder to regulate. You may feel anxious, low, overwhelmed or struggle to sleep. Mental health is affected.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_L8NWYD": {
+          "type": "point",
+          "settings": {
+            "point_heading": "DIGESTION & METABOLISM",
+            "point_content": "Bloating, cravings and discomfort increase.  Off-colour skin and complexion. Gut balance is disrupted. Sugar, fat and protein metabolism slow. Collagen breakdown. Hyaluronic acid breakdown.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_zjnhQy": {
+          "type": "point",
+          "settings": {
+            "point_heading": "IMMUNE & LYMPHATIC",
+            "point_content": "Recovery slows. Inflammation lingers. Your system struggles to clear what it holds. You get sick more often.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_frm6hk": {
+          "type": "point",
+          "settings": {
+            "point_heading": "HORMONES & REPRODUCTIVE",
+            "point_content": "Hormonal rhythms shift. Fertility may be affected. Water retention, thyroid disruption and cycle irregularity become more common.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_DzyNyJ": {
+          "type": "point",
+          "settings": {
+            "point_heading": "FOCUS & COGNITION",
+            "point_content": "Hormonal rhythms shift. Fertility may be affected. Water retention, thyroid disruption and cycle irregularity become more common.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_7EAbHN": {
+          "type": "point",
+          "settings": {
+            "point_heading": "HYDRATION",
+            "point_content": "Cellular hydration becomes impaired. Water is poorly retained or distributed. This affects all systems.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "point_9FRepW",
+        "point_PMazXU",
+        "point_RLJGpt",
+        "point_L8NWYD",
+        "point_zjnhQy",
+        "point_frm6hk",
+        "point_DzyNyJ",
+        "point_7EAbHN"
+      ],
+      "name": "RKWO Highlight Points",
+      "settings": {
+        "heading": "THE PHYSIOLOGY OF STRESS",
+        "content": "<p><em>When your foundations are under long-term stress, your essential systems  and functions stop working together. You feel the effects across body, mind, energy.<\/em><\/p>",
+        "cta_text": "SHOP NOW",
+        "cta_url": "shopify:\/\/collections\/all",
+        "image": "shopify:\/\/shop_images\/aequilv.svg"
+      }
+    },
+    "rkwo_text_image_highlight_rngncc": {
+      "type": "rkwo-text-image-highlight",
+      "name": "RKWO Text Image Highlight",
+      "settings": {
+        "heading": "Ten Thousand Patients, 27 years & One Belief: You Deserve to Be Well",
+        "content": "<p>Frédéric Roscop is one of the world’s leading osteopaths. He created Aequil after treating more than ten thousand patients and recovering from long-term illness himself. Aequil is the result of twenty-seven years of clinical experience, ten years of scientific research, and five years of testing. It was built to help you feel well and stay well.<\/p><p>Frédéric believes wellness is often mistaken for quick fixes or surface-level solutions. But true wellbeing goes deeper. It begins when your foundation works. When your essential systems and functions are supported and maintained, you feel balanced, cope with anything and perform at your best: physically, mentally and emotionally. Wellbeing is not a destination. It’s a dialogue. A dynamic journey that gives you the freedom to grow, adapt and become who you are meant to be.<\/p>",
+        "cta_text": "",
+        "cta_url": "shopify:\/\/pages\/frederic-says",
+        "image": "shopify:\/\/shop_images\/f.png"
+      }
+    },
+    "rkwo_highlight_points_WRtQkm": {
+      "type": "rkwo-highlight-points",
+      "blocks": {
+        "point_GQAaVq": {
+          "type": "point",
+          "settings": {
+            "point_heading": "ENERGY & CELLULAR",
+            "point_content": "Energy returns. You feel steady, recharged and clear.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_dVJbMY": {
+          "type": "point",
+          "settings": {
+            "point_heading": "MOOD & NERVOUS SYSTEM",
+            "point_content": "Mood feels stable. Sleep deepens. Mental clarity and emotional steadiness return.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_bafXQR": {
+          "type": "point",
+          "settings": {
+            "point_heading": "DIGESTION & METABOLISM",
+            "point_content": "Digestion smooths. Cravings drop.  Bloating eases. Metabolism and collagen repair improve.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_jiY6CN": {
+          "type": "point",
+          "settings": {
+            "point_heading": "IMMUNE & LYMPHATIC",
+            "point_content": "You recover faster. Inflammation clears. Defence and detox improve.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_e9TfpW": {
+          "type": "point",
+          "settings": {
+            "point_heading": "HORMONES & REPRODUCTIVE",
+            "point_content": "Hormones rebalance. Cycles and fertility improve.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_eJiFJV": {
+          "type": "point",
+          "settings": {
+            "point_heading": "FOCUS & COGNITION",
+            "point_content": "You feel focused, sharp and clear. Memory and decision-making return with ease.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        },
+        "point_wk4kdr": {
+          "type": "point",
+          "settings": {
+            "point_heading": "HYDRATION",
+            "point_content": "Cells rehydrate and function better. Every system is more balanced, responsive and efficient.",
+            "point_cta_text": "",
+            "point_cta_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "point_GQAaVq",
+        "point_dVJbMY",
+        "point_bafXQR",
+        "point_jiY6CN",
+        "point_e9TfpW",
+        "point_eJiFJV",
+        "point_wk4kdr"
+      ],
+      "name": "RKWO Highlight Points",
+      "settings": {
+        "heading": "THE BENEFITS OF BALANCE",
+        "content": "<p>When your systems are supported, your body returns to dynamic balance and can work as one.<\/p>",
+        "cta_text": "Reset Now",
+        "cta_url": "shopify:\/\/products\/the-daily-aequil",
+        "image": "shopify:\/\/shop_images\/aequilv.svg"
+      }
+    },
+    "slideshow_BqpRbK": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_JhQ3K3": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/9.jpg",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        }
+      },
+      "block_order": [
+        "slide_JhQ3K3"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "rkwo_heading_text_ahDDJG": {
+      "type": "rkwo-heading-text",
+      "name": "RKWO Heading Text",
+      "settings": {
+        "heading": "Our AEQUIL Products",
+        "content": "<p>AEQUIL meet you where you are. By offering dynamised solutions that cleanse, nourish, maintain and support the foundations of your health. Our range is simple. RESET removes toxicity. RECHARGE restores what is missing. MAINTAIN keeps your systems balanced. PLUS supports specific needs like sleep, mood, energy and immunity. We offer two delivery formats; fast acting dynamized supplements, and slow release patches for daily support.<\/p>",
+        "cta_text": "SHOP OUR PRODUCTS",
+        "cta_url": "shopify:\/\/collections\/products"
+      }
+    },
+    "featured_collection_zjLXT4": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "products",
+        "products_to_show": 4,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rkwo_image_text_h_cta_3UM8GD": {
+      "type": "rkwo-image-text-h-cta",
+      "name": "RKWO Image Text H-CTA",
+      "settings": {
+        "heading": "Liquid Intelligence™",
+        "heading2": "WHAT IS LIQUID INTELLIGENCE?",
+        "content": "<p>Liquid Intelligence™ is Aequil’s double patented process and technology. Created through electro-vibration using low-frequency, low-energy inputs, this process produces structured, dynamized water that is combined with botanicals, vitamins, minerals and electrolytes. The entire solution is electro-vibrated together as a single formulation. It is meticulously formulated to mimic the natural composition of water within the human body, ensuring seamless and effective integration at the deepest cellular level.<\/p><p>Each dynamized solution created with Liquid Intelligence™ is designed to support the body’s essential systems and functions across Body, Mind, Energy. These include the brain, heart, digestive and urogenital systems, as well as the immune and lymphatic systems, and the essential dynamized hydration of every cell. This hydration occurs within the cell and is foundational to wellbeing. Dynamized hydration is what allows each cell to function at its best, which in turn supports the balance of all systems and functions. These systems are deeply interconnected. By restoring their relationship through cellular-level hydration and vibrational balance, Liquid Intelligence™ helps the body return to a state of dynamic balance and performance<\/p><p>It forms the foundation of The Aequil Reset (both deep and daily), a structured journey that includes products to cleanse, nourish and maintain the body’s internal balance. This reset enables individuals not only to feel better, but to stay in balance, handle stress, and grow through life’s challenges as their true self.<\/p>",
+        "cta_text": "SHOP NOW",
+        "cta_url": "shopify:\/\/collections\/products",
+        "cta_text2": "Discover the Range",
+        "cta_url2": "shopify:\/\/collections\/products",
+        "image": "shopify:\/\/shop_images\/IMG_0619_2.jpg"
+      }
+    },
+    "custom_liquid_rAa3fx": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n    .testimonial-wrapper {\n        overflow: hidden;\n        position: relative;\n    }\n\n    .testimonial-slider {\n        display: flex;\n        gap: 20px;\n        overflow-x: auto;\n        scroll-behavior: smooth;\n        -webkit-overflow-scrolling: touch;\n        padding: 20px;\n        cursor: grab;\n\n        scrollbar-width: none;       \/* Firefox *\/\n        -ms-overflow-style: none;    \/* IE 10+ *\/\n    }\n    .testimonial-slider::-webkit-scrollbar {\n        display: none;               \/* Chrome, Safari, Opera *\/\n    }\n\n    .testimonial-slider:active {\n        cursor: grabbing;\n    }\n    .testimonial-card {\n        flex: 0 0 320px;\n        padding: 40px;\n        border-radius: 12px;\n        color: #fff;\n        font-family: ';\n        min-height: 300px;\n        box-sizing: border-box;\n        display: flex;\n        flex-direction: column;\n        justify-content: flex-start;\n    }\n\n    .testimonial-card p {\n        color: #ffffff !important;\n        line-height: 1.5;\n        font-size: 14px;\n        font-family: 'Endurance Pro', sans-serif !important;\n        font-weight: 300;\n    }\n\n    .testimonial-card strong {\n        font-size: 14px;\n        font-family: 'Endurance Pro', sans-serif !important;\n        font-weight: 400;\n    }\n\n    .stars {\n        width: 122px;\n        height: 28px;\n        margin-bottom: 15px;\n        background-repeat: no-repeat;\n        background-size: contain;\n        background-position: center;\n        display: block !important;\n    }\n\n    .testimonial-card.light-blue .stars {\n        background-image: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0652\/1860\/9385\/files\/Stars-white.png?v=1749731279');\n    }\n\n    .testimonial-card.dark-blue .stars {\n        background-image: url('https:\/\/cdn.shopify.com\/s\/files\/1\/0652\/1860\/9385\/files\/Stars-white.png?v=1749731279');\n    }\n\n    .testimonial-card.light-blue {\n        background-color: #6f9fcf;\n    }\n\n    .testimonial-card.dark-blue {\n        background-color: #416fa3;\n    }\n\n    @media (max-width: 480px) {\n        .testimonial-card {\n            flex: 0 0 85%;\n        }\n    }\n<\/style>\n<div class=\"testimonial-wrapper\">\n    <div class=\"testimonial-slider\" id=\"testimonialSlider\">\n        <div class=\"testimonial-card light-blue\">\n            <div class=\"stars\"><\/div>\n            <p>Had my doubts, but it helped my sleep and digestion more than anything else I have tried.<\/p>\n            <strong>&mdash; Ravi K.<\/strong>\n        <\/div>\n\n        <div class=\"testimonial-card dark-blue\">\n            <div class=\"stars\"><\/div>\n            <p>Frederic has helped me more in two months than years of appointments elsewhere. I feel like myself again.<\/p>\n            <strong>&mdash; Isla P.<\/strong>\n        <\/div>\n\n        <div class=\"testimonial-card light-blue\">\n            <div class=\"stars\"><\/div>\n            <p>You can tell this has been created by someone who understands real illness. I trust it completely.<\/p>\n            <strong>&mdash; Greg S.<\/strong>\n        <\/div>\n\n        <div class=\"testimonial-card dark-blue\">\n            <div class=\"stars\"><\/div>\n            <p>I have tried so many things. This is the only one that helped all levels of how I feel.<\/p>\n            <strong>&mdash; Henrietta V.<\/strong>\n        <\/div>\n\n\n        <div class=\"testimonial-card light-blue\">\n            <div class=\"stars\"><\/div>\n            <p>This was recommended by a friend and I didn't expect much. I was wrong. It was outstanding.<\/p>\n            <strong>&mdash; Lina R.<\/strong>\n        <\/div>\n\n        <div class=\"testimonial-card dark-blue\">\n            <div class=\"stars\"><\/div>\n            <p>Aequil and The Reset have completely changed how I feel in my own body. More grounded, more present.<\/p>\n            <strong>&mdash; Emma C.<\/strong>\n        <\/div>\n\n\n        <div class=\"testimonial-card light-blue\">\n            <div class=\"stars\"><\/div>\n            <p>There’s something subtle but brilliant about how Reset works. It's not a jolt of energy or a sudden change, more like a gradual realignment?<\/p>\n            <strong>&mdash; Alyssa H.<\/strong>\n        <\/div>\n\n        <div class=\"testimonial-card dark-blue\">\n            <div class=\"stars\"><\/div>\n            <p>Really impressed. The effect is gentle but powerful. It helped me reset completely after burnout.<\/p>\n            <strong>&mdash; Marcus D.<\/strong>\n        <\/div>\n        \n        <div class=\"testimonial-card light-blue\">\n            <div class=\"stars\"><\/div>\n            <p>Simple to use, and the impact has been lasting. I am doing less, but feeling more balanced.<\/p>\n            <strong>&mdash; Noor A.<\/strong>\n        <\/div>\n    <\/div>\n<\/div>\n\n<script>\n    \/\/ Center slider on load\n    window.addEventListener('load', () => {\n        const slider = document.getElementById('testimonialSlider');\n        const totalWidth = slider.scrollWidth;\n        const visibleWidth = slider.offsetWidth;\n        slider.scrollLeft = (totalWidth - visibleWidth) \/ 2;\n    });\n\n    \/\/ Enable drag-to-scroll on desktop\n    (function() {\n        const slider = document.getElementById('testimonialSlider');\n        let isDown = false;\n        let startX;\n        let scrollLeft;\n\n        slider.addEventListener('mousedown', (e) => {\n            isDown = true;\n            slider.classList.add('dragging');\n            startX = e.pageX - slider.offsetLeft;\n            scrollLeft = slider.scrollLeft;\n        });\n\n        slider.addEventListener('mouseleave', () => {\n            isDown = false;\n            slider.classList.remove('dragging');\n        });\n\n        slider.addEventListener('mouseup', () => {\n            isDown = false;\n            slider.classList.remove('dragging');\n        });\n\n        slider.addEventListener('mousemove', (e) => {\n            if (!isDown) return;\n            e.preventDefault();\n            const x = e.pageX - slider.offsetLeft;\n            const walk = (x - startX) * 1.2;\n            slider.scrollLeft = scrollLeft - walk;\n        });\n    })();\n<\/script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "1748782285167ab2f6": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_j498A7": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "<a href=\"https:\/\/www.instagram.com\/aequil\/\" target=\"_blank\">Follow us @AEQUIL<\/a>",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 100,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "center",
+            "link_color": "#000000",
+            "background_color": "#ffffff",
+            "feed_id": "",
+            "html_area": "<style>\n#insta-feed h2 a {\ncolor: inherit;\n}\n#insta-feed h2 {\nfont-weight:300 !important;\ntext-align: center;\ntext-transform: uppercase;\n}\n\n<\/style>"
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_j498A7"
+      ],
+      "custom_css": [
+        ".insta-feed {margin-top: 0; padding-top: 0;}"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "custom_liquid_dEQjHx": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div style=\"display: flex; justify-content: center; align-items: center;\">\n  <img \n    src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0652\/1860\/9385\/files\/BeAequil-Icon-Simple_1.gif?v=1744633705\" \n    alt=\"AEQUIL animated logo\" \n    style=\"max-width: 300px; width: 80vw; aspect-ratio: 1\/1; object-fit: contain;\"\n  >\n<\/div>",
+        "color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_NrcBYP": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<p class=\"aequil-subtext\">\n  Everything starts with your foundations. That’s where we start, too.\n<\/p>",
+        "color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_Wy48eA": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"aequil-two-col\">\n  <div>\n    <img \n      src=\"{{ 'splash-water.jpg' | asset_url }}\" \n      alt=\"Person splashing water on their face at sunset\" \n    \/>\n  <\/div>\n  <div class=\"aequil-bodycopy\">\n    <p>\n      At the core of every product is our double-patented Liquid Intelligence™ process and technology. \n      It uses structured, dynamized water designed to mirror the water inside your cells, helping \n      support balance across your essential systems and functions.\n    <\/p>\n    <p>\n      That’s why at Aequil we specialise in rebuilding what everything else depends on, your foundations. \n      Because the right foundations are a fundamental component of wellbeing.\n    <\/p>\n  <\/div>\n<\/div>",
+        "color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_akX9xN": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"aequil-bodycopy\">\n  <p>\n    At the core of every product is our double patented Liquid Intelligence™\n    process and technology. It uses structured, dynamized water designed to\n    mirror the water inside your cells, helping support balance across your\n    essential systems and functions.\n  <\/p>\n  <p>\n    That is why at Aequil we specialise in rebuilding what everything else\n    depends on, your foundations. That’s it. Because the right foundations are\n    a fundamental component of wellbeing.\n  <\/p>\n<\/div>",
+        "color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "video_AkzXTb": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/Aequil LP (2).mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_88eFRq": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screenshot_2024-01-25_at_09.30.13.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "collapsible_content_FdtWNg": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_wUcQ4X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CREATED BY FRÈDÈRIC ROSCOP",
+            "icon": "check_mark",
+            "row_content": "<p>Aequil is the vision of Frédéric Roscop, UK Osteopath of the Year 2024 and founder of the Aequil Practice in Knightsbridge. Born with synaesthesia, his heightened sensitivity gave him a unique ability to understand the body, mind, and energy. After overcoming chronic health challenges, including Lyme disease, Frédéric spent decades researching how to treat the root causes of imbalance. His breakthrough came by bringing energetic understanding into the heart of healing. For over 25 years, he’s helped thousands of people restore their foundation and find lasting wellbeing.<\/p><p>An experienced osteopath, complementary medicine practitioner, quantum biologist, and researcher at Aequil Science, Frédéric built Aequil to share what he’s learned and lived.<\/p><p>“This is about transformation, from the foundations up.” – Frédéric Roscop<\/p><p><\/p><p>Book an appointment at <a href=\"https:\/\/www.aequilpractice.com\" target=\"_blank\" title=\"https:\/\/www.aequilpractice.com\">ROSCOP PRACTICE<\/a><\/p><p><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_mAFKWx": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "DYNAMIZED WATER",
+            "icon": "check_mark",
+            "row_content": "<p>Dynamized Water is structured water that has been activated using AEQUIL’s low-frequency, low-energy electro-vibration process. It mirrors the natural state of water found in healthy human cells and forms the foundation of every Liquid Intelligence™ formula.<\/p><p>This type of water supports hydration, cognitive function, detoxification and cellular communication. It helps the body absorb and deliver nutrients more effectively, and improves how signals flow between cells.<\/p><p>Dynamized Water goes beyond simple hydration. It contributes to internal balance and adaptability by supporting the body’s ability to regulate itself. Frédéric Roscop describes it as a global internal network, where water acts as a medium for clarity, awareness and physiological stability.<\/p><p>Developed using Aquantum Technology and protected by two patents, Dynamized Water represents a new way for supplements to interact with the body. It is the core of the AEQUIL Reset, helping support your systems, functions and energy through a smarter, more responsive approach to delivery.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7N4yk8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "LIQUID INTELLIGENCE",
+            "icon": "check_mark",
+            "row_content": "<p>Liquid Intelligence™ is AEQUIL’s double patented process and technology. It combines structured, dynamized water with botanicals, vitamins, minerals and electrolytes. This formulation is activated using low-frequency, low-energy electro-vibration and mirrors the structure of water found in human cells. By doing so, it ensures seamless and effective integration at the deepest cellular level, optimising the supplement’s impact.<br\/><br\/>Liquid Intelligence™ is designed to target your body’s four essential systems and functions. These include the heart, brain, digestive and urogenital systems, along with the kidneys, reproductive system, lymphatic and immune systems, and your cells. All are deeply connected and rely on structured, dynamized water to work together. By restoring this connection, Liquid Intelligence™ helps bring your body back into balance, supporting optimal health.<br\/><br\/>This process forms the foundation of The Aequil Reset, a structured two-month journey created to help rebalance the body from within. More than just a delivery method, Liquid Intelligence™ reflects a new way of thinking about supplements. It supports your body’s natural ability to heal and helps create lasting change.<br\/><br\/>Our bodies are made up of around 60 percent water by weight, and 99 percent of our molecules are water. Liquid Intelligence™ is built on this truth. By aligning with the water already in your body, it enhances nutrient absorption, supports communication between cells and encourages repair. This creates the conditions for clarity, resilience and vitality at every level.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QERFey": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "BODY MIND ENERGY",
+            "icon": "check_mark",
+            "row_content": "<p><em><strong>Wellbeing is more than just being well.- <\/strong><\/em>Frédéric Roscop<\/p><p>There are three core interconnected foundations: your body, mind and energy.<br\/><br\/>Your body moves you through the world.<br\/><br\/>Your mind helps you make sense of it.<br\/><br\/>Your energy connects it all.<\/p><p>When one is out of balance, the others feel it. That’s why Aequil works across all three, helping your body, mind and energy reset together.<\/p><p>This balance is not a fixed state, but a dynamic one. It helps you adapt, move through challenges and feel more connected to yourself and the world around you.<\/p><p>This is our definition of wellbeing. And it’s what every Aequil product is designed to support.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_MJnrni": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHY RESET?",
+            "icon": "check_mark",
+            "row_content": "<p>You deserve to be well. To feel like yourself. To stop chasing symptoms and start reconnecting with your foundation.<\/p><p>That’s why we created The Aequil Reset: a two-month, three-part system that supports your body’s essential systems and functions. Based on over 26 years of patient-led insight, and developed through AEQUIL Science’s double patented Liquid Intelligence™ process, this is a reset designed to work with your biology, not against it.<\/p><p>We use structured, dynamized water to activate each formula at a deep level. This is how we reach the root cause. Not with another pill, but with a process. Not to add more to your routine, but to give your body what it truly needs to begin again.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_47frqR": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "FIXING YOUR FOUNDATIONS",
+            "icon": "check_mark",
+            "row_content": "<p>The right foundations are the starting point of wellbeing.<\/p><p>They support your body’s ability to adapt, unwind and repair, helping you respond to stress and return to a balanced state. Without strong foundations, your body struggles to self-regulate or function as it should.<\/p><p>Your <strong>four essential systems and functions- <\/strong>brain, heart, digestive and urogenital- work together with your immune, lymphatic and cellular networks. These are not separate systems. They are deeply interconnected and rely on water to communicate and function as one.<\/p><p>Our bodies are made mostly of water. Over 60 percent of your body weight is water and 99 percent of your molecules are water. That is why the <strong>state of your internal water<\/strong> matters.<\/p><p>At AEQUIL, we use a double patented process and technology called Liquid Intelligence™. It helps restore the water inside your cells to its natural, dynamized state. This supports how your cells work and how your systems connect, so your foundations can be rebuilt from within.<\/p><p>When your foundations are in balance, your body, mind and energy can function in harmony. This is what makes a reset so powerful. It creates the conditions you need to grow physically, mentally, emotionally and spiritually, and to feel well over the long term.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_wUcQ4X",
+        "collapsible_row_mAFKWx",
+        "collapsible_row_7N4yk8",
+        "collapsible_row_QERFey",
+        "collapsible_row_MJnrni",
+        "collapsible_row_47frqR"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "WHY AEQUIL?",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collapsible_content_NjhPq7": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_JcwxjX": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW TO USE",
+            "icon": "check_mark",
+            "row_content": "<p><em>Practical guidance for day-to-day use of Aequil products.<\/em><\/p><p><strong>Can I drink the supplement undiluted?<br\/><\/strong>Yes. It may taste bitter for some. If so, mix with your favourite juice or water.<\/p><p><strong>Can I mix supplements with tea or smoothies?<br\/><\/strong>Yes. You can mix them into water, tea, juice or smoothies. Just shake or stir well before drinking.<\/p><p><strong>Can I take 10ml at once instead of two 5ml doses?<br\/><\/strong>Yes, but we recommend two 5ml doses for best results.<\/p><p><strong>Should I refrigerate Aequil products?<br\/><\/strong>No. Store at room temperature, away from sunlight and heat.<\/p><p><strong>Can I take multiple Aequil products at once?<br\/><\/strong>Yes. Our products are designed to work together as a system.<\/p><p><strong>Can I take Aequil longer than the reset period?<br\/><\/strong>Yes. Many people continue using our products beyond the Signature Freedom System for ongoing support.<\/p><p><strong>Can I take it on a plane?<br\/><\/strong>The full bottle is 300ml, so we recommend transferring it to a smaller, food-grade container if flying. Patches are safe to carry and wear while travelling.<\/p><p><strong>How should I shake the product?<br\/><\/strong>Shake the supplement bottle for 5 seconds before use. If mixing with another drink, shake or stir again.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Mbwwkd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": " THE RESET PROCESS",
+            "icon": "check_mark",
+            "row_content": "<p><em>How the Signature Freedom System works and what to expect.<\/em><\/p><p><strong>What is the Signature Freedom System?<br\/><\/strong>It is a structured two-month programme that helps your body, mind and energy reset together. It includes three phases: Reset, Recharge and Maintain.<\/p><p><strong>Why is it called a reset or a rebirth?<br\/><\/strong>Our system helps clear what no longer serves you and builds new foundations. Many describe it as starting over, from a clearer, more balanced place.<\/p><p><strong>Can I change the frequency or dose?<br\/><\/strong>Always follow the recommended schedule. If needed, you can reduce the dose temporarily during detox. Return to the full schedule when ready.<\/p><p><strong>Why do I feel tired or worse during the process?<br\/><\/strong>Detoxing can temporarily affect your energy. It means your body is clearing what it no longer needs. This is normal, but listen to your body.<\/p><p><strong>Why do I feel exhausted after the reset?<br\/><\/strong>As your system clears toxins, it may take a moment to adjust. Give yourself time to feel the difference.<\/p><p><strong>What if detox feels too strong?<br\/><\/strong>Pause for five days. You can restart with a lower dose, then gradually return to the schedule. If discomfort persists, contact us.<\/p><p><strong>What should I eat during the reset?<br\/><\/strong>Eat as usual, but reducing sugar, alcohol, gluten and heavy foods may help your body respond more easily.<\/p><p><strong>Do I still need other supplements?<br\/><\/strong>Aequil is designed to support your full system, so additional supplements are often not needed unless advised by a professional.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_eqKMiB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "SAFETY AND SUITABILITY",
+            "icon": "check_mark",
+            "row_content": "<p><em>Who it’s for, when to take it, and what to be aware of.<\/em><\/p><p><strong>Can I use Aequil while pregnant or breastfeeding?<br\/><\/strong>Speak to a healthcare professional before use.<\/p><p><strong>Can children use Aequil?<br\/><\/strong>Yes. Our supplements, patches and sound tools are.<\/p><p><strong>Is Aequil safe for professional athletes?<br\/><\/strong>Yes. Our formulations are designed to support performance and recovery.<\/p><p><strong>Can I overdose on Aequil?<br\/><\/strong>No, but detoxing too quickly can cause discomfort. Adjust your dose if needed.<\/p><p><strong>Are there any artificial ingredients or toxins?<br\/><\/strong>No. We use only the minimum amount of preservative to ensure stability. All ingredients are non-toxic.<\/p><p><strong>What if I get the solution in my eyes or a patch irritates my skin?<br\/><\/strong>Rinse your eyes with water. If skin irritation occurs, remove the patch and wash the area. Check ingredients if you have allergies.<\/p><p><strong>Can Liquid Intelligence be affected by medical implants or metal fillings?<br\/><\/strong>It may be less effective for people with pacemakers, copper IUDs or metal plates, though it remains safe to use.<\/p><p><strong>Do I need to believe in the product for it to work?<\/strong>No. You only need to commit to the journey.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_e9JkNe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "SCIENCE AND STORY",
+            "icon": "check_mark",
+            "row_content": "<p><em>The thinking, research and technology behind Aequil.<\/em><\/p><p><strong>What is Liquid Intelligence?<br\/><\/strong>It is our patented biotechnology that restructures water, then blends it with nutrients to support your body, mind and energy at a cellular level.<\/p><p><strong>What is dynamized water?<br\/><\/strong>It is water treated to mimic how water naturally behaves in your body, helping cells resonate at the right frequency.<\/p><p><strong>What are the four essential systems?<br\/><\/strong>We focus on four key areas: clarity, energy, immunity and emotional balance. Our system is designed to support them all.<\/p><p><strong>When was Liquid Intelligence created?<br\/><\/strong>It was developed in 2016, based on over two decades of research and clinical insight.<\/p><p><strong>Why is there no alcohol in the products?<br\/><\/strong>So that everyone, regardless of age, background or beliefs, can benefit from Aequil.<\/p><p><strong>Who is Frédéric Roscop?<\/strong>Frédéric is the founder of Aequil, a UK Osteopath of the Year, and a quantum biologist with over 25 years of experience in wellbeing.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_JcwxjX",
+        "collapsible_row_Mbwwkd",
+        "collapsible_row_eqKMiB",
+        "collapsible_row_e9JkNe"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "FAQs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "color_scheme": "scheme-97017b6a-3e7c-4963-be9a-76b577556b34",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1748780051d88e1f12": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_carousel_section_VbEnnm": {
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "max_width": 1920,
+            "text_color": "#000000",
+            "background_color": "#ffffff",
+            "arrows_color": "#000000",
+            "dots_color": "#000000",
+            "button_color": "#000000",
+            "show_more": true,
+            "only_photos": false,
+            "use_widget_font": true,
+            "product_handle": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_carousel_section_VbEnnm"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17487800656682da25": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_WBHzPx": {
+          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-agg-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_WBHzPx"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "rkwo_hero_rdceqU",
+    "custom_liquid_rMXKd7",
+    "rkwo_video_text_aCHKL7",
+    "rkwo_pagebreak_cta_Kb78Hd",
+    "rkwo_highlight_points_LeM8CW",
+    "rkwo_text_image_highlight_rngncc",
+    "rkwo_highlight_points_WRtQkm",
+    "slideshow_BqpRbK",
+    "rkwo_heading_text_ahDDJG",
+    "featured_collection_zjLXT4",
+    "rkwo_image_text_h_cta_3UM8GD",
+    "custom_liquid_rAa3fx",
+    "1748782285167ab2f6",
+    "custom_liquid_dEQjHx",
+    "custom_liquid_NrcBYP",
+    "custom_liquid_Wy48eA",
+    "custom_liquid_akX9xN",
+    "video_AkzXTb",
+    "image_banner_88eFRq",
+    "collapsible_content_FdtWNg",
+    "collapsible_content_NjhPq7",
+    "1748780051d88e1f12",
+    "17487800656682da25"
+  ]
+}
