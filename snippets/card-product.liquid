@@ -747,6 +747,21 @@
     opacity: 1 !important;
   }
 
+  /* Disable window scroll when hovering over card */
+  .card-wrapper:hover {
+    overflow: hidden;
+  }
+
+  /* Prevent scroll chaining to window */
+  .card-hover-overlay {
+    overscroll-behavior: contain;
+  }
+
+  .card-hover-content {
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
   /* Override existing hover effects to prevent images from having 0 opacity */
   .card-wrapper:hover .media.media--hover-effect > img:first-child:not(:only-child) {
     opacity: 1 !important;
@@ -777,3 +792,27 @@
     }
   }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cardWrappers = document.querySelectorAll('.card-wrapper');
+
+  cardWrappers.forEach(card => {
+    const overlay = card.querySelector('.card-hover-overlay');
+    if (!overlay) return;
+
+    card.addEventListener('mouseenter', function() {
+      document.body.style.overflow = 'hidden';
+    });
+
+    card.addEventListener('mouseleave', function() {
+      document.body.style.overflow = '';
+    });
+
+    // Prevent scroll on overlay content
+    overlay.addEventListener('wheel', function(e) {
+      e.stopPropagation();
+    });
+  });
+});
+</script>
