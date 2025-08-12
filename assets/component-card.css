@@ -665,7 +665,7 @@
   display: none;
 }
 
-/* Hide all card content for hover overlay cards */
-.has-hover-overlay .card__content {
+/* Hide card content for ratio cards with hover overlay */
+.has-hover-overlay .ratio .card__content {
   display: none;
 }
