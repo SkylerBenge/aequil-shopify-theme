@@ -2454,7 +2454,7 @@ input[type='checkbox'] {
 }
 
 .header .list-menu.list-menu--inline {
-  margin-top: 0;
+  margin: .5rem 0;
 }
 
 .header *[tabindex='-1']:focus {
