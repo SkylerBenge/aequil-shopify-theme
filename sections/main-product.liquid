@@ -856,18 +856,20 @@
           i.classList.remove('rkwo-active');
         });
 
-        // Toggle current
+                // Toggle current
         if (!isActive) {
           item.classList.add('rkwo-active');
 
-          // Smooth scroll to top of accordion
-          const accordion = document.querySelector('.rkwo-accordion');
-          if (accordion) {
-            accordion.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
+          // Wait for accordion to fully open (0.5s) then scroll
+          setTimeout(() => {
+            const accordion = document.querySelector('.rkwo-accordion');
+            if (accordion) {
+              accordion.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }, 500);
         }
       });
     });
