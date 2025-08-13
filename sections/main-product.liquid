@@ -856,11 +856,11 @@
           i.classList.remove('rkwo-active');
         });
 
-                // Toggle current
+                        // Toggle current
         if (!isActive) {
           item.classList.add('rkwo-active');
 
-          // Wait for accordion to fully open (0.5s) then scroll
+          // Start scrolling partway through the accordion animation for smoother feel
           setTimeout(() => {
             const accordion = document.querySelector('.rkwo-accordion');
             if (accordion) {
@@ -869,7 +869,7 @@
                 block: 'start'
               });
             }
-          }, 500);
+          }, 200);
         }
       });
     });
