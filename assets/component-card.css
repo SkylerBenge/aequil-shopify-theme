@@ -807,6 +807,12 @@
   gap: 5px;
   z-index: 15;
   pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide pills when hover overlay is active */
+.has-hover-overlay:hover .bottle-tags-container {
+  opacity: 0;
 }
 
 /* Bottle Tag Pill */
