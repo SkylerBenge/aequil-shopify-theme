@@ -590,16 +590,16 @@
     {%- endif -%}
 
     <!-- Bottle Tag Pills - Outside the card wrapper -->
-    {%- assign bottle_tag_count = 0 -%}
-    {%- for tag in card_product.tags -%}
-      {%- if tag contains 'bottle:' -%}
-        {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
-        <div class="bottle-tag-pill" style="top: {{ 10 | plus: bottle_tag_count | times: 25 }}px;">
-          {{ bottle_text }}
-        </div>
-        {%- assign bottle_tag_count = bottle_tag_count | plus: 1 -%}
-      {%- endif -%}
-    {%- endfor -%}
+    <div class="bottle-tags-container">
+      {%- for tag in card_product.tags -%}
+        {%- if tag contains 'bottle:' -%}
+          {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
+          <div class="bottle-tag-pill">
+            {{ bottle_text }}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
   </div>
 {%- else -%}
   {%- liquid
