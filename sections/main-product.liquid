@@ -826,12 +826,15 @@
   }
 
   .rkwo-accordion-content {
-    display: none;
-    padding: 0 0 1rem 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.5s ease, padding 0.5s ease;
   }
 
   .rkwo-accordion-item.rkwo-active .rkwo-accordion-content {
-    display: block;
+    max-height: 500px;
+    padding: 0 0 1rem 0;
   }
 
   .rkwo-accordion-item.rkwo-active .rkwo-accordion-button .rkwo-icon {
@@ -851,13 +854,11 @@
         // Close all
         items.forEach(i => {
           i.classList.remove('rkwo-active');
-          i.querySelector('.rkwo-accordion-content').style.display = 'none';
         });
 
         // Toggle current
         if (!isActive) {
           item.classList.add('rkwo-active');
-          item.querySelector('.rkwo-accordion-content').style.display = 'block';
         }
       });
     });
