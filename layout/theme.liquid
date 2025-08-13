@@ -70,9 +70,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {%- endif %}
         .color-{{ scheme.id }} {
           --color-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-
-          --gradient-background: {{ scheme.settings.background_gradient }};
-
+          --gradient-background: {{ scheme.settings.background }};
 
         {% liquid
           assign background_color = scheme.settings.background
