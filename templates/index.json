@@ -13,11 +13,11 @@
       "type": "rkwo-hero",
       "name": "RKWO Hero",
       "settings": {
-        "heading": "NOT A SUPPLEMENT. A HOLISTIC SOLUTION.",
-        "content": "<p>Aequil offers biotech health solutions powered by our double patent-pending technology, Liquid Intelligence™—a precise combination of structured, dynamized water with botanicals, minerals, vitamins and electrolytes. Every formula is engineered to support the essential systems that regulate how you feel, think and function, enabling you to perform at your best physically, mentally, spiritually and emotionally—so you can cope with anything and thrive.</p>",
+        "heading": "Everything is connected",
+        "content": "<p>Your gut, your brain, your immune system, your emotions - when one part is out of sync, the whole body feels it. AEQUIL is a biotech health system that helps you reset the foundation of your wellbeing - restoring rhythm, energy, and coherence between body, mind, energy.</p>",
         "highlight": "<p><strong>Trusted by +10,000 customers</strong></p>",
         "image": "shopify://shop_images/IMG_5414_2.jpg",
-        "link_text": "What kind of reset does your body need?",
+        "link_text": "Discover Your Personalised Reset",
         "link_url": "shopify://pages/quiz"
       }
     },
