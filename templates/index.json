@@ -18,7 +18,9 @@
         "highlight": "<p><strong>Trusted by +10,000 customers</strong></p>",
         "image": "shopify://shop_images/IMG_5414_2.jpg",
         "link_text": "Discover Your Personalised Reset",
-        "link_url": "shopify://pages/quiz"
+        "link_url": "shopify://pages/quiz",
+        "link_text_2": "Shop The Range",
+        "link_url_2": "shopify://collections/products"
       }
     },
     "custom_liquid_rMXKd7": {
