@@ -84,6 +84,20 @@
               </div>
             </div>
           {%- endunless -%}
+
+          <!-- Bottle Tag Pills for Featured Product -->
+          {%- unless placeholder -%}
+            <div class="bottle-tags-container">
+              {%- for tag in product.tags -%}
+                {%- if tag contains 'bottle:' -%}
+                  {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
+                  <div class="bottle-tag-pill">
+                    {{ bottle_text }}
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endunless -%}
         </div>
         <div class="product__info-wrapper grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           <section
