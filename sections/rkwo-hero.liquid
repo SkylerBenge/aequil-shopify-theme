@@ -33,11 +33,18 @@
           {{ content }}
         </div>
       {%- endif -%}
-      {%- if section.settings.link_url != blank and section.settings.link_text != blank -%}
+      {%- if section.settings.link_url != blank and section.settings.link_text != blank or section.settings.link_url_2 != blank and section.settings.link_text_2 != blank -%}
         <div class="rkwo-hero-content-link">
-          <a href="{{ section.settings.link_url }}" class="rkwo-hero-link">
-            {{ section.settings.link_text }}
-          </a>
+          {%- if section.settings.link_url != blank and section.settings.link_text != blank -%}
+            <a href="{{ section.settings.link_url }}" class="rkwo-hero-link rkwo-hero-link-primary">
+              {{ section.settings.link_text }}
+            </a>
+          {%- endif -%}
+          {%- if section.settings.link_url_2 != blank and section.settings.link_text_2 != blank -%}
+            <a href="{{ section.settings.link_url_2 }}" class="rkwo-hero-link rkwo-hero-link-secondary">
+              {{ section.settings.link_text_2 }}
+            </a>
+          {%- endif -%}
         </div>
       {%- endif -%}
   </div>
@@ -98,12 +105,14 @@
 
   .rkwo-hero-content-link {
     margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .rkwo-hero-link {
     display: inline-block;
-    background-color: #6f9fcf;
-    color: white;
     padding: 12px 24px;
     border-radius: 25px;
     text-decoration: none;
@@ -111,10 +120,29 @@
     font-weight: 400;
     font-size: 16px;
     transition: all 0.3s ease;
+    border: 2px solid #6f9fcf;
   }
 
-  .rkwo-hero-link:hover {
+  .rkwo-hero-link-primary {
+    background-color: #6f9fcf;
+    color: white;
+  }
+
+  .rkwo-hero-link-primary:hover {
     background-color: #5a8bb8;
+    border-color: #5a8bb8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
+  }
+
+  .rkwo-hero-link-secondary {
+    background-color: transparent;
+    color: #6f9fcf;
+  }
+
+  .rkwo-hero-link-secondary:hover {
+    background-color: #6f9fcf;
+    color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
   }
