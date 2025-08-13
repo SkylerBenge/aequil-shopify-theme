@@ -33,6 +33,13 @@
           {{ content }}
         </div>
       {%- endif -%}
+      {%- if section.settings.link_url != blank and section.settings.link_text != blank -%}
+        <div class="rkwo-hero-content-link">
+          <a href="{{ section.settings.link_url }}" class="rkwo-hero-link">
+            {{ section.settings.link_text }}
+          </a>
+        </div>
+      {%- endif -%}
   </div>
   <div class="rkwo-hero-gradient"></div>
 </section>
@@ -89,6 +96,29 @@
     height: auto;
   }
 
+  .rkwo-hero-content-link {
+    margin-top: 30px;
+  }
+
+  .rkwo-hero-link {
+    display: inline-block;
+    background-color: #6f9fcf;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Endurance Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .rkwo-hero-link:hover {
+    background-color: #5a8bb8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
+  }
+
   .rkwo-hero-gradient {
     content: '';
     position: absolute;
@@ -100,13 +130,13 @@
     background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(69,66,62,0) 50%,rgba(137,131,123,1) 100%);
     z-index: 1;
   }
-  
+
   @media (max-width: 1700px) {
-     
+
   }
-  
+
   @media (max-width: 1024px) {
-    
+
   }
 
   @media (max-width: 768px) {
@@ -150,7 +180,7 @@
       filter: brightness(0);
     }
   }
-  
+
   @media (max-width: 480px) {
     .rkwo-hero-mobile-image {
       min-height: 250px;
@@ -163,7 +193,7 @@
       padding: 35px 25px;
     }
   }
-  
+
   @media (max-width: 360px) {
     .rkwo-hero-content-highlight span img {
       width: 22vw;
@@ -180,7 +210,7 @@
   "settings": [
     {
       "type": "text",
-      "id": "heading", 
+      "id": "heading",
       "label": "Main Heading",
       "default": "Heading"
     },
@@ -192,7 +222,7 @@
     },
     {
       "type": "richtext",
-      "id": "highlight", 
+      "id": "highlight",
       "label": "Highlight",
       "default": "<p>Enter a highlight</p>"
     },
