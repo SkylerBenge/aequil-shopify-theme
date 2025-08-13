@@ -51,10 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
           e.preventDefault();
 
           const content = this.getAttribute('data-content');
+          const title = this.getAttribute('data-product-title');
           const lightbox = document.getElementById('mobile-lightbox');
           const textContainer = document.getElementById('mobile-lightbox-text');
+          const titleContainer = document.getElementById('mobile-lightbox-title');
 
-          if (content && lightbox && textContainer) {
+          if (content && lightbox && textContainer && titleContainer) {
+            titleContainer.innerHTML = title || '';
             textContainer.innerHTML = content;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
