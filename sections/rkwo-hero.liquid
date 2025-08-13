@@ -13,7 +13,7 @@
     <div class="rkwo-hero-content">
       {%- if highlight != blank -%}
         <div class="rkwo-hero-content-highlight">
-          <span><img src="https://cdn.shopify.com/s/files/1/0652/1860/9385/files/Stars-white.png" alt="Stars" /></span><span>{{ highlight }}</span>
+          <span><img src="https://cdn.shopify.com/s/files/1/0652/1860/9385/files/Stars-white.png" alt="Stars" width="100" height="20" /></span><span>{{ highlight }}</span>
         </div>
       {%- endif -%}
       {%- if heading != blank -%}
@@ -231,6 +231,17 @@
       "id": "image",
       "label": "Section Image",
       "info": "Upload an image"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
     }
   ],
   "presets": [
