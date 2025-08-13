@@ -625,6 +625,27 @@
   max-width: 90%;
   height: 100%;
   overflow: scroll;
+  /* Light grey scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #d3d3d3 transparent;
+}
+
+/* Webkit scrollbar styling for light grey */
+.has-hover-overlay .card-hover-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar-thumb {
+  background-color: #d3d3d3;
+  border-radius: 3px;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar-thumb:hover {
+  background-color: #b8b8b8;
 }
 
 .has-hover-overlay:hover .card-hover-overlay {
