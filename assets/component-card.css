@@ -797,11 +797,20 @@
   }
 }
 
-/* Bottle Tag Pill */
-.bottle-tag-pill {
+/* Bottle Tag Pills Container */
+.bottle-tags-container {
   position: absolute;
   top: 10px;
   left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* Bottle Tag Pill */
+.bottle-tag-pill {
   background-color: #6f9fcf;
   color: white;
   padding: 4px 8px;
@@ -812,6 +821,4 @@
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  z-index: 15;
-  pointer-events: none;
 }
