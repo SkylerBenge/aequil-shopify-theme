@@ -582,7 +582,7 @@
       </div>
 
       <!-- Mobile Info Icon - Outside the card wrapper -->
-      <button class="mobile-info-icon" aria-label="Product information" data-product-id="{{ card_product.id }}" data-content="{{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' | escape }}">
+      <button class="mobile-info-icon" aria-label="Product information" data-product-id="{{ card_product.id }}" data-product-title="{{ card_product.title | escape }}" data-content="{{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' | escape }}">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15h-2v-6h2v6zm0-8h-2V5h2v2z" fill="currentColor"/>
         </svg>
