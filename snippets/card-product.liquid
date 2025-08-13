@@ -588,6 +588,17 @@
         </svg>
       </button>
     {%- endif -%}
+
+    <!-- Bottle Tag Pill - Outside the card wrapper -->
+    {%- for tag in card_product.tags -%}
+      {%- if tag contains 'bottle:' -%}
+        {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
+        <div class="bottle-tag-pill">
+          {{ bottle_text }}
+        </div>
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
   </div>
 {%- else -%}
   {%- liquid
