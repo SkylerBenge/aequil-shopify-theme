@@ -207,7 +207,7 @@
         "heading_alignment": "center",
         "layout": "section",
         "container_color_scheme": "scheme-5",
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
         "open_first_collapsible_row": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
