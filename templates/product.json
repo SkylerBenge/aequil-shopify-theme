@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -84,8 +93,8 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": false,
-        "video_url": "https:\/\/vimeo.com\/1097380718?share=copy#t=0",
-        "cover_image": "shopify:\/\/shop_images\/Screenshot_2025-06-30_at_01.42.45.png",
+        "video_url": "https://vimeo.com/1097380718?share=copy#t=0",
+        "cover_image": "shopify://shop_images/Screenshot_2025-06-30_at_01.42.45.png",
         "description": "",
         "full_width": false,
         "color_scheme": "",
@@ -98,7 +107,7 @@
       "name": "RKWO Product Image Points",
       "settings": {
         "heading": "{{ product.metafields.custom.rkwo_product_image_points_main_heading.value }}",
-        "image": "shopify:\/\/shop_images\/Clothing_Company_GoDaddy_Store_Image_1.png"
+        "image": "shopify://shop_images/Clothing_Company_GoDaddy_Store_Image_1.png"
       }
     },
     "rkwo_product_callouts_hAjPB8": {
@@ -106,7 +115,7 @@
       "name": "RKWO Product Callouts",
       "settings": {
         "heading": "Product Benefits",
-        "image": "shopify:\/\/shop_images\/splash-water.jpg"
+        "image": "shopify://shop_images/splash-water.jpg"
       }
     },
     "collapsible_content_mHNL4X": {
@@ -117,7 +126,7 @@
           "settings": {
             "heading": "{{ product.metafields.custom.rkwo_product_faq_heading_1.value }}",
             "icon": "check_mark",
-            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_1 | metafield_tag }}<\/p>",
+            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_1 | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -126,7 +135,7 @@
           "settings": {
             "heading": "{{ product.metafields.custom.rkwo_product_faq_heading_2.value }}",
             "icon": "check_mark",
-            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_2 | metafield_tag }}<\/p>",
+            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_2 | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -135,7 +144,7 @@
           "settings": {
             "heading": "{{ product.metafields.custom.rkwo_product_faq_heading_3.value }}",
             "icon": "check_mark",
-            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_3 | metafield_tag }}<\/p>",
+            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_3 | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -144,7 +153,7 @@
           "settings": {
             "heading": "{{ product.metafields.custom.rkwo_product_faq_heading_4.value }}",
             "icon": "check_mark",
-            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_4 | metafield_tag }}<\/p>",
+            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_4 | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -153,7 +162,7 @@
           "settings": {
             "heading": "{{ product.metafields.custom.rkwo_product_faq_heading_5.value }}",
             "icon": "check_mark",
-            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_5 | metafield_tag }}<\/p>",
+            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_5 | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -162,7 +171,7 @@
           "settings": {
             "heading": "{{ product.metafields.custom.rkwo_product_faq_heading_6.value }}",
             "icon": "check_mark",
-            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_6 | metafield_tag }}<\/p>",
+            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_6 | metafield_tag }}</p>",
             "page": ""
           }
         },
@@ -171,7 +180,7 @@
           "settings": {
             "heading": "{{ product.metafields.custom.rkwo_product_faq_heading_7.value }}",
             "icon": "check_mark",
-            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_7 | metafield_tag }}<\/p>",
+            "row_content": "<p>{{ product.metafields.custom.rkwo_product_faq_content_7 | metafield_tag }}</p>",
             "page": ""
           }
         }
@@ -202,8 +211,8 @@
         "open_first_collapsible_row": true,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "related-products": {
