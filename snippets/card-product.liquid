@@ -40,7 +40,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  <div class="card-wrapper product-card-wrapper underline-links-hover has-hover-overlay">
     <div
       class="
         card card--{{ settings.card_style }}
@@ -63,9 +63,7 @@
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="
-                  {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if card_product.featured_media.width >= 0 -%}{{ card_product.featured_media | image_url: width: 600 }} 533w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
                   {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
@@ -103,8 +101,11 @@
                   height="{{ card_product.media[1].height }}"
                 >
               {%- endif -%}
+
+
             </div>
           </div>
+
         {%- endif -%}
         <div class="card__content">
           <div class="card__information">
@@ -569,6 +570,34 @@
         </div>
       </div>
     </div>
+
+    {%- if card_product.metafields.custom.rkwo_product_image_points_content_1 != blank -%}
+      <!-- Desktop Hover Overlay - Outside the card wrapper -->
+      <div class="card-hover-overlay">
+        <div class="card-hover-content">
+          {{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' }}
+        </div>
+      </div>
+
+      <!-- Mobile Info Icon - Outside the card wrapper -->
+      <button class="mobile-info-icon" aria-label="Product information" data-product-id="{{ card_product.id }}" data-product-title="{{ card_product.title | escape }}" data-content="{{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' | escape }}">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15h-2v-6h2v6zm0-8h-2V5h2v2z" fill="currentColor"/>
+        </svg>
+      </button>
+    {%- endif -%}
+
+    <!-- Bottle Tag Pills - Outside the card wrapper -->
+    <div class="bottle-tags-container">
+      {%- for tag in card_product.tags -%}
+        {%- if tag contains 'bottle:' -%}
+          {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
+          <div class="bottle-tag-pill">
+            {{ bottle_text }}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
   </div>
 {%- else -%}
   {%- liquid
@@ -578,7 +607,7 @@
       assign ratio = 0.8
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  <div class="card-wrapper product-card-wrapper underline-links-hover has-hover-overlay">
     <div
       class="
         card card--{{ settings.card_style }}
@@ -664,7 +693,7 @@
       width: 70%;
     }
   }
-  
+
   @media (max-width: 480px) {
     .card__information h3.card__heading a {
       font-size: 12px !important;
@@ -674,4 +703,29 @@
       font-size: 14px;
     }
   }
+
+
+
+
+
+  @media (max-width: 768px) {
+    .card-hover-content {
+      font-size: 12px;
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-hover-content {
+      font-size: 11px;
+      padding: 10px;
+    }
+  }
+
+
+
+
 </style>
+
+
+

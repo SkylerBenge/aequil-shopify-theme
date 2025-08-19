@@ -593,3 +593,238 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+/* Card Hover Overlay Styles */
+.has-hover-overlay .card__media {
+  position: relative;
+}
+
+.has-hover-overlay .card-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.has-hover-overlay .card-hover-content {
+  padding: 4px;
+  text-align: left;
+  color: #000000;
+  font-family: 'Endurance Pro', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.4;
+  max-width: 90%;
+  height: 100%;
+  overflow: scroll;
+  /* Semi-transparent scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(211, 211, 211, 0.5) transparent;
+}
+
+/* Webkit scrollbar styling for semi-transparent */
+.has-hover-overlay .card-hover-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar-thumb {
+  background-color: rgba(211, 211, 211, 0.5);
+  border-radius: 3px;
+}
+
+.has-hover-overlay .card-hover-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(184, 184, 184, 0.7);
+}
+
+.has-hover-overlay:hover .card-hover-overlay {
+  opacity: 1 !important;
+}
+
+/* Override existing hover effects to prevent images from having 0 opacity */
+.has-hover-overlay:hover .media.media--hover-effect > img:first-child:not(:only-child) {
+  opacity: 1 !important;
+}
+
+.has-hover-overlay:hover .media.media--hover-effect > img + img {
+  opacity: 1 !important;
+}
+
+/* Hide card content for ratio cards with hover overlay */
+.has-hover-overlay .ratio .card__content {
+  display: none;
+}
+
+/* Ensure card wrapper has relative positioning for icon placement */
+.card-wrapper {
+  position: relative;
+}
+
+/* Mobile Info Icon */
+.mobile-info-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  pointer-events: auto;
+}
+
+.mobile-info-icon:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.mobile-info-icon svg {
+  width: 18px;
+  height: 18px;
+  color: #333;
+  pointer-events: none;
+}
+
+/* Prevent icon from being affected by link styles */
+.mobile-info-icon,
+.mobile-info-icon * {
+  text-decoration: none !important;
+}
+
+/* Mobile Lightbox */
+.mobile-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.mobile-lightbox.active {
+  display: flex;
+}
+
+.mobile-lightbox-content {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 80%;
+  position: relative;
+  overflow-y: auto;
+}
+
+.mobile-lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-lightbox-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.mobile-lightbox-title {
+  font-family: 'Endurance Pro', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.mobile-lightbox-text {
+  font-family: 'Endurance Pro', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Hide hover overlay on mobile */
+@media (max-width: 768px) {
+  .has-hover-overlay .card-hover-overlay {
+    display: none !important;
+  }
+}
+
+/* Show mobile info icon only on mobile */
+@media (max-width: 768px) {
+  .mobile-info-icon {
+    display: flex;
+  }
+}
+
+/* Hide mobile info icon on desktop */
+@media (min-width: 769px) {
+  .mobile-info-icon {
+    display: none !important;
+  }
+}
+
+/* Bottle Tag Pills Container */
+.bottle-tags-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 15;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide pills when hover overlay is active */
+.has-hover-overlay:hover .bottle-tags-container {
+  opacity: 0;
+}
+
+/* Bottle Tag Pill */
+.bottle-tag-pill {
+  background-color: #6f9fcf;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-family: 'Endurance Pro', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

@@ -16,6 +16,7 @@ product-info {
 }
 
 .product__media-wrapper {
+  position: relative;
   padding-left: 0;
 }
 

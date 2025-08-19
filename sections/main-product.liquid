@@ -77,6 +77,18 @@
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
+
+        <!-- Bottle Tag Pills for Main Product -->
+        <div class="bottle-tags-container">
+          {%- for tag in product.tags -%}
+            {%- if tag contains 'bottle:' -%}
+              {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
+              <div class="bottle-tag-pill">
+                {{ bottle_text }}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -791,11 +803,11 @@
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   .rkwo-accordion-item {
     border-bottom: 1px solid #ccc;
   }
-  
+
   .rkwo-accordion-button {
     background: none;
     border: none;
@@ -808,20 +820,23 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .rkwo-accordion-button .rkwo-icon {
     transition: transform 0.3s;
   }
-  
+
   .rkwo-accordion-content {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+  }
+
+  .rkwo-accordion-item.rkwo-active .rkwo-accordion-content {
+    max-height: 500px;
     padding: 0 0 1rem 0;
   }
-  
-  .rkwo-accordion-item.rkwo-active .rkwo-accordion-content {
-    display: block;
-  }
-  
+
   .rkwo-accordion-item.rkwo-active .rkwo-accordion-button .rkwo-icon {
     transform: rotate(45deg);
   }
@@ -839,13 +854,22 @@
         // Close all
         items.forEach(i => {
           i.classList.remove('rkwo-active');
-          i.querySelector('.rkwo-accordion-content').style.display = 'none';
         });
 
-        // Toggle current
+                        // Toggle current
         if (!isActive) {
           item.classList.add('rkwo-active');
-          item.querySelector('.rkwo-accordion-content').style.display = 'block';
+
+          // Start scrolling partway through the accordion animation for smoother feel
+          setTimeout(() => {
+            const accordion = document.querySelector('.rkwo-accordion');
+            if (accordion) {
+              accordion.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }, 200);
         }
       });
     });
@@ -1801,7 +1825,7 @@
         {
           "type": "header",
           "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_2.label"
-        },        
+        },
         {
           "type": "select",
           "id": "icon_2",
@@ -2001,7 +2025,7 @@
         {
           "type": "header",
           "content": "t:sections.main-product.blocks.icon_with_text.settings.pairing_3.label"
-        },        
+        },
         {
           "type": "select",
           "id": "icon_3",
@@ -2303,7 +2327,7 @@
       ],
       "default": "hide",
       "label": "t:sections.main-product.settings.mobile_thumbnails.label"
-    },    
+    },
     {
       "type": "select",
       "id": "media_position",

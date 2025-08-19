@@ -1157,7 +1157,7 @@ summary::-webkit-details-marker {
   background-color: transparent;
 }
 
-.media > *:not(.zoom):not(.deferred-media__poster-button),
+.media > *:not(.zoom):not(.deferred-media__poster-button):not(.mobile-info-icon),
 .media model-viewer {
   display: block;
   max-width: 100%;
@@ -2451,10 +2451,10 @@ input[type='checkbox'] {
     grid-template-areas: 'left-icons heading icons';
     grid-template-columns: 1fr auto 1fr;
   }
+}
 
-  .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
-    margin-top: 1.05rem;
-  }
+.header .list-menu.list-menu--inline {
+  margin: .5rem 0;
 }
 
 .header *[tabindex='-1']:focus {
