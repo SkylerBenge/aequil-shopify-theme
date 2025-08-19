@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/aequil-logo-small-blue_cdc31537-f0ec-403e-a467-37a74756c4d7.png",
+    "logo": "shopify://shop_images/aequil-logo-small-blue_cdc31537-f0ec-403e-a467-37a74756c4d7.png",
     "logo_width": 160,
-    "favicon": "shopify:\/\/shop_images\/AEQUIL_icon_blue_RGB_a07b9499-3b85-415a-b7da-3fe595fa91d0.png",
+    "favicon": "shopify://shop_images/AEQUIL_icon_blue_RGB_a07b9499-3b85-415a-b7da-3fe595fa91d0.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "mono",
@@ -99,7 +108,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -136,17 +145,17 @@
     "content_for_index": [],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       },
       "11532412952436166569": {
-        "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-inject\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+        "type": "shopify://apps/loox-reviews/blocks/loox-inject/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
         "disabled": true,
         "settings": {}
       },
       "4113930173634242220": {
-        "type": "shopify:\/\/apps\/referral-program-shopjar\/blocks\/app-shopjar\/bf205236-47cf-42ff-acf9-5de1b0804e4d",
+        "type": "shopify://apps/referral-program-shopjar/blocks/app-shopjar/bf205236-47cf-42ff-acf9-5de1b0804e4d",
         "disabled": false,
         "settings": {
           "storefront_api": "8307d692be7ade1b36565cc5d7b26fd6"
@@ -400,7 +409,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-3",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
