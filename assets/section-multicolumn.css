@@ -85,6 +85,7 @@
 .multicolumn-list h3,
 .multicolumn-list p {
   margin: 0;
+  color: rgb(var(--color-shadow));
 }
 
 .multicolumn-card-spacing {
