@@ -104,6 +104,8 @@
         "image_ratio": "adapt",
         "button_label": "About AEQUIL",
         "button_link": "shopify://pages/about-us",
+        "button_label2": "Shop The Range",
+        "button_link2": "shopify://collections/products",
         "columns_desktop": 2,
         "column_alignment": "left",
         "background_style": "primary",
