@@ -50,6 +50,60 @@
         "video_url": ""
       }
     },
+    "multicolumn_mpjMcw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_qqfG3k": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Jwqtrd": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_RizpLe": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_qqfG3k",
+        "column_Jwqtrd",
+        "column_RizpLe"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rkwo_pagebreak_cta_Kb78Hd": {
       "type": "rkwo-pagebreak-cta",
       "custom_css": [],
@@ -388,6 +442,7 @@
     "rkwo_hero_rdceqU",
     "custom_liquid_rMXKd7",
     "rkwo_video_text_aCHKL7",
+    "multicolumn_mpjMcw",
     "rkwo_pagebreak_cta_Kb78Hd",
     "rkwo_highlight_points_LeM8CW",
     "rkwo_text_image_highlight_rngncc",
