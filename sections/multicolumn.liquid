@@ -187,13 +187,13 @@
         </a>
         <a
           class="button button--secondary"
-          {% if section.settings.button_link == blank %}
+          {% if section.settings.button_link2 == blank %}
             role="link" aria-disabled="true"
           {% else %}
-            href="{{ section.settings.button_link }}"
+            href="{{ section.settings.button_link2 }}"
           {% endif %}
         >
-          {{ section.settings.button_label | escape }}
+          {{ section.settings.button_label2 | escape }}
         </a>
       {%- endif -%}
     </div>
