@@ -170,6 +170,11 @@
                 {{ block.settings.heading }}
               </h2>
             {%- endif -%}
+            {%- if block.settings.text != blank -%}
+              <div class="banner__text rte">
+                <p>{{ block.settings.text }}</p>
+              </div>
+            {%- endif -%}
             {%- if block.settings.button_label != blank -%}
               <div class="banner__buttons">
                 <a
@@ -448,6 +453,12 @@
           "id": "subheading",
           "default": "t:sections.slideshow.blocks.slide.settings.subheading.default",
           "label": "t:sections.slideshow.blocks.slide.settings.subheading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>text</p>",
+          "label": "text"
         },
         {
           "type": "header",
