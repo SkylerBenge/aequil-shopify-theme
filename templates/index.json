@@ -189,6 +189,7 @@
     },
     "rkwo_pagebreak_cta_Kb78Hd": {
       "type": "rkwo-pagebreak-cta",
+      "disabled": true,
       "custom_css": [],
       "name": "RKWO Pagebreak CTA",
       "settings": {
@@ -284,6 +285,7 @@
         "point_DzyNyJ",
         "point_7EAbHN"
       ],
+      "disabled": true,
       "name": "RKWO Highlight Points",
       "settings": {
         "heading": "THE PHYSIOLOGY OF STRESS",
@@ -297,8 +299,8 @@
       "type": "rkwo-text-image-highlight",
       "name": "RKWO Text Image Highlight",
       "settings": {
-        "heading": "Ten Thousand Patients, 27 years & One Belief: You Deserve to Be Well",
-        "content": "<p>Frédéric Roscop is one of the world’s leading osteopaths. He created Aequil after treating more than ten thousand patients and recovering from long-term illness himself. Aequil is the result of twenty-seven years of clinical experience, ten years of scientific research, and five years of testing. It was built to help you feel well and stay well.</p><p>Frédéric believes wellness is often mistaken for quick fixes or surface-level solutions. But true wellbeing goes deeper. It begins when your foundation works. When your essential systems and functions are supported and maintained, you feel balanced, cope with anything and perform at your best: physically, mentally and emotionally. Wellbeing is not a destination. It’s a dialogue. A dynamic journey that gives you the freedom to grow, adapt and become who you are meant to be.</p>",
+        "heading": "ABOUT FRÉDÉRIC",
+        "content": "<h3>Meet the Founder</h3><p>Frédéric Roscop is a pioneering osteopath, researcher, and creator of AEQUIL Science. He has treated thousands of patients across decades in clinical practice, working at the intersection of body, mind, energy. </p><p>Frédéric's vision is simple: We all have the right to feel well, be free, and return to ourselves. </p><p>He is the author of multiple scientific publications on dynamised water, and an international speaker on topics like Lyme disease, biophysics, and human adaptability. </p><p>Through AEQUIL, he brings together clinical wisdom, biotech innovation, and a belief in human coherence.</p>",
         "cta_text": "",
         "cta_url": "shopify://pages/frederic-says",
         "image": "shopify://shop_images/f.png"
