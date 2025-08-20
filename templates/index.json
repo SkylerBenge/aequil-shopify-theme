@@ -364,10 +364,10 @@
       ],
       "name": "RKWO Highlight Points",
       "settings": {
-        "heading": "THE BENEFITS OF BALANCE",
-        "content": "<p>When your systems are supported, your body returns to dynamic balance and can work as one.</p>",
-        "cta_text": "Reset Now",
-        "cta_url": "shopify://products/the-daily-aequil",
+        "heading": "Glossary",
+        "content": "",
+        "cta_text": "Explore the Glossary",
+        "cta_url": "",
         "image": "shopify://shop_images/aequilv.svg"
       }
     },
