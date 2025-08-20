@@ -116,6 +116,77 @@
         "padding_bottom": 36
       }
     },
+    "multirow_epexcg": {
+      "type": "multirow",
+      "blocks": {
+        "row_ixwJ3M": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/30.jpg",
+            "caption": "1",
+            "heading": "The Deep Reset",
+            "text": "<p>A 12-week foundational protocol designed for longstanding complaints, stress accumulation, and physiological dysregulation. Recommended for people dealing with chronic stress, emotional overwhelm, fatigue, or immune dysfunction.</p>",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/the-deep-reset"
+          }
+        },
+        "row_EPmpgp": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Aequil-Bundle_R1.jpg",
+            "caption": "2",
+            "heading": "The Daily Reset",
+            "text": "<p>A 4-week lighter reset for those needing ongoing support or those coming out of an intense period (postillness, seasonal change, burnout recovery). Designed to maintain rhythm and coherence.</p>",
+            "button_label": "Learn More",
+            "button_link": "shopify://products/the-daily-aequil"
+          }
+        },
+        "row_BBMyNR": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/1_bd92e34e-92f6-4af0-b118-8aac5098da2e.jpg",
+            "caption": "3",
+            "heading": "The PLUS Range",
+            "text": "<p>Targeted support for specific daily complaints: ENERGY+, SLEEP+, MOOD+, AIRWAYS+. These work alongside your Reset or independently to help bring specific systems back into balance.</p>",
+            "button_label": "Learn More",
+            "button_link": ""
+          }
+        },
+        "row_kdXtER": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Untitleddesign_1.png",
+            "caption": "4",
+            "heading": "The Maintain Range",
+            "text": "<p>Daily maintenance products to help sustain your rhythm after completing a Reset. Replenishes, supports, and stabilises your progress.</p>",
+            "button_label": "Learn More",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_ixwJ3M",
+        "row_EPmpgp",
+        "row_BBMyNR",
+        "row_kdXtER"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rkwo_pagebreak_cta_Kb78Hd": {
       "type": "rkwo-pagebreak-cta",
       "custom_css": [],
@@ -455,6 +526,7 @@
     "custom_liquid_rMXKd7",
     "rkwo_video_text_aCHKL7",
     "multicolumn_mpjMcw",
+    "multirow_epexcg",
     "rkwo_pagebreak_cta_Kb78Hd",
     "rkwo_highlight_points_LeM8CW",
     "rkwo_text_image_highlight_rngncc",
