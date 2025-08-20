@@ -312,8 +312,8 @@
         "point_GQAaVq": {
           "type": "point",
           "settings": {
-            "point_heading": "ENERGY & CELLULAR",
-            "point_content": "Energy returns. You feel steady, recharged and clear.",
+            "point_heading": "Dynamic Balance",
+            "point_content": "A living state of internal coherence where your systems and functions can self-regulate, adapt, and grow. It is not stillness - it's rhythmic, intelligent movement on both the micro and macro level.",
             "point_cta_text": "",
             "point_cta_url": ""
           }
@@ -321,8 +321,8 @@
         "point_dVJbMY": {
           "type": "point",
           "settings": {
-            "point_heading": "MOOD & NERVOUS SYSTEM",
-            "point_content": "Mood feels stable. Sleep deepens. Mental clarity and emotional steadiness return.",
+            "point_heading": "Rhythm",
+            "point_content": "The unique physiological pattern of movement, recovery, and response that your body needs. Not everyone's rhythm is the same - AEQUIL helps you return to yours.",
             "point_cta_text": "",
             "point_cta_url": ""
           }
@@ -330,8 +330,8 @@
         "point_bafXQR": {
           "type": "point",
           "settings": {
-            "point_heading": "DIGESTION & METABOLISM",
-            "point_content": "Digestion smooths. Cravings drop.  Bloating eases. Metabolism and collagen repair improve.",
+            "point_heading": "Coherence",
+            "point_content": "The alignment and flow between your systems and functions. A state of internal clarity where things work together, not in conflict.",
             "point_cta_text": "",
             "point_cta_url": ""
           }
@@ -339,8 +339,8 @@
         "point_jiY6CN": {
           "type": "point",
           "settings": {
-            "point_heading": "IMMUNE & LYMPHATIC",
-            "point_content": "You recover faster. Inflammation clears. Defence and detox improve.",
+            "point_heading": "Symptoms vs. Signals",
+            "point_content": "What you feel is not the issue - it's information. Symptoms are signals from your body, asking you to pay attention to a deeper imbalance.",
             "point_cta_text": "",
             "point_cta_url": ""
           }
@@ -348,26 +348,8 @@
         "point_e9TfpW": {
           "type": "point",
           "settings": {
-            "point_heading": "HORMONES & REPRODUCTIVE",
-            "point_content": "Hormones rebalance. Cycles and fertility improve.",
-            "point_cta_text": "",
-            "point_cta_url": ""
-          }
-        },
-        "point_eJiFJV": {
-          "type": "point",
-          "settings": {
-            "point_heading": "FOCUS & COGNITION",
-            "point_content": "You feel focused, sharp and clear. Memory and decision-making return with ease.",
-            "point_cta_text": "",
-            "point_cta_url": ""
-          }
-        },
-        "point_wk4kdr": {
-          "type": "point",
-          "settings": {
-            "point_heading": "HYDRATION",
-            "point_content": "Cells rehydrate and function better. Every system is more balanced, responsive and efficient.",
+            "point_heading": "Dysrhythmia",
+            "point_content": "When your systems fall out of sync - whether due to trauma, illness, inherited patterns, or daily stress - your rhythm becomes distorted. AEQUIL helps restore it.",
             "point_cta_text": "",
             "point_cta_url": ""
           }
@@ -378,9 +360,7 @@
         "point_dVJbMY",
         "point_bafXQR",
         "point_jiY6CN",
-        "point_e9TfpW",
-        "point_eJiFJV",
-        "point_wk4kdr"
+        "point_e9TfpW"
       ],
       "name": "RKWO Highlight Points",
       "settings": {
