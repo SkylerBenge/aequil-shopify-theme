@@ -2,13 +2,13 @@
   margin: 0;
 }
 
-.multicolumn .title-svg-icon {
+.multicolumn-card__svg-icon {
   display: inline-block;
   margin-left: 1rem;
   vertical-align: middle;
 }
 
-.multicolumn .title-svg-icon svg {
+.multicolumn-card__svg-icon svg {
   width: auto;
   height: 1em;
   vertical-align: middle;
