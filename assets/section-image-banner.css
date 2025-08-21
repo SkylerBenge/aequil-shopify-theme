@@ -417,6 +417,9 @@
   .banner--stacked .banner__box {
     width: 100%;
   }
+  .slideshow__text .banner__heading {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 750px) {
