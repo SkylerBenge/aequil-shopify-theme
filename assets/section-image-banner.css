@@ -429,7 +429,7 @@
     min-width: 45rem;
   }
   .slideshow__media .banner__heading {
-    display: none;
+    display: none !important;
   }
 }
 
