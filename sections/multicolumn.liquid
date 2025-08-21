@@ -34,6 +34,11 @@
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
+          {%- if section.settings.svg_icon != blank -%}
+            <span class="title-svg-icon">
+              {{ section.settings.svg_icon }}
+            </span>
+          {%- endif -%}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
           <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
@@ -242,6 +247,12 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "html",
+      "id": "svg_icon",
+      "label": "SVG Icon",
+      "info": "Add an SVG icon to display inline with the title"
     },
     {
       "type": "header",
