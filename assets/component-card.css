@@ -611,7 +611,7 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .has-hover-overlay .card-hover-content {
