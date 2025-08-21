@@ -3706,7 +3706,9 @@ h1.rkwo-aequil-heading span {
 }
 
 @media (max-width: 768px) {
-  section[class^='rkwo-'].rkwo-content-white a,
+  section[class^='rkwo-'].rkwo-content-white a.rkwo-hero-link-secondary {
+    color: #000000 !important;
+  }
   section[class^='rkwo-'] h2 {
     font-size: 28px !important;
   }
