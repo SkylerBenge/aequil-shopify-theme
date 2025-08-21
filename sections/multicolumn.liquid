@@ -120,7 +120,14 @@
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                  <h3 class="inline-richtext">
+                    {{ block.settings.title }}
+                    {%- if block.settings.svg_icon != blank -%}
+                      <span class="multicolumn-card__svg-icon">
+                        {{ block.settings.svg_icon }}
+                      </span>
+                    {%- endif -%}
+                  </h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
@@ -436,6 +443,12 @@
           "id": "title",
           "default": "t:sections.multicolumn.blocks.column.settings.title.default",
           "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "html",
+          "id": "svg_icon",
+          "label": "SVG Icon",
+          "info": "Add an SVG icon to display inline with the column title"
         },
         {
           "type": "richtext",
