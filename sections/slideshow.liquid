@@ -120,11 +120,12 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-                             {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}">
-                {{ block.settings.heading }}
-              </h2>
-            {%- endif -%}
+      {%- if block.settings.heading != blank -%}
+        <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}" style="text-align: center;">
+          {{ block.settings.heading }}
+        </h2>
+      {%- endif -%}
+
         <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
           {%- if block.settings.image -%}
             {%- liquid
