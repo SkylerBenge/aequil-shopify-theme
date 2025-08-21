@@ -3663,9 +3663,6 @@ section[class^='rkwo-'].rkwo-content-white h4,
 section[class^='rkwo-'].rkwo-content-white h5,
 section[class^='rkwo-'].rkwo-content-white h6 {color: #ffffff !important}
 
-section[class^='rkwo-'].rkwo-content-white .rkwo-hero-link-secondary {
-    color: #000000 !important
-  }
 section[class^='rkwo-'] p {
   font-size: 14px;
   line-height: 1.5;
