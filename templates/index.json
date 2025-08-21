@@ -507,7 +507,7 @@
         ".insta-feed {margin-top: 0; padding-top: 0;}"
       ],
       "settings": {
-        "include_margins": true
+        "include_margins": false
       }
     }
   },
