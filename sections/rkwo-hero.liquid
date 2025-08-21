@@ -170,15 +170,28 @@
     background: rgba(0,0,0,.2);
     z-index: 1;
   }
-  .rkwo-hero-heading-mobile {
-    display: none;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  }
+.rkwo-hero-mobile-image {
+  display: none;
+  position: relative;
+  min-height: 300px;
+  background-image: url({{ image | img_url: '1000x1000' }}); /* mobile image */
+  background-size: cover;
+  background-position: center;
+}
+
+.rkwo-hero-heading-mobile {
+  display: none;
+  position: absolute;
+  bottom: 20px; /* adjust placement */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff; /* or black depending on bg */
+  text-align: center;
+  font-size: 38px;
+  z-index: 2;
+  padding: 0 20px;
+  max-width: 90%;
+}
 
   @media (max-width: 1700px) {
 
