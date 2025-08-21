@@ -284,6 +284,30 @@
       font-size: 3.5vw !important;
     }
   }
+.rkwo-hero-mobile-figure img { display: block; width: 100%; height: auto; }
+
+/* title overlays the image only */
+.rkwo-hero-heading-mobile {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0 16px;
+  max-width: 92%;
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.1;
+}
+
+/* mobile: show figure+overlay, hide desktop H1 and gradient */
+@media (max-width: 768px) {
+  .rkwo-hero { background-image: none; padding: 0; }
+  .rkwo-hero-mobile-figure { display: block; }
+  .rkwo-hero-mobile-image { display: none !important; } /* old empty div, if still present */
+  .rkwo-hero-content-heading { display: none; }         /* hide desktop H1 */
+  .rkwo-hero-gradient { display: none !important; }
+}
 </style>
 
 {% schema %}
