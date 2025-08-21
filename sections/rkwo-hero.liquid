@@ -8,36 +8,7 @@
 
 <section class="rkwo-hero rkwo-content-white" id="section-{{ section_id }}">
     {%- if image -%}
-<div class="rkwo-hero-mobile-figure">
-  {% if image %}
-    <img src="{{ image | img_url: '1000x' }}" alt="" loading="lazy">
-  {% endif %}
-
-  {% if heading != blank %}
-    <h1 class="rkwo-hero-heading-mobile rkwo-aequil-heading">
-      {% assign words = heading | split: ' ' %}
-      {% if words.size > 1 %}
-        {% assign last_index = words.size | minus: 1 %}
-        {% assign first_words = words | slice: 0, last_index %}
-        {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
-      {% else %}
-        {{ heading }}
-      {% endif %}
-    </h1>
-  {% endif %}
-</div>
-    {%- endif -%}
-    {%- if heading != blank -%}
-      <h1 class="rkwo-hero-heading-mobile rkwo-aequil-heading">
-        {% assign words = heading | split: ' ' %}
-        {% if words.size > 1 %}
-          {% assign last_index = words.size | minus: 1 %}
-          {% assign first_words = words | slice: 0, last_index %}
-          {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
-        {% else %}
-          {{ heading }}
-        {% endif %}
-      </h1>
+      <div class="rkwo-hero-mobile-image" style="display: none;"></div>
     {%- endif -%}
     <div class="rkwo-hero-content">
       {%- if highlight != blank -%}
@@ -184,31 +155,9 @@
     top: 0;
     left: 0;
     display: block !important;
-    background: rgba(0,0,0,.2);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(69,66,62,0) 50%,rgba(137,131,123,1) 100%);
     z-index: 1;
   }
-.rkwo-hero-mobile-image {
-  display: none;
-  position: relative;
-  min-height: 300px;
-  background-image: url({{ image | img_url: '1000x1000' }}); /* mobile image */
-  background-size: cover;
-  background-position: center;
-}
-
-.rkwo-hero-heading-mobile {
-  display: none;
-  position: absolute;
-  bottom: 20px; /* adjust placement */
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff; /* or black depending on bg */
-  text-align: center;
-  font-size: 38px;
-  z-index: 2;
-  padding: 0 20px;
-  max-width: 90%;
-}
 
   @media (max-width: 1700px) {
 
@@ -258,9 +207,6 @@
       -webkit-filter: brightness(0);
       filter: brightness(0);
     }
-  .rkwo-hero-mobile-image { display: block !important; }
-  .rkwo-hero-heading-mobile { display: block; }
-  .rkwo-hero-content-heading { display: none; }
   }
 
   @media (max-width: 480px) {
@@ -284,30 +230,6 @@
       font-size: 3.5vw !important;
     }
   }
-.rkwo-hero-mobile-figure img { display: block; width: 100%; height: auto; }
-
-/* title overlays the image only */
-.rkwo-hero-heading-mobile {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  transform: translateX(-50%);
-  text-align: center;
-  padding: 0 16px;
-  max-width: 92%;
-  color: #fff;
-  font-size: 38px;
-  line-height: 1.1;
-}
-
-/* mobile: show figure+overlay, hide desktop H1 and gradient */
-@media (max-width: 768px) {
-  .rkwo-hero { background-image: none; padding: 0; }
-  .rkwo-hero-mobile-figure { display: block; }
-  .rkwo-hero-mobile-image { display: none !important; } /* old empty div, if still present */
-  .rkwo-hero-content-heading { display: none; }         /* hide desktop H1 */
-  .rkwo-hero-gradient { display: none !important; }
-}
 </style>
 
 {% schema %}
