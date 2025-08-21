@@ -425,6 +425,9 @@
     max-width: 71rem;
     min-width: 45rem;
   }
+  .slideshow__media .banner__heading {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1400px) {
