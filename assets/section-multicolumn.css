@@ -95,6 +95,10 @@
   justify-content: space-between;
   align-items: baseline;
 }
+.multicolumn-list h3 svg {
+  width: 40px;
+  height: 40px;
+}
 
 .multicolumn-list h3,
 .multicolumn-list p {
