@@ -484,13 +484,13 @@
         "instafeed_app_block_j498A7": {
           "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
           "settings": {
-            "title": "<a href=\"https://www.instagram.com/aequil/\" target=\"_blank\">Follow us @AEQUIL</a>",
+            "title": "Follow us @AEQUIL",
             "title_color": "",
             "title_size_v2": 0,
             "alignment": "center",
             "instafeed_margin_top": 0,
-            "instafeed_margin_bottom": 100,
-            "instafeed_margin_sides": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 40,
             "show_instagram_link": false,
             "link_alignment": "center",
             "link_color": "#000000",
