@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: 'Endurance Pro';
   src: url('{{ "EndurancePro-Light.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro-Light.woff2" | asset_url }}') format("woff2");
   font-weight: 300;
@@ -14,18 +14,9 @@
 
 @font-face {
   font-family: 'Endurance Pro';
-  src: url('{{ "EndurancePro.woff" | asset_url }}') format("woff"),
-  url('{{ "EndurancePro.woff2" | asset_url }}') format("woff2");
+  src: url('{{ "EndurancePro.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro.woff2" | asset_url }}') format("woff2");
   font-weight: 400;
   font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'Endurance Pro';
-  src: url('{{ "EndurancePro-Italic.woff" | asset_url }}') format("woff"),
-  url('{{ "EndurancePro-Italic.woff2" | asset_url }}') format("woff2");
-  font-weight: 400;
-  font-style: italic;
 }
 
 @font-face {
@@ -34,14 +25,6 @@
   font-weight: 700;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'Endurance Pro';
-  src: url('{{ "EndurancePro-Bold-Italic.woff" | asset_url }}') format("woff"),
-  url('{{ "EndurancePro-Bold-Italic.woff2" | asset_url }}') format("woff2");
-  font-weight: 700;
-  font-style: italic;
-} */
 
 body {
   font-family: 'Endurance Pro', sans-serif !important;
