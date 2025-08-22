@@ -574,9 +574,9 @@
     {%- if card_product.metafields.custom.rkwo_product_image_points_content_1 != blank -%}
       <!-- Desktop Hover Overlay - Outside the card wrapper -->
       <div class="card-hover-overlay">
-        <div class="card-hover-content">
+        <a href="{{ card_product.url }}" class="card-hover-content">
           {{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' }}
-        </div>
+        </a>
       </div>
 
       <!-- Mobile Info Icon - Outside the card wrapper -->
