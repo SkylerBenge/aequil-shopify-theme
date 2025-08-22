@@ -15,7 +15,7 @@
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? -%}
-      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      {% comment %}<link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>{% endcomment %}
     {%- endunless -%}
 
     {%- assign formatted_balance = gift_card.balance | money_without_trailing_zeros | strip_html -%}
