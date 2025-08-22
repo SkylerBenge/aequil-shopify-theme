@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'AvenirPro';
-  src: url('{{ "AvenirPro.woff" | asset_url }}') format("woff"), url('{{ "AvenirPro.woff" | asset_url }}') format("woff2");
+  src: url('{{ "EndurancePro.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro.woff" | asset_url }}') format("woff2");
   font-weight: 300;
   font-style: normal;
 }
