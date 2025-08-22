@@ -420,7 +420,20 @@
   .slideshow__text .banner__heading {
     display: none;
   }
-banner__heading inline-richtext h1
+  .slideshow__media .banner__heading {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, .15);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: end;
+    color: #fff;
+  }
+}
 }
 
 @media screen and (min-width: 750px) {
