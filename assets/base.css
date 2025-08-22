@@ -6,14 +6,14 @@
 }
 
 @font-face {
-  font-family: 'Endurance Pro Light';
+  font-family: 'Endurance Pro';
   src: url('{{ "EndurancePro-Light.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro-Light.woff2" | asset_url }}') format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Endurance Pro Light Italic';
+  font-family: 'Endurance Pro';
   src: url('{{ "EndurancePro-LightItalic.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro-LightItalic.woff2" | asset_url }}') format("woff2");
   font-weight: 300;
   font-style: italic;
