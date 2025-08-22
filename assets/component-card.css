@@ -605,12 +605,12 @@
   left: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.5);
+  overflow: scroll;
   display: flex;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;
-  pointer-events: none;
 }
 
 .has-hover-overlay .card-hover-content {
@@ -622,7 +622,7 @@
   font-size: 16px;
   line-height: 1.4;
   max-width: 90%;
-  height: 100%;
+  height: fit-content;
   overflow: scroll;
   /* Semi-transparent scrollbar */
   scrollbar-width: thin;
