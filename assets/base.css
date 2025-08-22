@@ -36,7 +36,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Endurance Pro', sans-serif !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   color: #4E69EA;
@@ -3658,7 +3658,7 @@ section[class^='rkwo-'] h4,
 section[class^='rkwo-'] h5,
 section[class^='rkwo-'] h6 {
   font-family: 'Endurance Pro', sans-serif !important;
-  font-weight: 400 !important;
+  font-weight: 300 !important;
   color: #000000 !important;
 }
 
