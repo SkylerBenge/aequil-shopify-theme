@@ -11,13 +11,13 @@
   font-weight: 300;
   font-style: italic;
 } */
-
+/*
 @font-face {
   font-family: 'Endurance Pro';
   src: url('{{ "Alvania.otf" | asset_url }}') format("opentype");
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 /* @font-face {
   font-family: 'Endurance Pro';
