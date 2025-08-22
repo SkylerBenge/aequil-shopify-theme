@@ -427,7 +427,7 @@
     left: 0;
     margin: 0;
     background: rgba(0, 0, 0, .15);
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     width: 100%;
     justify-content: end;
