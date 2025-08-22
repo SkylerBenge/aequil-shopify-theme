@@ -80,14 +80,21 @@
 
         <!-- Bottle Tag Pills for Main Product -->
         <div class="bottle-tags-container">
-          {%- for tag in product.tags -%}
-            {%- if tag contains 'bottle:' -%}
-              {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
-              <div class="bottle-tag-pill">
-                {{ bottle_text }}
-              </div>
-            {%- endif -%}
-          {%- endfor -%}
+          {%- if product.metafields.custom.rkwo_product_callouts_heading_1.value != blank -%}
+            <div class="bottle-tag-pill">
+              {{ product.metafields.custom.rkwo_product_callouts_heading_1.value }}
+            </div>
+          {%- endif -%}
+          {%- if product.metafields.custom.rkwo_product_callouts_heading_2.value != blank -%}
+            <div class="bottle-tag-pill">
+              {{ product.metafields.custom.rkwo_product_callouts_heading_2.value }}
+            </div>
+          {%- endif -%}
+          {%- if product.metafields.custom.rkwo_product_callouts_heading_3.value != blank -%}
+            <div class="bottle-tag-pill">
+              {{ product.metafields.custom.rkwo_product_callouts_heading_3.value }}
+            </div>
+          {%- endif -%}
         </div>
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">

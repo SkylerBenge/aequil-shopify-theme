@@ -589,14 +589,21 @@
 
     <!-- Bottle Tag Pills - Outside the card wrapper -->
     <div class="bottle-tags-container">
-      {%- for tag in card_product.tags -%}
-        {%- if tag contains 'bottle:' -%}
-          {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
-          <div class="bottle-tag-pill">
-            {{ bottle_text }}
-          </div>
-        {%- endif -%}
-      {%- endfor -%}
+      {%- if card_product.metafields.custom.rkwo_product_callouts_heading_1.value != blank -%}
+        <div class="bottle-tag-pill">
+          {{ card_product.metafields.custom.rkwo_product_callouts_heading_1.value }}
+        </div>
+      {%- endif -%}
+      {%- if card_product.metafields.custom.rkwo_product_callouts_heading_2.value != blank -%}
+        <div class="bottle-tag-pill">
+          {{ card_product.metafields.custom.rkwo_product_callouts_heading_2.value }}
+        </div>
+      {%- endif -%}
+      {%- if card_product.metafields.custom.rkwo_product_callouts_heading_3.value != blank -%}
+        <div class="bottle-tag-pill">
+          {{ card_product.metafields.custom.rkwo_product_callouts_heading_3.value }}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 {%- else -%}
