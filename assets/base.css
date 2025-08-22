@@ -48,6 +48,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
+  --font-body-family: 'Endurance Pro', sans-serif;
+  --font-heading-family: 'Endurance Pro', sans-serif;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
