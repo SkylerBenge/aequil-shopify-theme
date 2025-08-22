@@ -14,16 +14,14 @@
 
 @font-face {
   font-family: 'Endurance Pro Light Italic';
-  src: url('{{ "EndurancePro-LightItalic.woff2" | asset_url }}') format("woff2"),
-       url('{{ "EndurancePro-LightItalic.woff" | asset_url }}') format("woff");
+  src: url('{{ "EndurancePro-LightItalic.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro-LightItalic.woff2" | asset_url }}') format("woff2");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Endurance Pro Bold';
-  src: url('{{ "EndurancePro-Bold.woff2" | asset_url }}') format("woff2"),
-       url('{{ "EndurancePro-Bold.woff" | asset_url }}') format("woff");
+  src: url('{{ "EndurancePro-Bold.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro-Bold.woff2" | asset_url }}') format("woff2");
   font-weight: 700;
   font-style: normal;
 }
