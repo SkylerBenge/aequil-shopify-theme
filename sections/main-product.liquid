@@ -843,40 +843,6 @@
     transform: rotate(45deg);
   }
 </style>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const items = document.querySelectorAll('.rkwo-accordion-item');
-
-    items.forEach(item => {
-      const button = item.querySelector('.rkwo-accordion-button');
-
-      button.addEventListener('click', function () {
-        const isActive = item.classList.contains('rkwo-active');
-
-        // Close all
-        items.forEach(i => {
-          i.classList.remove('rkwo-active');
-        });
-
-                        // Toggle current
-        if (!isActive) {
-          item.classList.add('rkwo-active');
-
-          // Start scrolling partway through the accordion animation for smoother feel
-          setTimeout(() => {
-            const accordion = document.querySelector('.rkwo-accordion');
-            if (accordion) {
-              accordion.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          }, 200);
-        }
-      });
-    });
-  });
-</script>
 {% schema %}
 {
   "name": "t:sections.main-product.name",
