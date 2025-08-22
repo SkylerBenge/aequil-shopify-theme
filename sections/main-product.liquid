@@ -235,14 +235,14 @@
                     </div>
                   </div>
                   {%- endif -%}
-                  {% if product.metafields.custom.rkwo_single_product_key_ingredients %}
+                  {% comment %} {% if product.metafields.custom.rkwo_single_product_key_ingredients %}
                   <div class="rkwo-accordion-item">
                     <button class="rkwo-accordion-button">KEY INGREDIENTS <span class="rkwo-icon">＋</span></button>
                     <div class="rkwo-accordion-content">
                       {{ product.metafields.custom.rkwo_single_product_key_ingredients | metafield_tag }}
                     </div>
                   </div>
-                  {%- endif -%}
+                  {%- endif -%} {% endcomment %}
                   {% if product.metafields.custom.rkwo_single_product_how_it_works %}
                   <div class="rkwo-accordion-item">
                     <button class="rkwo-accordion-button">HOW IT WORKS <span class="rkwo-icon">＋</span></button>
