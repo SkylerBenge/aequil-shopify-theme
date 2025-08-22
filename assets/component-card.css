@@ -624,7 +624,7 @@
   max-width: 90%;
   height: fit-content;
   overflow: scroll;
-  text-decoration: none;
+  text-decoration: none !important;
   scrollbar-width: thin;
   scrollbar-color: rgba(211, 211, 211, 0.5) transparent;
 }
