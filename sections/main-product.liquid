@@ -214,6 +214,7 @@
                   <div class="rkwo-accordion-item">
                     <button class="rkwo-accordion-button">What You'll Receive <span class="rkwo-icon">＋</span></button>
                     <div class="rkwo-accordion-content">
+                      {{ product.metafields.custom.rkwo_single_product_what_is_included | metafield_tag }}
                       {{ product.metafields.custom.rkwo_single_product_benefits | metafield_tag }}
                     </div>
                   </div>
