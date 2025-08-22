@@ -26,6 +26,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Endurance Pro';
+  src: url('{{ "EndurancePro-Bold-Italic.woff" | asset_url }}') format("woff"),
+  url('{{ "EndurancePro-Bold-Italic.woff2" | asset_url }}') format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   font-family: 'Endurance Pro', sans-serif !important;
   font-weight: 300 !important;
