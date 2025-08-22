@@ -141,11 +141,7 @@
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
           <span>
             <s class="price-item price-item--regular">
-              {% if settings.currency_code_enabled %}
-                {{ compare_at_price | money_with_currency }}
-              {% else %}
-                {{ compare_at_price | money }}
-              {% endif %}
+              {{ money_compare_at_price }}
             </s>
           </span>
         {%- endunless -%}
@@ -157,7 +153,15 @@
       <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
         <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
         <span class="price-item price-item--last">
-          <span>{{- product.selected_or_first_available_variant.unit_price | money -}}</span>
+          {%- assign unit_price = product.selected_or_first_available_variant.unit_price -%}
+          {%- assign unit_price_cents = unit_price | modulo: 100 -%}
+          <span>
+            {%- if unit_price_cents == 0 -%}
+              {{- unit_price | money | remove: '.00' -}}
+            {%- else -%}
+              {{- unit_price | money -}}
+            {%- endif -%}
+          </span>
           <span aria-hidden="true">/</span>
           <span class="visually-hidden">&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span>
           <span>
