@@ -605,13 +605,12 @@
   left: 0;
   right: 0;
   background-color: rgba(255, 255, 255, 0.5);
+  overflow: scroll;
   display: flex;
-  align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;
-  pointer-events: auto;
 }
 
 .has-hover-overlay .card-hover-content {
@@ -620,12 +619,12 @@
   color: #000000;
   font-family: 'Endurance Pro', sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.4;
   max-width: 90%;
-  height: 100%;
+  height: fit-content;
   overflow: scroll;
-  /* Semi-transparent scrollbar */
+  text-decoration: none !important;
   scrollbar-width: thin;
   scrollbar-color: rgba(211, 211, 211, 0.5) transparent;
 }

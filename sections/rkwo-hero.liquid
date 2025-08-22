@@ -8,7 +8,20 @@
 
 <section class="rkwo-hero rkwo-content-white" id="section-{{ section_id }}">
     {%- if image -%}
-      <div class="rkwo-hero-mobile-image" style="display: none;"></div>
+      <div class="rkwo-hero-mobile-image" style="display: none;">
+        {%- if heading != blank -%}
+          <h1 class="rkwo-hero-content-heading rkwo-aequil-heading" style="color: #ffffff !important;">
+            {% assign words = heading | split: ' ' %}
+            {% if words.size > 1 %}
+              {% assign last_index = words.size | minus: 1 %}
+              {% assign first_words = words | slice: 0, last_index %}
+              {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
+            {% else %}
+              {{ heading }}
+            {% endif %}
+          </h1>
+        {%- endif -%}
+      </div>
     {%- endif -%}
     <div class="rkwo-hero-content">
       {%- if highlight != blank -%}
@@ -155,7 +168,7 @@
     top: 0;
     left: 0;
     display: block !important;
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(69,66,62,0) 50%,rgba(137,131,123,1) 100%);
+    background: rgba(0,0,0,0.2);
     z-index: 1;
   }
 
@@ -168,6 +181,22 @@
   }
 
   @media (max-width: 768px) {
+    .rkwo-hero-content-heading {
+      text-align: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+      background: rgba(0, 0, 0, .1);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: end;
+    }
+    .rkwo-hero-content .rkwo-hero-content-heading {
+      display: none;
+    }
     .rkwo-hero {
       background-image: none;
       padding: 0;

@@ -2,12 +2,16 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-left: {{ section.settings.padding_top | times: 0.75 }}px;
+    padding-right: {{ section.settings.padding_top | times: 0.75 }}px;
+    padding-top: {{ section.settings.padding_top | times: 0.75 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
+      padding-left: {{ section.settings.padding_top }}px;
+      padding-right: {{ section.settings.padding_top }}px;
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
@@ -43,7 +47,7 @@
 -%}
 
 <div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="multirow__inner page-width">
+  <div class="multirow__inner">
     {%- for block in section.blocks -%}
       <div
         class="image-with-text isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -75,7 +79,7 @@
           <div class="image-with-text__text-item grid__item">
             <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% else %} background-transparent{% endunless %}">
               {%- if block.settings.caption -%}
-                <p class="image-with-text__text image-with-text__text--caption caption-with-letter-spacing caption-with-letter-spacing--medium">
+                <p class="image-with-text__text image-with-text__text--caption">
                   {{ block.settings.caption | escape }}
                 </p>
               {%- endif -%}
@@ -384,7 +388,7 @@
           "type": "text",
           "id": "button_label",
           "default": "t:sections.multirow.blocks.row.settings.button_label.default",
-          "label": "t:sections.multirow.blocks.row.settings.button_label.label", 
+          "label": "t:sections.multirow.blocks.row.settings.button_label.label",
           "info": "t:sections.multirow.blocks.row.settings.button_label.info"
         },
         {

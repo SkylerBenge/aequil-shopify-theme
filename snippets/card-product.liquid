@@ -574,9 +574,9 @@
     {%- if card_product.metafields.custom.rkwo_product_image_points_content_1 != blank -%}
       <!-- Desktop Hover Overlay - Outside the card wrapper -->
       <div class="card-hover-overlay">
-        <div class="card-hover-content">
+        <a href="{{ card_product.url }}" class="card-hover-content">
           {{ card_product.metafields.custom.rkwo_product_image_points_content_1 | replace: '•', '<br>•' }}
-        </div>
+        </a>
       </div>
 
       <!-- Mobile Info Icon - Outside the card wrapper -->
@@ -589,14 +589,21 @@
 
     <!-- Bottle Tag Pills - Outside the card wrapper -->
     <div class="bottle-tags-container">
-      {%- for tag in card_product.tags -%}
-        {%- if tag contains 'bottle:' -%}
-          {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
-          <div class="bottle-tag-pill">
-            {{ bottle_text }}
-          </div>
-        {%- endif -%}
-      {%- endfor -%}
+      {%- if card_product.metafields.custom.rkwo_product_callouts_heading_1.value != blank -%}
+        <div class="bottle-tag-pill">
+          {{ card_product.metafields.custom.rkwo_product_callouts_heading_1.value }}
+        </div>
+      {%- endif -%}
+      {%- if card_product.metafields.custom.rkwo_product_callouts_heading_2.value != blank -%}
+        <div class="bottle-tag-pill">
+          {{ card_product.metafields.custom.rkwo_product_callouts_heading_2.value }}
+        </div>
+      {%- endif -%}
+      {%- if card_product.metafields.custom.rkwo_product_callouts_heading_3.value != blank -%}
+        <div class="bottle-tag-pill">
+          {{ card_product.metafields.custom.rkwo_product_callouts_heading_3.value }}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 {%- else -%}
@@ -665,6 +672,7 @@
   .card__information .rkwo-button {
     width: 90%;
     margin-top: 25px;
+    border-radius: 20px;
     color: #000000 !important;
     font-size: 16px;
     font-weight: 300 !important;

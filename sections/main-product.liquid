@@ -73,21 +73,28 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="page-width">
+  <div class="product-container">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
 
         <!-- Bottle Tag Pills for Main Product -->
         <div class="bottle-tags-container">
-          {%- for tag in product.tags -%}
-            {%- if tag contains 'bottle:' -%}
-              {%- assign bottle_text = tag | remove: 'bottle:' | strip -%}
-              <div class="bottle-tag-pill">
-                {{ bottle_text }}
-              </div>
-            {%- endif -%}
-          {%- endfor -%}
+          {%- if product.metafields.custom.rkwo_product_callouts_heading_1.value != blank -%}
+            <div class="bottle-tag-pill">
+              {{ product.metafields.custom.rkwo_product_callouts_heading_1.value }}
+            </div>
+          {%- endif -%}
+          {%- if product.metafields.custom.rkwo_product_callouts_heading_2.value != blank -%}
+            <div class="bottle-tag-pill">
+              {{ product.metafields.custom.rkwo_product_callouts_heading_2.value }}
+            </div>
+          {%- endif -%}
+          {%- if product.metafields.custom.rkwo_product_callouts_heading_3.value != blank -%}
+            <div class="bottle-tag-pill">
+              {{ product.metafields.custom.rkwo_product_callouts_heading_3.value }}
+            </div>
+          {%- endif -%}
         </div>
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -116,6 +123,7 @@
                       {{ product.title | escape }}
                     </h2>
                   </a>
+                  <p>{{ product.metafields.custom.short_description_ | metafield_tag }}</p>
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -212,17 +220,18 @@
                 <div class="rkwo-accordion">
                   {% if product.metafields.custom.rkwo_single_product_benefits %}
                   <div class="rkwo-accordion-item">
-                    <button class="rkwo-accordion-button">BENEFITS <span class="rkwo-icon">＋</span></button>
+                    <button class="rkwo-accordion-button">WHAT YOU'LL RECEIVE <span class="rkwo-icon">＋</span></button>
                     <div class="rkwo-accordion-content">
+                      {{ product.metafields.custom.rkwo_single_product_what_is_included | metafield_tag }}
                       {{ product.metafields.custom.rkwo_single_product_benefits | metafield_tag }}
                     </div>
                   </div>
                   {%- endif -%}
-                  {% if product.metafields.custom.rkwo_single_product_what_is_included %}
+                  {% if product.metafields.custom.rkwo_single_product_how_it_works %}
                   <div class="rkwo-accordion-item">
-                    <button class="rkwo-accordion-button">WHAT IS INCLUDED <span class="rkwo-icon">＋</span></button>
+                    <button class="rkwo-accordion-button">WHY IT WORKS <span class="rkwo-icon">＋</span></button>
                     <div class="rkwo-accordion-content">
-                      {{ product.metafields.custom.rkwo_single_product_what_is_included | metafield_tag }}
+                      {{ product.metafields.custom.rkwo_single_product_how_it_works | metafield_tag }}
                     </div>
                   </div>
                   {%- endif -%}
@@ -234,19 +243,19 @@
                     </div>
                   </div>
                   {%- endif -%}
-                  {% if product.metafields.custom.rkwo_single_product_key_ingredients %}
+                  {% comment %} {% if product.metafields.custom.rkwo_single_product_key_ingredients %}
                   <div class="rkwo-accordion-item">
                     <button class="rkwo-accordion-button">KEY INGREDIENTS <span class="rkwo-icon">＋</span></button>
                     <div class="rkwo-accordion-content">
                       {{ product.metafields.custom.rkwo_single_product_key_ingredients | metafield_tag }}
                     </div>
                   </div>
-                  {%- endif -%}
-                  {% if product.metafields.custom.rkwo_single_product_how_it_works %}
+                  {%- endif -%} {% endcomment %}
+                  {% if product.metafields.custom.rkwo_single_product_benefits %}
                   <div class="rkwo-accordion-item">
-                    <button class="rkwo-accordion-button">HOW IT WORKS <span class="rkwo-icon">＋</span></button>
+                    <button class="rkwo-accordion-button">GOOD TO KNOW <span class="rkwo-icon">＋</span></button>
                     <div class="rkwo-accordion-content">
-                      {{ product.metafields.custom.rkwo_single_product_how_it_works | metafield_tag }}
+                      {{ product.metafields.custom.rkwo_single_product_benefits | metafield_tag }}
                     </div>
                   </div>
                   {%- endif -%}
@@ -785,7 +794,7 @@
   .product-form__quantity {display: none;}
 
   .product__description ul,
-  .rkwo-accordion-content ul {padding: 0;}
+  .rkwo-accordion-content ul {padding: 0;margin: 0;}
   .product__description ul li,
   .rkwo-accordion-content ul li {
     list-style-position: inside;
@@ -830,6 +839,7 @@
     overflow: hidden;
     padding: 0;
     transition: max-height 0.5s ease, padding 0.5s ease;
+    overflow: scroll;
   }
 
   .rkwo-accordion-item.rkwo-active .rkwo-accordion-content {
@@ -859,17 +869,6 @@
                         // Toggle current
         if (!isActive) {
           item.classList.add('rkwo-active');
-
-          // Start scrolling partway through the accordion animation for smoother feel
-          setTimeout(() => {
-            const accordion = document.querySelector('.rkwo-accordion');
-            if (accordion) {
-              accordion.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          }, 200);
         }
       });
     });

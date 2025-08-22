@@ -3,12 +3,16 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
+    padding-left: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-right: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
+      padding-left: {{ section.settings.padding_top }}px;
+      padding-right: {{ section.settings.padding_top }}px;
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
@@ -25,7 +29,7 @@
 
 <div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div
-    class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+    class="section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
@@ -120,7 +124,14 @@
               {%- endif -%}
               <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext">{{ block.settings.title }}</h3>
+                  <h3 class="inline-richtext">
+                    {{ block.settings.title }}
+                    {%- if block.settings.svg_icon != blank -%}
+                      <span class="multicolumn-card__svg-icon">
+                        {{ block.settings.svg_icon }}
+                      </span>
+                    {%- endif -%}
+                  </h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
@@ -185,6 +196,16 @@
         >
           {{ section.settings.button_label | escape }}
         </a>
+        <a
+          class="button button--secondary"
+          {% if section.settings.button_link2 == blank %}
+            role="link" aria-disabled="true"
+          {% else %}
+            href="{{ section.settings.button_link2 }}"
+          {% endif %}
+        >
+          {{ section.settings.button_label2 | escape }}
+        </a>
       {%- endif -%}
     </div>
   </div>
@@ -236,7 +257,7 @@
     {
       "type": "header",
       "content": "t:sections.multicolumn.settings.header_image.content"
-    },    
+    },
     {
       "type": "select",
       "id": "image_width",
@@ -284,23 +305,35 @@
     {
       "type": "header",
       "content": "t:sections.multicolumn.settings.header_button.content"
-    },    
+    },
     {
       "type": "text",
       "id": "button_label",
       "default": "t:sections.multicolumn.settings.button_label.default",
-      "label": "t:sections.multicolumn.settings.button_label.label", 
+      "label": "t:sections.multicolumn.settings.button_label.label",
       "info": "t:sections.multicolumn.settings.button_label.info"
     },
     {
       "type": "url",
       "id": "button_link",
       "label": "t:sections.multicolumn.settings.button_link.label"
-    },    
+    },
+    {
+      "type": "text",
+      "id": "button_label2",
+      "default": "t:sections.multicolumn.settings.button_label.default",
+      "label": "t:sections.multicolumn.settings.button_label.label",
+      "info": "t:sections.multicolumn.settings.button_label.info"
+    },
+    {
+      "type": "url",
+      "id": "button_link2",
+      "label": "t:sections.multicolumn.settings.button_link.label"
+    },
     {
       "type": "header",
       "content": "t:sections.multicolumn.settings.header_layout.content"
-    },     
+    },
     {
       "type": "range",
       "id": "columns_desktop",
@@ -347,7 +380,7 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
-    },    
+    },
     {
       "type": "header",
       "content": "t:sections.multicolumn.settings.header_mobile.content"
@@ -414,6 +447,12 @@
           "id": "title",
           "default": "t:sections.multicolumn.blocks.column.settings.title.default",
           "label": "t:sections.multicolumn.blocks.column.settings.title.label"
+        },
+        {
+          "type": "html",
+          "id": "svg_icon",
+          "label": "SVG Icon",
+          "info": "Add an SVG icon to display inline with the column title"
         },
         {
           "type": "richtext",

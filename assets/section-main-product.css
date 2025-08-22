@@ -2,6 +2,9 @@ product-info {
   display: block;
 }
 
+.product-container {
+  padding: 0 40px
+}
 .product {
   margin: 0;
 }
@@ -24,7 +27,7 @@ product-info {
   .product__column-sticky {
     display: block;
     position: sticky;
-    top: 3rem;
+    top: 0rem;
     z-index: 2;
   }
 
@@ -192,6 +195,12 @@ product-info {
 
 .product-form__submit {
   margin-bottom: 1rem;
+  background-color: transparent;
+  color: #000;
+}
+.product-form__submit:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .product-form__submit[aria-disabled='true'] + .shopify-payment-button .shopify-payment-button__button[disabled],
@@ -218,9 +227,9 @@ product-info {
 
 /* Product info */
 
-.product__info-container > * + * {
+/* .product__info-container > * + * {
   margin: 1.5rem 0;
-}
+} */
 
 .product__info-container iframe {
   max-width: 100%;
@@ -229,7 +238,7 @@ product-info {
 .product__info-container .product-form,
 .product__info-container .product__description,
 .product__info-container .icon-with-text {
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 0;
 }
 
 .product__text {
@@ -248,7 +257,6 @@ a.product__text {
 
 .product__title {
   word-break: break-word;
-  margin-bottom: 1.5rem;
 }
 
 .product__title > * {
@@ -275,9 +283,9 @@ a.product__text {
   margin-bottom: 0.5rem;
 }
 
-.product .price__container {
+/* .product .price__container {
   margin-bottom: 0.5rem;
-}
+} */
 
 .product .price dl {
   margin-top: 0.5rem;
@@ -317,10 +325,6 @@ a.product__text {
 .product--no-media .product__media-wrapper,
 .product--no-media .product__info-wrapper {
   padding: 0;
-}
-
-.product__tax {
-  margin-top: -1.4rem;
 }
 
 .product--no-media .share-button {
@@ -1295,7 +1299,6 @@ a.product__text {
   --ratio-percent: calc(1 / var(--aspect-ratio) * 100%);
   position: relative;
   width: 100%;
-  max-width: calc(100% - calc(var(--media-border-width) * 2));
 }
 
 .product-media-container.constrain-height {
@@ -1307,10 +1310,10 @@ a.product__text {
   margin-left: auto;
 }
 
-.product-media-container.constrain-height.media-fit-contain {
+/* .product-media-container.constrain-height.media-fit-contain {
   --contained-width: calc(var(--constrained-height) * var(--aspect-ratio));
   width: min(var(--contained-width), 100%);
-}
+} */
 
 .product-media-container .media {
   padding-top: var(--ratio-percent);
