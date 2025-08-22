@@ -44,8 +44,8 @@
       "type": "rkwo-video-text",
       "name": "RKWO Video Text",
       "settings": {
-        "heading": "We don't treat symptoms. We reset systems.",
-        "content": "<h3><strong>The Aequil way </strong></h3><p>combines cutting-edge biotech with 27 years of clinical insight to create a new kind of health solution: one that works at the level of your body9s essential systems and functions. We don9t treat symptoms - we help you restore the rhythm, regulation, and communication between the systems that keep you well.</p><p>We call this <strong>dynamic balance</strong>.</p><p> And it's where true wellbeing begins. </p><p>Most health solutions treat problems in isolation. We don't. At AEQUIL, we work at the level of your essential systems and functions - the core physiological structures that govern how you feel, function, and adapt. These systems include your brain, heart, gut, immune system, lymphatic system, cell membranes, and more. They are interrelated, interconnected, and interdependent. </p><p>Stress, trauma, toxins, deficiencies, and depletion can overload these systems - storing dysfunction and disrupting communication. AEQUIL helps restore their rhythm and coherence.</p>",
+        "heading": "THE AEQUIL WAY",
+        "content": "<h1>We don't treat symptoms. <em><strong>We reset systems.</strong></em></h1><p>AEQUIL combines cutting-edge biotech with 27 years of clinical insight to create a new kind of health solution: one that works at the level of your body's essential systems and functions. We don't treat symptoms - we help you restore the rhythm, regulation, and communication between the systems that keep you well.</p><p>We call this <strong>dynamic balance</strong>.</p><p> And it's where true wellbeing begins. </p><p>Most health solutions treat problems in isolation. We don't. At AEQUIL, we work at the level of your essential systems and functions - the core physiological structures that govern how you feel, function, and adapt. These systems include your brain, heart, gut, immune system, lymphatic system, cell membranes, and more. They are interrelated, interconnected, and interdependent. </p><p>Stress, trauma, toxins, deficiencies, and depletion can overload these systems - storing dysfunction and disrupting communication. AEQUIL helps restore their rhythm and coherence.</p>",
         "image": "shopify://shop_images/IMG_2330_2.jpg",
         "video_url": ""
       }
@@ -56,9 +56,10 @@
         "column_qqfG3k": {
           "type": "column",
           "settings": {
-            "title": "Reset Foundation",
-            "svg_icon": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_4_1596)\">\n<path d=\"M12 4.74332C7.30558 4.74332 3.5 8.5489 3.5 13.2433C3.5 17.9377 7.30558 21.7433 12 21.7433C16.6944 21.7433 20.5 17.9377 20.5 13.2433C20.5 11.3773 19.8987 9.65179 18.8794 8.24986\" stroke=\"#252525\" stroke-width=\"1.5\" stroke-linecap=\"round\"></path>\n<path d=\"M10.4932 7.45982L12.9477 4.40312L9.22748 3.16699\" stroke=\"#252525\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_4_1596\">\n<rect width=\"24\" height=\"24\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
-            "text": "<p>We help you reset your foundation - to clear what's been stored and return to dynamic balance.</p>",
+            "image": "shopify://shop_images/The_Aequil_Way_-_Reset_Foundation.png",
+            "title": "",
+            "svg_icon": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -66,9 +67,10 @@
         "column_Jwqtrd": {
           "type": "column",
           "settings": {
-            "title": "Maintain Rhythm",
-            "svg_icon": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_4_4906)\">\n<path d=\"M2.22039 17.2927C2.10588 17.6907 2.33575 18.1063 2.73382 18.2208C3.13189 18.3353 3.54742 18.1054 3.66193 17.7073L2.22039 17.2927ZM21.8075 6.54362C21.8316 6.13011 21.5159 5.77536 21.1024 5.75127C20.6889 5.72718 20.3342 6.04286 20.3101 6.45638L21.8075 6.54362ZM3.66193 17.7073C3.91624 16.8233 4.31577 15.8242 4.8474 14.9316C5.38318 14.032 6.02338 13.2905 6.73717 12.8565C7.42346 12.4393 8.19373 12.2927 9.09778 12.5909C10.0374 12.9009 11.1899 13.7152 12.5327 15.3822L13.7009 14.4413C12.264 12.6574 10.8892 11.6024 9.56771 11.1664C8.21067 10.7188 6.98615 10.9496 5.95788 11.5749C4.95711 12.1833 4.163 13.1494 3.55867 14.164C2.95019 15.1856 2.50382 16.3074 2.22039 17.2927L3.66193 17.7073ZM12.5327 15.3822C13.9528 17.1452 15.3239 18.0871 16.6729 18.0577C18.065 18.0274 19.042 16.9839 19.7046 15.7874C20.383 14.5624 20.8629 12.9557 21.1949 11.3312C21.529 9.69618 21.7231 7.99285 21.8075 6.54362L20.3101 6.45638C20.229 7.84702 20.0426 9.47783 19.7252 11.0309C19.4057 12.5945 18.9632 14.0299 18.3924 15.0607C17.8058 16.1199 17.2067 16.5457 16.6402 16.5581C16.0307 16.5714 15.0606 16.1293 13.7009 14.4413L12.5327 15.3822Z\" fill=\"#252525\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_4_4906\">\n<rect width=\"24\" height=\"24\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
-            "text": "<p>We help you maintain your rhythm - so your body can adapt to daily demands.</p>",
+            "image": "shopify://shop_images/The_Aequil_Way_-_MainTain_Rhythm.png",
+            "title": "",
+            "svg_icon": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -76,9 +78,10 @@
         "column_RizpLe": {
           "type": "column",
           "settings": {
-            "title": "Target Needs",
-            "svg_icon": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_4_7586)\">\n<rect x=\"2.75\" y=\"2.75\" width=\"18.5\" height=\"18.5\" rx=\"6.28499\" stroke=\"#252525\" stroke-width=\"1.5\"></rect>\n<rect x=\"8.75\" y=\"8.75\" width=\"6.5\" height=\"6.5\" rx=\"2.25\" stroke=\"#252525\" stroke-width=\"1.5\"></rect>\n</g>\n<defs>\n<clippath id=\"clip0_4_7586\">\n<rect width=\"24\" height=\"24\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
-            "text": "<p>We help you target specific needs - like sleep, mood, energy or immunity.</p>",
+            "image": "shopify://shop_images/The_Aequil_Way_-_Target_Needs.png",
+            "title": "",
+            "svg_icon": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -86,9 +89,10 @@
         "column_YfqpFY": {
           "type": "column",
           "settings": {
-            "title": "Build Resilience",
-            "svg_icon": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g clip-path=\"url(#clip0_4_8251)\">\n<circle cx=\"12\" cy=\"12\" r=\"9.25\" stroke=\"#252525\" stroke-width=\"1.5\"></circle>\n<path d=\"M16.0659 16.0659C16.3588 15.773 16.3588 15.2981 16.0659 15.0052C15.773 14.7123 15.2981 14.7123 15.0052 15.0052L16.0659 16.0659ZM8.9948 15.0052C8.7019 14.7123 8.22703 14.7123 7.93414 15.0052C7.64124 15.2981 7.64124 15.773 7.93414 16.0659L8.9948 15.0052ZM15.0052 15.0052C13.3455 16.6649 10.6545 16.6649 8.9948 15.0052L7.93414 16.0659C10.1797 18.3114 13.8203 18.3114 16.0659 16.0659L15.0052 15.0052Z\" fill=\"#252525\"></path>\n</g>\n<defs>\n<clippath id=\"clip0_4_8251\">\n<rect width=\"24\" height=\"24\" fill=\"white\"></rect>\n</clippath>\n</defs>\n</svg>",
-            "text": "<p>We help you thrive - by building real resilience that doesn't rely on quick fixes.</p>",
+            "image": "shopify://shop_images/The_Aequil_Way_-_Build_Strength.png",
+            "title": "",
+            "svg_icon": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -112,7 +116,7 @@
         "button_link2": "shopify://collections/products",
         "columns_desktop": 4,
         "column_alignment": "left",
-        "background_style": "primary",
+        "background_style": "none",
         "color_scheme": "scheme-5",
         "columns_mobile": "1",
         "swipe_on_mobile": false,

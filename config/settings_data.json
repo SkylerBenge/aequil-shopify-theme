@@ -250,6 +250,17 @@
           "secondary_button_label": "#121212",
           "shadow": "#121212"
         }
+      },
+      "scheme-ab71c139-b15b-42c2-9771-84ea9363c5d5": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text": "rgba(0,0,0,0)",
+          "button": "rgba(0,0,0,0)",
+          "button_label": "rgba(0,0,0,0)",
+          "secondary_button_label": "rgba(0,0,0,0)",
+          "shadow": "rgba(0,0,0,0)"
+        }
       }
     }
   },
