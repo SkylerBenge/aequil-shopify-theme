@@ -26,13 +26,63 @@
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false
-  assign money_price = price | money
-  assign money_price_min = price_min | money
-  assign money_price_max = price_max | money
+
+  comment
+    Custom price formatting to remove cents if .00
+  endcomment
+  assign price_cents = price | modulo: 100
+  assign price_min_cents = price_min | modulo: 100
+  assign price_max_cents = price_max | modulo: 100
+  assign compare_at_price_cents = compare_at_price | modulo: 100
+
+  if price_cents == 0
+    assign money_price = price | money | remove: '.00'
+  else
+    assign money_price = price | money
+  endif
+
+  if price_min_cents == 0
+    assign money_price_min = price_min | money | remove: '.00'
+  else
+    assign money_price_min = price_min | money
+  endif
+
+  if price_max_cents == 0
+    assign money_price_max = price_max | money | remove: '.00'
+  else
+    assign money_price_max = price_max | money
+  endif
+
+  if compare_at_price_cents == 0
+    assign money_compare_at_price = compare_at_price | money | remove: '.00'
+  else
+    assign money_compare_at_price = compare_at_price | money
+  endif
+
   if settings.currency_code_enabled
-    assign money_price = price | money_with_currency
-    assign money_price_min = price_min | money_with_currency
-    assign money_price_max = price_max | money_with_currency
+    if price_cents == 0
+      assign money_price = price | money_with_currency | remove: '.00'
+    else
+      assign money_price = price | money_with_currency
+    endif
+
+    if price_min_cents == 0
+      assign money_price_min = price_min | money_with_currency | remove: '.00'
+    else
+      assign money_price_min = price_min | money_with_currency
+    endif
+
+    if price_max_cents == 0
+      assign money_price_max = price_max | money_with_currency | remove: '.00'
+    else
+      assign money_price_max = price_max | money_with_currency
+    endif
+
+    if compare_at_price_cents == 0
+      assign money_compare_at_price = compare_at_price | money_with_currency | remove: '.00'
+    else
+      assign money_compare_at_price = compare_at_price | money_with_currency
+    endif
   endif
 
   if target == product and product.price_varies
@@ -67,11 +117,7 @@
               </span>
               <span>
                 <s class="price-item price-item--regular variant-item__old-price">
-                  {% if settings.currency_code_enabled %}
-                    {{ compare_at_price | money_with_currency }}
-                  {% else %}
-                    {{ compare_at_price | money }}
-                  {% endif %}
+                  {{ money_compare_at_price }}
                 </s>
               </span>
             {%- endunless -%}
