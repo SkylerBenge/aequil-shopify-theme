@@ -43,7 +43,7 @@
 }
 
 body {
-  font-family: 'Endurance Pro', sans-serif !important;
+  font-family: 'Endurance Pro' !important;
   font-weight: 300 !important;
   background-color: #FAF9F6;
   color: #121212;
@@ -51,7 +51,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Endurance Pro', sans-serif !important;
+  font-family: 'Endurance Pro' !important;
   font-weight: 300 !important;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-body {
-  font-family: 'Endurance Pro', sans-serif !important;
+  font-family: 'Endurance Pro' !important;
   font-weight: 300 !important;
 }
 
@@ -3671,7 +3671,7 @@ section[class^='rkwo-'] h3,
 section[class^='rkwo-'] h4,
 section[class^='rkwo-'] h5,
 section[class^='rkwo-'] h6 {
-  font-family: 'Endurance Pro', sans-serif !important;
+  font-family: 'Endurance Pro' !important;
   font-weight: 300 !important;
   color: #000000 !important;
 }
