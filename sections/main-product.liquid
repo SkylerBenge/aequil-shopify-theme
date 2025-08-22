@@ -116,7 +116,7 @@
                       {{ product.title | escape }}
                     </h2>
                   </a>
-                  <h3>{{ product.metafields.custom.short_description_ | metafield_tag }}</h3>
+                  <p>{{ product.metafields.custom.short_description_ | metafield_tag }}</p>
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
