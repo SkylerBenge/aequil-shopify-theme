@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Endurance';
-  src: url('{{ "EndurancePro-Light.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro-Light.woff2" | asset_url }}') format("woff2");
+  font-family: 'Avenir';
+  src: url('{{ "AvenirPro-Light.woff" | asset_url }}') format("woff"), url('{{ "AvenirPro-Light.woff2" | asset_url }}') format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Endurance', sans-serif !important;
+  font-family: 'Avenir', sans-serif !important;
   font-weight: 300 !important;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -14,13 +14,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-body {
-  font-family: 'Endurance', sans-serif !important;
+  font-family: 'Avenir', sans-serif !important;
   font-weight: 300 !important;
 }
 
 :root {
-  --font-body-family: 'Endurance', sans-serif;
-  --font-heading-family: 'Endurance', sans-serif;
+  --font-body-family: 'Avenir', sans-serif;
+  --font-heading-family: 'Avenir', sans-serif;
   --alpha-button-background: 1;
   --alpha-button-border: 1;
   --alpha-link: 0.85;
@@ -3628,7 +3628,7 @@ section[class^='rkwo-'] h3,
 section[class^='rkwo-'] h4,
 section[class^='rkwo-'] h5,
 section[class^='rkwo-'] h6 {
-  font-family: 'Endurance', sans-serif !important;
+  font-family: 'Avenir', sans-serif !important;
   font-weight: 300 !important;
   color: #000000 !important;
 }
