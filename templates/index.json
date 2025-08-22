@@ -372,6 +372,16 @@
         "image": "shopify://shop_images/aequilv.svg"
       }
     },
+    "rkwo_text_image_highlight_wFjWjG": {
+      "type": "rkwo-text-image-highlight",
+      "name": "RKWO Text Image Highlight",
+      "settings": {
+        "heading": "The Hidden Impact of Stress: Why Your Body Feels Stuck",
+        "content": "<h3><strong>Stress isn't just something you feel. It's something your body stores - and if left unresolved, it blocks your ability to heal, regulate, and thrive.</strong></h3><p><strong>STRESS IS NOT JUST ONE THING</strong></p><p>At AEQUIL, we define stress as anything that places pressure on your essential systems and functions - whether physical, emotional, mental, or energetic.</p>",
+        "cta_text": "Learn More About The Impact Of Stress",
+        "cta_url": "shopify://pages/about-stress"
+      }
+    },
     "slideshow_BqpRbK": {
       "type": "slideshow",
       "blocks": {
@@ -520,6 +530,7 @@
     "rkwo_highlight_points_LeM8CW",
     "rkwo_text_image_highlight_rngncc",
     "rkwo_highlight_points_WRtQkm",
+    "rkwo_text_image_highlight_wFjWjG",
     "slideshow_BqpRbK",
     "rkwo_heading_text_ahDDJG",
     "featured_collection_zjLXT4",
