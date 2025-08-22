@@ -2,6 +2,9 @@ product-info {
   display: block;
 }
 
+.product-container {
+  padding: 0 40px
+}
 .product {
   margin: 0;
 }
