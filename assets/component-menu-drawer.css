@@ -54,11 +54,9 @@ details[open] > .menu-drawer {
 }
 
 /* Prevent body scroll when menu is open */
-.overflow-hidden-tablet,
-.overflow-hidden-desktop {
+.menu-drawer-container[open] ~ body,
+body:has(.menu-drawer-container[open]) {
   overflow: hidden !important;
-  position: fixed;
-  width: 100%;
 }
 
 .js details[open] > .menu-drawer,
