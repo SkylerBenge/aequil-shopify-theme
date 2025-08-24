@@ -100,6 +100,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 1.1rem 3rem;
   text-decoration: none;
   font-size: 1.8rem;
+  color: #ffffff;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
@@ -111,7 +112,6 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__close-button:focus,
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
-  color: #ffffff;
   background-color: rgba(var(--color-foreground), 0.04);
 }
 
