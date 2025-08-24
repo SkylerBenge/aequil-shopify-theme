@@ -8,12 +8,18 @@
   }
   .section-{{ section.id }} .color-{{ section.settings.color_scheme }} .gradient {
     border-radius: 40px;
+    overflow: hidden;
+    width: calc(100% - 80px);
+    margin: 0 40px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .section-{{ section.id }} .color-{{ section.settings.color_scheme }} .gradient {
+      margin: 0 40px;
     }
   }
 {%- endstyle -%}
