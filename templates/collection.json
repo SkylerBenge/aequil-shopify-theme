@@ -20,6 +20,9 @@
     },
     "rkwo_hero_jjcEHF": {
       "type": "rkwo-hero",
+      "custom_css": [
+        ".rkwo-hero-content {padding: 0 !important;}"
+      ],
       "name": "RKWO Hero",
       "settings": {
         "heading": "{{ collection.title }}",
