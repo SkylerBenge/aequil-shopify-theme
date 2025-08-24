@@ -26,14 +26,17 @@ menu-drawer > details[open] > summary::before {
 }
 
 .menu-drawer {
-  position: absolute;
-  z-index: 3;
+  position: fixed;
+  z-index: 1000;
   left: 0;
-  top: 100%;
+  top: 0;
   width: 100%;
+  height: 100vh;
   padding: 0;
   background-color: transparent;
   overflow-x: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)
       rgba(var(--color-shadow), var(--drawer-shadow-opacity))
@@ -45,9 +48,14 @@ menu-drawer > details[open] > summary::before {
   height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
 }
 
+/* Menu drawer open state */
+details[open] > .menu-drawer {
+  transform: translateX(0);
+}
+
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
-  transition: transform var(--duration-default) ease, visibility var(--duration-default) ease;
+  transition: transform 0.3s ease-in-out, visibility var(--duration-default) ease;
 }
 
 .js details[open].menu-opening > .menu-drawer,
