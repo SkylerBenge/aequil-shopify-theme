@@ -25,6 +25,9 @@ product-info {
 }
 
 @media screen and (min-width: 750px) {
+  .bottle-tags-container {
+    z-index: 15;
+  }
   .product__column-sticky {
     display: block;
     position: sticky;
