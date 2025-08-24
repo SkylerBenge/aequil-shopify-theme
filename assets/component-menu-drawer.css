@@ -110,6 +110,14 @@ details[open].menu-opening > .menu-drawer__submenu {
 
 .menu-drawer__menu {
   list-style: none;
+  opacity: 1;
+  transition: opacity 0s;
+}
+
+/* Hide menu content immediately when drawer is closed */
+details:not([open]) .menu-drawer__menu {
+  opacity: 0;
+  transition: opacity 0s;
 }
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
