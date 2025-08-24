@@ -799,8 +799,8 @@
 /* Bottle Tag Pills Container */
 .bottle-tags-container {
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 10px;
+  left: 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
