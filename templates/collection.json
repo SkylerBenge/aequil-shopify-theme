@@ -100,6 +100,9 @@
     },
     "rkwo_image_text_h_cta_b7cc69": {
       "type": "rkwo-image-text-h-cta",
+      "custom_css": [
+        ".rkwo-image-text-highlighted-cta {margin-bottom: 0 !important;}"
+      ],
       "name": "RKWO Image Text H-CTA",
       "settings": {
         "heading": "",
