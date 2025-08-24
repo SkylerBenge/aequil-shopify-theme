@@ -111,12 +111,14 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__menu {
   list-style: none;
   visibility: visible;
+  display: none;
 }
 
 /* Hide menu content immediately when drawer is closed */
 .js details[open] .menu-drawer__menu {
-  display: none;
+  display: inherit;
 }
+
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
 }
