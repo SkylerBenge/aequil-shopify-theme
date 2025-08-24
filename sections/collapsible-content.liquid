@@ -9,7 +9,6 @@
   .section-{{ section.id }}-gradient {
     border-radius: 40px;
     overflow: hidden;
-    width: calc(100% - 80px);
   }
 
   @media screen and (min-width: 750px) {
@@ -18,6 +17,7 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
     .section-{{ section.id }}-gradient {
+      width: calc(100% - 80px);
       margin: 0 40px;
     }
   }
