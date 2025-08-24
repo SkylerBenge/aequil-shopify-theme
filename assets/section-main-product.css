@@ -2,9 +2,6 @@ product-info {
   display: block;
 }
 
-.product-container {
-  padding: 0 40px
-}
 .product {
   margin: 0;
 }
@@ -24,6 +21,9 @@ product-info {
 }
 
 @media screen and (min-width: 750px) {
+.product-container {
+    padding: 0 40px
+  }
   .product__column-sticky {
     display: block;
     position: sticky;
