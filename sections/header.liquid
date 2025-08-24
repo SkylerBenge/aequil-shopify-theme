@@ -77,6 +77,10 @@
     
     <!-- Icons (Right) -->
     <div class="header__icons">
+      <!-- Mobile Menu Button (visible on mobile/tablet) -->
+      <div class="header__icon header__icon--menu large-up-hide">
+        {% render 'header-drawer' %}
+      </div>
       <!-- Cart Icon -->
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset">
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
