@@ -44,8 +44,8 @@ menu-drawer > details[open] > summary::before {
 }
 
 .js .menu-drawer {
-  height: calc(100vh - 100%);
-  height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
+  height: 100vh;
+  height: var(--viewport-height, 100vh);
 }
 
 /* Menu drawer open state */
@@ -54,9 +54,9 @@ details[open] > .menu-drawer {
 }
 
 /* Prevent body scroll when menu is open */
-.menu-drawer-container[open] ~ * body,
-body:has(.menu-drawer-container[open]) {
-  overflow: hidden;
+.overflow-hidden-tablet,
+.overflow-hidden-desktop {
+  overflow: hidden !important;
   position: fixed;
   width: 100%;
 }
