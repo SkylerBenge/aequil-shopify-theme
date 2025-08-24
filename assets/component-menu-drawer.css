@@ -92,6 +92,9 @@ details[open].menu-opening > .menu-drawer__submenu {
   overflow-y: auto;
 }
 
+.menu-drawer__menu {
+  list-style: none;
+}
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
 }
