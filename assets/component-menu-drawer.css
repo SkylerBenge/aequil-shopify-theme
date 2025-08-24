@@ -114,8 +114,8 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 /* Hide menu content immediately when drawer is closed */
-details:not([open]) .menu-drawer__menu {
-  visibility: hidden;
+.js details[open] .menu-drawer__menu {
+  display: none;
 }
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
