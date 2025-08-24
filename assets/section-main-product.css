@@ -2,6 +2,9 @@
   .product-template {
     padding: 0 20px;
   }
+  .product-container {
+    margin-top: 40px;
+  }
 }
 
 product-info {
