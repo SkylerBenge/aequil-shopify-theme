@@ -53,6 +53,14 @@ details[open] > .menu-drawer {
   transform: translateX(0);
 }
 
+/* Prevent body scroll when menu is open */
+.menu-drawer-container[open] ~ * body,
+body:has(.menu-drawer-container[open]) {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
   transition: transform 0.3s ease-in-out, visibility var(--duration-default) ease;
