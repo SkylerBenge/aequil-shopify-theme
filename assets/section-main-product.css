@@ -37,6 +37,10 @@ product-info {
   .bottle-tags-container {
     z-index: 15;
   }
+  .grid__item.product__media-wrapper {
+    background-color: transparent;
+    border-radius: 0;
+  }
   .product__column-sticky {
     display: block;
     position: sticky;
@@ -408,11 +412,6 @@ a.product__text {
     margin-left: -2.5rem;
     margin-bottom: 3rem;
     width: calc(100% + 4rem);
-  }
-
-  .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
   }
 
   .slider.product__media-list::-webkit-scrollbar {
