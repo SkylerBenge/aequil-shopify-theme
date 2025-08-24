@@ -991,7 +991,7 @@ a.product__text {
     width: calc(33% - 0.6rem);
   }
   :not(.thumbnail-slider).slider-mobile-gutter li {
-    padding: 0;
+    padding: 0 !important;
   }
 }
 
