@@ -43,6 +43,23 @@ h1, h2, h3, h4, h5, h6 {
   --image-padding: var(--product-card-image-padding);
   --text-alignment: var(--product-card-text-alignment);
 }
+.bottle-tags-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+@media screen and (min-width: 750px) {
+  .bottle-tags-container {
+    z-index: 15;
+    left: 40px;
+  }
+}
 
 .collection-card-wrapper .card,
 .contains-card--collection {
