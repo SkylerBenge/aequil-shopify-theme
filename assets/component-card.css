@@ -796,18 +796,6 @@
   }
 }
 
-/* Bottle Tag Pills Container */
-.bottle-tags-container {
-  position: absolute;
-  top: 10px;
-  left: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
 /* Hide pills when hover overlay is active */
 .has-hover-overlay:hover .bottle-tags-container {
   opacity: 0;
