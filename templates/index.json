@@ -451,6 +451,48 @@
       "settings": {
         "include_margins": false
       }
+    },
+    "product_features_Ay8eT6": {
+      "type": "product-features",
+      "blocks": {
+        "feature_iqK8d4": {
+          "type": "feature",
+          "settings": {
+            "svg_icon": "",
+            "title": "Quality Materials",
+            "text": "<p>Made with premium materials for lasting durability.</p>"
+          }
+        },
+        "feature_zjVELr": {
+          "type": "feature",
+          "settings": {
+            "svg_icon": "",
+            "title": "Expert Craftsmanship",
+            "text": "<p>Carefully crafted by skilled artisans.</p>"
+          }
+        },
+        "feature_XMK4pa": {
+          "type": "feature",
+          "settings": {
+            "svg_icon": "",
+            "title": "Satisfaction Guaranteed",
+            "text": "<p>100% satisfaction guarantee or your money back.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_iqK8d4",
+        "feature_zjVELr",
+        "feature_XMK4pa"
+      ],
+      "name": "Product Features",
+      "settings": {
+        "background_color": "#6f9fcf",
+        "link_url": "shopify://pages/about-us",
+        "link_text": "About AEQUIL",
+        "link_url_2": "shopify://collections/products",
+        "link_text_2": "Shop The Range"
+      }
     }
   },
   "order": [
@@ -468,6 +510,7 @@
     "featured_collection_zjLXT4",
     "rkwo_image_text_h_cta_3UM8GD",
     "custom_liquid_rAa3fx",
-    "1748782285167ab2f6"
+    "1748782285167ab2f6",
+    "product_features_Ay8eT6"
   ]
 }
