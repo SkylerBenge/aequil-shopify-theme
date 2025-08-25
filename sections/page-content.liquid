@@ -15,7 +15,7 @@
       <div class="page-content__mobile-image" style="background-image: url({{ image | img_url: '1200x800' }});">
         <div class="page-content__mobile-overlay">
           {%- if heading != blank -%}
-            <h1 class="page-content__heading">{{ heading }}</h1>
+            <h1 class="page-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
           {%- endif -%}
         </div>
       </div>
@@ -25,13 +25,13 @@
         <div class="page-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
           <div class="page-content__image-overlay">
             {%- if heading != blank -%}
-              <h1 class="page-content__heading">{{ heading }}</h1>
+              <h1 class="page-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
             {%- endif -%}
             {%- if subheading != blank -%}
-              <h2 class="page-content__subheading">{{ subheading }}</h2>
+              <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
             {%- endif -%}
             {%- if content != blank -%}
-              <div class="page-content__text">{{ content }}</div>
+              <div class="page-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
             {%- endif -%}
           </div>
         </div>
