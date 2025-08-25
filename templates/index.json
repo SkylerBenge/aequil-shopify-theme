@@ -375,7 +375,7 @@
         "heading": "Glossary",
         "content": "",
         "cta_text": "Explore the Glossary",
-        "cta_url": "",
+        "cta_url": "shopify://pages/glossary",
         "image": "shopify://shop_images/aequilv.svg"
       }
     },
