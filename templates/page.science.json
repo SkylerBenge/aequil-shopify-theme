@@ -76,11 +76,15 @@
       ],
       "name": "Page Content",
       "settings": {
-        "image": "shopify://shop_images/Aequil-Banner_01.png",
+        "image": "shopify://shop_images/science.png",
         "desktop_layout": "left",
-        "heading": "THE AEQUIL APPROACH",
-        "subheading": "About Aequil",
+        "heading": "Our Science",
+        "heading_alignment": "center",
+        "subheading": "Biotech for body, mind, energy. Rooted in rhythm.",
+        "subheading_alignment": "center",
+        "subheading_dark_background": false,
         "content": "<p>Your body remembers. We help you listen.</p>",
+        "content_alignment": "center",
         "overlay_opacity": 1,
         "open_first_block": true
       }
@@ -120,7 +124,11 @@
           }
         }
       },
-      "block_order": ["heading_biDjpE", "text_eRgUfa", "button_dCbg9h"],
+      "block_order": [
+        "heading_biDjpE",
+        "text_eRgUfa",
+        "button_dCbg9h"
+      ],
       "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
