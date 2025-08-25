@@ -344,22 +344,9 @@
     transform: rotate(180deg);
   }
 
-  /* Accordion content transitions */
   .page-content__accordion-content {
     padding: 0 20px 20px;
     line-height: 1.6;
-    overflow: hidden;
-    transition: max-height 1s ease, padding 1s ease;
-  }
-
-  .page-content__accordion details:not([open]) .page-content__accordion-content {
-    max-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .page-content__accordion details[open] .page-content__accordion-content {
-    max-height: 1000px;
   }
 
   .page-content__accordion-content p {
