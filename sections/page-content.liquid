@@ -8,7 +8,7 @@
 -%}
 
 <section class="page-content" id="section-{{ section_id }}">
-  <!-- Hero Section with Background Image and Content -->
+  <!-- Hero Section with Background Image and Title -->
   <div class="page-content__hero">
     {%- if image -%}
       <!-- Mobile: Background image with title overlay -->
@@ -20,18 +20,12 @@
         </div>
       </div>
 
-      <!-- Desktop: Split layout with background image and content -->
+      <!-- Desktop: Split layout with background image and title -->
       <div class="page-content__desktop-layout page-content__desktop-layout--{{ desktop_layout }}">
         <div class="page-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
           <div class="page-content__image-overlay">
             {%- if heading != blank -%}
               <h1 class="page-content__heading">{{ heading }}</h1>
-            {%- endif -%}
-            {%- if subheading != blank -%}
-              <h2 class="page-content__subheading">{{ subheading }}</h2>
-            {%- endif -%}
-            {%- if content != blank -%}
-              <div class="page-content__text">{{ content }}</div>
             {%- endif -%}
           </div>
         </div>
@@ -68,11 +62,19 @@
         </div>
       </div>
     {%- else -%}
-      <!-- No image: just content -->
+      <!-- No image: just heading -->
       <div class="page-content__content-only">
         {%- if heading != blank -%}
           <h1 class="page-content__heading">{{ heading }}</h1>
         {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <!-- Subtitle and Text Section (below banner, above accordions) -->
+  {%- if subheading != blank or content != blank -%}
+    <div class="page-content__subtitle-section">
+      <div class="page-content__subtitle-content">
         {%- if subheading != blank -%}
           <h2 class="page-content__subheading">{{ subheading }}</h2>
         {%- endif -%}
@@ -80,10 +82,10 @@
           <div class="page-content__text">{{ content }}</div>
         {%- endif -%}
       </div>
-    {%- endif -%}
-  </div>
+    </div>
+  {%- endif -%}
 
-  <!-- Mobile Collapsible Content Blocks (below hero) -->
+  <!-- Mobile Collapsible Content Blocks -->
   {%- if section.blocks.size > 0 -%}
     <div class="page-content__mobile-collapsible">
       <div class="page-content__blocks">
