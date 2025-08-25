@@ -79,8 +79,12 @@
         "image": "shopify://shop_images/Aequil-Banner_02.png",
         "desktop_layout": "left",
         "heading": "The Hidden Impact of Stress: Why Your Body Feels Stuck",
+        "heading_alignment": "center",
         "subheading": "There are different types of stress:",
+        "subheading_alignment": "center",
+        "subheading_dark_background": true,
         "content": "<ul><li>Acute Stress: triggered by a current event (e.g. a deadline, a conflict)</li><li>Chronic Stress: low-level stress sustained over time</li><li>Stored Stress: unresolved experiences, trauma, or long-term dysregulation that get embedded in the body</li><li>Inherited Stress: energetic or biological patterns passed down through family systems, survival conditioning, or trauma <br/>cycles</li></ul>",
+        "content_alignment": "left",
         "overlay_opacity": 1,
         "open_first_block": true
       }
