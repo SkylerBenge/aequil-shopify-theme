@@ -114,9 +114,9 @@
         "collapsible_row_mMqiDT": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
-            "icon": "check_mark",
-            "row_content": "",
+            "heading": "WHAT IS AEQUIL?",
+            "icon": "none",
+            "row_content": "<p>AEQUIL is a pioneering biotech brand offering transformative health solutions that help you reset your foundation of <br/>wellbeing.</p><p><br/>We work at the level of your essential systems and functions - supporting the rhythm, regulation, and communication <br/>between your body, mind, and energy. Because when your internal systems stop moving together, you don't feel like yourself. We help restore that movement.<br/></p><p>We don't treat symptoms. We help you return to a state of dynamic balance - where your body can self-regulate, self-repair, <br/>and thrive.</p>",
             "page": ""
           }
         },
@@ -148,9 +148,9 @@
       "settings": {
         "image": "shopify://shop_images/Aequil-Banner_01.png",
         "desktop_layout": "left",
-        "heading": "Page Heading",
-        "subheading": "",
-        "content": "<p>Add your page content here.</p>",
+        "heading": "THE AEQUIL APPROACH",
+        "subheading": "About Aequil",
+        "content": "<p>Your body remembers. We help you listen.</p>",
         "open_first_block": false
       }
     }
