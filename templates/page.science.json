@@ -78,9 +78,9 @@
       "settings": {
         "image": "shopify://shop_images/science.png",
         "desktop_layout": "left",
-        "heading": "<p>Our <strong>Science</strong></p>",
-        "heading_alignment": "right",
-        "subheading": "<p>Biotech for body, mind, energy. Rooted in rhythm.</p>",
+        "heading": "<p>Our <em><strong>Science</strong></em></p>",
+        "heading_alignment": "left",
+        "subheading": "<p>Biotech for body, mind, energy. <em><strong>Rooted in rhythm.</strong></em></p>",
         "subheading_alignment": "center",
         "subheading_dark_background": true,
         "content": "<p>Your body remembers. We help you listen.</p>",
