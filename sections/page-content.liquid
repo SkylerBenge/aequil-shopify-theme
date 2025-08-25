@@ -12,7 +12,7 @@
   <div class="page-content__hero">
     {%- if image -%}
       <!-- Mobile: Background image with title overlay -->
-      <div class="page-content__mobile-image" style="background-image: url({{ image | img_url: '1200x800' }});">
+      <div class="page-content__mobile-image page-content__mobile-image--{{ section.settings.mobile_image_height }}" style="background-image: url({{ image | img_url: '1200x800' }});">
         <div class="page-content__mobile-overlay">
           {%- if heading != blank -%}
             <h1 class="page-content__heading">{{ heading }}</h1>
@@ -165,10 +165,21 @@
   .page-content__mobile-image {
     display: block;
     position: relative;
-    min-height: 400px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .page-content__mobile-image--small {
+    min-height: 200px;
+  }
+
+  .page-content__mobile-image--medium {
+    min-height: 300px;
+  }
+
+  .page-content__mobile-image--tall {
+    min-height: 400px;
   }
 
   .page-content__mobile-overlay {
