@@ -42,7 +42,7 @@
                 <div class="page-content__accordion" {{ block.shopify_attributes }}>
                   <details
                     id="Details-{{ block.id }}-{{ section.id }}"
-                    {% if section.settings.open_first_block and forloop.first %}open{% endif %}
+                    {% if section.settings.open_first_block and forloop.first %}open=""{% endif %}
                   >
                     <summary
                       id="Summary-{{ block.id }}-{{ section.id }}"
@@ -109,7 +109,7 @@
           <div class="page-content__accordion" {{ block.shopify_attributes }}>
             <details
               id="Details-mobile-{{ block.id }}-{{ section.id }}"
-              {% if section.settings.open_first_block and forloop.first %}open{% endif %}
+              {% if section.settings.open_first_block and forloop.first %}open=""{% endif %}
             >
               <summary
                 id="Summary-mobile-{{ block.id }}-{{ section.id }}"
