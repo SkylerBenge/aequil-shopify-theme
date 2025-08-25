@@ -16,7 +16,9 @@
         "heading": "Everything is connected",
         "content": "<p>Your gut, your brain, your immune system, your emotions - when one part is out of sync, the whole body feels it. AEQUIL is a biotech health system that helps you reset the foundation of your wellbeing - restoring rhythm, energy, and coherence between body, mind, energy.</p>",
         "highlight": "<p><strong>Trusted by +10,000 customers</strong></p>",
-        "image": "shopify://shop_images/Aequil-Banner_01.png",
+        "background_type": "video",
+        "video": "shopify://files/videos/Banner 03_Animated Bubbles_01_Loop_Colour Corrected.mp4",
+        "video_poster": "shopify://shop_images/Screenshot_2025-08-24_at_9.28.45_PM.png",
         "link_text": "Discover Your Personalised Reset",
         "link_url": "shopify://pages/quiz",
         "link_text_2": "Shop The Range",
@@ -307,8 +309,8 @@
       "settings": {
         "heading": "ABOUT FRÉDÉRIC",
         "content": "<h3>Meet the Founder</h3><p>Frédéric Roscop is a pioneering osteopath, researcher, and creator of AEQUIL Science. He has treated thousands of patients across decades in clinical practice, working at the intersection of body, mind, energy. </p><p>Frédéric's vision is simple: We all have the right to feel well, be free, and return to ourselves. </p><p>He is the author of multiple scientific publications on dynamised water, and an international speaker on topics like Lyme disease, biophysics, and human adaptability. </p><p>Through AEQUIL, he brings together clinical wisdom, biotech innovation, and a belief in human coherence.</p>",
-        "cta_text": "",
-        "cta_url": "shopify://pages/frederic-says",
+        "cta_text": "Full Bio",
+        "cta_url": "shopify://pages/bio",
         "image": "shopify://shop_images/f.png"
       }
     },
@@ -373,7 +375,7 @@
         "heading": "Glossary",
         "content": "",
         "cta_text": "Explore the Glossary",
-        "cta_url": "",
+        "cta_url": "shopify://pages/glossary",
         "image": "shopify://shop_images/aequilv.svg"
       }
     },
@@ -384,7 +386,7 @@
         "heading": "The Hidden Impact of Stress: Why Your Body Feels Stuck",
         "content": "<h3><strong>Stress isn't just something you feel. It's something your body stores - and if left unresolved, it blocks your ability to heal, regulate, and thrive.</strong></h3><p><strong>STRESS IS NOT JUST ONE THING</strong></p><p>At AEQUIL, we define stress as anything that places pressure on your essential systems and functions - whether physical, emotional, mental, or energetic.</p>",
         "cta_text": "Learn More About The Impact Of Stress",
-        "cta_url": "shopify://pages/about-stress"
+        "cta_url": "shopify://pages/stress"
       }
     },
     "slideshow_BqpRbK": {
