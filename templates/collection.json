@@ -20,12 +20,19 @@
     },
     "rkwo_hero_jjcEHF": {
       "type": "rkwo-hero",
+      "custom_css": [
+        ".rkwo-hero-content {padding: 0 !important;}"
+      ],
       "name": "RKWO Hero",
       "settings": {
         "heading": "{{ collection.title }}",
         "content": "",
         "highlight": "",
-        "image": "shopify://shop_images/Aequil-Group_Render.jpg"
+        "image": "shopify://shop_images/Aequil-Group_Render.jpg",
+        "link_text": "Learn More",
+        "link_url": "",
+        "link_text_2": "Learn More",
+        "link_url_2": ""
       }
     },
     "product-grid": {
@@ -33,7 +40,7 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -93,6 +100,9 @@
     },
     "rkwo_image_text_h_cta_b7cc69": {
       "type": "rkwo-image-text-h-cta",
+      "custom_css": [
+        ".rkwo-image-text-highlighted-cta {margin-bottom: 0 !important;}"
+      ],
       "name": "RKWO Image Text H-CTA",
       "settings": {
         "heading": "",

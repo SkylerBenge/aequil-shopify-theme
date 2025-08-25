@@ -12,9 +12,9 @@
     "logo": "shopify://shop_images/aequil-logo-small-blue_cdc31537-f0ec-403e-a467-37a74756c4d7.png",
     "logo_width": 160,
     "favicon": "shopify://shop_images/AEQUIL_icon_blue_RGB_a07b9499-3b85-415a-b7da-3fe595fa91d0.png",
-    "type_header_font": "system",
+    "type_header_font": "serif",
     "heading_scale": 100,
-    "type_body_font": "system",
+    "type_body_font": "serif",
     "body_scale": 100,
     "page_width": 1200,
     "spacing_sections": 0,
@@ -167,22 +167,22 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
+          "text": "#555557",
+          "button": "#555557",
           "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "secondary_button_label": "#555557",
+          "shadow": "#555557"
         }
       },
       "scheme-2": {
         "settings": {
           "background": "#f3f3f3",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
+          "text": "#555557",
+          "button": "#555557",
           "button_label": "#f3f3f3",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "secondary_button_label": "#555557",
+          "shadow": "#555557"
         }
       },
       "scheme-3": {
@@ -191,9 +191,9 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "#ffffff",
-          "button_label": "#000000",
+          "button_label": "#555557",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#555557"
         }
       },
       "scheme-4": {
@@ -215,40 +215,40 @@
           "button": "#ffffff",
           "button_label": "#334fb4",
           "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "shadow": "#555557"
         }
       },
       "scheme-9168992c-f633-48dc-8a7c-56ed3c44e80e": {
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
+          "text": "#555557",
+          "button": "#555557",
           "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "secondary_button_label": "#555557",
+          "shadow": "#555557"
         }
       },
       "scheme-97017b6a-3e7c-4963-be9a-76b577556b34": {
         "settings": {
           "background": "#faf9f6",
           "background_gradient": "",
-          "text": "#121212",
+          "text": "#555557",
           "button": "#334fb4",
           "button_label": "#ffffff",
           "secondary_button_label": "#4e69ea",
-          "shadow": "#121212"
+          "shadow": "#555557"
         }
       },
       "scheme-3d21349a-cd80-43e2-8d55-fb771ca9e6cf": {
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#121212",
-          "button": "#121212",
+          "text": "#555557",
+          "button": "#555557",
           "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "secondary_button_label": "#555557",
+          "shadow": "#555557"
         }
       }
     }
