@@ -60,18 +60,6 @@
             {%- endif -%}
           </video>
         {%- endif -%}
-        {%- if heading != blank -%}
-          <h1 class="rkwo-hero-content-heading rkwo-aequil-heading" style="color: #ffffff !important;">
-            {% assign words = heading | split: ' ' %}
-            {% if words.size > 1 %}
-              {% assign last_index = words.size | minus: 1 %}
-              {% assign first_words = words | slice: 0, last_index %}
-              {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
-            {% else %}
-              {{ heading }}
-            {% endif %}
-          </h1>
-        {%- endif -%}
       </div>
     {%- endif -%}
     <div class="rkwo-hero-content">
