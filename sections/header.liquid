@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: {{ section.settings.padding_top }}px 3rem {{ section.settings.padding_bottom }}px 3rem;
+    padding: 1rem 2rem;
   }
 
   .header__heading-link {
@@ -27,6 +27,20 @@
 
   .header__cart-count {
     margin-left: 0.3rem;
+  }
+
+  /* Hide desktop menu on mobile/tablet */
+  @media screen and (max-width: 989px) {
+    .header__inline-menu {
+      display: none;
+    }
+  }
+
+  /* Hide mobile menu on desktop */
+  @media screen and (min-width: 990px) {
+    .header__icon--menu {
+      display: none;
+    }
   }
 </style>
 
@@ -74,9 +88,13 @@
     </a>
 
     {% render 'header-mega-menu' %}
-    
-    <!-- Icons (Right) -->
+
+        <!-- Icons (Right) -->
     <div class="header__icons">
+      <!-- Mobile Menu Button (visible on mobile/tablet) -->
+      <div class="header__icon header__icon--menu large-up-hide">
+        {% render 'header-drawer' %}
+      </div>
       <!-- Cart Icon -->
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset">
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
@@ -98,6 +116,114 @@
       "id": "menu",
       "label": "Menu",
       "default": "main-menu"
+    },
+    {
+      "type": "select",
+      "id": "menu_type_desktop",
+      "label": "Desktop menu type",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "Dropdown"
+        },
+        {
+          "value": "mega",
+          "label": "Mega menu"
+        },
+        {
+          "value": "drawer",
+          "label": "Drawer"
+        }
+      ],
+      "default": "mega"
+    },
+    {
+      "type": "color_scheme",
+      "id": "menu_color_scheme",
+      "label": "Menu color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Header color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_customer_avatar",
+      "label": "Enable customer avatar",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "sticky_header_type",
+      "label": "Sticky header",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "on-scroll-up",
+          "label": "On scroll up"
+        },
+        {
+          "value": "always",
+          "label": "Always"
+        }
+      ],
+      "default": "on-scroll-up"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separator",
+      "label": "Show line separator",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "label": "Logo position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-center",
+          "label": "Top center"
+        },
+        {
+          "value": "middle-left",
+          "label": "Middle left"
+        },
+        {
+          "value": "middle-center",
+          "label": "Middle center"
+        }
+      ],
+      "default": "middle-left"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 20
     }
   ]
 }

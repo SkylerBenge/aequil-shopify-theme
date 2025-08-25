@@ -26,16 +26,17 @@ menu-drawer > details[open] > summary::before {
 }
 
 .menu-drawer {
-  position: absolute;
-  transform: translateX(-100%);
-  visibility: hidden;
-  z-index: 3;
+  position: fixed;
+  z-index: 1000;
   left: 0;
-  top: 100%;
+  top: 104px;
   width: 100%;
+  height: 100vh;
   padding: 0;
-  background-color: rgb(var(--color-background));
+  background-color: transparent;
   overflow-x: hidden;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)
       rgba(var(--color-shadow), var(--drawer-shadow-opacity))
@@ -43,13 +44,24 @@ menu-drawer > details[open] > summary::before {
 }
 
 .js .menu-drawer {
-  height: calc(100vh - 100%);
-  height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
+  height: 100vh;
+  height: var(--viewport-height, 100vh);
+}
+
+/* Menu drawer open state */
+details[open] > .menu-drawer {
+  transform: translateX(0);
+}
+
+/* Prevent body scroll when menu is open */
+.menu-drawer-container[open] ~ body,
+body:has(.menu-drawer-container[open]) {
+  overflow: hidden !important;
 }
 
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
-  transition: transform var(--duration-default) ease, visibility var(--duration-default) ease;
+  transition: transform 0.3s ease-in-out, visibility var(--duration-default) ease;
 }
 
 .js details[open].menu-opening > .menu-drawer,
@@ -94,6 +106,17 @@ details[open].menu-opening > .menu-drawer__submenu {
   overflow-y: auto;
 }
 
+.menu-drawer__menu {
+  list-style: none;
+  visibility: visible;
+  display: none;
+}
+
+/* Hide menu content immediately when drawer is closed */
+.js details[open] .menu-drawer__menu {
+  display: inherit;
+}
+
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
 }
@@ -102,6 +125,7 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 1.1rem 3rem;
   text-decoration: none;
   font-size: 1.8rem;
+  color: #ffffff;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
@@ -113,7 +137,6 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__close-button:focus,
 .menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
-  color: rgb(var(--color-foreground));
   background-color: rgba(var(--color-foreground), 0.04);
 }
 

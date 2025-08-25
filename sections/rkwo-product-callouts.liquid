@@ -45,12 +45,15 @@
   {%- endif -%}
 </section>
 {%- endif -%}
-  
+
 <style>
   .rkwo-product-callouts {
-    width: 100%;
+    width: calc(100% - 80PX);
+    margin: 40px;
+    border-radius: 40px;
+    overflow: hidden;
     display: table;
-    background-color: #f9f8f6;
+    background-color: #ecebe8;
   }
   .rkwo-product-callouts-image,
   .rkwo-product-callouts-content {
@@ -74,7 +77,7 @@
     font-size: 4em;
     font-style: italic;
   }
-  
+
   section[class^=rkwo-] .rkwo-product-callouts-point h3 {
     font-weight: 500 !important;
     margin: 0 0 25px 0;
@@ -83,13 +86,13 @@
     border-bottom: 1px solid #666;
     padding-bottom: 15px;
   }
-  
+
   @media (max-width: 1700px) {
     .rkwo-product-callouts-content {
       padding: 75px 50px 75px 100px;
     }
   }
-  
+
   @media (max-width: 1024px) {
     .rkwo-product-callouts,
     .rkwo-product-callouts-image,
@@ -108,8 +111,11 @@
       margin-top: 0;
     }
   }
-  
+
   @media (max-width: 768px) {
+    .rkwo-product-callouts {
+      margin: 40px 0;
+    }
     .rkwo-product-callouts-image {
       min-height: 300px;
     }
@@ -120,7 +126,7 @@
       font-size: 3em;
     }
   }
-  
+
   @media (max-width: 480px) {
     .rkwo-product-callouts-image {
       min-height: 250px;
@@ -141,7 +147,7 @@
   "settings": [
     {
       "type": "text",
-      "id": "heading", 
+      "id": "heading",
       "label": "Main Heading",
       "default": "Heading"
     },

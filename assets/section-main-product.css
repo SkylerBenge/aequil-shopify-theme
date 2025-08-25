@@ -1,10 +1,16 @@
+@media screen and (max-width: 749px) {
+  .product-template {
+    padding: 0 20px;
+  }
+  .product-container {
+    margin-top: 40px;
+  }
+}
+
 product-info {
   display: block;
 }
 
-.product-container {
-  padding: 0 40px
-}
 .product {
   margin: 0;
 }
@@ -22,8 +28,33 @@ product-info {
   position: relative;
   padding-left: 0;
 }
+.grid__item.product__media-wrapper {
+  background-color: #ecebe8;
+  border-radius: 40px 40px 0 0;
+}
+
+/* Bottle Tag Pills Container */
+/* .bottle-tags-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+} */
 
 @media screen and (min-width: 750px) {
+  /* .bottle-tags-container {
+    z-index: 15;
+    left: 40px;
+  } */
+  .grid__item.product__media-wrapper {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0 40px;
+  }
   .product__column-sticky {
     display: block;
     position: sticky;
@@ -395,11 +426,6 @@ a.product__text {
     margin-left: -2.5rem;
     margin-bottom: 3rem;
     width: calc(100% + 4rem);
-  }
-
-  .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
   }
 
   .slider.product__media-list::-webkit-scrollbar {
@@ -976,6 +1002,14 @@ a.product__text {
 
   .thumbnail-list__item.slider__slide {
     width: calc(33% - 0.6rem);
+  }
+
+  :not(.thumbnail-slider).slider-mobile-gutter ul {
+    border-radius: 40px;
+  }
+  :not(.thumbnail-slider).slider-mobile-gutter li {
+    padding: 0 !important;
+    width: 80%;
   }
 }
 

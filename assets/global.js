@@ -530,26 +530,11 @@ class MenuDrawer extends HTMLElement {
   }
 
   closeAnimation(detailsElement) {
-    let animationStart;
-
-    const handleAnimation = (time) => {
-      if (animationStart === undefined) {
-        animationStart = time;
-      }
-
-      const elapsedTime = time - animationStart;
-
-      if (elapsedTime < 400) {
-        window.requestAnimationFrame(handleAnimation);
-      } else {
-        detailsElement.removeAttribute('open');
-        if (detailsElement.closest('details[open]')) {
-          trapFocus(detailsElement.closest('details[open]'), detailsElement.querySelector('summary'));
-        }
-      }
-    };
-
-    window.requestAnimationFrame(handleAnimation);
+    // Remove open attribute immediately instead of waiting 400ms
+    detailsElement.removeAttribute('open');
+    if (detailsElement.closest('details[open]')) {
+      trapFocus(detailsElement.closest('details[open]'), detailsElement.querySelector('summary'));
+    }
   }
 }
 
