@@ -38,12 +38,12 @@
     {%- if link_url != blank and link_text != blank or link_url_2 != blank and link_text_2 != blank -%}
       <div class="product-features__links">
         {%- if link_url != blank and link_text != blank -%}
-          <a href="{{ link_url }}" class="product-features__link product-features__link--primary">
+          <a href="{{ link_url }}" class="rkwo-hero-link rkwo-hero-link-primary">
             {{ link_text }}
           </a>
         {%- endif -%}
         {%- if link_url_2 != blank and link_text_2 != blank -%}
-          <a href="{{ link_url_2 }}" class="product-features__link product-features__link--secondary">
+          <a href="{{ link_url_2 }}" class="rkwo-hero-link rkwo-hero-link-secondary">
             {{ link_text_2 }}
           </a>
         {%- endif -%}
@@ -68,7 +68,7 @@
 
   .product-features__blocks {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat({{ desktop_columns | default: 3 }}, 1fr);
     gap: 40px;
     margin-bottom: 60px;
   }
@@ -121,38 +121,42 @@
     flex-wrap: wrap;
   }
 
-  .product-features__link {
+  /* Use rkwo-hero button styles */
+  .rkwo-hero-link {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 24px;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 600;
     font-size: 16px;
     transition: all 0.3s ease;
-    min-width: 160px;
-    text-align: center;
+    border: 2px solid #6f9fcf;
+    margin: 0 10px;
   }
 
-  .product-features__link--primary {
-    background-color: #333;
-    color: #fff;
-    border: 2px solid #333;
+  .rkwo-hero-link-primary {
+    background-color: #6f9fcf;
+    color: white;
   }
 
-  .product-features__link--primary:hover {
+  .rkwo-hero-link-primary:hover {
+    background-color: #5a8bb8;
+    border-color: #5a8bb8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
+  }
+
+  .rkwo-hero-link-secondary {
     background-color: transparent;
-    color: #333;
+    color: #6f9fcf;
   }
 
-  .product-features__link--secondary {
-    background-color: transparent;
-    color: #333;
-    border: 2px solid #333;
-  }
-
-  .product-features__link--secondary:hover {
-    background-color: #333;
-    color: #fff;
+  .rkwo-hero-link-secondary:hover {
+    background-color: #6f9fcf;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
   }
 
   /* Mobile Styles */
@@ -189,9 +193,10 @@
       align-items: center;
     }
 
-    .product-features__link {
+    .rkwo-hero-link {
       width: 100%;
       max-width: 280px;
+      margin: 5px 0;
     }
   }
 
@@ -219,6 +224,15 @@
       "id": "background_color",
       "label": "Background Color",
       "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "Desktop Columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
     },
     {
       "type": "url",
