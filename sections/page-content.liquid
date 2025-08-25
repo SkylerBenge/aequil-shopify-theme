@@ -161,7 +161,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,.{{ section.settings.mobile_overlay_opacity }});
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity }});
     padding: 40px 20px 30px;
     color: white;
     text-align: center;
@@ -208,7 +208,7 @@
     text-align: center;
     color: white;
     max-width: 500px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity }});
     padding: 40px;
     border-radius: 10px;
   }
@@ -497,6 +497,17 @@
       "id": "content",
       "label": "Content Text",
       "default": "<p>Add your page content here.</p>"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "10%",
+      "label": "Mobile Overlay Opacity",
+      "info": "Controls the darkness of the overlay behind text on mobile",
+      "default": 1
     },
     {
       "type": "header",
