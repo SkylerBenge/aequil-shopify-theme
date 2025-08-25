@@ -371,18 +371,67 @@
 function playHeroVideo(playButton) {
   const section = playButton.closest('.rkwo-hero');
   const video = section.querySelector('.rkwo-hero-video');
-
+  
   if (video) {
     // Hide the play button
     playButton.style.display = 'none';
-
+    
     // Show and play the video
     video.style.display = 'block';
     video.play();
-
+    
     // Optional: Add event listener to show play button again when video ends
     video.addEventListener('ended', function() {
       video.style.display = 'none';
+      playButton.style.display = 'block';
+    });
+  }
+}
+
+function playHeroVideoMobile(playButton) {
+  const section = playButton.closest('.rkwo-hero');
+  const video = section.querySelector('.rkwo-hero-video');
+  
+  if (video) {
+    // Create a modal or fullscreen video experience for mobile
+    // For now, we'll use the same functionality but could enhance later
+    playButton.style.display = 'none';
+    
+    // Clone video for mobile playback
+    const mobileVideo = video.cloneNode(true);
+    mobileVideo.style.display = 'block';
+    mobileVideo.style.position = 'fixed';
+    mobileVideo.style.top = '0';
+    mobileVideo.style.left = '0';
+    mobileVideo.style.width = '100vw';
+    mobileVideo.style.height = '100vh';
+    mobileVideo.style.zIndex = '9999';
+    mobileVideo.style.backgroundColor = '#000';
+    
+    // Add close button
+    const closeButton = document.createElement('div');
+    closeButton.innerHTML = '×';
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '20px';
+    closeButton.style.right = '20px';
+    closeButton.style.color = 'white';
+    closeButton.style.fontSize = '30px';
+    closeButton.style.cursor = 'pointer';
+    closeButton.style.zIndex = '10000';
+    closeButton.onclick = function() {
+      document.body.removeChild(mobileVideo);
+      document.body.removeChild(closeButton);
+      playButton.style.display = 'block';
+    };
+    
+    document.body.appendChild(mobileVideo);
+    document.body.appendChild(closeButton);
+    mobileVideo.play();
+    
+    // Auto close when video ends
+    mobileVideo.addEventListener('ended', function() {
+      document.body.removeChild(mobileVideo);
+      document.body.removeChild(closeButton);
       playButton.style.display = 'block';
     });
   }
