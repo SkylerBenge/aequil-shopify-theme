@@ -17,8 +17,8 @@
         playsinline="playsinline"
         muted="muted"
         loop="loop"
+        autoplay="autoplay"
         preload="metadata"
-        style="display: none;"
         {%- if video_poster -%}
         poster="{{ video_poster | img_url: '1920x1080' }}"
         {%- endif -%}
@@ -33,25 +33,13 @@
         {%- endif -%}
       </video>
 
-      <!-- Play Button Overlay -->
-      <div class="rkwo-hero-play-button" onclick="playHeroVideo(this)">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.9)"/>
-          <path d="M32 25L55 40L32 55V25Z" fill="#333"/>
-        </svg>
-      </div>
+
     {%- endif -%}
 
     {%- if image != blank or background_type == 'video' -%}
       <div class="rkwo-hero-mobile-image" style="display: none;">
         {%- if background_type == 'video' and video -%}
-          <!-- Mobile Play Button -->
-          <div class="rkwo-hero-play-button rkwo-hero-play-button--mobile" onclick="playHeroVideoMobile(this)">
-            <svg width="60" height="60" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.9)"/>
-              <path d="M32 25L55 40L32 55V25Z" fill="#333"/>
-            </svg>
-          </div>
+
         {%- endif -%}
         {%- if heading != blank -%}
           <h1 class="rkwo-hero-content-heading rkwo-aequil-heading" style="color: #ffffff !important;">
@@ -138,33 +126,7 @@
     z-index: 0;
   }
 
-  .rkwo-hero-play-button {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    cursor: pointer;
-    z-index: 3;
-    transition: all 0.3s ease;
-  }
 
-  .rkwo-hero-play-button:hover {
-    transform: scale(1.1);
-  }
-
-  .rkwo-hero-play-button svg {
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-  }
-
-  .rkwo-hero-play-button--mobile {
-    top: 20px;
-    left: 50%;
-    bottom: auto;
-    transform: translateX(-50%);
-  }
-
-  .rkwo-hero-play-button--mobile:hover {
-    transform: translateX(-50%) scale(1.1);
-  }
   .rkwo-hero-content {
     width: 100%;
     max-width: 700px;
@@ -321,9 +283,7 @@
       display: none;
     }
 
-    .rkwo-hero-play-button:not(.rkwo-hero-play-button--mobile) {
-      display: none !important;
-    }
+
     .rkwo-hero-gradient {
       display: none !important;
     }
