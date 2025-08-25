@@ -77,6 +77,7 @@
       "name": "Page Content",
       "settings": {
         "image": "shopify://shop_images/science.png",
+        "mobile_image_height": "small",
         "desktop_layout": "left",
         "heading": "<p>Our <em><strong>Science</strong></em></p>",
         "heading_alignment": "left",
