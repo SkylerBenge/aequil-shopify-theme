@@ -391,15 +391,27 @@ function playHeroVideo(playButton) {
 function playHeroVideoMobile(playButton) {
   const section = playButton.closest('.rkwo-hero');
   const video = section.querySelector('.rkwo-hero-video');
-
+  
   if (video) {
-    // Create a modal or fullscreen video experience for mobile
-    // For now, we'll use the same functionality but could enhance later
     playButton.style.display = 'none';
-
-    // Clone video for mobile playback
-    const mobileVideo = video.cloneNode(true);
-    mobileVideo.style.display = 'block';
+    
+    // Create a new video element for mobile fullscreen
+    const mobileVideo = document.createElement('video');
+    mobileVideo.muted = true;
+    mobileVideo.loop = true;
+    mobileVideo.playsInline = true;
+    mobileVideo.controls = true; // Add controls for mobile
+    
+    // Copy all source elements
+    const sources = video.querySelectorAll('source');
+    sources.forEach(source => {
+      const newSource = document.createElement('source');
+      newSource.src = source.src;
+      newSource.type = source.type;
+      mobileVideo.appendChild(newSource);
+    });
+    
+    // Style for fullscreen mobile
     mobileVideo.style.position = 'fixed';
     mobileVideo.style.top = '0';
     mobileVideo.style.left = '0';
@@ -407,33 +419,43 @@ function playHeroVideoMobile(playButton) {
     mobileVideo.style.height = '100vh';
     mobileVideo.style.zIndex = '9999';
     mobileVideo.style.backgroundColor = '#000';
-
+    mobileVideo.style.objectFit = 'contain';
+    
     // Add close button
     const closeButton = document.createElement('div');
     closeButton.innerHTML = '×';
-    closeButton.style.position = 'absolute';
+    closeButton.style.position = 'fixed';
     closeButton.style.top = '20px';
     closeButton.style.right = '20px';
     closeButton.style.color = 'white';
-    closeButton.style.fontSize = '30px';
+    closeButton.style.fontSize = '40px';
     closeButton.style.cursor = 'pointer';
-    closeButton.style.zIndex = '10000';
-    closeButton.onclick = function() {
-      document.body.removeChild(mobileVideo);
-      document.body.removeChild(closeButton);
+    closeButton.style.zIndex = '10001';
+    closeButton.style.fontWeight = 'bold';
+    closeButton.style.textShadow = '2px 2px 4px rgba(0,0,0,0.8)';
+    
+    const closeMobileVideo = function() {
+      if (document.body.contains(mobileVideo)) {
+        document.body.removeChild(mobileVideo);
+      }
+      if (document.body.contains(closeButton)) {
+        document.body.removeChild(closeButton);
+      }
       playButton.style.display = 'block';
     };
-
+    
+    closeButton.onclick = closeMobileVideo;
+    
     document.body.appendChild(mobileVideo);
     document.body.appendChild(closeButton);
-    mobileVideo.play();
-
-    // Auto close when video ends
-    mobileVideo.addEventListener('ended', function() {
-      document.body.removeChild(mobileVideo);
-      document.body.removeChild(closeButton);
-      playButton.style.display = 'block';
+    
+    // Play the video
+    mobileVideo.play().catch(function(error) {
+      console.log('Video play failed:', error);
     });
+    
+    // Auto close when video ends
+    mobileVideo.addEventListener('ended', closeMobileVideo);
   }
 }
 </script>
