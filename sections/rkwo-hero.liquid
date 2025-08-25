@@ -140,20 +140,30 @@
 
   .rkwo-hero-play-button {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 30px;
+    left: 30px;
     cursor: pointer;
     z-index: 3;
     transition: all 0.3s ease;
   }
 
   .rkwo-hero-play-button:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
   }
 
   .rkwo-hero-play-button svg {
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  }
+
+  .rkwo-hero-play-button--mobile {
+    top: 20px;
+    left: 50%;
+    bottom: auto;
+    transform: translateX(-50%);
+  }
+
+  .rkwo-hero-play-button--mobile:hover {
+    transform: translateX(-50%) scale(1.1);
   }
   .rkwo-hero-content {
     width: 100%;
@@ -306,8 +316,11 @@
       {%- endif -%}
     }
 
-    .rkwo-hero-video,
-    .rkwo-hero-play-button {
+    .rkwo-hero-video {
+      display: none !important;
+    }
+    
+    .rkwo-hero-play-button:not(.rkwo-hero-play-button--mobile) {
       display: none !important;
     }
     .rkwo-hero-gradient {
