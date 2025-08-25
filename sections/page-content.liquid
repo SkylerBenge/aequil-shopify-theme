@@ -83,7 +83,7 @@
           <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
         {%- endif -%}
         {%- if content != blank -%}
-          <div class="page-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
+          <div class="page-content__text">{{ content }}</div>
         {%- endif -%}
       </div>
     {%- endif -%}
@@ -281,6 +281,7 @@
   .page-content__text {
     line-height: 1.6;
     margin: 0;
+    text-align: {{ section.settings.content_alignment }};
   }
 
   .page-content__text p:last-child {
