@@ -336,7 +336,7 @@
   .page-content__accordion summary svg {
     width: 16px;
     height: 16px;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
     flex-shrink: 0;
   }
 
@@ -344,9 +344,22 @@
     transform: rotate(180deg);
   }
 
+  /* Accordion content transitions */
   .page-content__accordion-content {
     padding: 0 20px 20px;
     line-height: 1.6;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .page-content__accordion details:not([open]) .page-content__accordion-content {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .page-content__accordion details[open] .page-content__accordion-content {
+    max-height: 1000px;
   }
 
   .page-content__accordion-content p {
