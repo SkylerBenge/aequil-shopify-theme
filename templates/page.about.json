@@ -120,11 +120,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_biDjpE",
-        "text_eRgUfa",
-        "button_dCbg9h"
-      ],
+      "block_order": ["heading_biDjpE", "text_eRgUfa", "button_dCbg9h"],
       "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
