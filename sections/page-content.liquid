@@ -20,6 +20,20 @@
         </div>
       </div>
 
+      <!-- Desktop: Subtitle and Text above image -->
+      {%- if subheading != blank or content != blank -%}
+        <div class="page-content__desktop-subtitle">
+          <div class="page-content__desktop-subtitle-content">
+            {%- if subheading != blank -%}
+              <h2 class="page-content__subheading">{{ subheading }}</h2>
+            {%- endif -%}
+            {%- if content != blank -%}
+              <div class="page-content__text">{{ content }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+
       <!-- Desktop: Split layout with background image and title -->
       <div class="page-content__desktop-layout page-content__desktop-layout--{{ desktop_layout }}">
         <div class="page-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
@@ -62,10 +76,16 @@
         </div>
       </div>
     {%- else -%}
-      <!-- No image: just heading -->
+      <!-- No image: heading, subtitle, and text -->
       <div class="page-content__content-only">
         {%- if heading != blank -%}
           <h1 class="page-content__heading">{{ heading }}</h1>
+        {%- endif -%}
+        {%- if subheading != blank -%}
+          <h2 class="page-content__subheading">{{ subheading }}</h2>
+        {%- endif -%}
+        {%- if content != blank -%}
+          <div class="page-content__text">{{ content }}</div>
         {%- endif -%}
       </div>
     {%- endif -%}
@@ -215,6 +235,19 @@
 
   .page-content__desktop-layout--right .page-content__blocks-section {
     grid-area: blocks;
+  }
+
+  /* Desktop Subtitle Section (above image) */
+  .page-content__desktop-subtitle {
+    display: none;
+    padding: 60px 40px;
+    text-align: center;
+    background: white;
+  }
+
+  .page-content__desktop-subtitle-content {
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   /* Content Only Layout */
