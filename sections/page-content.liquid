@@ -71,23 +71,24 @@
     {%- endif -%}
   </div>
 
-  <!-- Subtitle and Text Section (below banner, above accordions) -->
-  {%- if subheading != blank or content != blank -%}
-    <div class="page-content__subtitle-section">
-      <div class="page-content__subtitle-content">
-        {%- if subheading != blank -%}
-          <h2 class="page-content__subheading">{{ subheading }}</h2>
-        {%- endif -%}
-        {%- if content != blank -%}
-          <div class="page-content__text">{{ content }}</div>
-        {%- endif -%}
+  <!-- Mobile: Subtitle, Text, and Collapsible Content Blocks -->
+  <div class="page-content__mobile-collapsible">
+    <!-- Subtitle and Text Section (mobile only) -->
+    {%- if subheading != blank or content != blank -%}
+      <div class="page-content__subtitle-section">
+        <div class="page-content__subtitle-content">
+          {%- if subheading != blank -%}
+            <h2 class="page-content__subheading">{{ subheading }}</h2>
+          {%- endif -%}
+          {%- if content != blank -%}
+            <div class="page-content__text">{{ content }}</div>
+          {%- endif -%}
+        </div>
       </div>
-    </div>
-  {%- endif -%}
+    {%- endif -%}
 
-  <!-- Mobile Collapsible Content Blocks -->
-  {%- if section.blocks.size > 0 -%}
-    <div class="page-content__mobile-collapsible">
+    <!-- Collapsible Blocks -->
+    {%- if section.blocks.size > 0 -%}
       <div class="page-content__blocks">
         {%- for block in section.blocks -%}
           <div class="page-content__accordion" {{ block.shopify_attributes }}>
@@ -115,8 +116,8 @@
           </div>
         {%- endfor -%}
       </div>
-    </div>
-  {%- endif -%}
+    {%- endif -%}
+  </div>
 </section>
 
 <style>
@@ -256,11 +257,22 @@
   /* Mobile Collapsible Section (below hero) */
   .page-content__mobile-collapsible {
     display: block;
-    padding: 60px 20px;
     background: #f9f9f9;
   }
 
-  .page-content__blocks {
+  .page-content__subtitle-section {
+    padding: 40px 20px;
+    text-align: center;
+    background: white;
+  }
+
+  .page-content__subtitle-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .page-content__mobile-collapsible .page-content__blocks {
+    padding: 60px 20px;
     max-width: 600px;
     margin: 0 auto;
   }
