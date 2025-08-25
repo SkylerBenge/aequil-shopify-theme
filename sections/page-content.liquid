@@ -80,7 +80,7 @@
           <h1 class="page-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
         {%- endif -%}
         {%- if subheading != blank -%}
-          <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
+          <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}"</h2>
         {%- endif -%}
         {%- if content != blank -%}
           <div class="page-content__text">{{ content }}</div>
@@ -269,6 +269,9 @@
     font-weight: 600;
     margin: 0 0 1.5rem 0;
     opacity: 0.9;
+  }
+  .page-content__subheading * {
+    text-align: {{ section.settings.subheading_alignment }};
   }
 
   .page-content__subheading--dark-bg {
