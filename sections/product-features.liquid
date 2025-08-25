@@ -114,14 +114,15 @@
     margin-bottom: 0;
   }
 
-  .product-features__links {
+  /* Use rkwo-hero-content-link styling */
+  .rkwo-hero-content-link {
+    margin-top: 30px;
     display: flex;
+    gap: 15px;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
   }
 
-  /* Use rkwo-hero button styles */
   .rkwo-hero-link {
     display: inline-block;
     padding: 12px 24px;
@@ -136,15 +137,16 @@
   }
 
   .rkwo-hero-link-primary {
-    background-color: #6f9fcf;
-    color: white;
+    background-color: #ecebe8;
+    color: #333;
+    border-color: #ecebe8;
   }
 
   .rkwo-hero-link-primary:hover {
-    background-color: #5a8bb8;
-    border-color: #5a8bb8;
+    background-color: #ddd9d4;
+    border-color: #ddd9d4;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
+    box-shadow: 0 4px 12px rgba(236, 235, 232, 0.3);
   }
 
   .rkwo-hero-link-secondary {
@@ -188,7 +190,7 @@
       font-size: 14px;
     }
 
-    .product-features__links {
+    .rkwo-hero-content-link {
       flex-direction: column;
       align-items: center;
     }
