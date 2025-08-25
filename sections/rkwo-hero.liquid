@@ -3,6 +3,9 @@
   assign content = section.settings.content
   assign highlight = section.settings.highlight
   assign image = section.settings.image
+  assign background_type = section.settings.background_type
+  assign video = section.settings.video
+  assign video_poster = section.settings.video_poster
   assign section_id = section.id
 -%}
 
@@ -284,10 +287,38 @@
       "default": "<p>Enter a highlight</p>"
     },
     {
+      "type": "select",
+      "id": "background_type",
+      "label": "Background Type",
+      "options": [
+        {
+          "value": "image",
+          "label": "Image"
+        },
+        {
+          "value": "video",
+          "label": "Video"
+        }
+      ],
+      "default": "image"
+    },
+    {
       "type": "image_picker",
       "id": "image",
       "label": "Section Image",
       "info": "Upload an image"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Background Video",
+      "info": "Upload a video file for background. Recommended: MP4 format, under 10MB"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video Poster Image",
+      "info": "Fallback image shown before video loads or on mobile devices"
     },
     {
       "type": "text",
