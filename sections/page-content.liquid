@@ -77,13 +77,13 @@
       <!-- No image: heading, subtitle, and text -->
       <div class="page-content__content-only">
         {%- if heading != blank -%}
-          <h1 class="page-content__heading">{{ heading }}</h1>
+          <h1 class="page-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
         {%- endif -%}
         {%- if subheading != blank -%}
-          <h2 class="page-content__subheading">{{ subheading }}</h2>
+          <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
         {%- endif -%}
         {%- if content != blank -%}
-          <div class="page-content__text">{{ content }}</div>
+          <div class="page-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
         {%- endif -%}
       </div>
     {%- endif -%}
@@ -96,10 +96,10 @@
       <div class="page-content__subtitle-section">
         <div class="page-content__subtitle-content">
           {%- if subheading != blank -%}
-            <h2 class="page-content__subheading">{{ subheading }}</h2>
+            <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
           {%- endif -%}
           {%- if content != blank -%}
-            <div class="page-content__text">{{ content }}</div>
+            <div class="page-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
           {%- endif -%}
         </div>
       </div>
