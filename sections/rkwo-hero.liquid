@@ -276,9 +276,9 @@
       {%- endif -%}
     }
 
-    /* Mobile video styling - replace the banner area */
+    /* Mobile video styling - replace the banner area only */
     {%- if background_type == 'video' and video -%}
-    .rkwo-hero-video {
+    .rkwo-hero-mobile-image .rkwo-hero-video {
       position: absolute;
       top: 0;
       left: 0;
@@ -286,6 +286,11 @@
       height: 100%;
       object-fit: cover;
       z-index: 1;
+    }
+    
+    /* Hide desktop video on mobile */
+    .rkwo-hero > .rkwo-hero-video {
+      display: none;
     }
     {%- endif -%}
 
