@@ -9,22 +9,85 @@
  */
 {
   "sections": {
-    "rkwo_hero_GEHH4f": {
-      "type": "rkwo-hero",
-      "name": "RKWO Hero",
+    "page_content_3iXekT": {
+      "type": "page-content",
+      "blocks": {
+        "collapsible_row_mMqiDT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IS AEQUIL?",
+            "icon": "none",
+            "row_content": "<p>AEQUIL is a pioneering biotech brand offering transformative health solutions that help you reset your foundation of <br/>wellbeing.</p><p><br/>We work at the level of your essential systems and functions - supporting the rhythm, regulation, and communication <br/>between your body, mind, and energy. Because when your internal systems stop moving together, you don't feel like yourself. We help restore that movement.<br/></p><p>We don't treat symptoms. We help you return to a state of dynamic balance - where your body can self-regulate, self-repair, <br/>and thrive.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_REDY69": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHY WE EXIST",
+            "icon": "none",
+            "row_content": "<p>You've likely been taught to view symptoms in isolation. Poor sleep. Low energy. Digestive issues. But your body doesn't <br/>work in pieces - it works as a whole.</p><p><br/>At AEQUIL, we see these surface-level complaints for what they really are: signals of deeper imbalance. And we know how to respond to those signals with clarity, calm, and clinical insight.</p><p><br/><strong>Our goal is simple:</strong><br/>To help you feel well. Be free. And return to the rhythm that's always been yours so that you can thrive.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qjra8f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW AEQUIL WORKS",
+            "icon": "none",
+            "row_content": "<p>AEQUIL's system supports your internal coherence at every level - biological, emotional, and energetic.</p><p><br/>We use three delivery methods:</p><ul><li>Food supplements with fast-acting support, powered by Liquid Intelligence#</li><li>Wearable patches for slow-release, skin-safe diffusion with essential oils and dynamised water</li><li>Digital tools like sound therapy, guided affirmations, and breathwork - for support beyond the physical</li></ul><p>Together, these products help you return to your own rhythm. Not the one you've inherited or forced yourself into - but the <br/>one that belongs to you.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cxXUk7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_7zfk4X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "OUR MISSION",
+            "icon": "none",
+            "row_content": "<p>To make foundational wellbeing accessible.<br/>To offer a real, credible alternative to symptom-chasing.<br/>To support humans and practitioners with tools that honour the complexity of our bodies and the simplicity of our needs.<br/>To bring rhythm, clarity, and vitality to those who've forgotten what it feels like to feel well.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zwEixd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "OUR VISION",
+            "icon": "none",
+            "row_content": "<p>A world of wellbeing - where every human has the right and the tools to reconnect, self-regulate, and thrive.<br/>AEQUIL exists not just to help you feel better.<br/>We exist to return you to your natural state of movement, rhythm, and coherence - and help you stay there.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_mMqiDT",
+        "collapsible_row_REDY69",
+        "collapsible_row_Qjra8f",
+        "collapsible_row_cxXUk7",
+        "collapsible_row_7zfk4X",
+        "collapsible_row_zwEixd"
+      ],
+      "name": "Page Content",
       "settings": {
-        "heading": "ABOUT AEQUIL",
-        "content": "",
-        "highlight": "",
         "image": "shopify://shop_images/Aequil-Banner_01.png",
-        "link_text": "Learn More",
-        "link_url": "",
-        "link_text_2": "Learn More",
-        "link_url_2": ""
+        "desktop_layout": "left",
+        "heading": "THE AEQUIL APPROACH",
+        "subheading": "About Aequil",
+        "content": "<p>Your body remembers. We help you listen.</p>",
+        "open_first_block": false
       }
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "show_page_title": false,
         "padding_top": 28,
@@ -107,89 +170,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "page_content_3iXekT": {
-      "type": "page-content",
-      "blocks": {
-        "collapsible_row_mMqiDT": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "WHAT IS AEQUIL?",
-            "icon": "none",
-            "row_content": "<p>AEQUIL is a pioneering biotech brand offering transformative health solutions that help you reset your foundation of <br/>wellbeing.</p><p><br/>We work at the level of your essential systems and functions - supporting the rhythm, regulation, and communication <br/>between your body, mind, and energy. Because when your internal systems stop moving together, you don't feel like yourself. We help restore that movement.<br/></p><p>We don't treat symptoms. We help you return to a state of dynamic balance - where your body can self-regulate, self-repair, <br/>and thrive.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_REDY69": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "WHY WE EXIST",
-            "icon": "none",
-            "row_content": "<p>You've likely been taught to view symptoms in isolation. Poor sleep. Low energy. Digestive issues. But your body doesn't <br/>work in pieces - it works as a whole.</p><p><br/>At AEQUIL, we see these surface-level complaints for what they really are: signals of deeper imbalance. And we know how to respond to those signals with clarity, calm, and clinical insight.</p><p><br/><strong>Our goal is simple:</strong><br/>To help you feel well. Be free. And return to the rhythm that's always been yours so that you can thrive.<br/></p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Qjra8f": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "HOW AEQUIL WORKS",
-            "icon": "none",
-            "row_content": "<p>AEQUIL's system supports your internal coherence at every level - biological, emotional, and energetic.</p><p><br/>We use three delivery methods:</p><ul><li>Food supplements with fast-acting support, powered by Liquid Intelligence#</li><li>Wearable patches for slow-release, skin-safe diffusion with essential oils and dynamised water</li><li>Digital tools like sound therapy, guided affirmations, and breathwork - for support beyond the physical</li></ul><p>Together, these products help you return to your own rhythm. Not the one you've inherited or forced yourself into - but the <br/>one that belongs to you.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_cxXUk7": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collapsible row",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_7zfk4X": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "OUR MISSION",
-            "icon": "none",
-            "row_content": "<p>To make foundational wellbeing accessible.<br/>To offer a real, credible alternative to symptom-chasing.<br/>To support humans and practitioners with tools that honour the complexity of our bodies and the simplicity of our needs.<br/>To bring rhythm, clarity, and vitality to those who've forgotten what it feels like to feel well.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_zwEixd": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "OUR VISION",
-            "icon": "none",
-            "row_content": "<p>A world of wellbeing - where every human has the right and the tools to reconnect, self-regulate, and thrive.<br/>AEQUIL exists not just to help you feel better.<br/>We exist to return you to your natural state of movement, rhythm, and coherence - and help you stay there.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_mMqiDT",
-        "collapsible_row_REDY69",
-        "collapsible_row_Qjra8f",
-        "collapsible_row_cxXUk7",
-        "collapsible_row_7zfk4X",
-        "collapsible_row_zwEixd"
-      ],
-      "name": "Page Content",
-      "settings": {
-        "image": "shopify://shop_images/Aequil-Banner_01.png",
-        "desktop_layout": "left",
-        "heading": "THE AEQUIL APPROACH",
-        "subheading": "About Aequil",
-        "content": "<p>Your body remembers. We help you listen.</p>",
-        "open_first_block": false
-      }
     }
   },
   "order": [
-    "rkwo_hero_GEHH4f",
+    "page_content_3iXekT",
     "main",
     "image_with_text_zQGxJL",
-    "featured_collection_w437fG",
-    "page_content_3iXekT"
+    "featured_collection_w437fG"
   ]
 }
