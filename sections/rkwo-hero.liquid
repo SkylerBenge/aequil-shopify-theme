@@ -280,6 +280,7 @@
       flex-direction: column;
       width: 100%;
       justify-content: end;
+      z-index: 2;
     }
     .rkwo-hero-content .rkwo-hero-content-heading {
       display: none;
@@ -419,7 +420,7 @@ function playHeroVideoMobile(playButton) {
     mobileVideo.style.width = '100%';
     mobileVideo.style.height = '100%';
     mobileVideo.style.objectFit = 'cover';
-    mobileVideo.style.zIndex = '2';
+    mobileVideo.style.zIndex = '1';
 
     // Add close button (smaller for in-section)
     const closeButton = document.createElement('div');
