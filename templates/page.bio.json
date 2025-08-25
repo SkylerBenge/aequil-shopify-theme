@@ -1,0 +1,173 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "page_content_3iXekT": {
+      "type": "page-content",
+      "blocks": {
+        "collapsible_row_mMqiDT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Liquid Intelligence?",
+            "icon": "none",
+            "row_content": "<p>Liquid Intelligence is our biotech delivery system. It uses dynamised water - water structured to carry precise, signal-<br/>based information - to support regulation and coherence at the cellular and energetic level.</p><p>Each AEQUIL formulation contains highly purified, energised water that has been programmed through a specific sequence <br/>of physical, energetic, and information-based steps. This creates a subtle but powerful medium that helps guide your body back to rhythm 4 not by forcing, but by remembering.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_REDY69": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Dynamised Water?",
+            "icon": "none",
+            "row_content": "<p>Dynamised water refers to water that has been structurally organised - its molecules aligned in a way that allows it to carry <br/>and transmit information more effectively.</p><p><br/>We use a proprietary process based on principles of <strong>quantum biophysics</strong>, clinical osteopathy, and vibrational research. Our <br/>water has been studied for its conductivity, information imprinting, and interaction with living systems.</p><p><br/>This is not homeopathy, not placebo, and not just hydration. It's biotechnology - delivered through the oldest, most responsive medium on earth.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7zfk4X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Dynamised Water?",
+            "icon": "none",
+            "row_content": "<p>To make foundational wellbeing accessible.<br/>To offer a real, credible alternative to symptom-chasing.<br/>To support humans and practitioners with tools that honour the complexity of our bodies and the simplicity of our needs.<br/>To bring rhythm, clarity, and vitality to those who've forgotten what it feels like to feel well.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qjra8f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How It Works in the Body",
+            "icon": "none",
+            "row_content": "<p>Once absorbed - through the gut, skin, or energy field - AEQUIL's Liquid Intelligence# interacts with your essential systems <br/>and functions, helping to:</p><ul><li>Regulate rhythm and coherence between systems</li><li>Support vagal tone and emotional balance</li><li>Clear stored stress at a cellular and energetic level</li><li>Reconnect communication pathways that govern health</li></ul><p>This allows the body to self-correct - not through chemical force, but through signal-based resonance.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_zwEixd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Vision for the Future",
+            "icon": "none",
+            "row_content": "<p>Our scientific research is ongoing - with upcoming clinical studies planned in the areas of stress response, immune <br/>regulation, and vibrational resonance.</p><p><br/>AEQUIL is committed to bridging biotech with biophysics, clinical intuition with measurable outcomes, and ancient healing <br/>principles with modern delivery systems.</p><p><br/>We believe science should support coherence - not complexity.<br/>And that every body deserves access to rhythm-first healthcare.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_mMqiDT",
+        "collapsible_row_REDY69",
+        "collapsible_row_7zfk4X",
+        "collapsible_row_Qjra8f",
+        "collapsible_row_zwEixd"
+      ],
+      "name": "Page Content",
+      "settings": {
+        "image": "shopify://shop_images/science.png",
+        "mobile_image_height": "small",
+        "desktop_layout": "left",
+        "heading": "<p>Our <em><strong>Science</strong></em></p>",
+        "heading_alignment": "left",
+        "subheading": "<p>Biotech for body, mind, energy. <em><strong>Rooted in rhythm.</strong></em></p>",
+        "subheading_alignment": "center",
+        "subheading_dark_background": true,
+        "content": "<p>At AEQUIL, we don't chase symptoms - we work at the system level. Our formulations are powered by a proprietary technology we call <strong>Liquid Intelligence</strong>, developed from decades of clinical experience and biophysical insight.</p><p><br/>It's a new kind of health logic: not suppression, but synchronisation. Not overwhelm, but rhythm. Not one-size-fits-all - but intelligent, responsive support.</p>",
+        "content_alignment": "left",
+        "overlay_opacity": 1,
+        "open_first_block": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_page_title": false,
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_with_text_zQGxJL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_biDjpE": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_eRgUfa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Frédéric Roscop is one of the world’s leading osteopaths. He created Aequil after treating more than ten thousand patients and recovering from chronic illness himself.<br/><br/>Aequil is the result of twenty seven years of clinical experience, ten years of scientific research, and five years of testing. It was built to help you feel well and stay well.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_dCbg9h": {
+          "type": "button",
+          "settings": {
+            "button_label": "WATCH MORE HERE",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading_biDjpE", "text_eRgUfa", "button_dCbg9h"],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_w437fG": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "products",
+        "products_to_show": 4,
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "page_content_3iXekT",
+    "main",
+    "image_with_text_zQGxJL",
+    "featured_collection_w437fG"
+  ]
+}
