@@ -1,0 +1,754 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading
+  assign content = section.settings.content
+  assign image = section.settings.image
+  assign desktop_layout = section.settings.desktop_layout
+  assign section_id = section.id
+-%}
+
+<section class="page-content" id="section-{{ section_id }}">
+  <!-- Hero Section with Background Image and Title -->
+  <div class="page-content__hero">
+    {%- if image -%}
+      <!-- Mobile: Background image with title overlay -->
+      <div class="page-content__mobile-image page-content__mobile-image--{{ section.settings.mobile_image_height }}" style="background-image: url({{ image | img_url: '1200x800' }});">
+        <div class="page-content__mobile-overlay">
+          {%- if heading != blank -%}
+            <h1 class="page-content__heading">{{ heading }}</h1>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <!-- Desktop: Split layout with background image and content -->
+      <div class="page-content__desktop-layout page-content__desktop-layout--{{ desktop_layout }}">
+        <div class="page-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
+          <div class="page-content__image-overlay">
+            {%- if heading != blank -%}
+              <h1 class="page-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
+            {%- endif -%}
+            {%- if subheading != blank -%}
+              <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
+            {%- endif -%}
+            {%- if content != blank -%}
+              <div class="page-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="page-content__blocks-section">
+          {%- if section.blocks.size > 0 -%}
+            <div class="page-content__blocks">
+              {%- for block in section.blocks -%}
+                <div class="page-content__accordion" {{ block.shopify_attributes }}>
+                  <details
+                    id="Details-{{ block.id }}-{{ section.id }}"
+                    {% if section.settings.open_first_block and forloop.first %}open=""{% endif %}
+                  >
+                    <summary
+                      id="Summary-{{ block.id }}-{{ section.id }}"
+                      {% if section.settings.open_first_block and forloop.first %}aria-expanded="true"{% else %}aria-expanded="false"{% endif %}
+                    >
+                      {% render 'icon-accordion', icon: block.settings.icon %}
+                      <h3 class="page-content__accordion-title">
+                        {{ block.settings.heading | default: block.settings.page.title | escape }}
+                      </h3>
+                    </summary>
+                                          <div
+                        class="page-content__accordion-content"
+                        id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                        role="region"
+                        aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                      >
+                        {%- if block.type == 'liquid_row' -%}
+                          {{ block.settings.liquid_content }}
+                        {%- else -%}
+                          {{ block.settings.row_content }}
+                          {{ block.settings.page.content }}
+                        {%- endif -%}
+                      </div>
+                  </details>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- else -%}
+      <!-- No image: heading, subtitle, and text -->
+      <div class="page-content__content-only">
+        {%- if heading != blank -%}
+          <h1 class="page-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
+        {%- endif -%}
+        {%- if subheading != blank -%}
+          <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}"</h2>
+        {%- endif -%}
+        {%- if content != blank -%}
+          <div class="page-content__text">{{ content }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <!-- Mobile: Subtitle, Text, and Collapsible Content Blocks -->
+  <div class="page-content__mobile-collapsible">
+    <!-- Subtitle and Text Section (mobile only) -->
+    {%- if subheading != blank or content != blank -%}
+      <div class="page-content__subtitle-section">
+        <div class="page-content__subtitle-content">
+          {%- if subheading != blank -%}
+            <h2 class="page-content__subheading{% if section.settings.subheading_dark_background %} page-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
+          {%- endif -%}
+          {%- if content != blank -%}
+            <div class="page-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <!-- Collapsible Blocks -->
+    {%- if section.blocks.size > 0 -%}
+      <div class="page-content__blocks">
+        {%- for block in section.blocks -%}
+          <div class="page-content__accordion" {{ block.shopify_attributes }}>
+            <details
+              id="Details-mobile-{{ block.id }}-{{ section.id }}"
+              {% if section.settings.open_first_block and forloop.first %}open=""{% endif %}
+            >
+              <summary
+                id="Summary-mobile-{{ block.id }}-{{ section.id }}"
+                {% if section.settings.open_first_block and forloop.first %}aria-expanded="true"{% else %}aria-expanded="false"{% endif %}
+              >
+                {% render 'icon-accordion', icon: block.settings.icon %}
+                <h3 class="page-content__accordion-title">
+                  {{ block.settings.heading | default: block.settings.page.title | escape }}
+                </h3>
+              </summary>
+              <div
+                class="page-content__accordion-content"
+                id="CollapsibleAccordion-mobile-{{ block.id }}-{{ section.id }}"
+                role="region"
+                aria-labelledby="Summary-mobile-{{ block.id }}-{{ section.id }}"
+              >
+                {%- if block.type == 'liquid_row' -%}
+                  {{ block.settings.liquid_content }}
+                {%- else -%}
+                  {{ block.settings.row_content }}
+                  {{ block.settings.page.content }}
+                {%- endif -%}
+              </div>
+            </details>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  /* Base Section Styles */
+  .page-content {
+    width: calc(100% - 40px);
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ecebe8;
+  }
+
+  /* Hero Section Styles */
+  .page-content__hero {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Mobile Layout - Background image with title overlay */
+  .page-content__mobile-image {
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .page-content__mobile-image--small {
+    min-height: 200px;
+  }
+
+  .page-content__mobile-image--medium {
+    min-height: 300px;
+  }
+
+  .page-content__mobile-image--tall {
+    min-height: 400px;
+  }
+
+  .page-content__mobile-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity }});
+    padding: 40px 20px 30px;
+    color: white;
+    text-align: center;
+  }
+
+  /* Desktop Layout - Split 50/50 with background image and blocks */
+  .page-content__desktop-layout {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+
+  .page-content__desktop-layout--left {
+    grid-template-areas: "image blocks";
+  }
+
+  .page-content__desktop-layout--right {
+    grid-template-areas: "blocks image";
+  }
+
+  .page-content__image-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+  }
+
+  .page-content__desktop-layout--left .page-content__image-section {
+    grid-area: image;
+  }
+
+  .page-content__desktop-layout--right .page-content__image-section {
+    grid-area: image;
+  }
+
+  .page-content__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity }});
+    padding: 40px;
+  }
+
+  .page-content__blocks-section {
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .page-content__desktop-layout--left .page-content__blocks-section {
+    grid-area: blocks;
+  }
+
+  .page-content__desktop-layout--right .page-content__blocks-section {
+    grid-area: blocks;
+  }
+
+  /* Content Only Layout */
+  .page-content__content-only {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Typography */
+  .page-content__heading {
+    color: #fff;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+  }
+
+  .page-content__heading * {
+    text-align: {{ section.settings.subheading_alignment }};
+    margin: 0;
+  }
+
+  .page-content__subheading {
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    opacity: 0.9;
+  }
+  .page-content__subheading * {
+    text-align: {{ section.settings.subheading_alignment }};
+    margin: 0;
+  }
+
+  .page-content__subheading--dark-bg {
+    background: #B9C4C4;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.8rem !important;
+    color: #222;
+  }
+
+  .page-content__text {
+    line-height: 1.6;
+    margin: 0;
+  }
+  .page-content__text * {
+    text-align: {{ section.settings.content_alignment }};
+  }
+
+  .page-content__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Mobile Collapsible Section (below hero) */
+  .page-content__mobile-collapsible {
+    display: block;
+  }
+
+  .page-content__subtitle-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .page-content__subtitle-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .page-content__mobile-collapsible .page-content__blocks {
+    padding: 0 20px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .page-content__accordion {
+    border-top: 2px solid #e0e0e0;
+    overflow: hidden;
+  }
+
+  .page-content__accordion:last-child {
+    margin-bottom: 0;
+  }
+
+  .page-content__accordion summary {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+  }
+
+  .page-content__accordion summary::-webkit-details-marker {
+    display: none;
+  }
+  .page-content__accordion-title {
+    flex: 1;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+
+  .page-content__accordion summary .icon-accordion {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  .page-content__accordion-content {
+    padding: 0 20px 20px;
+    line-height: 1.6;
+  }
+
+  .page-content__accordion-content p {
+    margin-bottom: 1rem;
+  }
+
+  .page-content__accordion-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Tablet Styles */
+  @media screen and (min-width: 750px) {
+    .page-content__mobile-image {
+      display: none;
+    }
+
+    .page-content__mobile-collapsible {
+      display: none;
+    }
+
+    .page-content__subheading {
+      color: #fff;
+    }
+
+    .page-content__desktop-layout {
+      display: grid;
+    }
+
+    .page-content__blocks-section {
+      padding: 20px
+    }
+
+    .page-content__blocks {
+      width: 100%;
+    }
+
+    .page-content__accordion summary {
+      padding: 20px;
+    }
+
+    .page-content__accordion-content {
+      padding: 0 20px 20px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Handle accordion group behavior for both mobile and desktop
+    const accordionContainers = document.querySelectorAll('#section-{{ section_id }} .page-content__blocks');
+
+    accordionContainers.forEach(container => {
+      const accordions = container.querySelectorAll('.page-content__accordion details');
+
+      accordions.forEach(accordion => {
+        accordion.addEventListener('toggle', function() {
+          if (this.open) {
+            // Close all other accordions in the same container
+            accordions.forEach(otherAccordion => {
+              if (otherAccordion !== this && otherAccordion.open) {
+                otherAccordion.open = false;
+                // Update aria-expanded for accessibility
+                const summary = otherAccordion.querySelector('summary');
+                if (summary) {
+                  summary.setAttribute('aria-expanded', 'false');
+                }
+              }
+            });
+
+            // Update aria-expanded for the opened accordion
+            const summary = this.querySelector('summary');
+            if (summary) {
+              summary.setAttribute('aria-expanded', 'true');
+            }
+          } else {
+            // Update aria-expanded when closing
+            const summary = this.querySelector('summary');
+            if (summary) {
+              summary.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Page Content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Section"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero Image",
+      "info": "Recommended: 1200x600px or larger"
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_height",
+      "label": "Mobile Image Height",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small (200px)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (300px)"
+        },
+        {
+          "value": "tall",
+          "label": "Tall (400px)"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "Desktop Layout",
+      "options": [
+        {
+          "value": "left",
+          "label": "Image Left, Content Right"
+        },
+        {
+          "value": "right",
+          "label": "Content Left, Image Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "<p>Page Heading</p>"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "<p>Subheading</p>"
+    },
+    {
+      "type": "select",
+      "id": "subheading_alignment",
+      "label": "Subheading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "subheading_dark_background",
+      "label": "Subheading Dark Background",
+      "info": "Adds a dark background behind the subheading",
+      "default": false
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content Text",
+      "default": "<p>Add your page content here.</p>"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "10%",
+      "label": "Mobile Overlay Opacity",
+      "info": "Controls the darkness of the overlay behind text on mobile",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "Collapsible Content"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_block",
+      "label": "Open first collapsible block by default",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_row",
+      "name": "Collapsible Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Collapsible row"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "Lightning bolt"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "fire",
+              "label": "Fire"
+            }
+          ],
+          "default": "none",
+          "label": "Icon"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "Content"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Page"
+        }
+      ]
+    },
+    {
+      "type": "liquid_row",
+      "name": "Liquid Code Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Liquid code row"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "Lightning bolt"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "fire",
+              "label": "Fire"
+            }
+          ],
+          "default": "none",
+          "label": "Icon"
+        },
+        {
+          "type": "liquid",
+          "id": "liquid_content",
+          "label": "Liquid Code",
+          "info": "Enter liquid code that will be executed and rendered"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Page Content",
+      "blocks": [
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
