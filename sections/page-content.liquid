@@ -8,46 +8,22 @@
 -%}
 
 <section class="page-content" id="section-{{ section_id }}">
-  <!-- Hero Section with Image and Content -->
+  <!-- Hero Section with Background Image and Content -->
   <div class="page-content__hero">
     {%- if image -%}
-      <!-- Mobile: Image at top -->
-      <div class="page-content__mobile-image">
-        {{
-          image
-          | image_url: width: 1200
-          | image_tag:
-            class: 'page-content__image',
-            sizes: '100vw',
-            widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-        }}
+      <!-- Mobile: Background image with title overlay -->
+      <div class="page-content__mobile-image" style="background-image: url({{ image | img_url: '1200x800' }});">
         <div class="page-content__mobile-overlay">
           {%- if heading != blank -%}
             <h1 class="page-content__heading">{{ heading }}</h1>
           {%- endif -%}
-          {%- if subheading != blank -%}
-            <h2 class="page-content__subheading">{{ subheading }}</h2>
-          {%- endif -%}
-          {%- if content != blank -%}
-            <div class="page-content__text">{{ content }}</div>
-          {%- endif -%}
         </div>
       </div>
 
-      <!-- Desktop: Side-by-side layout -->
+      <!-- Desktop: Split layout with background image and content -->
       <div class="page-content__desktop-layout page-content__desktop-layout--{{ desktop_layout }}">
-        <div class="page-content__image-container">
-          {{
-            image
-            | image_url: width: 1200
-            | image_tag:
-              class: 'page-content__image',
-              sizes: '(min-width: 750px) 50vw, 100vw',
-              widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-          }}
-        </div>
-        <div class="page-content__content-container">
-          <div class="page-content__content-overlay">
+        <div class="page-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
+          <div class="page-content__image-overlay">
             {%- if heading != blank -%}
               <h1 class="page-content__heading">{{ heading }}</h1>
             {%- endif -%}
@@ -58,6 +34,37 @@
               <div class="page-content__text">{{ content }}</div>
             {%- endif -%}
           </div>
+        </div>
+        <div class="page-content__blocks-section">
+          {%- if section.blocks.size > 0 -%}
+            <div class="page-content__blocks">
+              {%- for block in section.blocks -%}
+                <div class="page-content__accordion" {{ block.shopify_attributes }}>
+                  <details
+                    id="Details-{{ block.id }}-{{ section.id }}"
+                    {% if section.settings.open_first_block and forloop.first %}open{% endif %}
+                  >
+                    <summary id="Summary-{{ block.id }}-{{ section.id }}">
+                      {% render 'icon-accordion', icon: block.settings.icon %}
+                      <h3 class="page-content__accordion-title">
+                        {{ block.settings.heading | default: block.settings.page.title | escape }}
+                      </h3>
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
+                    </summary>
+                    <div
+                      class="page-content__accordion-content"
+                      id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                      role="region"
+                      aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                    >
+                      {{ block.settings.row_content }}
+                      {{ block.settings.page.content }}
+                    </div>
+                  </details>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
         </div>
       </div>
     {%- else -%}
@@ -76,17 +83,17 @@
     {%- endif -%}
   </div>
 
-  <!-- Collapsible Content Blocks -->
+  <!-- Mobile Collapsible Content Blocks (below hero) -->
   {%- if section.blocks.size > 0 -%}
-    <div class="page-content__collapsible-section">
+    <div class="page-content__mobile-collapsible">
       <div class="page-content__blocks">
         {%- for block in section.blocks -%}
           <div class="page-content__accordion" {{ block.shopify_attributes }}>
             <details
-              id="Details-{{ block.id }}-{{ section.id }}"
+              id="Details-mobile-{{ block.id }}-{{ section.id }}"
               {% if section.settings.open_first_block and forloop.first %}open{% endif %}
             >
-              <summary id="Summary-{{ block.id }}-{{ section.id }}">
+              <summary id="Summary-mobile-{{ block.id }}-{{ section.id }}">
                 {% render 'icon-accordion', icon: block.settings.icon %}
                 <h3 class="page-content__accordion-title">
                   {{ block.settings.heading | default: block.settings.page.title | escape }}
@@ -95,9 +102,9 @@
               </summary>
               <div
                 class="page-content__accordion-content"
-                id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                id="CollapsibleAccordion-mobile-{{ block.id }}-{{ section.id }}"
                 role="region"
-                aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                aria-labelledby="Summary-mobile-{{ block.id }}-{{ section.id }}"
               >
                 {{ block.settings.row_content }}
                 {{ block.settings.page.content }}
