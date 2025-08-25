@@ -10,7 +10,23 @@
 -%}
 
 <section class="rkwo-hero rkwo-content-white" id="section-{{ section_id }}">
-    {%- if image -%}
+    {%- if background_type == 'video' and video -%}
+      <!-- Video Element (hidden initially) -->
+      <video class="rkwo-hero-video" muted loop playsinline style="display: none;">
+        <source src="{{ video }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Play Button Overlay -->
+      <div class="rkwo-hero-play-button" onclick="playHeroVideo(this)">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.9)"/>
+          <path d="M32 25L55 40L32 55V25Z" fill="#333"/>
+        </svg>
+      </div>
+    {%- endif -%}
+
+    {%- if image != blank or background_type == 'video' -%}
       <div class="rkwo-hero-mobile-image" style="display: none;">
         {%- if heading != blank -%}
           <h1 class="rkwo-hero-content-heading rkwo-aequil-heading" style="color: #ffffff !important;">
@@ -74,12 +90,45 @@
     padding: 150px 50px 100px 50px;
     position: relative;
     background-color: #ffffff;
-    {%- if image -%}
+    {%- if background_type == 'image' and image -%}
     background-image: url({{ image | img_url: '2000x2000' }});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    {%- elsif background_type == 'video' and video_poster -%}
+    background-image: url({{ video_poster | img_url: '2000x2000' }});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     {%- endif -%}
+  }
+
+  .rkwo-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .rkwo-hero-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+  }
+
+  .rkwo-hero-play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .rkwo-hero-play-button svg {
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
   }
   .rkwo-hero-content {
     width: 100%;
@@ -216,9 +265,25 @@
       width: 75px;
     }
 
-    .rkwo-hero-mobile-image {
+        .rkwo-hero-mobile-image {
       display: block !important;
       min-height: 300px;
+      {%- if background_type == 'image' and image -%}
+      background-image: url({{ image | img_url: '1200x800' }});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      {%- elsif background_type == 'video' and video_poster -%}
+      background-image: url({{ video_poster | img_url: '1200x800' }});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      {%- endif -%}
+    }
+
+    .rkwo-hero-video,
+    .rkwo-hero-play-button {
+      display: none !important;
     }
     .rkwo-hero-gradient {
       display: none !important;
@@ -263,6 +328,28 @@
     }
   }
 </style>
+
+<script>
+function playHeroVideo(playButton) {
+  const section = playButton.closest('.rkwo-hero');
+  const video = section.querySelector('.rkwo-hero-video');
+
+  if (video) {
+    // Hide the play button
+    playButton.style.display = 'none';
+
+    // Show and play the video
+    video.style.display = 'block';
+    video.play();
+
+    // Optional: Add event listener to show play button again when video ends
+    video.addEventListener('ended', function() {
+      video.style.display = 'none';
+      playButton.style.display = 'block';
+    });
+  }
+}
+</script>
 
 {% schema %}
 {
