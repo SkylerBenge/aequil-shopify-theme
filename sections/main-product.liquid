@@ -218,6 +218,15 @@
                   </div>
                 {%- endif -%}
                 <div class="rkwo-accordion">
+                  {% if product.metafields.custom.rkwo_single_why_you_love %}
+                  <div class="rkwo-accordion-item">
+                    <button class="rkwo-accordion-button">WHAT YOU'LL RECEIVE <span class="rkwo-icon">＋</span></button>
+                    <div class="rkwo-accordion-content">
+                      {{ product.metafields.custom.rkwo_single_why_you_love | metafield_tag }}
+                      {{ product.metafields.custom.rkwo_single_why_you_love | metafield_tag }}
+                    </div>
+                  </div>
+                  {%- endif -%}
                   {% if product.metafields.custom.rkwo_single_product_benefits %}
                   <div class="rkwo-accordion-item">
                     <button class="rkwo-accordion-button">WHAT YOU'LL RECEIVE <span class="rkwo-icon">＋</span></button>
