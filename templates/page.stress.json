@@ -15,9 +15,9 @@
         "collapsible_row_mMqiDT": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "WHAT IS AEQUIL?",
+            "heading": "WHAT HAPPENS INSIDE THE BODY",
             "icon": "none",
-            "row_content": "<p>AEQUIL is a pioneering biotech brand offering transformative health solutions that help you reset your foundation of <br/>wellbeing.</p><p><br/>We work at the level of your essential systems and functions - supporting the rhythm, regulation, and communication <br/>between your body, mind, and energy. Because when your internal systems stop moving together, you don't feel like yourself. We help restore that movement.<br/></p><p>We don't treat symptoms. We help you return to a state of dynamic balance - where your body can self-regulate, self-repair, <br/>and thrive.</p>",
+            "row_content": "<p>Your body is a dynamic system made of interconnected parts - brain, gut, heart, immune system, hormones, nervous system, skin, and more. When stress is:<br/></p><ul><li><strong>Acute</strong>, your body may react with tension, inflammation, or fatigue</li><li><strong>Chronic</strong>, your systems lose communication and coherence</li><li><strong>Stored</strong>, your body gets stuck in outdated stress responses, even when the danger is gone</li></ul><p><br/>The result?<br/>You stop feeling like yourself.<br/>Your body becomes reactive, rigid, exhausted - or emotionally flat.<br/>The systems that once worked together begin working in conflict.<br/></p><p>This is <strong>foundational imbalance.</strong><br/>This is <strong>dysrhythmia.</strong><br/>This is where symptoms begin.</p>",
             "page": ""
           }
         },
@@ -83,7 +83,7 @@
         "subheading": "There are different types of stress:",
         "subheading_alignment": "center",
         "subheading_dark_background": true,
-        "content": "<ul><li>Acute Stress: triggered by a current event (e.g. a deadline, a conflict)</li><li>Chronic Stress: low-level stress sustained over time</li><li>Stored Stress: unresolved experiences, trauma, or long-term dysregulation that get embedded in the body</li><li>Inherited Stress: energetic or biological patterns passed down through family systems, survival conditioning, or trauma <br/>cycles</li></ul>",
+        "content": "<ul><li><strong>Acute Stress:</strong> triggered by a current event (e.g. a deadline, a conflict)</li><li><strong>Chronic Stress:</strong> low-level stress sustained over time</li><li><strong>Stored Stress:</strong> unresolved experiences, trauma, or long-term dysregulation that get embedded in the body</li><li><strong>Inherited Stress:</strong> energetic or biological patterns passed down through family systems, survival conditioning, or trauma <br/>cycles</li></ul>",
         "content_alignment": "left",
         "overlay_opacity": 1,
         "open_first_block": true
