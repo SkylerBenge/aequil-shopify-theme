@@ -157,8 +157,8 @@
       ],
       "name": "Page Content",
       "settings": {
-        "image": "shopify://shop_images/science.png",
-        "mobile_image_height": "small",
+        "image": "shopify://shop_images/Glossarypage.png",
+        "mobile_image_height": "tall",
         "desktop_layout": "left",
         "heading": "<p>AEQUIL Glossary</p>",
         "heading_alignment": "left",
