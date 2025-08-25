@@ -76,11 +76,11 @@
       ],
       "name": "Page Content",
       "settings": {
-        "image": "shopify://shop_images/Aequil-Banner_01.png",
+        "image": "shopify://shop_images/Aequil-Banner_02.png",
         "desktop_layout": "left",
-        "heading": "THE AEQUIL APPROACH",
-        "subheading": "About Aequil",
-        "content": "<p>Your body remembers. We help you listen.</p>",
+        "heading": "The Hidden Impact of Stress: Why Your Body Feels Stuck",
+        "subheading": "There are different types of stress:",
+        "content": "<ul><li>Acute Stress: triggered by a current event (e.g. a deadline, a conflict)</li><li>Chronic Stress: low-level stress sustained over time</li><li>Stored Stress: unresolved experiences, trauma, or long-term dysregulation that get embedded in the body</li><li>Inherited Stress: energetic or biological patterns passed down through family systems, survival conditioning, or trauma <br/>cycles</li></ul>",
         "overlay_opacity": 1,
         "open_first_block": true
       }
@@ -120,7 +120,11 @@
           }
         }
       },
-      "block_order": ["heading_biDjpE", "text_eRgUfa", "button_dCbg9h"],
+      "block_order": [
+        "heading_biDjpE",
+        "text_eRgUfa",
+        "button_dCbg9h"
+      ],
       "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
