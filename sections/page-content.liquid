@@ -129,8 +129,12 @@
                 role="region"
                 aria-labelledby="Summary-mobile-{{ block.id }}-{{ section.id }}"
               >
-                {{ block.settings.row_content }}
-                {{ block.settings.page.content }}
+                {%- if block.type == 'liquid_row' -%}
+                  {{ block.settings.liquid_content }}
+                {%- else -%}
+                  {{ block.settings.row_content }}
+                  {{ block.settings.page.content }}
+                {%- endif -%}
               </div>
             </details>
           </div>
