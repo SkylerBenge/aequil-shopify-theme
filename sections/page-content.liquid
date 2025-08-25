@@ -15,7 +15,7 @@
       <div class="page-content__mobile-image" style="background-image: url({{ image | img_url: '1200x800' }});">
         <div class="page-content__mobile-overlay">
           {%- if heading != blank -%}
-            <h1 class="page-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
+            <h1 class="page-content__heading">{{ heading }}</h1>
           {%- endif -%}
         </div>
       </div>
@@ -263,6 +263,10 @@
     font-weight: bold;
     margin: 0 0 1rem 0;
     line-height: 1.2;
+  }
+
+  .page-content__heading * {
+    text-align: {{ section.settings.subheading_alignment }};
   }
 
   .page-content__subheading {
