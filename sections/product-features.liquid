@@ -1,0 +1,300 @@
+{%- liquid
+  assign background_color = section.settings.background_color
+  assign link_url = section.settings.link_url
+  assign link_text = section.settings.link_text
+  assign link_url_2 = section.settings.link_url_2
+  assign link_text_2 = section.settings.link_text_2
+  assign section_id = section.id
+-%}
+
+<section class="product-features" id="section-{{ section_id }}" style="background-color: {{ background_color }};">
+  <div class="product-features__container">
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="product-features__blocks">
+        {%- for block in section.blocks -%}
+          <div class="product-features__block" {{ block.shopify_attributes }}>
+            {%- if block.settings.svg_icon != blank -%}
+              <div class="product-features__icon">
+                {{ block.settings.svg_icon }}
+              </div>
+            {%- endif -%}
+
+            {%- if block.settings.title != blank -%}
+              <h3 class="product-features__title">{{ block.settings.title }}</h3>
+            {%- endif -%}
+
+            {%- if block.settings.text != blank -%}
+              <div class="product-features__text">
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if link_url != blank and link_text != blank or link_url_2 != blank and link_text_2 != blank -%}
+      <div class="product-features__links">
+        {%- if link_url != blank and link_text != blank -%}
+          <a href="{{ link_url }}" class="product-features__link product-features__link--primary">
+            {{ link_text }}
+          </a>
+        {%- endif -%}
+        {%- if link_url_2 != blank and link_text_2 != blank -%}
+          <a href="{{ link_url_2 }}" class="product-features__link product-features__link--secondary">
+            {{ link_text_2 }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+  </div>
+</section>
+
+<style>
+  .product-features {
+    width: 100%;
+    padding: 80px 50px;
+    position: relative;
+  }
+
+  .product-features__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .product-features__blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .product-features__block {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .product-features__icon {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-features__icon svg {
+    width: 60px;
+    height: 60px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-features__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    color: #333;
+  }
+
+  .product-features__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+  }
+
+  .product-features__text p {
+    margin: 0 0 15px 0;
+  }
+
+  .product-features__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .product-features__links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .product-features__link {
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    text-align: center;
+  }
+
+  .product-features__link--primary {
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+  }
+
+  .product-features__link--primary:hover {
+    background-color: transparent;
+    color: #333;
+  }
+
+  .product-features__link--secondary {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+  }
+
+  .product-features__link--secondary:hover {
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .product-features {
+      padding: 60px 25px;
+    }
+
+    .product-features__blocks {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .product-features__block {
+      padding: 20px 15px;
+    }
+
+    .product-features__icon svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    .product-features__title {
+      font-size: 20px;
+    }
+
+    .product-features__text {
+      font-size: 14px;
+    }
+
+    .product-features__links {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-features__link {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .product-features {
+      padding: 40px 20px;
+    }
+
+    .product-features__title {
+      font-size: 18px;
+    }
+
+    .product-features__text {
+      font-size: 13px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Product Features",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Primary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Primary Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "link_url_2",
+      "label": "Secondary Button Link"
+    },
+    {
+      "type": "text",
+      "id": "link_text_2",
+      "label": "Secondary Button Text",
+      "default": "Shop Now"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Block",
+      "settings": [
+        {
+          "type": "html",
+          "id": "svg_icon",
+          "label": "SVG Icon",
+          "info": "Paste your SVG code here"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Feature description goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Features",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Quality Materials",
+            "text": "<p>Made with premium materials for lasting durability.</p>"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Expert Craftsmanship",
+            "text": "<p>Carefully crafted by skilled artisans.</p>"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "title": "Satisfaction Guaranteed",
+            "text": "<p>100% satisfaction guarantee or your money back.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
