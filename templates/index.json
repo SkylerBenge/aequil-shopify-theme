@@ -478,12 +478,21 @@
             "title": "Satisfaction Guaranteed",
             "text": "<p>100% satisfaction guarantee or your money back.</p>"
           }
+        },
+        "feature_dqtkai": {
+          "type": "feature",
+          "settings": {
+            "svg_icon": "",
+            "title": "Feature Title",
+            "text": "<p>Feature description goes here.</p>"
+          }
         }
       },
       "block_order": [
         "feature_iqK8d4",
         "feature_zjVELr",
-        "feature_XMK4pa"
+        "feature_XMK4pa",
+        "feature_dqtkai"
       ],
       "name": "Product Features",
       "settings": {
