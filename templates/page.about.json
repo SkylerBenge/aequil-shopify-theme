@@ -82,7 +82,8 @@
         "heading": "THE AEQUIL APPROACH",
         "subheading": "About Aequil",
         "content": "<p>Your body remembers. We help you listen.</p>",
-        "open_first_block": false
+        "overlay_opacity": 1,
+        "open_first_block": true
       }
     },
     "main": {
