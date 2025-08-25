@@ -107,12 +107,59 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "page_content_3iXekT": {
+      "type": "page-content",
+      "blocks": {
+        "collapsible_row_mMqiDT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_REDY69": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qjra8f": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_mMqiDT",
+        "collapsible_row_REDY69",
+        "collapsible_row_Qjra8f"
+      ],
+      "name": "Page Content",
+      "settings": {
+        "image": "shopify://shop_images/Aequil-Banner_01.png",
+        "desktop_layout": "left",
+        "heading": "Page Heading",
+        "subheading": "",
+        "content": "<p>Add your page content here.</p>",
+        "open_first_block": false
+      }
     }
   },
   "order": [
     "rkwo_hero_GEHH4f",
     "main",
     "image_with_text_zQGxJL",
-    "featured_collection_w437fG"
+    "featured_collection_w437fG",
+    "page_content_3iXekT"
   ]
 }
