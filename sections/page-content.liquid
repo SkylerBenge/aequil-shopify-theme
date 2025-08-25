@@ -53,15 +53,19 @@
                         {{ block.settings.heading | default: block.settings.page.title | escape }}
                       </h3>
                     </summary>
-                    <div
-                      class="page-content__accordion-content"
-                      id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
-                      role="region"
-                      aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
-                    >
-                      {{ block.settings.row_content }}
-                      {{ block.settings.page.content }}
-                    </div>
+                                          <div
+                        class="page-content__accordion-content"
+                        id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+                        role="region"
+                        aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+                      >
+                        {%- if block.type == 'liquid_row' -%}
+                          {{ block.settings.liquid_content }}
+                        {%- else -%}
+                          {{ block.settings.row_content }}
+                          {{ block.settings.page.content }}
+                        {%- endif -%}
+                      </div>
                   </details>
                 </div>
               {%- endfor -%}
@@ -549,6 +553,64 @@
           "type": "page",
           "id": "page",
           "label": "Page"
+        }
+      ]
+    },
+    {
+      "type": "liquid_row",
+      "name": "Liquid Code Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Liquid code row"
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "Lightning bolt"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "fire",
+              "label": "Fire"
+            }
+          ],
+          "default": "none",
+          "label": "Icon"
+        },
+        {
+          "type": "liquid",
+          "id": "liquid_content",
+          "label": "Liquid Code",
+          "info": "Enter liquid code that will be executed and rendered"
         }
       ]
     }
