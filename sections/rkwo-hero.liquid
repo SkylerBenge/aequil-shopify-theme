@@ -391,17 +391,17 @@ function playHeroVideo(playButton) {
 function playHeroVideoMobile(playButton) {
   const section = playButton.closest('.rkwo-hero');
   const video = section.querySelector('.rkwo-hero-video');
-  
+
   if (video) {
     playButton.style.display = 'none';
-    
+
     // Create a new video element for mobile fullscreen
     const mobileVideo = document.createElement('video');
     mobileVideo.muted = true;
     mobileVideo.loop = true;
     mobileVideo.playsInline = true;
     mobileVideo.controls = true; // Add controls for mobile
-    
+
     // Copy all source elements
     const sources = video.querySelectorAll('source');
     sources.forEach(source => {
@@ -410,7 +410,7 @@ function playHeroVideoMobile(playButton) {
       newSource.type = source.type;
       mobileVideo.appendChild(newSource);
     });
-    
+
     // Style for fullscreen mobile
     mobileVideo.style.position = 'fixed';
     mobileVideo.style.top = '0';
@@ -420,7 +420,7 @@ function playHeroVideoMobile(playButton) {
     mobileVideo.style.zIndex = '9999';
     mobileVideo.style.backgroundColor = '#000';
     mobileVideo.style.objectFit = 'contain';
-    
+
     // Add close button
     const closeButton = document.createElement('div');
     closeButton.innerHTML = '×';
@@ -433,7 +433,7 @@ function playHeroVideoMobile(playButton) {
     closeButton.style.zIndex = '10001';
     closeButton.style.fontWeight = 'bold';
     closeButton.style.textShadow = '2px 2px 4px rgba(0,0,0,0.8)';
-    
+
     const closeMobileVideo = function() {
       if (document.body.contains(mobileVideo)) {
         document.body.removeChild(mobileVideo);
@@ -443,17 +443,17 @@ function playHeroVideoMobile(playButton) {
       }
       playButton.style.display = 'block';
     };
-    
+
     closeButton.onclick = closeMobileVideo;
-    
+
     document.body.appendChild(mobileVideo);
     document.body.appendChild(closeButton);
-    
+
     // Play the video
     mobileVideo.play().catch(function(error) {
       console.log('Video play failed:', error);
     });
-    
+
     // Auto close when video ends
     mobileVideo.addEventListener('ended', closeMobileVideo);
   }
