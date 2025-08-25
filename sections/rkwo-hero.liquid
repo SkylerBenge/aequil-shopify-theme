@@ -317,9 +317,9 @@
     }
 
     .rkwo-hero-video {
-      display: none !important;
+      display: none;
     }
-    
+
     .rkwo-hero-play-button:not(.rkwo-hero-play-button--mobile) {
       display: none !important;
     }
@@ -371,15 +371,15 @@
 function playHeroVideo(playButton) {
   const section = playButton.closest('.rkwo-hero');
   const video = section.querySelector('.rkwo-hero-video');
-  
+
   if (video) {
     // Hide the play button
     playButton.style.display = 'none';
-    
+
     // Show and play the video
     video.style.display = 'block';
     video.play();
-    
+
     // Optional: Add event listener to show play button again when video ends
     video.addEventListener('ended', function() {
       video.style.display = 'none';
@@ -391,12 +391,12 @@ function playHeroVideo(playButton) {
 function playHeroVideoMobile(playButton) {
   const section = playButton.closest('.rkwo-hero');
   const video = section.querySelector('.rkwo-hero-video');
-  
+
   if (video) {
     // Create a modal or fullscreen video experience for mobile
     // For now, we'll use the same functionality but could enhance later
     playButton.style.display = 'none';
-    
+
     // Clone video for mobile playback
     const mobileVideo = video.cloneNode(true);
     mobileVideo.style.display = 'block';
@@ -407,7 +407,7 @@ function playHeroVideoMobile(playButton) {
     mobileVideo.style.height = '100vh';
     mobileVideo.style.zIndex = '9999';
     mobileVideo.style.backgroundColor = '#000';
-    
+
     // Add close button
     const closeButton = document.createElement('div');
     closeButton.innerHTML = '×';
@@ -423,11 +423,11 @@ function playHeroVideoMobile(playButton) {
       document.body.removeChild(closeButton);
       playButton.style.display = 'block';
     };
-    
+
     document.body.appendChild(mobileVideo);
     document.body.appendChild(closeButton);
     mobileVideo.play();
-    
+
     // Auto close when video ends
     mobileVideo.addEventListener('ended', function() {
       document.body.removeChild(mobileVideo);
