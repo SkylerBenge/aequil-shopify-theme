@@ -44,7 +44,7 @@
                     id="Details-{{ block.id }}-{{ section.id }}"
                     {% if section.settings.open_first_block and forloop.first %}open{% endif %}
                   >
-                    <summary 
+                    <summary
                       id="Summary-{{ block.id }}-{{ section.id }}"
                       {% if section.settings.open_first_block and forloop.first %}aria-expanded="true"{% else %}aria-expanded="false"{% endif %}
                     >
@@ -111,7 +111,10 @@
               id="Details-mobile-{{ block.id }}-{{ section.id }}"
               {% if section.settings.open_first_block and forloop.first %}open{% endif %}
             >
-              <summary id="Summary-mobile-{{ block.id }}-{{ section.id }}">
+              <summary
+                id="Summary-mobile-{{ block.id }}-{{ section.id }}"
+                {% if section.settings.open_first_block and forloop.first %}aria-expanded="true"{% else %}aria-expanded="false"{% endif %}
+              >
                 {% render 'icon-accordion', icon: block.settings.icon %}
                 <h3 class="page-content__accordion-title">
                   {{ block.settings.heading | default: block.settings.page.title | escape }}
