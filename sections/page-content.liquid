@@ -393,6 +393,47 @@
   }
 </style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Handle accordion group behavior for both mobile and desktop
+    const accordionContainers = document.querySelectorAll('#section-{{ section_id }} .page-content__blocks');
+    
+    accordionContainers.forEach(container => {
+      const accordions = container.querySelectorAll('.page-content__accordion details');
+      
+      accordions.forEach(accordion => {
+        accordion.addEventListener('toggle', function() {
+          if (this.open) {
+            // Close all other accordions in the same container
+            accordions.forEach(otherAccordion => {
+              if (otherAccordion !== this && otherAccordion.open) {
+                otherAccordion.open = false;
+                // Update aria-expanded for accessibility
+                const summary = otherAccordion.querySelector('summary');
+                if (summary) {
+                  summary.setAttribute('aria-expanded', 'false');
+                }
+              }
+            });
+            
+            // Update aria-expanded for the opened accordion
+            const summary = this.querySelector('summary');
+            if (summary) {
+              summary.setAttribute('aria-expanded', 'true');
+            }
+          } else {
+            // Update aria-expanded when closing
+            const summary = this.querySelector('summary');
+            if (summary) {
+              summary.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+      });
+    });
+  });
+</script>
+
 {% schema %}
 {
   "name": "Page Content",
