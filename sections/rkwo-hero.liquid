@@ -10,36 +10,55 @@
 -%}
 
 <section class="rkwo-hero rkwo-content-white" id="section-{{ section_id }}">
-        {%- if background_type == 'video' and video -%}
-      <!-- Video Element (hidden initially) -->
-      <video
-        class="rkwo-hero-video"
-        playsinline="playsinline"
-        muted="muted"
-        loop="loop"
-        autoplay="autoplay"
-        preload="metadata"
-        {%- if video_poster -%}
-        poster="{{ video_poster | img_url: '1920x1080' }}"
-        {%- endif -%}
-      >
-        {%- if video.sources -%}
-          {%- for source in video.sources -%}
-            <source src="{{ source.url }}" type="{{ source.mime_type }}">
-          {%- endfor -%}
-        {%- endif -%}
-        {%- if video_poster -%}
-          <img src="{{ video_poster | img_url: '1920x1080' }}" alt="Video poster">
-        {%- endif -%}
-      </video>
+  {%- if background_type == 'video' and video -%}
+    <!-- Desktop Video Element -->
+    <video
+      class="rkwo-hero-video rkwo-hero-video--desktop"
+      playsinline="playsinline"
+      muted="muted"
+      loop="loop"
+      autoplay="autoplay"
+      preload="metadata"
+      {%- if video_poster -%}
+      poster="{{ video_poster | img_url: '1920x1080' }}"
+      {%- endif -%}
+    >
+      {%- if video.sources -%}
+        {%- for source in video.sources -%}
+          <source src="{{ source.url }}" type="{{ source.mime_type }}">
+        {%- endfor -%}
+      {%- endif -%}
+      {%- if video_poster -%}
+        <img src="{{ video_poster | img_url: '1920x1080' }}" alt="Video poster">
+      {%- endif -%}
+    </video>
+  {%- endif -%}
 
-
-    {%- endif -%}
 
     {%- if image != blank or background_type == 'video' -%}
       <div class="rkwo-hero-mobile-image" style="display: none;">
         {%- if background_type == 'video' and video -%}
-
+          <!-- Mobile Video Element -->
+          <video
+            class="rkwo-hero-video"
+            playsinline="playsinline"
+            muted="muted"
+            loop="loop"
+            autoplay="autoplay"
+            preload="metadata"
+            {%- if video_poster -%}
+            poster="{{ video_poster | img_url: '1920x1080' }}"
+            {%- endif -%}
+          >
+            {%- if video.sources -%}
+              {%- for source in video.sources -%}
+                <source src="{{ source.url }}" type="{{ source.mime_type }}">
+              {%- endfor -%}
+            {%- endif -%}
+            {%- if video_poster -%}
+              <img src="{{ video_poster | img_url: '1920x1080' }}" alt="Video poster">
+            {%- endif -%}
+          </video>
         {%- endif -%}
         {%- if heading != blank -%}
           <h1 class="rkwo-hero-content-heading rkwo-aequil-heading" style="color: #ffffff !important;">
