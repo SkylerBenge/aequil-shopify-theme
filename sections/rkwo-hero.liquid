@@ -10,11 +10,27 @@
 -%}
 
 <section class="rkwo-hero rkwo-content-white" id="section-{{ section_id }}">
-    {%- if background_type == 'video' and video -%}
+        {%- if background_type == 'video' and video -%}
       <!-- Video Element (hidden initially) -->
-      <video class="rkwo-hero-video" muted loop playsinline style="display: none;">
-        <source src="{{ video }}" type="video/mp4">
-        Your browser does not support the video tag.
+      <video
+        class="rkwo-hero-video"
+        playsinline="playsinline"
+        muted="muted"
+        loop="loop"
+        preload="metadata"
+        style="display: none;"
+        {%- if video_poster -%}
+        poster="{{ video_poster | img_url: '1920x1080' }}"
+        {%- endif -%}
+      >
+        {%- if video.sources -%}
+          {%- for source in video.sources -%}
+            <source src="{{ source.url }}" type="{{ source.mime_type }}">
+          {%- endfor -%}
+        {%- endif -%}
+        {%- if video_poster -%}
+          <img src="{{ video_poster | img_url: '1920x1080' }}" alt="Video poster">
+        {%- endif -%}
       </video>
 
       <!-- Play Button Overlay -->
