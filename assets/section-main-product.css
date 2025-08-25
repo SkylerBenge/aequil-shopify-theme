@@ -1005,7 +1005,7 @@ a.product__text {
   }
 
   :not(.thumbnail-slider).slider-mobile-gutter ul {
-    border-radius: 40px;
+    border-radius: 20px;
   }
   :not(.thumbnail-slider).slider-mobile-gutter li {
     padding: 0 !important;
