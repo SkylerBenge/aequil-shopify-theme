@@ -272,12 +272,22 @@
       background-position: center;
       background-repeat: no-repeat;
       {%- elsif background_type == 'video' and video_poster -%}
-      background-image: url({{ video_poster | img_url: '1200x800' }});
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-image: none; /* Remove background when video is present */
       {%- endif -%}
     }
+
+    /* Mobile video styling - replace the banner area */
+    {%- if background_type == 'video' and video -%}
+    .rkwo-hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    {%- endif -%}
 
 
 
