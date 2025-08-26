@@ -48,7 +48,7 @@
       height: 600px;
       min-height: 600px;
     }
-    
+
     .image-with-text__content--full-height {
       height: 600px;
       min-height: 600px;
@@ -99,7 +99,7 @@
             </h2>
           </div>
         {%- endif -%}
-        
+
         <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
           <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
             <div
