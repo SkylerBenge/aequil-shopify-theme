@@ -59,7 +59,7 @@
           "type": "svg_text_overlay",
           "settings": {
             "svg_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 200 152.24\"><path fill=\"#6F9FCF\" d=\"M111.46,152.24h-.09c-5.79,0-11.25-.55-16.37-1.62-3.02.35-6.15.53-9.37.54h-.09c-41.73-.04-66.64-28.29-66.64-75.58,0-23.38,6.11-42.63,17.67-55.68C48.09,6.9,65.03.02,85.55,0h0s.06,0,.09,0c5.72,0,11.17.54,16.29,1.6,3.05-.34,6.2-.52,9.44-.52h0s.06,0,.09,0c20.52.02,37.45,6.9,48.97,19.9,11.56,13.05,17.67,32.3,17.67,55.68,0,46.58-25.53,75.54-66.64,75.58h0ZM101.24,149.62c3.28.41,6.67.61,10.17.62,39.9-.02,64.68-28.21,64.68-73.58,0-22.88-5.94-41.68-17.17-54.35-11.13-12.57-27.57-19.21-47.52-19.22-1.14,0-2.27.02-3.38.07,10.58,3.21,19.58,8.85,26.58,16.75,11.56,13.05,17.67,32.3,17.67,55.68,0,40.37-19.17,67.5-51.04,74.04ZM85.59,2c-19.95,0-36.38,6.66-47.52,19.22-11.23,12.68-17.17,31.47-17.17,54.35s5.94,41.65,17.17,54.33c11.14,12.58,27.57,19.24,47.52,19.25,1.15,0,2.28-.02,3.41-.07-28.11-8.59-44.27-34.33-44.27-72.42,0-23.38,6.11-42.63,17.67-55.68,8.4-9.48,19.69-15.71,33.15-18.39-3.21-.39-6.53-.59-9.95-.59ZM101.83,3.63c-15.65,1.82-28.64,8.19-37.94,18.68-11.23,12.68-17.17,31.47-17.17,54.35s5.94,41.65,17.17,54.33c7.93,8.96,18.54,14.91,31.19,17.6,34.3-4.19,55.19-31.36,55.19-73.01,0-22.88-5.94-41.68-17.17-54.35-7.95-8.97-18.58-14.92-31.28-17.6Z\"></path></svg>",
-            "overlay_text": "We call this dynamic balance.And it's where true wellbeing begins.",
+            "overlay_text": "",
             "heading": "",
             "text": "<p>Most health solutions treat problems in isolation. We don't. At AEQUIL, we work at the level of your essential systems and <br/>functions - the core physiological structures that govern how you feel, function, and adapt. These systems include your brain, heart, gut, immune system, lymphatic system, cell membranes, and more. They are interrelated, interconnected, and interdependent</p>"
           }
@@ -83,7 +83,7 @@
         "heading": "<h3>The AEQUIL Way</h3><h2>We don't treat symptoms. <strong>We Reset Systems</strong></h2>",
         "subheading": "",
         "content": "<p>AEQUIL combines cutting-edge biotech with 27 years of clinical insight to create a new kind of health solution: one that works at the level of your body's essential systems and functions. We don't treat symptoms - we help you restore the rhythm, regulation, and communication between the systems that keep you well.<br/></p>",
-        "image": "shopify://shop_images/Untitled-3Artboard-1.png",
+        "image": "shopify://shop_images/Untitled-3Artboard-1_79b176d0-5c57-4594-9a24-c93ef96c502c.png",
         "desktop_layout": "left",
         "mobile_image_height": "medium",
         "overlay_opacity": 0,
