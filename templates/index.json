@@ -79,9 +79,12 @@
         "svg_text_overlay_Aq6x94",
         "text_button_f7axMa"
       ],
+      "custom_css": [
+        "@media (max-width: 750px) {.featured-content__mobile-overlay h3 {text-align: left; } .featured-content__mobile-image {height: 500px; background-color: #ecebe8; background-position: top; }}"
+      ],
       "name": "Featured Content",
       "settings": {
-        "heading": "<h3>The AEQUIL Way</h3><h2>We don't treat symptoms. <strong>We Reset Systems</strong></h2>",
+        "heading": "<h3>The AEQUIL WAY</h3><h2>We don't treat symptoms. <strong>We Reset Systems</strong></h2>",
         "subheading": "",
         "content": "<p>AEQUIL combines cutting-edge biotech with 27 years of clinical insight to create a new kind of health solution: one that works at the level of your body's essential systems and functions. We don't treat symptoms - we help you restore the rhythm, regulation, and communication between the systems that keep you well.<br/></p>",
         "image": "shopify://shop_images/Untitled-3Artboard-1_79b176d0-5c57-4594-9a24-c93ef96c502c.png",
