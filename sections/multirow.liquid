@@ -167,7 +167,7 @@
         <!-- Title above image (mobile only) -->
         {%- if block.settings.heading -%}
           <div class="multirow__title-section multirow__title-section--mobile">
-            <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte multirow__title--{% cycle 'even', 'odd' %}">
+            <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte multirow__title--{% cycle 'even', 'even', 'odd', 'odd' %}">
               {{ block.settings.heading }}
             </h2>
           </div>
