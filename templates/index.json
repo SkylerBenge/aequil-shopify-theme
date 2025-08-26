@@ -154,6 +154,7 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/DESKTOP---DAILY_DEEP-RESET-Artboard-1_69415c72-f754-4ae9-95a7-70055767010a.png",
+            "mobile_image": "shopify://shop_images/Mobile-Images---ResizedArtboard-1.png",
             "caption": "",
             "heading": "The Deep Reset",
             "text": "<p>A 12-week foundational protocol designed for longstanding complaints, stress accumulation, and physiological dysregulation. Recommended for people dealing with chronic stress, emotional overwhelm, fatigue, or immune dysfunction.</p>",
@@ -165,6 +166,7 @@
           "type": "row",
           "settings": {
             "image": "shopify://shop_images/DESKTOP---DAILY_DEEP-RESET-Artboard-2.png",
+            "mobile_image": "shopify://shop_images/Mobile-Images---ResizedArtboard-2.png",
             "caption": "",
             "heading": "The Daily Reset",
             "text": "<p>A 4-week lighter reset for those needing ongoing support or those coming out of an intense period (postillness, seasonal change, burnout recovery). Designed to maintain rhythm and coherence.</p>",
