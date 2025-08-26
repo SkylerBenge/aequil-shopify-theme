@@ -363,27 +363,27 @@
         "collapsible_row_TcmTW7": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Dynamic Balance",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>A living state of internal regulation where your systems (body, mind, energy) can self-adjust, adapt, and thrive. It's not stillness - it's intelligent, responsive movement.</p>",
             "page": ""
           }
         },
         "collapsible_row_7yTKzD": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Rhythm",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>The unique physiological flow of your body - across sleep, energy, emotion, digestion, immunity, and more. When you're in rhythm, things feel clear and connected. When you're out of rhythm, even simple tasks feel like friction.</p>",
             "page": ""
           }
         },
         "collapsible_row_awUpWB": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Coherence",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>The clear communication between your systems. Coherence is what allows your body to respond to life with ease - instead of overwhelm. It's how everything works better, together.</p>",
             "page": ""
           }
         }
