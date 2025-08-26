@@ -21,65 +21,125 @@
       </div>
 
       <!-- Desktop: Split layout with background image and content -->
-      <div class="featured-content__desktop-layout featured-content__desktop-layout--{{ desktop_layout }}">
-        <div class="featured-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
-          <div class="featured-content__image-overlay">
+      {%- if desktop_layout == 'background' -%}
+        <!-- Background layout: Image covers entire section -->
+        <div class="featured-content__desktop-layout featured-content__desktop-layout--background" style="background-image: url({{ image | img_url: '1200x800' }});">
+          <div class="featured-content__background-overlay">
             {%- if heading != blank -%}
               <h1 class="featured-content__heading">{{ heading }}</h1>
             {%- endif -%}
             {%- if subheading != blank -%}
               <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
             {%- endif -%}
+            {%- if content != blank -%}
+              <div class="featured-content__desktop-text">
+                {{ content }}
+              </div>
+            {%- endif -%}
+            {%- if section.blocks.size > 0 -%}
+              <div class="featured-content__blocks">
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'text_button' -%}
+                    <div class="featured-content__text-button" {{ block.shopify_attributes }}>
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                      {%- if block.settings.button_url != blank and block.settings.button_text != blank -%}
+                        <a href="{{ block.settings.button_url }}" class="featured-content__button">{{ block.settings.button_text }}</a>
+                      {%- endif -%}
+                    </div>
+                  {%- elsif block.type == 'svg_text_overlay' -%}
+                    <div class="featured-content__svg-overlay" {{ block.shopify_attributes }}>
+                      {%- if block.settings.svg_icon != blank -%}
+                        <div class="featured-content__svg-container">
+                          <div class="featured-content__svg-icon">
+                            {{ block.settings.svg_icon }}
+                          </div>
+                          <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
+                            {%- if block.settings.overlay_text != blank -%}
+                              <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
+                            {%- endif -%}
+                          </div>
+                        </div>
+                      {%- endif -%}
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
           </div>
         </div>
-        <div class="featured-content__blocks-section">
-          {%- if content != blank -%}
-            <div class="featured-content__desktop-text">
-              {{ content }}
+      {%- else -%}
+        <!-- Split layout: Image on one side, content on the other -->
+        <div class="featured-content__desktop-layout featured-content__desktop-layout--{{ desktop_layout }}">
+          <div class="featured-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
+            <div class="featured-content__image-overlay">
+              {%- if heading != blank -%}
+                <h1 class="featured-content__heading">{{ heading }}</h1>
+              {%- endif -%}
+              {%- if subheading != blank -%}
+                <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
+              {%- endif -%}
             </div>
-          {%- endif -%}
-          {%- if section.blocks.size > 0 -%}
-            <div class="featured-content__blocks">
-              {%- for block in section.blocks -%}
-                {%- if block.type == 'text_button' -%}
-                  <div class="featured-content__text-button" {{ block.shopify_attributes }}>
-                    {%- if block.settings.heading != blank -%}
-                      <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
-                    {%- endif -%}
-                    {%- if block.settings.text != blank -%}
-                      <div class="featured-content__block-text">{{ block.settings.text }}</div>
-                    {%- endif -%}
-                    {%- if block.settings.button_url != blank and block.settings.button_text != blank -%}
-                      <a href="{{ block.settings.button_url }}" class="featured-content__button">{{ block.settings.button_text }}</a>
-                    {%- endif -%}
-                  </div>
-                {%- elsif block.type == 'svg_text_overlay' -%}
-                  <div class="featured-content__svg-overlay" {{ block.shopify_attributes }}>
-                    {%- if block.settings.svg_icon != blank -%}
-                      <div class="featured-content__svg-container">
-                        <div class="featured-content__svg-icon">
-                          {{ block.settings.svg_icon }}
+          </div>
+          <div class="featured-content__blocks-section">
+            {%- if content != blank -%}
+              <div class="featured-content__desktop-text">
+                {{ content }}
+              </div>
+            {%- endif -%}
+            {%- if section.blocks.size > 0 -%}
+              <div class="featured-content__blocks">
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'text_button' -%}
+                    <div class="featured-content__text-button" {{ block.shopify_attributes }}>
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                      {%- if block.settings.button_url != blank and block.settings.button_text != blank -%}
+                        <a href="{{ block.settings.button_url }}" class="featured-content__button">{{ block.settings.button_text }}</a>
+                      {%- endif -%}
+                    </div>
+                  {%- elsif block.type == 'svg_text_overlay' -%}
+                    <div class="featured-content__svg-overlay" {{ block.shopify_attributes }}>
+                      {%- if block.settings.svg_icon != blank -%}
+                        <div class="featured-content__svg-container">
+                          <div class="featured-content__svg-icon">
+                            {{ block.settings.svg_icon }}
+                          </div>
+                          <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
+                            {%- if block.settings.overlay_text != blank -%}
+                              <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
+                            {%- endif -%}
+                          </div>
                         </div>
-                        <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
-                          {%- if block.settings.overlay_text != blank -%}
-                            <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
-                          {%- endif -%}
-                        </div>
-                      </div>
-                    {%- endif -%}
-                    {%- if block.settings.heading != blank -%}
-                      <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
-                    {%- endif -%}
-                    {%- if block.settings.text != blank -%}
-                      <div class="featured-content__block-text">{{ block.settings.text }}</div>
-                    {%- endif -%}
-                  </div>
-                {%- endif -%}
-              {%- endfor -%}
-            </div>
-          {%- endif -%}
+                      {%- endif -%}
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
         </div>
-      </div>
+      {%- endif -%}
     {%- else -%}
       <!-- No image: heading, subtitle, and text -->
       <div class="featured-content__content-only">
@@ -280,6 +340,36 @@
 
   .featured-content__desktop-layout--right .featured-content__blocks-section {
     order: 1;
+  }
+
+  /* Background Layout */
+  .featured-content__desktop-layout--background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .featured-content__background-overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity | default: 1 }});
+    padding: 60px 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .featured-content__background-overlay .featured-content__heading,
+  .featured-content__background-overlay .featured-content__subheading,
+  .featured-content__background-overlay .featured-content__desktop-text {
+    color: white;
   }
 
   .featured-content__image-section {
