@@ -93,7 +93,7 @@
         "mobile_image_height": "medium",
         "overlay_opacity": 0,
         "subheading_dark_background": false,
-        "mobile_overlay_position": "bottom"
+        "overlay_position": "top"
       }
     },
     "product_features_Ay8eT6": {
@@ -355,7 +355,7 @@
         "mobile_image_height": "full",
         "overlay_opacity": 0,
         "subheading_dark_background": false,
-        "mobile_overlay_position": "top"
+        "overlay_position": "center"
       }
     },
     "rkwo_text_image_highlight_rngncc": {
