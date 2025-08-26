@@ -25,7 +25,7 @@
         <div class="featured-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
           <div class="featured-content__image-overlay">
             {%- if heading != blank -%}
-              <h1 class="featured-content__heading">{{ heading }}</h1>
+              <h1 class="featured-content__heading">{{section.settings.overlay_position}}{{ heading }}</h1>
             {%- endif -%}
             {%- if subheading != blank -%}
               <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
