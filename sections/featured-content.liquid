@@ -30,12 +30,14 @@
             {%- if subheading != blank -%}
               <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
             {%- endif -%}
-            {%- if content != blank -%}
-              <div class="featured-content__text">{{ content }}</div>
-            {%- endif -%}
           </div>
         </div>
         <div class="featured-content__blocks-section">
+          {%- if content != blank -%}
+            <div class="featured-content__desktop-text">
+              {{ content }}
+            </div>
+          {%- endif -%}
           {%- if section.blocks.size > 0 -%}
             <div class="featured-content__blocks">
               {%- for block in section.blocks -%}
