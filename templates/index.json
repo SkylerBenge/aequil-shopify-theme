@@ -329,6 +329,46 @@
         "image": "shopify://shop_images/aequilv.svg"
       }
     },
+    "featured_content_z8CmqQ": {
+      "type": "featured-content",
+      "blocks": {
+        "text_button_4R3Tj7": {
+          "type": "text_button",
+          "settings": {
+            "heading": "Get Started",
+            "text": "<p>Learn more about our featured content and how it can help you.</p>",
+            "button_url": "",
+            "button_text": "Learn More"
+          }
+        },
+        "svg_text_overlay_JkDLnx": {
+          "type": "svg_text_overlay",
+          "settings": {
+            "svg_icon": "",
+            "overlay_text": "<p>NEW</p>",
+            "overlay_position": "center",
+            "heading": "Latest Features",
+            "text": "<p>Discover our newest additions and improvements.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_button_4R3Tj7",
+        "svg_text_overlay_JkDLnx"
+      ],
+      "name": "Featured Content",
+      "settings": {
+        "heading": "<p>Featured Content</p>",
+        "subheading": "<p>Subtitle goes here</p>",
+        "content": "<p>Content description goes here.</p>",
+        "image": "shopify://shop_images/Untitled-3Artboard-4.png",
+        "desktop_layout": "left",
+        "mobile_image_height": "full",
+        "overlay_opacity": 1,
+        "subheading_dark_background": false,
+        "mobile_overlay_position": "center"
+      }
+    },
     "rkwo_text_image_highlight_rngncc": {
       "type": "rkwo-text-image-highlight",
       "name": "RKWO Text Image Highlight",
@@ -558,6 +598,7 @@
     "multirow_epexcg",
     "rkwo_pagebreak_cta_Kb78Hd",
     "rkwo_highlight_points_LeM8CW",
+    "featured_content_z8CmqQ",
     "rkwo_text_image_highlight_rngncc",
     "rkwo_highlight_points_WRtQkm",
     "rkwo_text_image_highlight_wFjWjG",
