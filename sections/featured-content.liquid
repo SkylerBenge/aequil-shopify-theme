@@ -179,7 +179,7 @@
   /* Mobile Image Styling */
   #section-{{ section_id }} .featured-content__mobile-image {
     display: none;
-    background-size: contain;
+    background-size: cover;
     border-radius: 20px;
     background-position: center;
     background-repeat: no-repeat;
@@ -192,17 +192,21 @@
     #section-{{ section_id }} .featured-content__mobile-image--small {
     max-width: 400px;
     margin: 0 auto;
+    min-height: 200px;
   }
   #section-{{ section_id }} .featured-content__mobile-image--medium {
     max-width: 600px;
     margin: 0 auto;
+    min-height: 300px;
   }
   #section-{{ section_id }} .featured-content__mobile-image--tall {
     max-width: 800px;
     margin: 0 auto;
+    min-height: 400px;
   }
   #section-{{ section_id }} .featured-content__mobile-image--full {
     max-width: 100%;
+    min-height: 300px;
   }
 
   #section-{{ section_id }} .featured-content__mobile-overlay {
