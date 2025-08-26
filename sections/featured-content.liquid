@@ -135,7 +135,7 @@
                   <div class="featured-content__svg-icon">
                     {{ block.settings.svg_icon }}
                   </div>
-                  <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ block.settings.overlay_position | default: 'center' }}">
+                  <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
                     {%- if block.settings.overlay_text != blank -%}
                       <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
                     {%- endif -%}
