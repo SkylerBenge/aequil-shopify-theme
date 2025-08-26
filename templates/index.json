@@ -358,7 +358,7 @@
       ],
       "name": "Featured Content",
       "settings": {
-        "heading": "<h3>ABOUT FRÉDÉRIC</h3><h2>Meet the Founder</h2>",
+        "heading": "<h3>ABOUT FRÉDÉRIC</h3><h2>Meet the <strong>Founder</strong></h2>",
         "subheading": "<p>Subtitle goes here</p>",
         "content": "<p>Content description goes here.</p>",
         "image": "shopify://shop_images/Untitled-3Artboard-4_6228ecce-ba63-4a5d-a146-a3dfed098bfe.png",
