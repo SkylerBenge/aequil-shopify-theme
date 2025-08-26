@@ -194,15 +194,30 @@
 
   .featured-content__mobile-overlay {
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     background: rgba(0,0,0,.{{ section.settings.overlay_opacity | default: 1 }});
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+  }
+
+  /* Mobile overlay positioning */
+  .featured-content__mobile-overlay--top {
+    top: 0;
+    justify-content: flex-start;
+  }
+
+  .featured-content__mobile-overlay--center {
+    top: 0;
+    bottom: 0;
     justify-content: center;
+  }
+
+  .featured-content__mobile-overlay--bottom {
+    bottom: 0;
+    justify-content: flex-end;
   }
 
   /* Desktop Layout */
