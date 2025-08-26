@@ -155,11 +155,16 @@
 </section>
 
 <style>
+  #section-{{ section_id }} {
+    /* All styles scoped to this section */
+  }
+  
   #section-{{ section_id }} .featured-content {
     width: calc(100% - 80px);
     margin: 40px;
     position: relative;
   }
+  
   #section-{{ section_id }} .featured-content__overlay-text * {
     text-align: center;
   }
@@ -291,7 +296,7 @@
   }
 
   /* Desktop overlay positioning based on mobile setting */
-  .featured-content__desktop-layout .featured-content__image-overlay {
+  #section-{{ section_id }} .featured-content__desktop-layout .featured-content__image-overlay {
     justify-content: {% if section.settings.overlay_position == 'top' %}flex-start{% elsif section.settings.overlay_position == 'bottom' %}flex-end{% else %}center{% endif %};
   }
 
