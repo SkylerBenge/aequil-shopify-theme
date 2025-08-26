@@ -401,6 +401,6 @@
     row-gap: var(--grid-desktop-vertical-spacing);
   }
   .multirow__inner p {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
