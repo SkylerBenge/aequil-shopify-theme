@@ -335,32 +335,21 @@
         "text_button_4R3Tj7": {
           "type": "text_button",
           "settings": {
-            "heading": "Get Started",
-            "text": "<p>Learn more about our featured content and how it can help you.</p>",
-            "button_url": "",
-            "button_text": "Learn More"
-          }
-        },
-        "svg_text_overlay_JkDLnx": {
-          "type": "svg_text_overlay",
-          "settings": {
-            "svg_icon": "",
-            "overlay_text": "<p>NEW</p>",
-            "overlay_position": "center",
-            "heading": "Latest Features",
-            "text": "<p>Discover our newest additions and improvements.</p>"
+            "heading": "",
+            "text": "",
+            "button_url": "shopify://pages/bio",
+            "button_text": "SEE FRÉDÉRIC'S STORY"
           }
         }
       },
       "block_order": [
-        "text_button_4R3Tj7",
-        "svg_text_overlay_JkDLnx"
+        "text_button_4R3Tj7"
       ],
       "name": "Featured Content",
       "settings": {
         "heading": "<h3>ABOUT FRÉDÉRIC</h3><h2>Meet the <strong>Founder</strong></h2>",
         "subheading": "<p>Subtitle goes here</p>",
-        "content": "<p>Content description goes here.</p>",
+        "content": "<p>Frédéric Roscop is a pioneering osteopath, researcher, and creator of AEQUIL Science. He has treated thousands of patients across decades in clinical practice, working at the intersection of body, mind, energy.<br/>Frédéric's vision is simple: We all have the right to feel well, be free, and return to ourselves.</p><p>He is the author of multiple scientific publications on dynamised water, and an international speaker on topics like Lyme disease, biophysics, and human adaptability.<br/></p><p>Through AEQUIL, he brings together clinical wisdom, biotech innovation, and a belief in human coherence.</p>",
         "image": "shopify://shop_images/Untitled-3Artboard-4_6228ecce-ba63-4a5d-a146-a3dfed098bfe.png",
         "desktop_layout": "left",
         "mobile_image_height": "full",
