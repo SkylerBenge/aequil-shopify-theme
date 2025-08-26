@@ -397,7 +397,7 @@
       "settings": {
         "image": "shopify://shop_images/DTS_AURA_Fanette_Guilloud_Photos_ID12981.jpg",
         "mobile_image_height": "medium",
-        "desktop_layout": "left",
+        "desktop_layout": "right",
         "heading": "<p>Glossary</p>",
         "heading_alignment": "center",
         "subheading": "",
@@ -406,7 +406,9 @@
         "content": "",
         "content_alignment": "center",
         "overlay_opacity": 1,
-        "open_first_block": true
+        "open_first_block": true,
+        "button_url": "shopify://pages/glossary",
+        "button_text": "Explore Glossary"
       }
     },
     "rkwo_text_image_highlight_rngncc": {
