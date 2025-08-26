@@ -16,6 +16,44 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  /* Title above image styling */
+  .multirow__title-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /* Full height images */
+  .image-with-text__media--full-height {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .image-with-text__media--full-height img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-with-text__content--full-height {
+    height: 500px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 750px) {
+    .image-with-text__media--full-height {
+      height: 600px;
+      min-height: 600px;
+    }
+    
+    .image-with-text__content--full-height {
+      height: 600px;
+      min-height: 600px;
+    }
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -53,13 +91,19 @@
         class="image-with-text isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         {{ block.shopify_attributes }}
       >
+        <!-- Title above image -->
+        {%- if block.settings.heading -%}
+          <div class="multirow__title-section">
+            <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
+              {{ block.settings.heading }}
+            </h2>
+          </div>
+        {%- endif -%}
+        
         <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
           <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
             <div
-              class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} gradient color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
-              {% if section.settings.image_height == 'adapt' and block.settings.image != blank %}
-                style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
+              class="image-with-text__media image-with-text__media--full-height gradient color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
             >
               {%- if block.settings.image != blank -%}
                 {%- capture sizes -%}
@@ -68,8 +112,8 @@
                 {%- endcapture -%}
                 {{
                   block.settings.image
-                  | image_url: width: 1500
-                  | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                  | image_url: width: 2400
+                  | image_tag: sizes: sizes, widths: '360, 535, 750, 1070, 1500, 2000, 2400'
                 }}
               {%- else -%}
                 {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -77,16 +121,11 @@
             </div>
           </div>
           <div class="image-with-text__text-item grid__item">
-            <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% else %} background-transparent{% endunless %}">
+            <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--full-height content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% else %} background-transparent{% endunless %}">
               {%- if block.settings.caption -%}
                 <p class="image-with-text__text image-with-text__text--caption">
                   {{ block.settings.caption | escape }}
                 </p>
-              {%- endif -%}
-              {%- if block.settings.heading -%}
-                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
-                  {{ block.settings.heading }}
-                </h2>
               {%- endif -%}
               {%- if block.settings.text -%}
                 <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
