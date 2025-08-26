@@ -400,4 +400,7 @@
   .multirow__inner {
     row-gap: var(--grid-desktop-vertical-spacing);
   }
+  .multirow__inner p {
+    font-size: 1.2rem;
+  }
 }
