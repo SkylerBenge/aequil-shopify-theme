@@ -13,7 +13,7 @@
     {%- if image -%}
       <!-- Mobile: Background image with title overlay -->
       <div class="featured-content__mobile-image featured-content__mobile-image--{{ section.settings.mobile_image_height }}" style="background-image: url({{ image | img_url: '1200x800' }});">
-        <div class="featured-content__mobile-overlay">
+        <div class="featured-content__mobile-overlay featured-content__mobile-overlay--{{ section.settings.mobile_overlay_position | default: 'center' }}">
           {%- if heading != blank -%}
             <h1 class="featured-content__heading">{{ heading }}</h1>
           {%- endif -%}
@@ -592,6 +592,26 @@ document.addEventListener('DOMContentLoaded', function() {
       "id": "subheading_dark_background",
       "label": "Subheading Dark Background",
       "default": false
+    },
+    {
+      "type": "select",
+      "id": "mobile_overlay_position",
+      "label": "Mobile Overlay Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
     }
   ],
   "blocks": [
