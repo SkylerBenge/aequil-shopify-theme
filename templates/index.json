@@ -361,12 +361,12 @@
         "heading": "<p>Featured Content</p>",
         "subheading": "<p>Subtitle goes here</p>",
         "content": "<p>Content description goes here.</p>",
-        "image": "shopify://shop_images/Untitled-3Artboard-4.png",
+        "image": "shopify://shop_images/Untitled-3Artboard-4_6228ecce-ba63-4a5d-a146-a3dfed098bfe.png",
         "desktop_layout": "left",
         "mobile_image_height": "full",
-        "overlay_opacity": 1,
+        "overlay_opacity": 0,
         "subheading_dark_background": false,
-        "mobile_overlay_position": "center"
+        "mobile_overlay_position": "top"
       }
     },
     "rkwo_text_image_highlight_rngncc": {
