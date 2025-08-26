@@ -44,12 +44,14 @@
 
     /* Even titles (left aligned) */
     .multirow__title-section--desktop:has(.multirow__title--even) {
-      text-align: left;
+      display: flex;
+      justify-content: start;
     }
 
     /* Odd titles (right aligned) */
     .multirow__title-section--desktop:has(.multirow__title--odd) {
-      text-align: right;
+      display: flex;
+      justify-content: end;
     }
   }
 
