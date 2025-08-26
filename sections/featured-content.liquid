@@ -25,7 +25,7 @@
         <div class="featured-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
           <div class="featured-content__image-overlay">
             {%- if heading != blank -%}
-              <h1 class="featured-content__heading">{{section.settings.overlay_position}}{{ heading }}</h1>
+              <h1 class="featured-content__heading">{{ heading }}</h1>
             {%- endif -%}
             {%- if subheading != blank -%}
               <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
@@ -390,7 +390,56 @@
     pointer-events: none;
   }
 
+  /* Overlay positioning */
+  .featured-content__svg-text-overlay--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
+  .featured-content__svg-text-overlay--top {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .featured-content__svg-text-overlay--bottom {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .featured-content__svg-text-overlay--left {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+
+  .featured-content__svg-text-overlay--right {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+  }
+
+  .featured-content__svg-text-overlay--top-left {
+    top: 10%;
+    left: 10%;
+  }
+
+  .featured-content__svg-text-overlay--top-right {
+    top: 10%;
+    right: 10%;
+  }
+
+  .featured-content__svg-text-overlay--bottom-left {
+    bottom: 10%;
+    left: 10%;
+  }
+
+  .featured-content__svg-text-overlay--bottom-right {
+    bottom: 10%;
+    right: 10%;
+  }
 
   /* Typography */
   .featured-content__heading {
