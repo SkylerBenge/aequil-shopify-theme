@@ -1,0 +1,712 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading
+  assign content = section.settings.content
+  assign image = section.settings.image
+  assign desktop_layout = section.settings.desktop_layout
+  assign section_id = section.id
+-%}
+
+<section class="featured-content" id="section-{{ section_id }}">
+  <!-- Hero Section with Background Image and Title -->
+  <div class="featured-content__hero">
+    {%- if image -%}
+      <!-- Mobile: Background image with title overlay -->
+      <div class="featured-content__mobile-image featured-content__mobile-image--{{ section.settings.mobile_image_height }}" style="background-image: url({{ image | img_url: '1200x800' }});">
+        <div class="featured-content__mobile-overlay">
+          {%- if heading != blank -%}
+            <h1 class="featured-content__heading">{{ heading }}</h1>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <!-- Desktop: Split layout with background image and content -->
+      <div class="featured-content__desktop-layout featured-content__desktop-layout--{{ desktop_layout }}">
+        <div class="featured-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
+          <div class="featured-content__image-overlay">
+            {%- if heading != blank -%}
+              <h1 class="featured-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
+            {%- endif -%}
+            {%- if subheading != blank -%}
+              <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
+            {%- endif -%}
+            {%- if content != blank -%}
+              <div class="featured-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
+            {%- endif -%}
+          </div>
+        </div>
+        <div class="featured-content__blocks-section">
+          {%- if section.blocks.size > 0 -%}
+            <div class="featured-content__blocks">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'text_button' -%}
+                  <div class="featured-content__text-button" {{ block.shopify_attributes }}>
+                    {%- if block.settings.heading != blank -%}
+                      <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                    {%- endif -%}
+                    {%- if block.settings.text != blank -%}
+                      <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                    {%- endif -%}
+                    {%- if block.settings.button_url != blank and block.settings.button_text != blank -%}
+                      <a href="{{ block.settings.button_url }}" class="featured-content__button">{{ block.settings.button_text }}</a>
+                    {%- endif -%}
+                  </div>
+                {%- elsif block.type == 'svg_text_overlay' -%}
+                  <div class="featured-content__svg-overlay" {{ block.shopify_attributes }}>
+                    {%- if block.settings.svg_icon != blank -%}
+                      <div class="featured-content__svg-container">
+                        <div class="featured-content__svg-icon">
+                          {{ block.settings.svg_icon }}
+                        </div>
+                        <div class="featured-content__svg-text-overlay">
+                          {%- if block.settings.overlay_text != blank -%}
+                            <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
+                          {%- endif -%}
+                        </div>
+                      </div>
+                    {%- endif -%}
+                    {%- if block.settings.heading != blank -%}
+                      <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                    {%- endif -%}
+                    {%- if block.settings.text != blank -%}
+                      <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- else -%}
+      <!-- No image: heading, subtitle, and text -->
+      <div class="featured-content__content-only">
+        {%- if heading != blank -%}
+          <h1 class="featured-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
+        {%- endif -%}
+        {%- if subheading != blank -%}
+          <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
+        {%- endif -%}
+        {%- if content != blank -%}
+          <div class="featured-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <!-- Mobile: Subtitle, Text, and Content Blocks -->
+  <div class="featured-content__mobile-content">
+    <!-- Subtitle and Text Section (mobile only) -->
+    {%- if subheading != blank or content != blank -%}
+      <div class="featured-content__subtitle-section">
+        <div class="featured-content__subtitle-content">
+          {%- if subheading != blank -%}
+            <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
+          {%- endif -%}
+          {%- if content != blank -%}
+            <div class="featured-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <!-- Content Blocks -->
+    {%- if section.blocks.size > 0 -%}
+      <div class="featured-content__blocks">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'text_button' -%}
+            <div class="featured-content__text-button" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="featured-content__block-text">{{ block.settings.text }}</div>
+              {%- endif -%}
+              {%- if block.settings.button_url != blank and block.settings.button_text != blank -%}
+                <a href="{{ block.settings.button_url }}" class="featured-content__button">{{ block.settings.button_text }}</a>
+              {%- endif -%}
+            </div>
+          {%- elsif block.type == 'svg_text_overlay' -%}
+            <div class="featured-content__svg-overlay" {{ block.shopify_attributes }}>
+              {%- if block.settings.svg_icon != blank -%}
+                <div class="featured-content__svg-container">
+                  <div class="featured-content__svg-icon">
+                    {{ block.settings.svg_icon }}
+                  </div>
+                  <div class="featured-content__svg-text-overlay">
+                    {%- if block.settings.overlay_text != blank -%}
+                      <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.heading != blank -%}
+                <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="featured-content__block-text">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  .featured-content {
+    width: 100%;
+    position: relative;
+  }
+
+  .featured-content__hero {
+    position: relative;
+  }
+
+  /* Mobile Image Styling */
+  .featured-content__mobile-image {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 300px;
+  }
+
+  .featured-content__mobile-image--small { min-height: 200px; }
+  .featured-content__mobile-image--medium { min-height: 300px; }
+  .featured-content__mobile-image--tall { min-height: 400px; }
+
+  .featured-content__mobile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity | default: 1 }});
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  /* Desktop Layout */
+  .featured-content__desktop-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+  }
+
+  .featured-content__desktop-layout--left {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-content__desktop-layout--right {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-content__desktop-layout--right .featured-content__image-section {
+    order: 2;
+  }
+
+  .featured-content__desktop-layout--right .featured-content__blocks-section {
+    order: 1;
+  }
+
+  .featured-content__image-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .featured-content__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity | default: 1 }});
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .featured-content__blocks-section {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .featured-content__blocks {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* Block Styling */
+  .featured-content__text-button,
+  .featured-content__svg-overlay {
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .featured-content__text-button:last-child,
+  .featured-content__svg-overlay:last-child {
+    margin-bottom: 0;
+  }
+
+  .featured-content__block-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    color: #333;
+  }
+
+  .featured-content__block-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 0 20px 0;
+  }
+
+  .featured-content__block-text p {
+    margin: 0 0 15px 0;
+  }
+
+  .featured-content__block-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .featured-content__button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+
+  .featured-content__button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+  }
+
+  /* SVG with Text Overlay */
+  .featured-content__svg-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .featured-content__svg-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .featured-content__svg-icon svg {
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .featured-content__svg-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .featured-content__overlay-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+  }
+
+  /* Typography */
+  .featured-content__heading {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    color: white;
+  }
+
+  .featured-content__subheading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: white;
+  }
+
+  .featured-content__subheading--dark-bg {
+    background: rgba(0,0,0,.4);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+
+  .featured-content__text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
+  }
+
+  .featured-content__text p {
+    margin: 0 0 15px 0;
+  }
+
+  .featured-content__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Content Only Layout */
+  .featured-content__content-only {
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .featured-content__content-only .featured-content__heading {
+    color: #333;
+  }
+
+  .featured-content__content-only .featured-content__subheading {
+    color: #666;
+  }
+
+  .featured-content__content-only .featured-content__text {
+    color: #666;
+  }
+
+  /* Mobile Content */
+  .featured-content__mobile-content {
+    display: none;
+  }
+
+  .featured-content__subtitle-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .featured-content__subtitle-content .featured-content__subheading {
+    color: #333;
+  }
+
+  .featured-content__subtitle-content .featured-content__text {
+    color: #666;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 1024px) {
+    .featured-content__desktop-layout {
+      display: none;
+    }
+
+    .featured-content__mobile-image {
+      display: block;
+    }
+
+    .featured-content__mobile-content {
+      display: block;
+    }
+
+    .featured-content__blocks {
+      padding: 20px;
+    }
+
+    .featured-content__heading {
+      font-size: 36px;
+    }
+
+    .featured-content__subheading {
+      font-size: 20px;
+    }
+
+    .featured-content__text {
+      font-size: 16px;
+    }
+
+    .featured-content__block-title {
+      font-size: 20px;
+    }
+
+    .featured-content__block-text {
+      font-size: 14px;
+    }
+
+    .featured-content__svg-icon svg {
+      width: 60px;
+      height: 60px;
+    }
+
+    .featured-content__overlay-text {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .featured-content__heading {
+      font-size: 28px;
+    }
+
+    .featured-content__subheading {
+      font-size: 18px;
+    }
+
+    .featured-content__text {
+      font-size: 14px;
+    }
+
+    .featured-content__content-only {
+      padding: 40px 20px;
+    }
+
+    .featured-content__svg-icon svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    .featured-content__overlay-text {
+      font-size: 10px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Featured Content",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Featured Content</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Subtitle goes here</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>Content description goes here.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "Desktop Layout",
+      "options": [
+        {
+          "value": "left",
+          "label": "Image Left"
+        },
+        {
+          "value": "right",
+          "label": "Image Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_height",
+      "label": "Mobile Image Height",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small (200px)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (300px)"
+        },
+        {
+          "value": "tall",
+          "label": "Tall (400px)"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "subheading_alignment",
+      "label": "Subheading Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Content Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "checkbox",
+      "id": "subheading_dark_background",
+      "label": "Subheading Dark Background",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_button",
+      "name": "Text with Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Block Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Block description goes here.</p>"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        }
+      ]
+    },
+    {
+      "type": "svg_text_overlay",
+      "name": "SVG with Text Overlay",
+      "settings": [
+        {
+          "type": "html",
+          "id": "svg_icon",
+          "label": "SVG Icon",
+          "info": "Paste your SVG code here"
+        },
+        {
+          "type": "text",
+          "id": "overlay_text",
+          "label": "Overlay Text",
+          "default": "Text"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Block Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Block description goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Content",
+      "blocks": [
+        {
+          "type": "text_button",
+          "settings": {
+            "heading": "Get Started",
+            "text": "<p>Learn more about our featured content and how it can help you.</p>",
+            "button_text": "Learn More"
+          }
+        },
+        {
+          "type": "svg_text_overlay",
+          "settings": {
+            "overlay_text": "NEW",
+            "heading": "Latest Features",
+            "text": "<p>Discover our newest additions and improvements.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
