@@ -58,7 +58,7 @@
                         <div class="featured-content__svg-icon">
                           {{ block.settings.svg_icon }}
                         </div>
-                        <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
+                        <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ block.settings.overlay_position | default: 'center' }}">
                           {%- if block.settings.overlay_text != blank -%}
                             <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
                           {%- endif -%}
@@ -133,7 +133,7 @@
                   <div class="featured-content__svg-icon">
                     {{ block.settings.svg_icon }}
                   </div>
-                  <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
+                  <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ block.settings.overlay_position | default: 'center' }}">
                     {%- if block.settings.overlay_text != blank -%}
                       <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
                     {%- endif -%}
@@ -155,24 +155,21 @@
 </section>
 
 <style>
-  /* Section-specific styles for {{ section_id }} */
-
-  #section-{{ section_id }} .featured-content {
+  .featured-content {
     width: calc(100% - 80px);
     margin: 40px;
     position: relative;
   }
-
-  #section-{{ section_id }} .featured-content__overlay-text * {
+  .featured-content__overlay-text * {
     text-align: center;
   }
 
-  #section-{{ section_id }} .featured-content__hero {
+  .featured-content__hero {
     position: relative;
   }
 
   /* Mobile Image Styling */
-  #section-{{ section_id }} .featured-content__mobile-image {
+  .featured-content__mobile-image {
     display: none;
     background-size: contain;
     border-radius: 20px;
@@ -183,23 +180,23 @@
     aspect-ratio: var(--image-aspect-ratio, 16/9);
   }
 
-    #section-{{ section_id }} .featured-content__mobile-image--small {
+  .featured-content__mobile-image--small {
     max-width: 400px;
     margin: 0 auto;
   }
-  #section-{{ section_id }} .featured-content__mobile-image--medium {
+  .featured-content__mobile-image--medium {
     max-width: 600px;
     margin: 0 auto;
   }
-  #section-{{ section_id }} .featured-content__mobile-image--tall {
+  .featured-content__mobile-image--tall {
     max-width: 800px;
     margin: 0 auto;
   }
-  #section-{{ section_id }} .featured-content__mobile-image--full {
+  .featured-content__mobile-image--full {
     max-width: 100%;
   }
 
-  #section-{{ section_id }} .featured-content__mobile-overlay {
+  .featured-content__mobile-overlay {
     position: absolute;
     left: 0;
     right: 0;
@@ -210,39 +207,20 @@
   }
 
   /* Mobile overlay positioning */
-  #section-{{ section_id }} .featured-content__mobile-overlay--top {
+  .featured-content__mobile-overlay--top {
     top: 0;
     justify-content: flex-start;
   }
 
-  #section-{{ section_id }} .featured-content__mobile-overlay--center {
+  .featured-content__mobile-overlay--center {
     top: 0;
     bottom: 0;
     justify-content: center;
   }
 
-  #section-{{ section_id }} .featured-content__mobile-overlay--bottom {
+  .featured-content__mobile-overlay--bottom {
     bottom: 0;
     justify-content: flex-end;
-  }
-
-  /* SVG overlay positioning using section setting */
-  .featured-content__svg-text-overlay--center {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .featured-content__svg-text-overlay--top {
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .featured-content__svg-text-overlay--bottom {
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .featured-content__mobile-overlay * {
@@ -279,7 +257,7 @@
     aspect-ratio: var(--image-aspect-ratio, 16/9);
   }
 
-  #section-{{ section_id }} .featured-content__image-overlay {
+  .featured-content__image-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -294,18 +272,18 @@
   }
 
   /* Desktop overlay positioning based on mobile setting */
-  #section-{{ section_id }} .featured-content__desktop-layout .featured-content__image-overlay {
+  .featured-content__desktop-layout .featured-content__image-overlay {
     justify-content: {% if section.settings.overlay_position == 'top' %}flex-start{% elsif section.settings.overlay_position == 'bottom' %}flex-end{% else %}center{% endif %};
   }
 
-  #section-{{ section_id }} .featured-content__blocks-section {
+  .featured-content__blocks-section {
     padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  #section-{{ section_id }} .featured-content__blocks {
+  .featured-content__blocks {
     width: 100%;
     max-width: 500px;
   }
