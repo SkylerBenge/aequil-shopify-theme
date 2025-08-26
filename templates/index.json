@@ -44,6 +44,7 @@
     },
     "rkwo_video_text_aCHKL7": {
       "type": "rkwo-video-text",
+      "disabled": true,
       "name": "RKWO Video Text",
       "settings": {
         "heading": "We don't treat symptoms. We reset systems.",
