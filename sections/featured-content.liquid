@@ -266,10 +266,14 @@
     background: rgba(0,0,0,.{{ section.settings.overlay_opacity | default: 1 }});
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: 40px;
     text-align: center;
+  }
+
+  /* Desktop overlay positioning based on mobile setting */
+  .featured-content__desktop-layout .featured-content__image-overlay {
+    justify-content: {% if section.settings.mobile_overlay_position == 'top' %}flex-start{% elsif section.settings.mobile_overlay_position == 'bottom' %}flex-end{% else %}center{% endif %};
   }
 
   .featured-content__blocks-section {
