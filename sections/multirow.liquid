@@ -127,14 +127,24 @@
       .image-with-text__media--full-height {
         height: 100%;
         min-height: 600px;
+        display: flex;
+        align-items: center;
       }
 
       .image-with-text__media--full-height img {
         width: 100%;
         height: auto;
         object-fit: contain;
-        object-position: center;
         max-height: 100%;
+      }
+
+      /* Position images closer to text content */
+      .image-with-text__grid--reverse .image-with-text__media--full-height {
+        justify-content: flex-start; /* Image on right, push toward text on left */
+      }
+
+      .image-with-text__grid:not(.image-with-text__grid--reverse) .image-with-text__media--full-height {
+        justify-content: flex-end; /* Image on left, push toward text on right */
       }
 
       .image-with-text__content--full-height {
