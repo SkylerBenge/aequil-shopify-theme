@@ -25,13 +25,13 @@
         <div class="featured-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
           <div class="featured-content__image-overlay">
             {%- if heading != blank -%}
-              <h1 class="featured-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
+              <h1 class="featured-content__heading">{{ heading }}</h1>
             {%- endif -%}
             {%- if subheading != blank -%}
-              <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
+              <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
             {%- endif -%}
             {%- if content != blank -%}
-              <div class="featured-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
+              <div class="featured-content__text">{{ content }}</div>
             {%- endif -%}
           </div>
         </div>
@@ -82,13 +82,13 @@
       <!-- No image: heading, subtitle, and text -->
       <div class="featured-content__content-only">
         {%- if heading != blank -%}
-          <h1 class="featured-content__heading" style="text-align: {{ section.settings.heading_alignment }};">{{ heading }}</h1>
+          <h1 class="featured-content__heading">{{ heading }}</h1>
         {%- endif -%}
         {%- if subheading != blank -%}
-          <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}" style="text-align: {{ section.settings.subheading_alignment }};">{{ subheading }}</h2>
+          <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
         {%- endif -%}
         {%- if content != blank -%}
-          <div class="featured-content__text" style="text-align: {{ section.settings.content_alignment }};">{{ content }}</div>
+          <div class="featured-content__text">{{ content }}</div>
         {%- endif -%}
       </div>
     {%- endif -%}
@@ -395,13 +395,6 @@
   .featured-content__svg-text-overlay--bottom-right {
     bottom: 10%;
     right: 10%;
-  }
-
-  .featured-content__overlay-text {
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
   }
 
   /* Typography */
