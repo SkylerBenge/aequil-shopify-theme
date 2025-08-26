@@ -399,6 +399,10 @@
   margin-left: 40px;
   margin-right: 40px;
 }
+.multirow__inner .image-with-text__grid img {
+  border-radius: 20px;
+}
+
 @media screen and (min-width: 750px) {
   .multirow__inner {
     row-gap: var(--grid-desktop-vertical-spacing);
