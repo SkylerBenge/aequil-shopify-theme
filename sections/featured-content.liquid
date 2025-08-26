@@ -168,17 +168,29 @@
   /* Mobile Image Styling */
   .featured-content__mobile-image {
     display: none;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    min-height: 300px;
+    width: 100%;
+    aspect-ratio: var(--image-aspect-ratio, 16/9);
   }
 
-  .featured-content__mobile-image--small { min-height: 200px; }
-  .featured-content__mobile-image--medium { min-height: 300px; }
-  .featured-content__mobile-image--tall { min-height: 400px; }
-  .featured-content__mobile-image--full { min-height: 100vh; }
+  .featured-content__mobile-image--small { 
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .featured-content__mobile-image--medium { 
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .featured-content__mobile-image--tall { 
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .featured-content__mobile-image--full { 
+    max-width: 100%;
+  }
 
   .featured-content__mobile-overlay {
     position: absolute;
@@ -197,7 +209,7 @@
   .featured-content__desktop-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 500px;
+    align-items: stretch;
   }
 
   .featured-content__desktop-layout--left {
@@ -217,10 +229,11 @@
   }
 
   .featured-content__image-section {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    aspect-ratio: var(--image-aspect-ratio, 16/9);
   }
 
   .featured-content__image-overlay {
