@@ -155,9 +155,7 @@
 </section>
 
 <style>
-  #section-{{ section_id }} {
-    /* All styles scoped to this section */
-  }
+  /* Section-specific styles for {{ section_id }} */
   
   #section-{{ section_id }} .featured-content {
     width: calc(100% - 80px);
@@ -300,14 +298,14 @@
     justify-content: {% if section.settings.overlay_position == 'top' %}flex-start{% elsif section.settings.overlay_position == 'bottom' %}flex-end{% else %}center{% endif %};
   }
 
-  .featured-content__blocks-section {
+  #section-{{ section_id }} .featured-content__blocks-section {
     padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .featured-content__blocks {
+  #section-{{ section_id }} .featured-content__blocks {
     width: 100%;
     max-width: 500px;
   }
