@@ -13,9 +13,9 @@
     {%- if image -%}
       <!-- Mobile: Background image with title overlay -->
       <div class="featured-content__mobile-image featured-content__mobile-image--{{ section.settings.mobile_image_height }}" style="background-image: url({{ image | img_url: '1200x800' }});">
-        <div class="featured-content__mobile-overlay featured-content__mobile-overlay--{{ section.settings.overlay_position }}">
+        <div class="featured-content__mobile-overlay featured-content__mobile-overlay--{{ section.settings.overlay_position | default: 'center' }}">
           {%- if heading != blank -%}
-            <h1 class="featured-content__heading">{{ section.settings.overlay_position }}{{ heading }}</h1>
+            <h1 class="featured-content__heading">{{ heading }}</h1>
           {%- endif -%}
         </div>
       </div>
