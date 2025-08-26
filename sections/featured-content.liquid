@@ -176,19 +176,19 @@
     aspect-ratio: var(--image-aspect-ratio, 16/9);
   }
 
-  .featured-content__mobile-image--small { 
+  .featured-content__mobile-image--small {
     max-width: 400px;
     margin: 0 auto;
   }
-  .featured-content__mobile-image--medium { 
+  .featured-content__mobile-image--medium {
     max-width: 600px;
     margin: 0 auto;
   }
-  .featured-content__mobile-image--tall { 
+  .featured-content__mobile-image--tall {
     max-width: 800px;
     margin: 0 auto;
   }
-  .featured-content__mobile-image--full { 
+  .featured-content__mobile-image--full {
     max-width: 100%;
   }
 
@@ -504,7 +504,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const section = document.getElementById('section-{{ section_id }}');
   if (!section) return;
-  
+
   {%- if image -%}
     // Create a temporary image to get natural dimensions
     const img = new Image();
