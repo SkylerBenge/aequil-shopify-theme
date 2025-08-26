@@ -357,8 +357,61 @@
         "overlay_position": "top"
       }
     },
+    "page_content_XRkRkq": {
+      "type": "page-content",
+      "blocks": {
+        "collapsible_row_TcmTW7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_7yTKzD": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_awUpWB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_TcmTW7",
+        "collapsible_row_7yTKzD",
+        "collapsible_row_awUpWB"
+      ],
+      "name": "Page Content",
+      "settings": {
+        "image": "shopify://shop_images/DTS_AURA_Fanette_Guilloud_Photos_ID12981.jpg",
+        "mobile_image_height": "medium",
+        "desktop_layout": "left",
+        "heading": "<p>Glossary</p>",
+        "heading_alignment": "center",
+        "subheading": "",
+        "subheading_alignment": "center",
+        "subheading_dark_background": false,
+        "content": "",
+        "content_alignment": "center",
+        "overlay_opacity": 1,
+        "open_first_block": true
+      }
+    },
     "rkwo_text_image_highlight_rngncc": {
       "type": "rkwo-text-image-highlight",
+      "disabled": true,
       "name": "RKWO Text Image Highlight",
       "settings": {
         "heading": "ABOUT FRÉDÉRIC",
@@ -424,6 +477,7 @@
         "point_jiY6CN",
         "point_e9TfpW"
       ],
+      "disabled": true,
       "name": "RKWO Highlight Points",
       "settings": {
         "heading": "Glossary",
@@ -435,6 +489,7 @@
     },
     "rkwo_text_image_highlight_wFjWjG": {
       "type": "rkwo-text-image-highlight",
+      "disabled": true,
       "name": "RKWO Text Image Highlight",
       "settings": {
         "heading": "The Hidden Impact of Stress: Why Your Body Feels Stuck",
@@ -469,6 +524,7 @@
       "block_order": [
         "slide_JhQ3K3"
       ],
+      "disabled": true,
       "name": "t:sections.slideshow.presets.name",
       "settings": {
         "layout": "full_bleed",
@@ -587,6 +643,7 @@
     "rkwo_pagebreak_cta_Kb78Hd",
     "rkwo_highlight_points_LeM8CW",
     "featured_content_z8CmqQ",
+    "page_content_XRkRkq",
     "rkwo_text_image_highlight_rngncc",
     "rkwo_highlight_points_WRtQkm",
     "rkwo_text_image_highlight_wFjWjG",
