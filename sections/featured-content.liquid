@@ -30,14 +30,12 @@
             {%- if subheading != blank -%}
               <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
             {%- endif -%}
+            {%- if content != blank -%}
+              <div class="featured-content__text">{{ content }}</div>
+            {%- endif -%}
           </div>
         </div>
         <div class="featured-content__blocks-section">
-          {%- if content != blank -%}
-            <div class="featured-content__desktop-text">
-              {{ content }}
-            </div>
-          {%- endif -%}
           {%- if section.blocks.size > 0 -%}
             <div class="featured-content__blocks">
               {%- for block in section.blocks -%}
@@ -303,26 +301,8 @@
   #section-{{ section_id }} .featured-content__blocks-section {
     padding: 40px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .featured-content__desktop-text {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666;
-    margin: 0 0 30px 0;
-    text-align: center;
-    max-width: 500px;
-  }
-
-  .featured-content__desktop-text p {
-    margin: 0 0 15px 0;
-  }
-
-  .featured-content__desktop-text p:last-child {
-    margin-bottom: 0;
   }
 
   #section-{{ section_id }} .featured-content__blocks {
@@ -414,52 +394,52 @@
   }
 
   /* Overlay positioning */
-  #section-{{ section_id }} .featured-content__svg-text-overlay--center {
+  .featured-content__svg-text-overlay--center {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  #section-{{ section_id }} .featured-content__svg-text-overlay--top {
+  .featured-content__svg-text-overlay--top {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  #section-{{ section_id }} .featured-content__svg-text-overlay--bottom {
+  .featured-content__svg-text-overlay--bottom {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  #section-{{ section_id }} .featured-content__svg-text-overlay--left {
+  .featured-content__svg-text-overlay--left {
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
   }
 
-  #section-{{ section_id }} .featured-content__svg-text-overlay--right {
+  .featured-content__svg-text-overlay--right {
     top: 50%;
     right: 10%;
     transform: translateY(-50%);
   }
 
-  #section-{{ section_id }} .featured-content__svg-text-overlay--top-left {
+  .featured-content__svg-text-overlay--top-left {
     top: 10%;
     left: 10%;
   }
 
-  #section-{{ section_id }} .featured-content__svg-text-overlay--top-right {
+  .featured-content__svg-text-overlay--top-right {
     top: 10%;
     right: 10%;
   }
 
-  #section-{{ section_id }} .featured-content__svg-text-overlay--bottom-left {
+  .featured-content__svg-text-overlay--bottom-left {
     bottom: 10%;
     left: 10%;
   }
 
-  #section-{{ section_id }} .featured-content__svg-text-overlay--bottom-right {
+  .featured-content__svg-text-overlay--bottom-right {
     bottom: 10%;
     right: 10%;
   }
@@ -540,7 +520,7 @@
   }
 
   /* Mobile Styles */
-  @media (max-width: 749px) {
+  @media (max-width: 750px) {
     .featured-content {
       width: calc(100% - 40px);
       margin: 20px;
