@@ -36,14 +36,14 @@
     {%- endif -%}
 
     {%- if link_url != blank and link_text != blank or link_url_2 != blank and link_text_2 != blank -%}
-      <div class="rkwo-hero-content-link">
+      <div class="product-features-content-link">
         {%- if link_url != blank and link_text != blank -%}
-          <a href="{{ link_url }}" class="rkwo-hero-link rkwo-hero-link-primary">
+          <a href="{{ link_url }}" class="product-features-link product-features-link-primary">
             {{ link_text }}
           </a>
         {%- endif -%}
         {%- if link_url_2 != blank and link_text_2 != blank -%}
-          <a href="{{ link_url_2 }}" class="rkwo-hero-link rkwo-hero-link-secondary">
+          <a href="{{ link_url_2 }}" class="product-features-link product-features-link-secondary">
             {{ link_text_2 }}
           </a>
         {%- endif -%}
@@ -114,8 +114,8 @@
     margin-bottom: 0;
   }
 
-  /* Use rkwo-hero-content-link styling */
-  .rkwo-hero-content-link {
+  /* Use product-features-content-link styling */
+  .product-features-content-link {
     margin-top: 30px;
     display: flex;
     gap: 15px;
@@ -123,7 +123,7 @@
     flex-wrap: wrap;
   }
 
-  .rkwo-hero-link {
+  .product-features-link {
     display: inline-block;
     padding: 12px 24px;
     border-radius: 25px;
@@ -135,25 +135,25 @@
     margin: 0 10px;
   }
 
-  .rkwo-hero-link-primary {
+  .product-features-link-primary {
     background-color: #ecebe8;
     color: #333;
     border-color: #ecebe8;
   }
 
-  .rkwo-hero-link-primary:hover {
+  .product-features-link-primary:hover {
     background-color: #ddd9d4;
     border-color: #ddd9d4;
     transform: translateY(-2px);
   }
 
-  .rkwo-hero-link-secondary {
+  .product-features-link-secondary {
     background-color: transparent;
     color: #fff;
     border-color: #fff;
   }
 
-  .rkwo-hero-link-secondary:hover {
+  .product-features-link-secondary:hover {
     background-color: #6f9fcf;
     color: white;
     transform: translateY(-2px);
@@ -189,12 +189,12 @@
       font-size: 14px;
     }
 
-    .rkwo-hero-content-link {
+    .product-features-content-link {
       flex-direction: column;
       align-items: center;
     }
 
-    .rkwo-hero-link {
+    .product-features-link {
       width: 100%;
       max-width: 280px;
       margin: 5px 0;
