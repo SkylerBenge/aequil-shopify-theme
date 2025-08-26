@@ -591,7 +591,17 @@ document.addEventListener('DOMContentLoaded', function() {
       const aspectRatio = this.naturalWidth / this.naturalHeight;
       section.style.setProperty('--image-aspect-ratio', aspectRatio);
     };
-    img.src = '{{ image | img_url: '1200x800' }}';
+    
+    // Use mobile image on mobile devices if available, otherwise use desktop image
+    {%- if section.settings.mobile_image != blank -%}
+      if (window.innerWidth <= 749) {
+        img.src = '{{ section.settings.mobile_image | img_url: '1200x800' }}';
+      } else {
+        img.src = '{{ image | img_url: '1200x800' }}';
+      }
+    {%- else -%}
+      img.src = '{{ image | img_url: '1200x800' }}';
+    {%- endif -%}
   {%- endif -%}
 });
 </script>
