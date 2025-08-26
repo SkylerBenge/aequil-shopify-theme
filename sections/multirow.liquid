@@ -42,15 +42,18 @@
       position: relative;
     }
 
+    .multirow__title-section--desktop {
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
     /* Even titles (left aligned) */
     .multirow__title-section--desktop:has(.multirow__title--even) {
-      display: flex;
       justify-content: start;
     }
 
     /* Odd titles (right aligned) */
     .multirow__title-section--desktop:has(.multirow__title--odd) {
-      display: flex;
       justify-content: end;
     }
   }
