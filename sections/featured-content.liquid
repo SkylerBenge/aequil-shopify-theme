@@ -500,6 +500,23 @@
   }
 </style>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const section = document.getElementById('section-{{ section_id }}');
+  if (!section) return;
+  
+  {%- if image -%}
+    // Create a temporary image to get natural dimensions
+    const img = new Image();
+    img.onload = function() {
+      const aspectRatio = this.naturalWidth / this.naturalHeight;
+      section.style.setProperty('--image-aspect-ratio', aspectRatio);
+    };
+    img.src = '{{ image | img_url: '1200x800' }}';
+  {%- endif -%}
+});
+</script>
+
 {% schema %}
 {
   "name": "Featured Content",
