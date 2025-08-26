@@ -88,10 +88,8 @@
         "desktop_layout": "left",
         "mobile_image_height": "medium",
         "overlay_opacity": 0,
-        "heading_alignment": "center",
-        "subheading_alignment": "center",
-        "content_alignment": "center",
-        "subheading_dark_background": false
+        "subheading_dark_background": false,
+        "mobile_overlay_position": "bottom"
       }
     },
     "product_features_Ay8eT6": {
