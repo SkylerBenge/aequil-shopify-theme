@@ -150,6 +150,13 @@
         {%- endfor -%}
       </div>
     {%- endif -%}
+    {%- if button_url != blank and button_text != blank -%}
+      <div class="page-content__button-section">
+        <a href="{{ button_url }}" class="page-content__button">
+          {{ button_text }}
+        </a>
+      </div>
+    {%- endif -%}
   </div>
 </section>
 
