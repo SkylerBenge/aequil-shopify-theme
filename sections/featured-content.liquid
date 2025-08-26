@@ -171,6 +171,9 @@
 
   #section-{{ section_id }} .featured-content__hero {
     position: relative;
+    {%- if image -%}
+    min-height: 200px; /* Ensure minimum height when image is present */
+    {%- endif -%}
   }
 
   /* Mobile Image Styling */
