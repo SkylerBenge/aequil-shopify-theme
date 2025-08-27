@@ -1,0 +1,374 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign content = section.settings.content
+  assign highlight = section.settings.highlight
+  assign image = section.settings.image
+  assign text_alignment = section.settings.text_alignment
+  assign section_id = section.id
+-%}
+
+<section class="hero-banner hero-content-white" id="section-{{ section_id }}">
+  {%- if image != blank -%}
+    <div class="hero-banner-mobile-image" style="display: none;">
+    </div>
+  {%- endif -%}
+  
+  <div class="hero-banner-content hero-banner-content--{{ text_alignment }}">
+    {%- if highlight != blank -%}
+      <div class="hero-banner-content-highlight">
+        <span><img src="https://cdn.shopify.com/s/files/1/0652/1860/9385/files/Stars-white.png" alt="Stars" width="100" height="20" /></span><span>{{ highlight }}</span>
+      </div>
+    {%- endif -%}
+    {%- if heading != blank -%}
+      <h1 class="hero-banner-content-heading hero-aequil-heading">
+        {% assign words = heading | split: ' ' %}
+        {% if words.size > 1 %}
+          {% assign last_index = words.size | minus: 1 %}
+          {% assign first_words = words | slice: 0, last_index %}
+          {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
+        {% else %}
+          {{ heading }}
+        {% endif %}
+      </h1>
+    {%- endif -%}
+    {%- if content != blank -%}
+      <div class="hero-banner-content-content">
+        {{ content }}
+      </div>
+    {%- endif -%}
+    {%- if section.settings.link_url != blank and section.settings.link_text != blank or section.settings.link_url_2 != blank and section.settings.link_text_2 != blank -%}
+      <div class="hero-banner-content-link">
+        {%- if section.settings.link_url != blank and section.settings.link_text != blank -%}
+          <a href="{{ section.settings.link_url }}" class="hero-banner-link hero-banner-link-primary">
+            {{ section.settings.link_text }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.link_url_2 != blank and section.settings.link_text_2 != blank -%}
+          <a href="{{ section.settings.link_url_2 }}" class="hero-banner-link hero-banner-link-secondary">
+            {{ section.settings.link_text_2 }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+  <div class="hero-banner-gradient"></div>
+</section>
+
+<style>
+  .hero-banner,
+  .hero-banner-mobile-image {
+    width: 100%;
+    padding: 150px 50px 100px 50px;
+    position: relative;
+    background-color: #ffffff;
+    {%- if image -%}
+    background-image: url({{ image | img_url: '2000x2000' }});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    {%- endif -%}
+  }
+
+  .hero-banner-content {
+    width: 100%;
+    max-width: 700px;
+    z-index: 2;
+    position: relative;
+  }
+
+  /* Text Alignment Options */
+  .hero-banner-content--left {
+    margin: 0 auto 0 0;
+    text-align: left;
+  }
+
+  .hero-banner-content--center {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-banner-content--right {
+    margin: 0 0 0 auto;
+    text-align: right;
+  }
+
+  .hero-banner-content h1,
+  .hero-banner-content p {
+    text-align: inherit;
+  }
+
+  .hero-banner-content h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+
+  .hero-banner-content-highlight {
+    border: 1px solid #ffffff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  
+  .hero-banner-content-highlight p {
+    margin-bottom: 0;
+  }
+
+  .hero-banner-content-highlight span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .hero-banner-content-highlight span:first-of-type {
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+  
+  .hero-banner-content-highlight span img {
+    width: 100px;
+    height: auto;
+  }
+
+  .hero-banner-content-link {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  /* Align buttons based on text alignment */
+  .hero-banner-content--left .hero-banner-content-link {
+    justify-content: flex-start;
+  }
+
+  .hero-banner-content--center .hero-banner-content-link {
+    justify-content: center;
+  }
+
+  .hero-banner-content--right .hero-banner-content-link {
+    justify-content: flex-end;
+  }
+
+  .hero-banner-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #6f9fcf;
+  }
+
+  .hero-banner-link-primary {
+    background-color: #6f9fcf;
+    color: white;
+  }
+
+  .hero-banner-link-primary:hover {
+    background-color: #5a8bb8;
+    border-color: #5a8bb8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
+  }
+
+  .hero-banner-link-secondary {
+    background-color: transparent;
+    color: #6f9fcf;
+  }
+
+  .hero-banner-link-secondary:hover {
+    background-color: #6f9fcf;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
+  }
+
+  .hero-banner-gradient {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block !important;
+    background: rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  @media (max-width: 1700px) {
+
+  }
+
+  @media (max-width: 1024px) {
+
+  }
+
+  @media (max-width: 768px) {
+    .hero-banner {
+      background-image: none;
+      padding: 0;
+    }
+
+    .hero-banner-content h1 {
+      font-size: 38px;
+    }
+    
+    .hero-banner-content-highlight {
+      padding: 2px 10px;
+      font-size: 10px;
+      border-color: #6f9fcf;
+    }
+
+    .hero-banner-content-highlight p {
+      color: #6f9fcf;
+    }
+
+    .hero-banner-content-highlight span img {
+      width: 75px;
+    }
+
+    .hero-banner-content-highlight span img {
+      filter: brightness(0) saturate(100%) /* make it pure black */ invert(59%) sepia(14%) saturate(1300%) hue-rotate(182deg) brightness(93%) contrast(92%);
+    }
+
+    .hero-banner-mobile-image {
+      display: block !important;
+      min-height: 300px;
+      {%- if image -%}
+      background-image: url({{ image | img_url: '1200x800' }});
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      {%- endif -%}
+    }
+
+    .hero-banner-gradient {
+      display: none !important;
+    }
+    
+    section[class^=hero-].hero-content-white h1,
+    section[class^=hero-].hero-content-white p {
+      color: #555557 !important;
+    }
+    
+    .hero-banner-content {
+      padding: 35px;
+    }
+
+    /* Mobile text alignment - force center on mobile for better readability */
+    .hero-banner-content {
+      text-align: center !important;
+    }
+
+    .hero-banner-content-link {
+      justify-content: center !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-banner-mobile-image {
+      min-height: 250px;
+    }
+    
+    .hero-banner-content h1 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    
+    .hero-banner-content {
+      padding: 35px 25px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .hero-banner-content-highlight span img {
+      width: 22vw;
+    }
+    
+    .hero-banner-content-highlight p {
+      font-size: 3.5vw !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Content</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "highlight",
+      "label": "Highlight",
+      "default": "<p>Enter a highlight</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image",
+      "info": "Upload a background image"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment (Desktop)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "link_text_2",
+      "label": "Second Link Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "link_url_2",
+      "label": "Second Link URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}
