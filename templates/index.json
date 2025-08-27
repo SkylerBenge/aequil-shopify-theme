@@ -81,7 +81,7 @@
       ],
       "custom_css": [
         "@media (max-width: 750px) {.featured-content__mobile-overlay h3 {text-align: left; } .featured-content__mobile-image {height: 500px; background-color: #ecebe8; background-position: top; }}",
-        "h3 {width: 100%; text-align: left; }"
+        "h3 {width: 100%; text-align: left; margin-bottom: 0;}"
       ],
       "name": "Featured Content",
       "settings": {
