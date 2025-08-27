@@ -15,70 +15,48 @@
         "collapsible_row_mMqiDT": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is Liquid Intelligence?",
+            "heading": "Bio",
             "icon": "none",
-            "row_content": "<p>Liquid Intelligence is our biotech delivery system. It uses dynamised water - water structured to carry precise, signal-<br/>based information - to support regulation and coherence at the cellular and energetic level.</p><p>Each AEQUIL formulation contains highly purified, energised water that has been programmed through a specific sequence <br/>of physical, energetic, and information-based steps. This creates a subtle but powerful medium that helps guide your body back to rhythm 4 not by forcing, but by remembering.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_REDY69": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is Dynamised Water?",
-            "icon": "none",
-            "row_content": "<p>Dynamised water refers to water that has been structurally organised - its molecules aligned in a way that allows it to carry <br/>and transmit information more effectively.</p><p><br/>We use a proprietary process based on principles of <strong>quantum biophysics</strong>, clinical osteopathy, and vibrational research. Our <br/>water has been studied for its conductivity, information imprinting, and interaction with living systems.</p><p><br/>This is not homeopathy, not placebo, and not just hydration. It's biotechnology - delivered through the oldest, most responsive medium on earth.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_7zfk4X": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is Dynamised Water?",
-            "icon": "none",
-            "row_content": "<p>To make foundational wellbeing accessible.<br/>To offer a real, credible alternative to symptom-chasing.<br/>To support humans and practitioners with tools that honour the complexity of our bodies and the simplicity of our needs.<br/>To bring rhythm, clarity, and vitality to those who've forgotten what it feels like to feel well.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_Qjra8f": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How It Works in the Body",
-            "icon": "none",
-            "row_content": "<p>Once absorbed - through the gut, skin, or energy field - AEQUIL's Liquid Intelligence# interacts with your essential systems <br/>and functions, helping to:</p><ul><li>Regulate rhythm and coherence between systems</li><li>Support vagal tone and emotional balance</li><li>Clear stored stress at a cellular and energetic level</li><li>Reconnect communication pathways that govern health</li></ul><p>This allows the body to self-correct - not through chemical force, but through signal-based resonance.</p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_zwEixd": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Vision for the Future",
-            "icon": "none",
-            "row_content": "<p>Our scientific research is ongoing - with upcoming clinical studies planned in the areas of stress response, immune <br/>regulation, and vibrational resonance.</p><p><br/>AEQUIL is committed to bridging biotech with biophysics, clinical intuition with measurable outcomes, and ancient healing <br/>principles with modern delivery systems.</p><p><br/>We believe science should support coherence - not complexity.<br/>And that every body deserves access to rhythm-first healthcare.</p>",
+            "row_content": "<p>Across thousands of patient cases, Frédéric saw the same thing: people were burnt out, emotionally overloaded, and stuck in survival patterns - not because they weren't trying, but because no one was supporting the systems that regulate how we feel, adapt, and recover.</p><p><br/>In response, he developed AEQUIL - a biotech system that doesn't treat symptoms, but restores rhythm. His formulations are informed by his own clinical work, deep research into dynamised water, and a belief that coherence between body, mind, and energy is not a luxury - but a human right.</p><p><br/>He has published papers on structured water and vibrational imprinting, and has presented at international forums on topics like Lyme disease, stress, and biophysics. Several of his patients were hospitalised with Lyme-related brain infections, including encephalitis and meningitis - experiences that deepened his commitment to foundational, whole-system care.</p><p><br/>Frédéric continues to teach, research, and support practitioners around the world as AEQUIL grows into a new kind of wellness system.</p>",
             "page": ""
           }
         }
       },
       "block_order": [
-        "collapsible_row_mMqiDT",
-        "collapsible_row_REDY69",
-        "collapsible_row_7zfk4X",
-        "collapsible_row_Qjra8f",
-        "collapsible_row_zwEixd"
+        "collapsible_row_mMqiDT"
       ],
+      "disabled": true,
       "name": "Page Content",
       "settings": {
-        "image": "shopify://shop_images/science.png",
-        "mobile_image_height": "small",
+        "image": "shopify://shop_images/Untitled.png",
+        "mobile_image_height": "tall",
         "desktop_layout": "left",
-        "heading": "<p>Our <em><strong>Science</strong></em></p>",
+        "heading": "<p>Frédéric's Full Bio</p>",
         "heading_alignment": "left",
-        "subheading": "<p>Biotech for body, mind, energy. <em><strong>Rooted in rhythm.</strong></em></p>",
+        "subheading": "<p>Frédéric Roscop is the founder of AEQUIL and the creator of Liquid Intelligence. He is a French osteopath, researcher, and clinical innovator with over 27 years of experience in bodywork, energetic medicine, and vibrational biophysics</p>",
         "subheading_alignment": "center",
         "subheading_dark_background": true,
-        "content": "<p>At AEQUIL, we don't chase symptoms - we work at the system level. Our formulations are powered by a proprietary technology we call <strong>Liquid Intelligence</strong>, developed from decades of clinical experience and biophysical insight.</p><p><br/>It's a new kind of health logic: not suppression, but synchronisation. Not overwhelm, but rhythm. Not one-size-fits-all - but intelligent, responsive support.</p>",
+        "content": "",
         "content_alignment": "left",
         "overlay_opacity": 1,
-        "open_first_block": true
+        "open_first_block": true,
+        "button_url": "",
+        "button_text": "Learn More"
+      }
+    },
+    "featured_content_z8CmqQ": {
+      "type": "featured-content",
+      "name": "Featured Content",
+      "settings": {
+        "heading": "<h3>ABOUT FRÉDÉRIC</h3><h2>Meet the <strong>Founder</strong></h2>",
+        "subheading": "",
+        "content": "<p>Frédéric Roscop is the founder of AEQUIL and the creator of Liquid Intelligence. He is a French osteopath, researcher, and clinical innovator with over 27 years of experience in bodywork, energetic medicine, and vibrational biophysics</p><p>Across thousands of patient cases, Frédéric saw the same thing: people were burnt out, emotionally overloaded, and stuck in survival patterns - not because they weren't trying, but because no one was supporting the systems that regulate how we feel, adapt, and recover.</p><p>In response, he developed AEQUIL - a biotech system that doesn't treat symptoms, but restores rhythm. His formulations are informed by his own clinical work, deep research into dynamised water, and a belief that coherence between body, mind, and energy is not a luxury - but a human right.</p><p>He has published papers on structured water and vibrational imprinting, and has presented at international forums on topics like Lyme disease, stress, and biophysics. Several of his patients were hospitalised with Lyme-related brain infections, including encephalitis and meningitis - experiences that deepened his commitment to foundational, whole-system care.</p><p>Frédéric continues to teach, research, and support practitioners around the world as AEQUIL grows into a new kind of wellness system.</p>",
+        "image": "shopify://shop_images/Untitled-3Artboard-4_6228ecce-ba63-4a5d-a146-a3dfed098bfe.png",
+        "desktop_layout": "left",
+        "mobile_image_height": "full",
+        "overlay_opacity": 0,
+        "subheading_dark_background": false,
+        "overlay_position": "top"
       }
     },
     "main": {
@@ -116,7 +94,11 @@
           }
         }
       },
-      "block_order": ["heading_biDjpE", "text_eRgUfa", "button_dCbg9h"],
+      "block_order": [
+        "heading_biDjpE",
+        "text_eRgUfa",
+        "button_dCbg9h"
+      ],
       "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
@@ -166,6 +148,7 @@
   },
   "order": [
     "page_content_3iXekT",
+    "featured_content_z8CmqQ",
     "main",
     "image_with_text_zQGxJL",
     "featured_collection_w437fG"

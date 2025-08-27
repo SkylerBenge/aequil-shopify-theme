@@ -15,45 +15,126 @@
         "collapsible_row_mMqiDT": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is Liquid Intelligence?",
+            "heading": "Dynamic Balance",
             "icon": "none",
-            "row_content": "<p>Liquid Intelligence is our biotech delivery system. It uses dynamised water - water structured to carry precise, signal-<br/>based information - to support regulation and coherence at the cellular and energetic level.</p><p>Each AEQUIL formulation contains highly purified, energised water that has been programmed through a specific sequence <br/>of physical, energetic, and information-based steps. This creates a subtle but powerful medium that helps guide your body back to rhythm 4 not by forcing, but by remembering.</p>",
+            "row_content": "<p>A living state of internal regulation where your systems (body, mind, energy) can self-adjust, adapt, and thrive. It's not stillness - it's intelligent, responsive movement.</p>",
             "page": ""
           }
         },
         "collapsible_row_REDY69": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is Dynamised Water?",
+            "heading": "Rhythm",
             "icon": "none",
-            "row_content": "<p>Dynamised water refers to water that has been structurally organised - its molecules aligned in a way that allows it to carry <br/>and transmit information more effectively.</p><p><br/>We use a proprietary process based on principles of <strong>quantum biophysics</strong>, clinical osteopathy, and vibrational research. Our <br/>water has been studied for its conductivity, information imprinting, and interaction with living systems.</p><p><br/>This is not homeopathy, not placebo, and not just hydration. It's biotechnology - delivered through the oldest, most responsive medium on earth.</p>",
+            "row_content": "<p>The unique physiological flow of your body - across sleep, energy, emotion, digestion, immunity, and more. When you're in rhythm, things feel clear and connected. When you're out of rhythm, even simple tasks feel like friction.</p>",
             "page": ""
           }
         },
         "collapsible_row_7zfk4X": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What is Dynamised Water?",
+            "heading": "Coherence",
             "icon": "none",
-            "row_content": "<p>To make foundational wellbeing accessible.<br/>To offer a real, credible alternative to symptom-chasing.<br/>To support humans and practitioners with tools that honour the complexity of our bodies and the simplicity of our needs.<br/>To bring rhythm, clarity, and vitality to those who've forgotten what it feels like to feel well.</p>",
+            "row_content": "<p>The clear communication between your systems. Coherence is what allows your body to respond to life with ease - instead of overwhelm. It's how everything works better, together.</p>",
             "page": ""
           }
         },
         "collapsible_row_Qjra8f": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How It Works in the Body",
+            "heading": "Dysrhythmia",
             "icon": "none",
-            "row_content": "<p>Once absorbed - through the gut, skin, or energy field - AEQUIL's Liquid Intelligence# interacts with your essential systems <br/>and functions, helping to:</p><ul><li>Regulate rhythm and coherence between systems</li><li>Support vagal tone and emotional balance</li><li>Clear stored stress at a cellular and energetic level</li><li>Reconnect communication pathways that govern health</li></ul><p>This allows the body to self-correct - not through chemical force, but through signal-based resonance.</p>",
+            "row_content": "<p>When your internal rhythm is off - whether from stress, illness, trauma, or emotional overload. It's the state where your systems fall out of sync, and symptoms begin to appear. AEQUIL helps you come back from dysrhythmia, into dynamic balance</p>",
             "page": ""
           }
         },
         "collapsible_row_zwEixd": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Vision for the Future",
+            "heading": "Symptoms vs Signals",
             "icon": "none",
-            "row_content": "<p>Our scientific research is ongoing - with upcoming clinical studies planned in the areas of stress response, immune <br/>regulation, and vibrational resonance.</p><p><br/>AEQUIL is committed to bridging biotech with biophysics, clinical intuition with measurable outcomes, and ancient healing <br/>principles with modern delivery systems.</p><p><br/>We believe science should support coherence - not complexity.<br/>And that every body deserves access to rhythm-first healthcare.</p>",
+            "row_content": "<p>What you feel (fatigue, fog, low mood) isn't the problem - it's the message. AEQUIL helps your body respond to those signals instead of just suppressing them.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_hkaiiq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Stored Stress",
+            "icon": "none",
+            "row_content": "<p>Stress your body couldn't process in real time - so it got stored in your gut, skin, breath, or cells. Over time, it disrupts rhythm and becomes part of the problem. AEQUIL helps you release it.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_F3YH9i": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Essential Systems & Functions",
+            "icon": "none",
+            "row_content": "<p>The interconnected systems that govern your wellbeing - brain, gut, heart, immunity, hormones, skin, breath, and more. When they work together, you feel well. When they fall out of sync, imbalance begins.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_tdPnBM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Foundation of Wellbeing",
+            "icon": "none",
+            "row_content": "<p>The state your body is in when your essential systems and functions are in rhythm, communication, and alignment. It's your baseline - and when it's strong, you can adapt to anything.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_x4iiXW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Overload & Deficiency",
+            "icon": "none",
+            "row_content": "<p>Too much of what overwhelms (toxins, grief, pressure) and too little of what sustains (nutrients, rest, joy). These two states often combine - and lead to imbalance. AEQUIL helps restore what's missing and clear what's too much.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_imbGbd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Liquid Intelligence",
+            "icon": "none",
+            "row_content": "<p>AEQUIL's patent-pending biotech system. It uses structured, dynamised water to deliver signal-based support to your cells and systems - helping restore regulation without chemical force.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_QF37U6": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "System Reset",
+            "icon": "none",
+            "row_content": "<p>What happens when you stop chasing symptoms and start supporting your systems. A full reset involves cleansing what's been stored, nourishing what's depleted, and restoring internal coherence.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ihzWzN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Thriving",
+            "icon": "none",
+            "row_content": "<p>Not perfection. Not peak performance. Just your systems working well enough to carry you through life with clarity, energy, and emotional freedom. That's what AEQUIL helps make possible.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Nkjp46": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "The Body as a House",
+            "icon": "none",
+            "row_content": "<p>Your body is like a house. Your systems are the plumbing and wiring, your cells are the bricks, and water is the energy that keeps everything flowing. When the house is overloaded or neglected, it becomes harder to live in. AEQUIL helps restore the foundation - so it feels like home again.<br/></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_BHhMCJ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "USB Metaphor",
+            "icon": "none",
+            "row_content": "<p>Every cell is like a USB stick - storing information and memory. When that data becomes corrupted (stress, trauma), your systems struggle to communicate. AEQUIL helps clear the interference so the signal can flow again.</p>",
             "page": ""
           }
         }
@@ -63,19 +144,28 @@
         "collapsible_row_REDY69",
         "collapsible_row_7zfk4X",
         "collapsible_row_Qjra8f",
-        "collapsible_row_zwEixd"
+        "collapsible_row_zwEixd",
+        "collapsible_row_hkaiiq",
+        "collapsible_row_F3YH9i",
+        "collapsible_row_tdPnBM",
+        "collapsible_row_x4iiXW",
+        "collapsible_row_imbGbd",
+        "collapsible_row_QF37U6",
+        "collapsible_row_ihzWzN",
+        "collapsible_row_Nkjp46",
+        "collapsible_row_BHhMCJ"
       ],
       "name": "Page Content",
       "settings": {
-        "image": "shopify://shop_images/science.png",
-        "mobile_image_height": "small",
+        "image": "shopify://shop_images/Glossarypage.png",
+        "mobile_image_height": "tall",
         "desktop_layout": "left",
-        "heading": "<p>Our <em><strong>Science</strong></em></p>",
+        "heading": "<p>AEQUIL Glossary</p>",
         "heading_alignment": "left",
-        "subheading": "<p>Biotech for body, mind, energy. <em><strong>Rooted in rhythm.</strong></em></p>",
+        "subheading": "",
         "subheading_alignment": "center",
         "subheading_dark_background": true,
-        "content": "<p>At AEQUIL, we don't chase symptoms - we work at the system level. Our formulations are powered by a proprietary technology we call <strong>Liquid Intelligence</strong>, developed from decades of clinical experience and biophysical insight.</p><p><br/>It's a new kind of health logic: not suppression, but synchronisation. Not overwhelm, but rhythm. Not one-size-fits-all - but intelligent, responsive support.</p>",
+        "content": "<p>Understanding the language of rhythm, regulation, and restoration.<br/></p><p>At AEQUIL, we work with systems - not symptoms. That means we often use words that speak to how body, mind, <br/>energy really work together. Here's a quick guide to the language we use, and why it matters.</p>",
         "content_alignment": "left",
         "overlay_opacity": 1,
         "open_first_block": true
@@ -116,7 +206,11 @@
           }
         }
       },
-      "block_order": ["heading_biDjpE", "text_eRgUfa", "button_dCbg9h"],
+      "block_order": [
+        "heading_biDjpE",
+        "text_eRgUfa",
+        "button_dCbg9h"
+      ],
       "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {

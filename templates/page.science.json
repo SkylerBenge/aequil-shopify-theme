@@ -15,53 +15,45 @@
         "collapsible_row_mMqiDT": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "WHAT IS AEQUIL?",
+            "heading": "What is Liquid Intelligence?",
             "icon": "none",
-            "row_content": "<p>AEQUIL is a pioneering biotech brand offering transformative health solutions that help you reset your foundation of <br/>wellbeing.</p><p><br/>We work at the level of your essential systems and functions - supporting the rhythm, regulation, and communication <br/>between your body, mind, and energy. Because when your internal systems stop moving together, you don't feel like yourself. We help restore that movement.<br/></p><p>We don't treat symptoms. We help you return to a state of dynamic balance - where your body can self-regulate, self-repair, <br/>and thrive.</p>",
+            "row_content": "<p>Liquid Intelligence is our biotech delivery system. It uses dynamised water - water structured to carry precise, signal-<br/>based information - to support regulation and coherence at the cellular and energetic level.</p><p>Each AEQUIL formulation contains highly purified, energised water that has been programmed through a specific sequence <br/>of physical, energetic, and information-based steps. This creates a subtle but powerful medium that helps guide your body back to rhythm 4 not by forcing, but by remembering.</p>",
             "page": ""
           }
         },
         "collapsible_row_REDY69": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "WHY WE EXIST",
+            "heading": "What is Dynamised Water?",
             "icon": "none",
-            "row_content": "<p>You've likely been taught to view symptoms in isolation. Poor sleep. Low energy. Digestive issues. But your body doesn't <br/>work in pieces - it works as a whole.</p><p><br/>At AEQUIL, we see these surface-level complaints for what they really are: signals of deeper imbalance. And we know how to respond to those signals with clarity, calm, and clinical insight.</p><p><br/><strong>Our goal is simple:</strong><br/>To help you feel well. Be free. And return to the rhythm that's always been yours so that you can thrive.<br/></p>",
+            "row_content": "<p>Dynamised water refers to water that has been structurally organised - its molecules aligned in a way that allows it to carry <br/>and transmit information more effectively.</p><p><br/>We use a proprietary process based on principles of <strong>quantum biophysics</strong>, clinical osteopathy, and vibrational research. Our <br/>water has been studied for its conductivity, information imprinting, and interaction with living systems.</p><p><br/>This is not homeopathy, not placebo, and not just hydration. It's biotechnology - delivered through the oldest, most responsive medium on earth.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_7zfk4X": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is Dynamised Water?",
+            "icon": "none",
+            "row_content": "<p>To make foundational wellbeing accessible.<br/>To offer a real, credible alternative to symptom-chasing.<br/>To support humans and practitioners with tools that honour the complexity of our bodies and the simplicity of our needs.<br/>To bring rhythm, clarity, and vitality to those who've forgotten what it feels like to feel well.</p>",
             "page": ""
           }
         },
         "collapsible_row_Qjra8f": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "HOW AEQUIL WORKS",
+            "heading": "How It Works in the Body",
             "icon": "none",
-            "row_content": "<p>AEQUIL's system supports your internal coherence at every level - biological, emotional, and energetic.</p><p><br/>We use three delivery methods:</p><ul><li>Food supplements with fast-acting support, powered by Liquid Intelligence#</li><li>Wearable patches for slow-release, skin-safe diffusion with essential oils and dynamised water</li><li>Digital tools like sound therapy, guided affirmations, and breathwork - for support beyond the physical</li></ul><p>Together, these products help you return to your own rhythm. Not the one you've inherited or forced yourself into - but the <br/>one that belongs to you.</p>",
-            "page": ""
-          }
-        },
-        "liquid_row_Ahcf6n": {
-          "type": "liquid_row",
-          "settings": {
-            "heading": "OUR RESET JOURNEY",
-            "icon": "none",
-            "liquid_content": "<style>\n.flex-table {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 600px;\n  font-size: 12px;\n}\n\n.row {\n  display: flex;\n}\n\n.cell {\n  flex: 1;\n  padding: 10px;\n}\n\n/* alternating row colors */\n.row:nth-child(odd) {\n  background-color: rgba(0,0,0,.1);\n}\n\n.row:nth-child(even) {\n  background-color: transparent;\n}\n</style>\n<p>We believe wellbeing is not a one-time fix.</p>\n<p>It's a rhythm you return to - over and over again.</p>\n<p>That's why our system supports you through every phase of the journey:</p>\n<div class=\"flex-table\">\n  <div class=\"row\">\n    <div class=\"cell\">Phase</div>\n    <div class=\"cell\">Purpose</div>\n    <div class=\"cell\">What's Included</div>\n  </div>\n  <div class=\"row\">\n    <div class=\"cell\">Reset</div>\n    <div class=\"cell\"> Cleanse stored stress and restore foundational rhythm</div>\n    <div class=\"cell\">Deep Reset / Daily Reset + digital tools</div>\n  </div>\n  <div class=\"row\">\n    <div class=\"cell\">Target</div>\n    <div class=\"cell\"> Support specific complaints like fatigue, mood, or poor sleep</div>\n    <div class=\"cell\">PLUS Range (e.g. MOOD+, ENERGY+, SLEEP+)</div>\n  </div>\n  <div class=\"row\">\n    <div class=\"cell\">Maintain</div>\n    <div class=\"cell\"> Keep your system adaptable during everyday life</div>\n    <div class=\"cell\">Daily drops, affirmations, planners</div>\n  </div>\n  <div class=\"row\">\n    <div class=\"cell\">Thrive</div>\n    <div class=\"cell\"> Reach peak strength - physically, mentally, emotionally</div>\n    <div class=\"cell\">Ongoing rhythm support, practitioner guidance, future innovation</div>\n  </div>\n</div>\n<br>\n<p>This is not a bandage. It's not a temporary boost.\n<p>It's a system to help you feel well - and stay well - no matter what life brings.</p>"
-          }
-        },
-        "collapsible_row_7zfk4X": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "OUR MISSION",
-            "icon": "none",
-            "row_content": "<p>To make foundational wellbeing accessible.<br/>To offer a real, credible alternative to symptom-chasing.<br/>To support humans and practitioners with tools that honour the complexity of our bodies and the simplicity of our needs.<br/>To bring rhythm, clarity, and vitality to those who've forgotten what it feels like to feel well.</p>",
+            "row_content": "<p>Once absorbed - through the gut, skin, or energy field - AEQUIL's Liquid Intelligence# interacts with your essential systems <br/>and functions, helping to:</p><ul><li>Regulate rhythm and coherence between systems</li><li>Support vagal tone and emotional balance</li><li>Clear stored stress at a cellular and energetic level</li><li>Reconnect communication pathways that govern health</li></ul><p>This allows the body to self-correct - not through chemical force, but through signal-based resonance.</p>",
             "page": ""
           }
         },
         "collapsible_row_zwEixd": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "OUR VISION",
+            "heading": "Vision for the Future",
             "icon": "none",
-            "row_content": "<p>A world of wellbeing - where every human has the right and the tools to reconnect, self-regulate, and thrive.<br/>AEQUIL exists not just to help you feel better.<br/>We exist to return you to your natural state of movement, rhythm, and coherence - and help you stay there.</p>",
+            "row_content": "<p>Our scientific research is ongoing - with upcoming clinical studies planned in the areas of stress response, immune <br/>regulation, and vibrational resonance.</p><p><br/>AEQUIL is committed to bridging biotech with biophysics, clinical intuition with measurable outcomes, and ancient healing <br/>principles with modern delivery systems.</p><p><br/>We believe science should support coherence - not complexity.<br/>And that every body deserves access to rhythm-first healthcare.</p>",
             "page": ""
           }
         }
@@ -69,18 +61,22 @@
       "block_order": [
         "collapsible_row_mMqiDT",
         "collapsible_row_REDY69",
-        "collapsible_row_Qjra8f",
-        "liquid_row_Ahcf6n",
         "collapsible_row_7zfk4X",
+        "collapsible_row_Qjra8f",
         "collapsible_row_zwEixd"
       ],
       "name": "Page Content",
       "settings": {
-        "image": "shopify://shop_images/Aequil-Banner_01.png",
+        "image": "shopify://shop_images/science.png",
+        "mobile_image_height": "small",
         "desktop_layout": "left",
-        "heading": "THE AEQUIL APPROACH",
-        "subheading": "About Aequil",
-        "content": "<p>Your body remembers. We help you listen.</p>",
+        "heading": "<p>Our <em><strong>Science</strong></em></p>",
+        "heading_alignment": "left",
+        "subheading": "<p>Biotech for body, mind, energy. <em><strong>Rooted in rhythm.</strong></em></p>",
+        "subheading_alignment": "center",
+        "subheading_dark_background": true,
+        "content": "<p>At AEQUIL, we don't chase symptoms - we work at the system level. Our formulations are powered by a proprietary technology we call <strong>Liquid Intelligence</strong>, developed from decades of clinical experience and biophysical insight.</p><p><br/>It's a new kind of health logic: not suppression, but synchronisation. Not overwhelm, but rhythm. Not one-size-fits-all - but intelligent, responsive support.</p>",
+        "content_alignment": "left",
         "overlay_opacity": 1,
         "open_first_block": true
       }
@@ -120,7 +116,11 @@
           }
         }
       },
-      "block_order": ["heading_biDjpE", "text_eRgUfa", "button_dCbg9h"],
+      "block_order": [
+        "heading_biDjpE",
+        "text_eRgUfa",
+        "button_dCbg9h"
+      ],
       "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
