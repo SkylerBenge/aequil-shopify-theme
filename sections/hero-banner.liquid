@@ -37,20 +37,18 @@
           {{ content }}
         </div>
       {%- endif -%}
-      {%- if section.settings.link_url != blank and section.settings.link_text != blank or section.settings.link_url_2 != blank and section.settings.link_text_2 != blank -%}
-        <div class="hero-banner-content-link">
-          {%- if section.settings.link_url != blank and section.settings.link_text != blank -%}
-            <a href="{{ section.settings.link_url }}" class="hero-banner-link hero-banner-link-primary">
-              {{ section.settings.link_text }}
-            </a>
-          {%- endif -%}
-          {%- if section.settings.link_url_2 != blank and section.settings.link_text_2 != blank -%}
-            <a href="{{ section.settings.link_url_2 }}" class="hero-banner-link hero-banner-link-secondary">
-              {{ section.settings.link_text_2 }}
-            </a>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
+      <div class="hero-banner-content-link">
+        {%- if section.settings.link_url != blank and section.settings.link_text != blank -%}
+          <a href="{{ section.settings.link_url }}" class="hero-banner-link hero-banner-link-primary">
+            {{ section.settings.link_text }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.link_url_2 != blank and section.settings.link_text_2 != blank -%}
+          <a href="{{ section.settings.link_url_2 }}" class="hero-banner-link hero-banner-link-secondary">
+            {{ section.settings.link_text_2 }}
+          </a>
+        {%- endif -%}
+      </div>
     </div>
   </div>
   <div class="hero-banner-gradient"></div>
