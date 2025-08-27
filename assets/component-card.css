@@ -794,12 +794,12 @@
   .mobile-info-icon {
     display: none !important;
   }
-}
-
 /* Hide pills when hover overlay is active */
 .has-hover-overlay:hover .bottle-tags-container {
   opacity: 0;
 }
+}
+
 
 /* Bottle Tag Pill */
 .bottle-tag-pill {

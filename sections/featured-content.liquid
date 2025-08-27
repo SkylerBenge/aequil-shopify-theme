@@ -1,0 +1,888 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading
+  assign content = section.settings.content
+  assign image = section.settings.image
+  assign desktop_layout = section.settings.desktop_layout
+  assign section_id = section.id
+-%}
+
+<section class="featured-content" id="section-{{ section_id }}">
+  <!-- Hero Section with Background Image and Title -->
+  <div class="featured-content__hero">
+    {%- if image -%}
+      <!-- Mobile: Background image with title overlay -->
+      <div class="featured-content__mobile-image featured-content__mobile-image--{{ section.settings.mobile_image_height }}" style="background-image: url({{ section.settings.mobile_image | default: image | img_url: '1200x800' }});">
+        <div class="featured-content__mobile-overlay featured-content__mobile-overlay--{{ section.settings.overlay_position | default: 'center' }}">
+          {%- if heading != blank -%}
+            <h1 class="featured-content__heading">{{ heading }}</h1>
+          {%- endif -%}
+        </div>
+      </div>
+
+      <!-- Desktop: Split layout with background image and content -->
+      {%- if desktop_layout == 'background' -%}
+        <!-- Background layout: Image covers entire section -->
+        <div class="featured-content__desktop-layout featured-content__desktop-layout--background" style="background-image: url({{ image | img_url: '1200x800' }});">
+          <div class="featured-content__background-overlay">
+            {%- if heading != blank -%}
+              <h1 class="featured-content__heading">{{ heading }}</h1>
+            {%- endif -%}
+            {%- if subheading != blank -%}
+              <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
+            {%- endif -%}
+            {%- if content != blank -%}
+              <div class="featured-content__desktop-text">
+                {{ content }}
+              </div>
+            {%- endif -%}
+            {%- if section.blocks.size > 0 -%}
+              <div class="featured-content__blocks">
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'text_button' -%}
+                    <div class="featured-content__text-button" {{ block.shopify_attributes }}>
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                      {%- if block.settings.button_url != blank and block.settings.button_text != blank -%}
+                        <a href="{{ block.settings.button_url }}" class="featured-content__button">{{ block.settings.button_text }}</a>
+                      {%- endif -%}
+                    </div>
+                  {%- elsif block.type == 'svg_text_overlay' -%}
+                    <div class="featured-content__svg-overlay" {{ block.shopify_attributes }}>
+                      {%- if block.settings.svg_icon != blank -%}
+                        <div class="featured-content__svg-container">
+                          <div class="featured-content__svg-icon">
+                            {{ block.settings.svg_icon }}
+                          </div>
+                          <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
+                            {%- if block.settings.overlay_text != blank -%}
+                              <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
+                            {%- endif -%}
+                          </div>
+                        </div>
+                      {%- endif -%}
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- else -%}
+        <!-- Split layout: Image on one side, content on the other -->
+        <div class="featured-content__desktop-layout featured-content__desktop-layout--{{ desktop_layout }}">
+          <div class="featured-content__image-section" style="background-image: url({{ image | img_url: '1200x800' }});">
+            <div class="featured-content__image-overlay">
+              {%- if heading != blank -%}
+                <h1 class="featured-content__heading">{{ heading }}</h1>
+              {%- endif -%}
+              {%- if subheading != blank -%}
+                <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="featured-content__blocks-section">
+            {%- if content != blank -%}
+              <div class="featured-content__desktop-text">
+                {{ content }}
+              </div>
+            {%- endif -%}
+            {%- if section.blocks.size > 0 -%}
+              <div class="featured-content__blocks">
+                {%- for block in section.blocks -%}
+                  {%- if block.type == 'text_button' -%}
+                    <div class="featured-content__text-button" {{ block.shopify_attributes }}>
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                      {%- if block.settings.button_url != blank and block.settings.button_text != blank -%}
+                        <a href="{{ block.settings.button_url }}" class="featured-content__button">{{ block.settings.button_text }}</a>
+                      {%- endif -%}
+                    </div>
+                  {%- elsif block.type == 'svg_text_overlay' -%}
+                    <div class="featured-content__svg-overlay" {{ block.shopify_attributes }}>
+                      {%- if block.settings.svg_icon != blank -%}
+                        <div class="featured-content__svg-container">
+                          <div class="featured-content__svg-icon">
+                            {{ block.settings.svg_icon }}
+                          </div>
+                          <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
+                            {%- if block.settings.overlay_text != blank -%}
+                              <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
+                            {%- endif -%}
+                          </div>
+                        </div>
+                      {%- endif -%}
+                      {%- if block.settings.heading != blank -%}
+                        <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.text != blank -%}
+                        <div class="featured-content__block-text">{{ block.settings.text }}</div>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- else -%}
+      <!-- No image: heading, subtitle, and text -->
+      <div class="featured-content__content-only">
+        {%- if heading != blank -%}
+          <h1 class="featured-content__heading">{{ heading }}</h1>
+        {%- endif -%}
+        {%- if subheading != blank -%}
+          <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
+        {%- endif -%}
+        {%- if content != blank -%}
+          <div class="featured-content__text">{{ content }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <!-- Mobile: Subtitle, Text, and Content Blocks -->
+  <div class="featured-content__mobile-content">
+    <!-- Subtitle and Text Section (mobile only) -->
+    {%- if subheading != blank or content != blank -%}
+      <div class="featured-content__subtitle-section">
+        <div class="featured-content__subtitle-content">
+          {%- if subheading != blank -%}
+            <h2 class="featured-content__subheading{% if section.settings.subheading_dark_background %} featured-content__subheading--dark-bg{% endif %}">{{ subheading }}</h2>
+          {%- endif -%}
+          {%- if content != blank -%}
+            <div class="featured-content__text">{{ content }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <!-- Content Blocks -->
+    {%- if section.blocks.size > 0 -%}
+      <div class="featured-content__blocks">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'text_button' -%}
+            <div class="featured-content__text-button" {{ block.shopify_attributes }}>
+              {%- if block.settings.heading != blank -%}
+                <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="featured-content__block-text">{{ block.settings.text }}</div>
+              {%- endif -%}
+              {%- if block.settings.button_url != blank and block.settings.button_text != blank -%}
+                <a href="{{ block.settings.button_url }}" class="featured-content__button">{{ block.settings.button_text }}</a>
+              {%- endif -%}
+            </div>
+          {%- elsif block.type == 'svg_text_overlay' -%}
+            <div class="featured-content__svg-overlay" {{ block.shopify_attributes }}>
+              {%- if block.settings.svg_icon != blank -%}
+                <div class="featured-content__svg-container">
+                  <div class="featured-content__svg-icon">
+                    {{ block.settings.svg_icon }}
+                  </div>
+                  <div class="featured-content__svg-text-overlay featured-content__svg-text-overlay--{{ section.settings.overlay_position | default: 'center' }}">
+                    {%- if block.settings.overlay_text != blank -%}
+                      <span class="featured-content__overlay-text">{{ block.settings.overlay_text }}</span>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+              {%- if block.settings.heading != blank -%}
+                <h3 class="featured-content__block-title">{{ block.settings.heading }}</h3>
+              {%- endif -%}
+              {%- if block.settings.text != blank -%}
+                <div class="featured-content__block-text">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+  /* Section-specific styles for {{ section_id }} */
+
+  #section-{{ section_id }} .featured-content {
+    width: calc(100% - 80px);
+    margin: 40px;
+    position: relative;
+  }
+
+  #section-{{ section_id }} .featured-content__overlay-text * {
+    text-align: center;
+  }
+
+  #section-{{ section_id }} .featured-content__hero {
+    position: relative;
+    {%- if image -%}
+    min-height: 200px; /* Ensure minimum height when image is present */
+    {%- endif -%}
+  }
+
+  /* Mobile Image Styling */
+  #section-{{ section_id }} .featured-content__mobile-image {
+    display: none;
+    background-size: cover;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--image-aspect-ratio, 16/9);
+    min-height: 300px; /* Fallback minimum height */
+  }
+
+    #section-{{ section_id }} .featured-content__mobile-image--small {
+    max-width: 400px;
+    margin: 0 auto;
+    min-height: 200px;
+  }
+  #section-{{ section_id }} .featured-content__mobile-image--medium {
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 300px;
+  }
+  #section-{{ section_id }} .featured-content__mobile-image--tall {
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 400px;
+  }
+  #section-{{ section_id }} .featured-content__mobile-image--full {
+    max-width: 100%;
+    min-height: 100vh !important;
+  }
+
+  #section-{{ section_id }} .featured-content__mobile-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity | default: 1 }});
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* Mobile overlay positioning */
+  #section-{{ section_id }} .featured-content__mobile-overlay--top {
+    top: 0;
+    justify-content: flex-start;
+  }
+
+  #section-{{ section_id }} .featured-content__mobile-overlay--center {
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+  }
+
+  #section-{{ section_id }} .featured-content__mobile-overlay--bottom {
+    bottom: 0;
+    justify-content: flex-end;
+  }
+
+  /* SVG overlay positioning using section setting */
+  .featured-content__svg-text-overlay--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .featured-content__svg-text-overlay--top {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .featured-content__svg-text-overlay--bottom {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .featured-content__mobile-overlay * {
+    margin: 0;
+  }
+  /* Desktop Layout */
+  .featured-content__desktop-layout {
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: stretch;
+  }
+
+  .featured-content__desktop-layout--left {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .featured-content__desktop-layout--right {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .featured-content__desktop-layout--right .featured-content__image-section {
+    order: 2;
+  }
+
+  .featured-content__desktop-layout--right .featured-content__blocks-section {
+    order: 1;
+  }
+
+  /* Background Layout */
+  .featured-content__desktop-layout--background {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    min-height: 600px;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .featured-content__background-overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity | default: 1 }});
+    padding: 60px 40px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .featured-content__background-overlay * {
+    color: white !important;
+    text-align: left;
+  }
+
+  .featured-content__image-section {
+    border-radius: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    aspect-ratio: var(--image-aspect-ratio, 16/9);
+  }
+
+  #section-{{ section_id }} .featured-content__image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.{{ section.settings.overlay_opacity | default: 1 }});
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+  }
+
+  /* Desktop overlay positioning based on mobile setting */
+  #section-{{ section_id }} .featured-content__desktop-layout .featured-content__image-overlay {
+    justify-content: {% if section.settings.overlay_position == 'top' %}flex-start{% elsif section.settings.overlay_position == 'bottom' %}flex-end{% else %}center{% endif %};
+  }
+
+  #section-{{ section_id }} .featured-content__blocks-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .featured-content__desktop-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0 0 30px 0;
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .featured-content__desktop-text p {
+    margin: 0 0 15px 0;
+  }
+
+  .featured-content__desktop-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  #section-{{ section_id }} .featured-content__blocks {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* Block Styling */
+  .featured-content__text-button,
+  .featured-content__svg-overlay {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .featured-content__button {
+    color: #666;
+    min-width: 200px;
+    text-align: center;
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #6f9fcf;
+  }
+
+  .featured-content__text-button .featured-content__block-text {
+    background-color: #ecebe8;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .featured-content__text-button:last-child,
+  .featured-content__svg-overlay:last-child {
+    margin-bottom: 0;
+  }
+
+  .featured-content__block-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    color: #333;
+  }
+
+  .featured-content__block-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+  }
+
+  .featured-content__block-text p {
+    margin: 0 0 15px 0;
+  }
+
+  .featured-content__block-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .featured-content__button {
+    transition: all 0.3s ease;
+  }
+
+  .featured-content__button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+  }
+
+  /* SVG with Text Overlay */
+  .featured-content__svg-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .featured-content__svg-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .featured-content__svg-icon svg {
+    width: 140px;
+    height: 140px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .featured-content__svg-text-overlay {
+    position: absolute;
+    width: 80%;
+    pointer-events: none;
+  }
+
+  /* Overlay positioning */
+  #section-{{ section_id }} .featured-content__svg-text-overlay--center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #section-{{ section_id }} .featured-content__svg-text-overlay--top {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #section-{{ section_id }} .featured-content__svg-text-overlay--bottom {
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #section-{{ section_id }} .featured-content__svg-text-overlay--left {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+  }
+
+  #section-{{ section_id }} .featured-content__svg-text-overlay--right {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+  }
+
+  #section-{{ section_id }} .featured-content__svg-text-overlay--top-left {
+    top: 10%;
+    left: 10%;
+  }
+
+  #section-{{ section_id }} .featured-content__svg-text-overlay--top-right {
+    top: 10%;
+    right: 10%;
+  }
+
+  #section-{{ section_id }} .featured-content__svg-text-overlay--bottom-left {
+    bottom: 10%;
+    left: 10%;
+  }
+
+  #section-{{ section_id }} .featured-content__svg-text-overlay--bottom-right {
+    bottom: 10%;
+    right: 10%;
+  }
+
+  /* Typography */
+  .featured-content__heading {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    color: white;
+  }
+
+  .featured-content__subheading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: white;
+  }
+
+  .featured-content__subheading--dark-bg {
+    background: rgba(0,0,0,.4);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+
+  .featured-content__text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    margin: 0;
+  }
+
+  .featured-content__text p {
+    margin: 0 0 15px 0;
+  }
+
+  .featured-content__text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Content Only Layout */
+  .featured-content__content-only {
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .featured-content__content-only .featured-content__heading {
+    color: #333;
+  }
+
+  .featured-content__content-only .featured-content__subheading {
+    color: #666;
+  }
+
+  .featured-content__content-only .featured-content__text {
+    color: #666;
+  }
+
+  /* Mobile Content */
+  .featured-content__mobile-content {
+    display: none;
+  }
+
+  .featured-content__subtitle-section {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .featured-content__subtitle-content .featured-content__subheading {
+    color: #333;
+  }
+
+  .featured-content__subtitle-content .featured-content__text {
+    color: #666;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 749px) {
+    .featured-content {
+      width: calc(100% - 40px);
+      margin: 20px;
+    }
+
+    .featured-content__desktop-layout {
+      display: none;
+    }
+
+    #section-{{ section_id }} .featured-content__mobile-image {
+      display: block;
+    }
+
+    .featured-content__mobile-content {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const section = document.getElementById('section-{{ section_id }}');
+  if (!section) return;
+
+    {%- if image -%}
+    // Create a temporary image to get natural dimensions
+    const img = new Image();
+    img.onload = function() {
+      const aspectRatio = this.naturalWidth / this.naturalHeight;
+      section.style.setProperty('--image-aspect-ratio', aspectRatio);
+    };
+    img.src = '{{ image | img_url: '1200x800' }}';
+  {%- endif -%}
+});
+</script>
+
+{% schema %}
+{
+  "name": "Featured Content",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Featured Content</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Subtitle goes here</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text",
+      "default": "<p>Content description goes here.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Background Image",
+      "info": "Optional: Use a different image for mobile devices. If blank, desktop image will be used."
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "Desktop Layout",
+      "options": [
+        {
+          "value": "left",
+          "label": "Image Left"
+        },
+        {
+          "value": "right",
+          "label": "Image Right"
+        },
+        {
+          "value": "background",
+          "label": "Background Image"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_height",
+      "label": "Mobile Image Size",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small (400px max width)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (600px max width)"
+        },
+        {
+          "value": "tall",
+          "label": "Large (800px max width)"
+        },
+        {
+          "value": "full",
+          "label": "Full Width"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay Opacity",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "default": 1
+    },
+
+    {
+      "type": "checkbox",
+      "id": "subheading_dark_background",
+      "label": "Subheading Dark Background",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "overlay_position",
+      "label": "Mobile Overlay Position",
+      "options": [
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_button",
+      "name": "Text with Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Block Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Block description goes here.</p>"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        }
+      ]
+    },
+    {
+      "type": "svg_text_overlay",
+      "name": "SVG with Text Overlay",
+      "settings": [
+        {
+          "type": "html",
+          "id": "svg_icon",
+          "label": "SVG Icon",
+          "info": "Paste your SVG code here"
+        },
+        {
+          "type": "richtext",
+          "id": "overlay_text",
+          "label": "Overlay Text",
+          "default": "<p>Text</p>"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Block Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Block description goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Content",
+      "blocks": [
+        {
+          "type": "text_button",
+          "settings": {
+            "heading": "Get Started",
+            "text": "<p>Learn more about our featured content and how it can help you.</p>",
+            "button_text": "Learn More"
+          }
+        },
+        {
+          "type": "svg_text_overlay",
+          "settings": {
+            "overlay_text": "<p>NEW</p>",
+            "heading": "Latest Features",
+            "text": "<p>Discover our newest additions and improvements.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

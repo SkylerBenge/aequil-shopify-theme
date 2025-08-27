@@ -4,6 +4,8 @@
   assign content = section.settings.content
   assign image = section.settings.image
   assign desktop_layout = section.settings.desktop_layout
+  assign button_text = section.settings.button_text
+  assign button_url = section.settings.button_url
   assign section_id = section.id
 -%}
 
@@ -69,6 +71,13 @@
                   </details>
                 </div>
               {%- endfor -%}
+            </div>
+          {%- endif -%}
+          {%- if button_url != blank and button_text != blank -%}
+            <div class="page-content__button-section">
+              <a href="{{ button_url }}" class="page-content__button">
+                {{ button_text }}
+              </a>
             </div>
           {%- endif -%}
         </div>
@@ -139,6 +148,13 @@
             </details>
           </div>
         {%- endfor -%}
+      </div>
+    {%- endif -%}
+    {%- if button_url != blank and button_text != blank -%}
+      <div class="page-content__button-section">
+        <a href="{{ button_url }}" class="page-content__button">
+          {{ button_text }}
+        </a>
       </div>
     {%- endif -%}
   </div>
@@ -248,6 +264,7 @@
   .page-content__blocks-section {
     padding: 60px 40px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -412,6 +429,38 @@
     .page-content__accordion-content {
       padding: 0 20px 20px;
     }
+    .page-content__button-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  /* Button Styles */
+  .page-content__button-section {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .page-content__button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #333;
+    color: #666;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .page-content__button:hover {
+    background-color: #6f9fcf;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
   }
 </style>
 
@@ -610,6 +659,21 @@
       "id": "open_first_block",
       "label": "Open first collapsible block by default",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn More"
     }
   ],
   "blocks": [

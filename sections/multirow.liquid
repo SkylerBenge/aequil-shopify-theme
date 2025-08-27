@@ -2,20 +2,159 @@
 
 {%- style -%}
   .section-{{ section.id }}-padding {
-    padding-left: {{ section.settings.padding_top | times: 0.75 }}px;
-    padding-right: {{ section.settings.padding_top | times: 0.75 }}px;
     padding-top: {{ section.settings.padding_top | times: 0.75 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 }}px;
   }
 
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
-      padding-left: {{ section.settings.padding_top }}px;
-      padding-right: {{ section.settings.padding_top }}px;
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  /* Title above image styling */
+  .multirow__title-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  /* Mobile title styling */
+  .multirow__title-section--mobile:has(.multirow__title--odd) {
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+  }
+
+  /* Desktop title styling - hide mobile, show desktop */
+  .multirow__title-section--desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .multirow__title-section--mobile {
+      display: none !important;
+    }
+
+    .multirow__title-section--desktop {
+      display: block;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .multirow__title-section--desktop {
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    /* Even titles (left aligned) */
+    .multirow__title-section--desktop:has(.multirow__title--even) {
+      justify-content: start;
+    }
+
+    /* Odd titles (right aligned) */
+    .multirow__title-section--desktop:has(.multirow__title--odd) {
+      justify-content: end;
+    }
+  }
+
+  .multirow__title-section h2 {
+    background-color: #B9C4C4;
+    padding: 10px;
+    width: fit-content;
+    font-size: 3rem !important;
+    padding: 10px 40px;z
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  .multirow__title--even {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .multirow__title--odd {
+    border-radius: 10px 0 0 10px;
+  }
+
+  /* Full height images */
+  .image-with-text__media--full-height {
+    height: 500px;
+    min-height: 500px;
+  }
+
+  .image-with-text__media--full-height img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-with-text__content--full-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .multirow__inner .multirow__button {
+    color: #666;
+    min-width: 200px;
+    text-align: center;
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #6f9fcf;
+  }
+
+  @media screen and (max-width: 749px) {
+    .image-with-text .grid {
+      margin: 0 20px;
+    }
+    .image-with-text__content {
+      padding: 0;
+    }
+  }
+      @media screen and (min-width: 750px) {
+      .image-with-text__content {
+        padding: 0 20px;
+      }
+      .image-with-text__media img {
+        width: auto !important;
+        left: inherit !important;
+      }
+
+      .image-with-text__media--full-height {
+        height: 100%;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+      }
+
+      .image-with-text__media--full-height img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-height: 100%;
+      }
+
+      /* Position images closer to text content */
+      .image-with-text__grid--reverse .image-with-text__media--full-height {
+        justify-content: flex-start; /* Image on right, push toward text on left */
+      }
+
+      .image-with-text__grid:not(.image-with-text__grid--reverse) .image-with-text__media--full-height {
+        justify-content: flex-end; /* Image on left, push toward text on right */
+      }
+      .image-with-text__content--full-height {
+        height: 100%;
+        min-height: 600px;
+      }
+    }
 {%- endstyle -%}
 
 {%- liquid
@@ -53,40 +192,58 @@
         class="image-with-text isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
         {{ block.shopify_attributes }}
       >
+        <!-- Title above image (mobile only) -->
+        {%- if block.settings.heading -%}
+          <div class="multirow__title-section multirow__title-section--mobile">
+            <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte multirow__title--{% cycle 'even', 'odd', 'odd', 'odd' %}">
+              {{ block.settings.heading }}
+            </h2>
+          </div>
+        {%- endif -%}
+
         <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
           <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
             <div
-              class="image-with-text__media image-with-text__media--{{ section.settings.image_height }} gradient color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
-              {% if section.settings.image_height == 'adapt' and block.settings.image != blank %}
-                style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
+              class="image-with-text__media image-with-text__media--full-height gradient color-{{ section.settings.row_color_scheme }} {% if block.settings.image != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
             >
               {%- if block.settings.image != blank -%}
                 {%- capture sizes -%}
                   (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
                   (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
                 {%- endcapture -%}
-                {{
-                  block.settings.image
-                  | image_url: width: 1500
-                  | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
-                }}
+
+                {%- comment -%} Desktop Image {%- endcomment -%}
+                  {%- if block.settings.mobile_image != blank -%}
+                    <source media="(max-width: 749px)" srcset="
+                      {{ block.settings.mobile_image | image_url: width: 360 }} 360w,
+                      {{ block.settings.mobile_image | image_url: width: 535 }} 535w,
+                      {{ block.settings.mobile_image | image_url: width: 750 }} 750w
+                    ">
+                  {%- endif -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 2400
+                    | image_tag: sizes: sizes, widths: '360, 535, 750, 1070, 1500, 2000, 2400'
+                  }}
               {%- else -%}
                 {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
               {%- endif -%}
             </div>
           </div>
           <div class="image-with-text__text-item grid__item">
-            <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.image_height }} content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% else %} background-transparent{% endunless %}">
+            <!-- Title in content area (desktop only) -->
+            {%- if block.settings.heading -%}
+              <div class="multirow__title-section multirow__title-section--desktop">
+                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte multirow__title--{% cycle 'even', 'odd' %}">
+                  {{ block.settings.heading }}
+                </h2>
+              </div>
+            {%- endif -%}
+            <div class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--full-height content-container{% unless no_content_background and no_content_styles %} gradient color-{{ section.settings.row_color_scheme }}{% else %} background-transparent{% endunless %}">
               {%- if block.settings.caption -%}
                 <p class="image-with-text__text image-with-text__text--caption">
                   {{ block.settings.caption | escape }}
                 </p>
-              {%- endif -%}
-              {%- if block.settings.heading -%}
-                <h2 class="image-with-text__heading {{ section.settings.heading_size }} rte">
-                  {{ block.settings.heading }}
-                </h2>
               {%- endif -%}
               {%- if block.settings.text -%}
                 <div class="image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
@@ -98,7 +255,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button button--{{ section.settings.button_style }}"
+                  class="multirow__button"
                 >
                   {{ block.settings.button_label | escape }}
                 </a>
@@ -365,6 +522,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.multirow.blocks.row.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image",
+          "info": "Optional: Use a different image for mobile devices. If blank, desktop image will be used."
         },
         {
           "type": "text",

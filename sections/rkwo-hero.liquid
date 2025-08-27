@@ -10,60 +10,55 @@
 -%}
 
 <section class="rkwo-hero rkwo-content-white" id="section-{{ section_id }}">
-        {%- if background_type == 'video' and video -%}
-      <!-- Video Element (hidden initially) -->
-      <video
-        class="rkwo-hero-video"
-        playsinline="playsinline"
-        muted="muted"
-        loop="loop"
-        preload="metadata"
-        style="display: none;"
-        {%- if video_poster -%}
-        poster="{{ video_poster | img_url: '1920x1080' }}"
-        {%- endif -%}
-      >
-        {%- if video.sources -%}
-          {%- for source in video.sources -%}
-            <source src="{{ source.url }}" type="{{ source.mime_type }}">
-          {%- endfor -%}
-        {%- endif -%}
-        {%- if video_poster -%}
-          <img src="{{ video_poster | img_url: '1920x1080' }}" alt="Video poster">
-        {%- endif -%}
-      </video>
+  {%- if background_type == 'video' and video -%}
+    <!-- Desktop Video Element -->
+    <video
+      class="rkwo-hero-video rkwo-hero-video--desktop"
+      playsinline="playsinline"
+      muted="muted"
+      loop="loop"
+      autoplay="autoplay"
+      preload="metadata"
+      {%- if video_poster -%}
+      poster="{{ video_poster | img_url: '1920x1080' }}"
+      {%- endif -%}
+    >
+      {%- if video.sources -%}
+        {%- for source in video.sources -%}
+          <source src="{{ source.url }}" type="{{ source.mime_type }}">
+        {%- endfor -%}
+      {%- endif -%}
+      {%- if video_poster -%}
+        <img src="{{ video_poster | img_url: '1920x1080' }}" alt="Video poster">
+      {%- endif -%}
+    </video>
+  {%- endif -%}
 
-      <!-- Play Button Overlay -->
-      <div class="rkwo-hero-play-button" onclick="playHeroVideo(this)">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.9)"/>
-          <path d="M32 25L55 40L32 55V25Z" fill="#333"/>
-        </svg>
-      </div>
-    {%- endif -%}
 
     {%- if image != blank or background_type == 'video' -%}
       <div class="rkwo-hero-mobile-image" style="display: none;">
         {%- if background_type == 'video' and video -%}
-          <!-- Mobile Play Button -->
-          <div class="rkwo-hero-play-button rkwo-hero-play-button--mobile" onclick="playHeroVideoMobile(this)">
-            <svg width="60" height="60" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="40" cy="40" r="40" fill="rgba(255,255,255,0.9)"/>
-              <path d="M32 25L55 40L32 55V25Z" fill="#333"/>
-            </svg>
-          </div>
-        {%- endif -%}
-        {%- if heading != blank -%}
-          <h1 class="rkwo-hero-content-heading rkwo-aequil-heading" style="color: #ffffff !important;">
-            {% assign words = heading | split: ' ' %}
-            {% if words.size > 1 %}
-              {% assign last_index = words.size | minus: 1 %}
-              {% assign first_words = words | slice: 0, last_index %}
-              {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
-            {% else %}
-              {{ heading }}
-            {% endif %}
-          </h1>
+          <!-- Mobile Video Element -->
+          <video
+            class="rkwo-hero-video"
+            playsinline="playsinline"
+            muted="muted"
+            loop="loop"
+            autoplay="autoplay"
+            preload="metadata"
+            {%- if video_poster -%}
+            poster="{{ video_poster | img_url: '1920x1080' }}"
+            {%- endif -%}
+          >
+            {%- if video.sources -%}
+              {%- for source in video.sources -%}
+                <source src="{{ source.url }}" type="{{ source.mime_type }}">
+              {%- endfor -%}
+            {%- endif -%}
+            {%- if video_poster -%}
+              <img src="{{ video_poster | img_url: '1920x1080' }}" alt="Video poster">
+            {%- endif -%}
+          </video>
         {%- endif -%}
       </div>
     {%- endif -%}
@@ -128,7 +123,7 @@
     {%- endif -%}
   }
 
-  .rkwo-hero-video {
+  .rkwo-hero-video--desktop {
     position: absolute;
     top: 0;
     left: 0;
@@ -138,33 +133,7 @@
     z-index: 0;
   }
 
-  .rkwo-hero-play-button {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    cursor: pointer;
-    z-index: 3;
-    transition: all 0.3s ease;
-  }
 
-  .rkwo-hero-play-button:hover {
-    transform: scale(1.1);
-  }
-
-  .rkwo-hero-play-button svg {
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-  }
-
-  .rkwo-hero-play-button--mobile {
-    top: 20px;
-    left: 50%;
-    bottom: auto;
-    transform: translateX(-50%);
-  }
-
-  .rkwo-hero-play-button--mobile:hover {
-    transform: translateX(-50%) scale(1.1);
-  }
   .rkwo-hero-content {
     width: 100%;
     max-width: 700px;
@@ -268,23 +237,6 @@
   }
 
   @media (max-width: 768px) {
-    .rkwo-hero-content-heading {
-      text-align: center;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      margin: 0;
-      background: rgba(0, 0, 0, .1);
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      justify-content: end;
-      z-index: 2;
-    }
-    .rkwo-hero-content .rkwo-hero-content-heading {
-      display: none;
-    }
     .rkwo-hero {
       background-image: none;
       padding: 0;
@@ -296,12 +248,22 @@
     .rkwo-hero-content-highlight {
       padding: 2px 10px;
       font-size: 10px;
+      border-color: #6f9fcf;
     }
+
+    .rkwo-hero-content-highlight p {
+      color: #6f9fcf;
+    }
+
     .rkwo-hero-content-highlight span img {
       width: 75px;
     }
 
-        .rkwo-hero-mobile-image {
+    .rkwo-hero-content-highlight span img {
+      filter: brightness(0) saturate(100%) /* make it pure black */ invert(59%) sepia(14%) saturate(1300%) hue-rotate(182deg) brightness(93%) contrast(92%);
+    }
+
+    .rkwo-hero-mobile-image {
       display: block !important;
       min-height: 300px;
       {%- if background_type == 'image' and image -%}
@@ -310,20 +272,28 @@
       background-position: center;
       background-repeat: no-repeat;
       {%- elsif background_type == 'video' and video_poster -%}
-      background-image: url({{ video_poster | img_url: '1200x800' }});
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-image: none; /* Remove background when video is present */
       {%- endif -%}
     }
 
-    .rkwo-hero-video {
+    /* Hide desktop video on mobile */
+    .rkwo-hero-video--desktop {
       display: none;
     }
 
-    .rkwo-hero-play-button:not(.rkwo-hero-play-button--mobile) {
-      display: none !important;
+    /* Mobile video styling - constrained to banner area only */
+    .rkwo-hero-mobile-image .rkwo-hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
     }
+
+
+
     .rkwo-hero-gradient {
       display: none !important;
     }
@@ -333,15 +303,6 @@
     }
     .rkwo-hero-content {
       padding: 35px;
-    }
-    .rkwo-hero-content-highlight {
-      border-color: #000000;
-    }
-    .rkwo-hero-content-highlight span img {
-      -ms-filter: brightness(0);
-      -moz-filter: brightness(0);
-      -webkit-filter: brightness(0);
-      filter: brightness(0);
     }
   }
 
@@ -368,99 +329,7 @@
   }
 </style>
 
-<script>
-function playHeroVideo(playButton) {
-  const section = playButton.closest('.rkwo-hero');
-  const video = section.querySelector('.rkwo-hero-video');
 
-  if (video) {
-    // Hide the play button
-    playButton.style.display = 'none';
-
-    // Show and play the video
-    video.style.display = 'block';
-    video.play();
-
-    // Optional: Add event listener to show play button again when video ends
-    video.addEventListener('ended', function() {
-      video.style.display = 'none';
-      playButton.style.display = 'block';
-    });
-  }
-}
-
-function playHeroVideoMobile(playButton) {
-  const section = playButton.closest('.rkwo-hero');
-  const mobileImageDiv = playButton.closest('.rkwo-hero-mobile-image');
-  const video = section.querySelector('.rkwo-hero-video');
-
-  if (video && mobileImageDiv) {
-    playButton.style.display = 'none';
-
-    // Create a new video element for mobile in-section playback
-    const mobileVideo = document.createElement('video');
-    mobileVideo.muted = true;
-    mobileVideo.loop = true;
-    mobileVideo.playsInline = true;
-    mobileVideo.controls = true;
-
-    // Copy all source elements
-    const sources = video.querySelectorAll('source');
-    sources.forEach(source => {
-      const newSource = document.createElement('source');
-      newSource.src = source.src;
-      newSource.type = source.type;
-      mobileVideo.appendChild(newSource);
-    });
-
-    // Style for in-section mobile video
-    mobileVideo.style.position = 'absolute';
-    mobileVideo.style.top = '0';
-    mobileVideo.style.left = '0';
-    mobileVideo.style.width = '100%';
-    mobileVideo.style.height = '100%';
-    mobileVideo.style.objectFit = 'cover';
-    mobileVideo.style.zIndex = '1';
-
-    // Add close button (smaller for in-section)
-    const closeButton = document.createElement('div');
-    closeButton.innerHTML = '×';
-    closeButton.style.position = 'absolute';
-    closeButton.style.top = '10px';
-    closeButton.style.right = '15px';
-    closeButton.style.color = 'white';
-    closeButton.style.fontSize = '30px';
-    closeButton.style.cursor = 'pointer';
-    closeButton.style.zIndex = '3';
-    closeButton.style.fontWeight = 'bold';
-    closeButton.style.textShadow = '2px 2px 4px rgba(0,0,0,0.8)';
-
-    const closeMobileVideo = function() {
-      if (mobileImageDiv.contains(mobileVideo)) {
-        mobileImageDiv.removeChild(mobileVideo);
-      }
-      if (mobileImageDiv.contains(closeButton)) {
-        mobileImageDiv.removeChild(closeButton);
-      }
-      playButton.style.display = 'block';
-    };
-
-    closeButton.onclick = closeMobileVideo;
-
-    // Add video and close button to the mobile image div
-    mobileImageDiv.appendChild(mobileVideo);
-    mobileImageDiv.appendChild(closeButton);
-
-    // Play the video
-    mobileVideo.play().catch(function(error) {
-      console.log('Video play failed:', error);
-    });
-
-    // Auto close when video ends
-    mobileVideo.addEventListener('ended', closeMobileVideo);
-  }
-}
-</script>
 
 {% schema %}
 {
