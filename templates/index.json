@@ -591,10 +591,10 @@
         "highlight": "<p>THE PLUS PACK</p>",
         "image": "shopify://shop_images/PLUS-PACK.png",
         "text_alignment": "left",
-        "link_text": "Learn More",
+        "link_text": "",
         "link_url": "",
-        "link_text_2": "Learn More",
-        "link_url_2": ""
+        "link_text_2": "TRY THE PLUS PACK",
+        "link_url_2": "shopify://products/sleepplus"
       }
     },
     "rkwo_image_text_h_cta_3UM8GD": {
