@@ -2611,7 +2611,7 @@ input[type='checkbox'] {
   width: 100%;
   display: block;
   position: absolute;
-  background: rgba(var(--color-foreground), 0.5);
+  background: rgba(var(--color-foreground), 0.7);
 }
 
 .header__icon--account shop-user-avatar {
