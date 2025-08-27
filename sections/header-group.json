@@ -48,7 +48,7 @@
       "type": "header",
       "custom_css": [],
       "settings": {
-        "menu": "mmenu",
+        "menu": "header-menu",
         "menu_type_desktop": "mega",
         "menu_color_scheme": "",
         "color_scheme": "",
