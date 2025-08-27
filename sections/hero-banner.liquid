@@ -10,6 +10,11 @@
 <section class="hero-banner hero-content-white" id="section-{{ section_id }}">
   {%- if image != blank -%}
     <div class="hero-banner-mobile-image" style="display: none;">
+      {%- if highlight != blank -%}
+        <div class="hero-banner-content-highlight hero-banner-content-highlight--mobile">
+          {{ highlight }}
+        </div>
+      {%- endif -%}
     </div>
   {%- endif -%}
 
@@ -207,12 +212,27 @@
     .hero-banner-mobile-image {
       display: block !important;
       min-height: 300px;
+      position: relative;
       {%- if image -%}
       background-image: url({{ image | img_url: '1200x800' }});
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       {%- endif -%}
+    }
+
+    /* Hide normal highlight on mobile */
+    .hero-banner-content .hero-banner-content-highlight {
+      display: none;
+    }
+
+    /* Show mobile overlay highlight */
+    .hero-banner-content-highlight--mobile {
+      display: block !important;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 3;
     }
 
     .hero-banner-gradient {
