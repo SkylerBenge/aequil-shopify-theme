@@ -213,12 +213,14 @@
       display: block !important;
       min-height: 300px;
       position: relative;
-      {%- if image -%}
+      {%- if section.settings.mobile_image != blank -%}
+      background-image: url({{ section.settings.mobile_image | img_url: '1200x800' }});
+      {%- elsif image -%}
       background-image: url({{ image | img_url: '1200x800' }});
+      {%- endif -%}
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      {%- endif -%}
     }
 
     /* Hide normal highlight on mobile */
@@ -285,6 +287,12 @@
       "id": "image",
       "label": "Background Image",
       "info": "Upload a background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Background Image",
+      "info": "Optional: Use a different image for mobile devices. If blank, desktop image will be used."
     },
     {
       "type": "select",
