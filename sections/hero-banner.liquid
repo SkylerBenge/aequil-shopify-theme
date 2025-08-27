@@ -87,10 +87,6 @@
     text-align: center;
   }
 
-  .hero-banner-content-inner {
-    padding: 0 40px;
-  }
-
   .hero-banner-content--right {
     margin: 0 0 0 auto;
     text-align: right;
@@ -186,11 +182,13 @@
 
   }
 
-  @media (max-width: 1024px) {
-
+  @media (min-width: 750px) {
+    .hero-banner-content-inner {
+      padding: 0 40px;
+    }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 749px) {
     .hero-banner {
       background-image: none;
       padding: 0;
@@ -237,28 +235,6 @@
 
     .hero-banner-content-link {
       justify-content: center !important;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .hero-banner-mobile-image {
-      min-height: 250px;
-    }
-
-    .hero-banner-content h1 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-
-    .hero-banner-content {
-      padding: 35px 25px;
-    }
-  }
-
-  @media (max-width: 360px) {
-    .hero-banner-content-highlight {
-      font-size: 1rem !important;
-      padding: 3px 15px;
     }
   }
 </style>
