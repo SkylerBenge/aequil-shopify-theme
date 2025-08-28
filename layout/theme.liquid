@@ -292,6 +292,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           font-size: 1.6rem;
         }
       }
+
+      /* Final font override - force StoryScript everywhere */
+      * {
+        font-family: 'StoryScript', sans-serif !important;
+      }
+      
+      body, html, p, div, span, a, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
+        font-family: 'StoryScript', sans-serif !important;
+      }
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
