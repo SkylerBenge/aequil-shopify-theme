@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'EndurancePro';
-  src: url('{{ "EndurancePro.woff" | asset_url }}') format("woff"), url('{{ "EndurancePro.woff" | asset_url }}') format("woff2");
+  src: url('{{ "EndurancePro.otf" | asset_url }}') format("opentype");
   font-weight: 300;
   font-style: normal;
 }
