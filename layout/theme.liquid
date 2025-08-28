@@ -63,6 +63,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
+      /* Custom StoryScript Font Override */
+      @font-face {
+        font-family: 'StoryScript';
+        src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
+             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'StoryScript';
+        src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
+             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'StoryScript';
+        src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
+             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
         {% if forloop.index == 1 -%}
@@ -113,6 +141,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         --font-heading-family: {{ settings.type_header_font.family }}, {{ settings.type_header_font.fallback_families }};
         --font-heading-style: {{ settings.type_header_font.style }};
         --font-heading-weight: {{ settings.type_header_font.weight }};
+
+        /* Override with custom fonts */
+        --font-body-family: 'StoryScript', sans-serif !important;
+        --font-heading-family: 'StoryScript', sans-serif !important;
+        --font-body-weight: 300 !important;
+        --font-heading-weight: 300 !important;
 
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
