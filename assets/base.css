@@ -34,6 +34,25 @@
   font-display: swap;
 }
 
+/* Override CSS variables to use EndurancePro */
+:root {
+  --font-body-family: 'EndurancePro', sans-serif;
+  --font-heading-family: 'EndurancePro', sans-serif;
+  --font-body-weight: 300;
+  --font-heading-weight: 300;
+  --font-body-style: normal;
+  --font-heading-style: normal;
+}
+
+/* Force EndurancePro on all elements */
+* {
+  font-family: 'EndurancePro', sans-serif !important;
+}
+
+body, p, div, span, a, button, input, textarea, select {
+  font-family: 'EndurancePro', sans-serif !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'EndurancePro', sans-serif !important;
   font-weight: 300 !important;
