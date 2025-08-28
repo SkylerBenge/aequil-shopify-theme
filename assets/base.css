@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Abc';
-  src: url('{{ "Story-Script.woff2" | asset_url }}') format("woff2"),
-       url('{{ "EndurancePro.woff" | asset_url }}') format("woff");
+  src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
+             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Abc';
-  src: url('{{ "EndurancePro-Light.woff2" | asset_url }}') format("woff2"),
-       url('{{ "EndurancePro-Light.woff" | asset_url }}') format("woff");
+  src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
+             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'Abc';
-  src: url('{{ "EndurancePro-Bold.woff2" | asset_url }}') format("woff2"),
-       url('{{ "EndurancePro-Bold.woff" | asset_url }}') format("woff");
+  src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
+             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
   font-family: 'Abc';
-  src: url('{{ "EndurancePro-Italic.woff2" | asset_url }}') format("woff2"),
-       url('{{ "EndurancePro-Italic.woff" | asset_url }}') format("woff");
+  src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
+    url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
