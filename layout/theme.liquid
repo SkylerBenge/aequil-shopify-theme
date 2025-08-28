@@ -63,31 +63,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
-      /* Custom StoryScript Font Override */
+            /* Custom EndurancePro Font Override */
       @font-face {
-        font-family: 'StoryScript';
-        src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
-             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
+        font-family: 'EndurancePro';
+        src: url('{{ "EndurancePro-Light.woff2" | asset_url }}') format("woff2"),
+             url('{{ "EndurancePro-Light.woff" | asset_url }}') format("woff");
         font-weight: 300;
         font-style: normal;
         font-display: swap;
       }
-
+      
       @font-face {
-        font-family: 'StoryScript';
-        src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
-             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
+        font-family: 'EndurancePro';
+        src: url('{{ "EndurancePro.woff2" | asset_url }}') format("woff2"),
+             url('{{ "EndurancePro.woff" | asset_url }}') format("woff");
         font-weight: 400;
         font-style: normal;
         font-display: swap;
       }
-
+      
       @font-face {
-        font-family: 'StoryScript';
-        src: url('{{ "StoryScript-Regular.woff2" | asset_url }}') format("woff2"),
-             url('{{ "StoryScript-Regular.woff" | asset_url }}') format("woff");
+        font-family: 'EndurancePro';
+        src: url('{{ "EndurancePro-Bold.woff2" | asset_url }}') format("woff2"),
+             url('{{ "EndurancePro-Bold.woff" | asset_url }}') format("woff");
         font-weight: 700;
         font-style: normal;
+        font-display: swap;
+      }
+      
+      @font-face {
+        font-family: 'EndurancePro';
+        src: url('{{ "EndurancePro-Italic.woff2" | asset_url }}') format("woff2"),
+             url('{{ "EndurancePro-Italic.woff" | asset_url }}') format("woff");
+        font-weight: 400;
+        font-style: italic;
         font-display: swap;
       }
 
@@ -143,8 +152,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
         /* Override with custom fonts */
-        --font-body-family: 'StoryScript', sans-serif !important;
-        --font-heading-family: 'StoryScript', sans-serif !important;
+        --font-body-family: 'EndurancePro', sans-serif !important;
+        --font-heading-family: 'EndurancePro', sans-serif !important;
         --font-body-weight: 300 !important;
         --font-heading-weight: 300 !important;
 
@@ -293,13 +302,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       }
 
-      /* Final font override - force StoryScript everywhere */
+            /* Final font override - force EndurancePro everywhere */
       * {
-        font-family: 'StoryScript', sans-serif !important;
+        font-family: 'EndurancePro', sans-serif !important;
       }
-
+      
       body, html, p, div, span, a, button, input, textarea, select, h1, h2, h3, h4, h5, h6 {
-        font-family: 'StoryScript', sans-serif !important;
+        font-family: 'EndurancePro', sans-serif !important;
       }
     {% endstyle %}
 
