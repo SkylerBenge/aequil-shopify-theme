@@ -1,0 +1,346 @@
+{%- liquid
+  assign heading = section.settings.heading
+  assign content = section.settings.content
+  assign highlight = section.settings.highlight
+  assign image = section.settings.image
+  assign text_alignment = section.settings.text_alignment
+  assign section_id = section.id
+-%}
+
+<section class="hero-banner hero-content-white" id="section-{{ section_id }}">
+  {%- if image != blank -%}
+    <div class="hero-banner-mobile-image" style="display: none;">
+      {%- if highlight != blank -%}
+        <div class="hero-banner-content-highlight hero-banner-content-highlight--mobile">
+          {{ highlight }}
+        </div>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  <div class="hero-banner-content hero-banner-content--{{ text_alignment }}">
+    {%- if highlight != blank -%}
+      <div class="hero-banner-content-highlight">
+        {{ highlight }}
+      </div>
+    {%- endif -%}
+    <div class="hero-banner-content-inner">
+      {%- if heading != blank -%}
+        <h1 class="hero-banner-content-heading hero-aequil-heading">
+          {% assign words = heading | split: ' ' %}
+          {% if words.size > 1 %}
+            {% assign last_index = words.size | minus: 1 %}
+            {% assign first_words = words | slice: 0, last_index %}
+            {{ first_words | join: ' ' }} <span>{{ words[last_index] }}</span>
+          {% else %}
+            {{ heading }}
+          {% endif %}
+        </h1>
+      {%- endif -%}
+      {%- if content != blank -%}
+        <div class="hero-banner-content-content">
+          {{ content }}
+        </div>
+      {%- endif -%}
+      <div class="hero-banner-content-link">
+        {%- if section.settings.link_url != blank and section.settings.link_text != blank -%}
+          <a href="{{ section.settings.link_url }}" class="hero-banner-link hero-banner-link-primary">
+            {{ section.settings.link_text }}
+          </a>
+        {%- endif -%}
+        {%- if section.settings.link_url_2 != blank and section.settings.link_text_2 != blank -%}
+          <a href="{{ section.settings.link_url_2 }}" class="hero-banner-link hero-banner-link-secondary">
+            {{ section.settings.link_text_2 }}
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+  <div class="hero-banner-gradient"></div>
+</section>
+
+<style>
+  .hero-banner,
+  .hero-banner-mobile-image {
+    width: 100%;
+    padding: 100px 0;
+    position: relative;
+    background-color: #ffffff;
+    {%- if image -%}
+    background-image: url({{ image | img_url: '2000x2000' }});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    {%- endif -%}
+  }
+
+  .hero-banner-content {
+    width: 100%;
+    max-width: 700px;
+    z-index: 2;
+    position: relative;
+  }
+
+  /* Text Alignment Options */
+  .hero-banner-content--left {
+    margin: 0 auto 0 0;
+    text-align: left;
+  }
+
+  .hero-banner-content--center {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-banner-content--right {
+    margin: 0 0 0 auto;
+    text-align: right;
+  }
+
+  .hero-banner-content h1,
+  .hero-banner-content p {
+    text-align: inherit;
+  }
+
+  .hero-banner-content h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+
+  .hero-banner-content-highlight {
+    background-color: #B9C4C4;
+    padding: 10px 40px;
+    width: fit-content;
+    font-size: 3rem !important;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    border-radius: 0 10px 10px 0;
+    display: inline-block;
+  }
+
+  .hero-banner-content-highlight p {
+    margin-bottom: 0;
+    font-size: inherit;
+    color: inherit;
+  }
+
+  .hero-banner-content-link {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  /* Align buttons based on text alignment */
+  .hero-banner-content--left .hero-banner-content-link {
+    justify-content: flex-start;
+  }
+
+  .hero-banner-content--center .hero-banner-content-link {
+    justify-content: center;
+  }
+
+  .hero-banner-content--right .hero-banner-content-link {
+    justify-content: flex-end;
+  }
+
+  .hero-banner-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'EndurancePro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #555557;
+  }
+
+  .hero-banner-link-primary {
+    background-color: #555557;
+    color: white;
+  }
+
+  .hero-banner-link-primary:hover {
+    background-color: #5a8bb8;
+    border-color: #5a8bb8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
+  }
+
+  .hero-banner-link-secondary {
+    background-color: transparent;
+    color: #555557;
+  }
+
+  .hero-banner-link-secondary:hover {
+    background-color: #555557;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(111, 159, 207, 0.3);
+  }
+
+  @media (max-width: 1700px) {
+
+  }
+
+  @media (min-width: 750px) {
+    .hero-banner-content-inner {
+      padding: 0 40px;
+    }
+  }
+
+  @media (max-width: 749px) {
+    .hero-banner {
+      background-image: none;
+      padding: 0;
+    }
+
+    .hero-banner-content h1 {
+      font-size: 38px;
+    }
+
+    .hero-banner-content-highlight {
+      font-size: 1.5rem !important;
+      padding: 5px 20px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-banner-mobile-image {
+      display: block !important;
+      min-height: 300px;
+      position: relative;
+      {%- if section.settings.mobile_image != blank -%}
+      background-image: url({{ section.settings.mobile_image | img_url: '1200x800' }});
+      {%- elsif image -%}
+      background-image: url({{ image | img_url: '1200x800' }});
+      {%- endif -%}
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Hide normal highlight on mobile */
+    .hero-banner-content .hero-banner-content-highlight {
+      display: none;
+    }
+
+    /* Show mobile overlay highlight */
+    .hero-banner-content-highlight--mobile {
+      display: block !important;
+      position: absolute;
+      top: 20px;
+      z-index: 3;
+    }
+
+    .hero-banner-gradient {
+      display: none !important;
+    }
+
+    section[class^=hero-].hero-content-white h1,
+    section[class^=hero-].hero-content-white p {
+      color: #555557 !important;
+    }
+
+    .hero-banner-content {
+      padding: 35px;
+    }
+
+    /* Mobile text alignment - force center on mobile for better readability */
+    .hero-banner-content {
+      text-align: center !important;
+    }
+
+    .hero-banner-content-link {
+      justify-content: center !important;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Content</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "highlight",
+      "label": "Highlight",
+      "default": "<p>Enter a highlight</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image",
+      "info": "Upload a background image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Background Image",
+      "info": "Optional: Use a different image for mobile devices. If blank, desktop image will be used."
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment (Desktop)",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "link_text_2",
+      "label": "Second Link Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "link_url_2",
+      "label": "Second Link URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}
