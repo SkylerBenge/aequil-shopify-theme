@@ -2,6 +2,7 @@
   assign heading = section.settings.heading
   assign content = section.settings.content
   assign highlight = section.settings.highlight
+  assign highlight_below = section.settings.highlight_below
   assign image = section.settings.image
   assign text_alignment = section.settings.text_alignment
   assign section_id = section.id
@@ -54,6 +55,11 @@
           </a>
         {%- endif -%}
       </div>
+      {%- if highlight_below != blank -%}
+        <div class="hero-banner-content-highlight hero-banner-content-highlight--below">
+          {{ highlight_below }}
+        </div>
+      {%- endif -%}
     </div>
   </div>
   <div class="hero-banner-gradient"></div>
@@ -119,6 +125,11 @@
     margin-top: 0;
     border-radius: 0 10px 10px 0;
     display: inline-block;
+  }
+
+  .hero-banner-content-highlight--below {
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 
   .hero-banner-content-highlight p {
@@ -335,6 +346,12 @@
       "type": "url",
       "id": "link_url_2",
       "label": "Second Link URL"
+    },
+    {
+      "type": "richtext",
+      "id": "highlight_below",
+      "label": "Highlight Below Buttons",
+      "default": "<p>Enter a highlight below the buttons</p>"
     }
   ],
   "presets": [
