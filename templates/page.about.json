@@ -35,7 +35,7 @@
           "settings": {
             "heading": "HOW AEQUIL WORKS",
             "icon": "none",
-            "row_content": "<p>AEQUIL's system supports your internal coherence at every level - biological, emotional, and energetic.</p><p><br/>We use three delivery methods:</p><ul><li>Food supplements with fast-acting support, powered by Liquid Intelligence#</li><li>Wearable patches for slow-release, skin-safe diffusion with essential oils and dynamised water</li><li>Digital tools like sound therapy, guided affirmations, and breathwork - for support beyond the physical</li></ul><p>Together, these products help you return to your own rhythm. Not the one you've inherited or forced yourself into - but the <br/>one that belongs to you.</p>",
+            "row_content": "<p>AEQUIL's system supports your internal coherence at every level - biological, emotional, and energetic.</p><p><br/>We use three delivery methods:</p><ul><li>Food supplements with fast-acting support, powered by Liquid Intelligence</li><li>Wearable patches for slow-release, skin-safe diffusion with essential oils and dynamised water</li><li>Digital tools like sound therapy, guided affirmations, and breathwork - for support beyond the physical</li></ul><p>Together, these products help you return to your own rhythm. Not the one you've inherited or forced yourself into - but the <br/>one that belongs to you.</p>",
             "page": ""
           }
         },
@@ -77,12 +77,19 @@
       "name": "Page Content",
       "settings": {
         "image": "shopify://shop_images/Aequil-Banner_01.png",
+        "mobile_image_height": "medium",
         "desktop_layout": "left",
-        "heading": "THE AEQUIL APPROACH",
-        "subheading": "About Aequil",
+        "heading": "<p>THE AEQUIL APPROACH</p>",
+        "heading_alignment": "center",
+        "subheading": "<p>About Aequil</p>",
+        "subheading_alignment": "center",
+        "subheading_dark_background": false,
         "content": "<p>Your body remembers. We help you listen.</p>",
+        "content_alignment": "center",
         "overlay_opacity": 1,
-        "open_first_block": true
+        "open_first_block": true,
+        "button_url": "",
+        "button_text": "Learn More"
       }
     },
     "main": {
@@ -120,7 +127,11 @@
           }
         }
       },
-      "block_order": ["heading_biDjpE", "text_eRgUfa", "button_dCbg9h"],
+      "block_order": [
+        "heading_biDjpE",
+        "text_eRgUfa",
+        "button_dCbg9h"
+      ],
       "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
