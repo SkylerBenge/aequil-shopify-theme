@@ -213,18 +213,18 @@
                 {%- endcapture -%}
 
                 <picture>
-                  {%- if block.settings.mobile_image != blank -%}
-                    <source media="(max-width: 749px)" srcset="
-                      {{ block.settings.mobile_image | image_url: width: 360 }} 360w,
-                      {{ block.settings.mobile_image | image_url: width: 535 }} 535w,
-                      {{ block.settings.mobile_image | image_url: width: 750 }} 750w
-                    " sizes="calc(100vw - 50px)">
-                  {%- endif -%}
-                  {{
-                    block.settings.image
-                    | image_url: width: 2400
-                    | image_tag: sizes: sizes, widths: '360, 535, 750, 1070, 1500, 2000, 2400'
-                  }}
+                {%- if block.settings.mobile_image != blank -%}
+                  <source media="(max-width: 749px)" srcset="
+                    {{ block.settings.mobile_image | image_url: width: 360 }} 360w,
+                    {{ block.settings.mobile_image | image_url: width: 535 }} 535w,
+                    {{ block.settings.mobile_image | image_url: width: 750 }} 750w
+                  " sizes="calc(100vw - 50px)">
+                {%- endif -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 2400
+                  | image_tag: sizes: sizes, widths: '360, 535, 750, 1070, 1500, 2000, 2400'
+                }}
                 </picture>
               {%- else -%}
                 {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
