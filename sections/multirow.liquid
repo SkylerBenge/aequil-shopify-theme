@@ -144,12 +144,27 @@
         max-height: 100%;
       }
 
+      .image-with-text__media--full-height picture {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
       /* Position images closer to text content */
       .image-with-text__grid--reverse .image-with-text__media--full-height {
         justify-content: flex-start; /* Image on right, push toward text on left */
       }
 
+      .image-with-text__grid--reverse .image-with-text__media--full-height picture {
+        justify-content: flex-start; /* Image on right, push toward text on left */
+      }
+
       .image-with-text__grid:not(.image-with-text__grid--reverse) .image-with-text__media--full-height {
+        justify-content: flex-end; /* Image on left, push toward text on right */
+      }
+
+      .image-with-text__grid:not(.image-with-text__grid--reverse) .image-with-text__media--full-height picture {
         justify-content: flex-end; /* Image on left, push toward text on right */
       }
       .image-with-text__content--full-height {
