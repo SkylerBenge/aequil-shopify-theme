@@ -147,6 +147,23 @@
         "link_text_2": "Shop The Range"
       }
     },
+    "hero_banner_aMiTrM": {
+      "type": "hero-banner",
+      "name": "Hero Banner",
+      "settings": {
+        "heading": "Start feeling better, fast.",
+        "content": "<p>The PLUS Pack is a welcome bundle for anyone experiencing everyday complaints - like fatigue, stress, poor sleep or respiratory challenges. It contains all four of our targeted solutions (SLEEP+, MOOD+, ENERGY+, AIRWAYS+) in both food supplement and patch formats.<br/></p><p>Perfect for individuals, families, or those new to AEQUIL. Biotech solutions. No synthetic melatonin. Safe, structured, and system-level support</p>",
+        "highlight": "<p>THE PLUS PACK</p>",
+        "image": "shopify://shop_images/PLUS-PACK_01a2fb24-d0dd-467b-9e20-bc2f66f51afd.png",
+        "mobile_image": "shopify://shop_images/PLUS-PACK_733d8b1a-bae7-498c-aa8e-3ebb0a110882.jpg",
+        "text_alignment": "left",
+        "link_text": "",
+        "link_url": "shopify://products/plus-pack",
+        "link_text_2": "TRY THE PLUS PACK",
+        "link_url_2": "shopify://products/plus-pack",
+        "highlight_below": "<p>Buy now and save, Only £100</p>"
+      }
+    },
     "multirow_epexcg": {
       "type": "multirow",
       "blocks": {
@@ -581,23 +598,6 @@
         "padding_bottom": 36
       }
     },
-    "hero_banner_aMiTrM": {
-      "type": "hero-banner",
-      "name": "Hero Banner",
-      "settings": {
-        "heading": "Start feeling better, fast.",
-        "content": "<p>The PLUS Pack is a welcome bundle for anyone experiencing everyday complaints - like fatigue, stress, poor sleep or respiratory challenges. It contains all four of our targeted solutions (SLEEP+, MOOD+, ENERGY+, AIRWAYS+) in both food supplement and patch formats.<br/></p><p>Perfect for individuals, families, or those new to AEQUIL. Biotech solutions. No synthetic melatonin. Safe, structured, and system-level support</p>",
-        "highlight": "<p>THE PLUS PACK</p>",
-        "image": "shopify://shop_images/PLUS-PACK_01a2fb24-d0dd-467b-9e20-bc2f66f51afd.png",
-        "mobile_image": "shopify://shop_images/PLUS-PACK_733d8b1a-bae7-498c-aa8e-3ebb0a110882.jpg",
-        "text_alignment": "left",
-        "link_text": "",
-        "link_url": "shopify://products/plus-pack",
-        "link_text_2": "TRY THE PLUS PACK",
-        "link_url_2": "shopify://products/plus-pack",
-        "highlight_below": "<p>Buy now and save, Only £100</p>"
-      }
-    },
     "rkwo_image_text_h_cta_3UM8GD": {
       "type": "rkwo-image-text-h-cta",
       "disabled": true,
@@ -661,6 +661,7 @@
     "rkwo_video_text_aCHKL7",
     "featured_content_d78pgK",
     "product_features_Ay8eT6",
+    "hero_banner_aMiTrM",
     "multirow_epexcg",
     "rkwo_pagebreak_cta_Kb78Hd",
     "rkwo_highlight_points_LeM8CW",
@@ -672,7 +673,6 @@
     "slideshow_BqpRbK",
     "rkwo_heading_text_ahDDJG",
     "featured_collection_zjLXT4",
-    "hero_banner_aMiTrM",
     "rkwo_image_text_h_cta_3UM8GD",
     "custom_liquid_rAa3fx",
     "1748782285167ab2f6"
