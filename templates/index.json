@@ -594,7 +594,7 @@
         "link_text": "",
         "link_url": "shopify://products/plus-pack",
         "link_text_2": "TRY THE PLUS PACK",
-        "link_url_2": "",
+        "link_url_2": "shopify://products/plus-pack",
         "highlight_below": "<p>Buy now and save, Only £100</p>"
       }
     },
