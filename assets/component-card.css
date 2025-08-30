@@ -622,7 +622,7 @@
   font-size: 16px;
   line-height: 1.4;
   max-width: 90%;
-  height: fit-content;
+  height: 100%;
   overflow: scroll;
   text-decoration: none !important;
   scrollbar-width: thin;
