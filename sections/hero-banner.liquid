@@ -2,6 +2,7 @@
   assign heading = section.settings.heading
   assign content = section.settings.content
   assign highlight = section.settings.highlight
+  assign highlight_below = section.settings.highlight_below
   assign image = section.settings.image
   assign text_alignment = section.settings.text_alignment
   assign section_id = section.id
@@ -13,6 +14,9 @@
       {%- if highlight != blank -%}
         <div class="hero-banner-content-highlight hero-banner-content-highlight--mobile">
           {{ highlight }}
+        </div>
+        <div class="hero-banner-content-highlight hero-banner-content-highlight--mobile hero-banner-content-highlight--mobile-below">
+          {{ highlight_below }}
         </div>
       {%- endif -%}
     </div>
@@ -55,6 +59,11 @@
         {%- endif -%}
       </div>
     </div>
+    {%- if highlight_below != blank -%}
+      <div class="hero-banner-content-highlight hero-banner-content-highlight--below">
+        {{ highlight_below }}
+      </div>
+    {%- endif -%}
   </div>
   <div class="hero-banner-gradient"></div>
 </section>
@@ -121,6 +130,11 @@
     display: inline-block;
   }
 
+  .hero-banner-content-highlight--below {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
   .hero-banner-content-highlight p {
     margin-bottom: 0;
     font-size: inherit;
@@ -152,7 +166,7 @@
     padding: 12px 24px;
     border-radius: 25px;
     text-decoration: none;
-    font-family: 'EndurancePro', sans-serif;
+    font-family: 'StoryScript', sans-serif;
     font-weight: 400;
     font-size: 16px;
     transition: all 0.3s ease;
@@ -232,8 +246,13 @@
     .hero-banner-content-highlight--mobile {
       display: block !important;
       position: absolute;
-      top: 20px;
+      top: 10px;
       z-index: 3;
+    }
+
+    .hero-banner-content-highlight--mobile-below {
+      bottom: 0;
+      top: auto;
     }
 
     .hero-banner-gradient {
@@ -335,6 +354,12 @@
       "type": "url",
       "id": "link_url_2",
       "label": "Second Link URL"
+    },
+    {
+      "type": "richtext",
+      "id": "highlight_below",
+      "label": "Highlight Below Buttons",
+      "default": "<p>Enter a highlight below the buttons</p>"
     }
   ],
   "presets": [
