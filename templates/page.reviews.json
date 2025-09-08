@@ -25,6 +25,7 @@
           "type": "review",
           "settings": {
             "title": "Amazing Product!",
+            "name": "John D.",
             "rating": 4,
             "text": "<p>This product exceeded my expectations. The quality is outstanding and I would definitely recommend it to others.</p>"
           }
@@ -33,6 +34,7 @@
           "type": "review",
           "settings": {
             "title": "Excellent Quality",
+            "name": "John D.",
             "rating": 5,
             "text": "<p>This product exceeded my expectations. The quality is outstanding and I would definitely recommend it to others.</p>"
           }
@@ -41,6 +43,7 @@
           "type": "review",
           "settings": {
             "title": "Amazing Product!",
+            "name": "John D.",
             "rating": 5,
             "text": "<p>This product exceeded my expectations. The quality is outstanding and I would definitely recommend it to others.</p>"
           }
@@ -49,6 +52,7 @@
           "type": "review",
           "settings": {
             "title": "Great Value",
+            "name": "John D.",
             "rating": 4,
             "text": "<p>Really happy with this purchase. Great value for money and fast shipping.</p>"
           }
@@ -57,6 +61,7 @@
           "type": "review",
           "settings": {
             "title": "Highly Recommended",
+            "name": "John D.",
             "rating": 5,
             "text": "<p>I've been using this for weeks now and it's been perfect. Will definitely buy again!</p>"
           }
@@ -71,7 +76,7 @@
       ],
       "name": "Review Cards",
       "settings": {
-        "heading": "Customer Reviews",
+        "heading": "Reviews",
         "color_scheme": "",
         "cards_per_row": 4,
         "mobile_cards_per_row": "2",
