@@ -14,9 +14,9 @@
   }
 
   .review-cards {
-    display: grid;
-    grid-template-columns: repeat({{ section.settings.cards_per_row }}, 1fr);
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -28,6 +28,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #e5e5e5;
+    flex: 0 0 calc((100% - ({{ section.settings.cards_per_row | minus: 1 }} * 1rem)) / {{ section.settings.cards_per_row }});
   }
 
   .review-card:hover {
@@ -79,7 +80,7 @@
     text-align: center;
     margin-bottom: 3rem;
     width: 100%;
-    grid-column: 1 / -1;
+    flex-basis: 100%;
   }
 
   .review-cards__heading h2 {
@@ -92,12 +93,12 @@
 
   @media screen and (max-width: 749px) {
     .review-cards {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .review-card {
       padding: 1.5rem;
+      flex: 0 0 100%;
     }
 
     .review-card__title {
