@@ -13,8 +13,8 @@
       "type": "main-page",
       "settings": {
         "show_page_title": true,
-        "padding_top": 0,
-        "padding_bottom": 28
+        "padding_top": 20,
+        "padding_bottom": 20
       }
     },
     "review_cards_yt3iUE": {
@@ -72,7 +72,8 @@
       "settings": {
         "heading": "Customer Reviews",
         "color_scheme": "",
-        "padding_top": 100,
+        "cards_per_row": 1,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     }
