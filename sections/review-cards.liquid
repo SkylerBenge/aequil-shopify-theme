@@ -31,7 +31,8 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #e5e5e5;
-    flex-basis: calc(100% / {{ section.settings.cards_per_row }} - 1rem);
+    flex: 1 1 calc(100% / {{ section.settings.cards_per_row }} - 1rem);
+    min-width: 0;
   }
 
   .review-card:hover {
@@ -101,7 +102,7 @@
 
     .review-card {
       padding: 1.5rem;
-      flex: 0 0 100%;
+      flex: 1 1 calc(100% / {{ section.settings.mobile_cards_per_row }} - 1rem);
     }
 
     .review-card__title {
