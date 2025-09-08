@@ -49,8 +49,15 @@
     font-size: 1.5rem;
     font-weight: 400;
     color: #555557;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.5rem 0;
     line-height: 1.3;
+  }
+
+  .review-card__name {
+    font-size: 0.9rem;
+    color: #888888;
+    margin-bottom: 1rem;
+    font-style: italic;
   }
 
   .review-card__stars {
@@ -126,9 +133,13 @@
     {%- for block in section.blocks -%}
       <div class="review-card" {{ block.shopify_attributes }}>
         <div class="review-card__header">
-          {%- if block.settings.title != blank -%}
-            <h3 class="review-card__title">{{ block.settings.title }}</h3>
-          {%- endif -%}
+        {%- if block.settings.title != blank -%}
+          <h3 class="review-card__title">{{ block.settings.title }}</h3>
+        {%- endif -%}
+        
+        {%- if block.settings.name != blank -%}
+          <div class="review-card__name">{{ block.settings.name }}</div>
+        {%- endif -%}
 
           {%- if block.settings.rating > 0 -%}
             <div class="review-card__stars" role="img" aria-label="{{ block.settings.rating }} out of 5 stars">
@@ -237,6 +248,12 @@
           "id": "title",
           "label": "Review Title",
           "default": "Amazing Product!"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Reviewer Name",
+          "default": "John D."
         },
         {
           "type": "range",
