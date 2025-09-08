@@ -72,7 +72,7 @@
       "settings": {
         "heading": "Customer Reviews",
         "color_scheme": "",
-        "cards_per_row": 1,
+        "cards_per_row": 4,
         "padding_top": 0,
         "padding_bottom": 36
       }
