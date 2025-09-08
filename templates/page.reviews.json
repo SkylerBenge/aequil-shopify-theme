@@ -16,9 +16,69 @@
         "padding_top": 0,
         "padding_bottom": 28
       }
+    },
+    "review_cards_yt3iUE": {
+      "type": "review-cards",
+      "blocks": {
+        "review_cUaUHU": {
+          "type": "review",
+          "settings": {
+            "title": "Amazing Product!",
+            "rating": 4,
+            "text": "<p>This product exceeded my expectations. The quality is outstanding and I would definitely recommend it to others.</p>"
+          }
+        },
+        "review_iGyRjH": {
+          "type": "review",
+          "settings": {
+            "title": "Excellent Quality",
+            "rating": 5,
+            "text": "<p>This product exceeded my expectations. The quality is outstanding and I would definitely recommend it to others.</p>"
+          }
+        },
+        "review_f7y36X": {
+          "type": "review",
+          "settings": {
+            "title": "Amazing Product!",
+            "rating": 5,
+            "text": "<p>This product exceeded my expectations. The quality is outstanding and I would definitely recommend it to others.</p>"
+          }
+        },
+        "review_MQdf7e": {
+          "type": "review",
+          "settings": {
+            "title": "Great Value",
+            "rating": 4,
+            "text": "<p>Really happy with this purchase. Great value for money and fast shipping.</p>"
+          }
+        },
+        "review_qKQ9BB": {
+          "type": "review",
+          "settings": {
+            "title": "Highly Recommended",
+            "rating": 5,
+            "text": "<p>I've been using this for weeks now and it's been perfect. Will definitely buy again!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "review_cUaUHU",
+        "review_iGyRjH",
+        "review_f7y36X",
+        "review_MQdf7e",
+        "review_qKQ9BB"
+      ],
+      "name": "Review Cards",
+      "settings": {
+        "heading": "Customer Reviews",
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "review_cards_yt3iUE"
   ]
 }
