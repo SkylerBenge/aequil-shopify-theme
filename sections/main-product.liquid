@@ -134,8 +134,8 @@
                     price_class: 'price--large'
                   -%}
                 </div>
-                <h1>test {{template.name}} {{ template.suffix }}</h1>
-                {%- if template.name == 'product' and template.suffix == 'discount' -%}
+                <h1>test {{ product.title }}</h1>
+                {%- if product.title == 'PLUS Pack' -%}
                   <div class="discount-note" style="color: #28a745; font-size: 0.9rem; margin-top: 0.5rem; font-weight: 500;">
                     Discount added automatically at checkout
                   </div>
