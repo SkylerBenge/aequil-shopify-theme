@@ -134,6 +134,11 @@
                     price_class: 'price--large'
                   -%}
                 </div>
+                {%- if template.name == 'product' and template.suffix == 'discount' -%}
+                  <div class="discount-note" style="color: #28a745; font-size: 0.9rem; margin-top: 0.5rem; font-weight: 500;">
+                    Discount added automatically at checkout
+                  </div>
+                {%- endif -%}
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
