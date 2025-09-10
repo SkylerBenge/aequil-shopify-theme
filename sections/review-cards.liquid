@@ -20,7 +20,7 @@
   .review-cards__grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
     margin: 0 auto;
   }
 
@@ -31,8 +31,10 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #e5e5e5;
-    flex: 1 1 calc(100% / {{ section.settings.cards_per_row }} - 1rem);
+    flex: 1 1 auto;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   .review-card:hover {
@@ -42,6 +44,7 @@
 
   .review-card__header {
     margin-bottom: 1.5rem;
+    flex-grow: 1;
   }
 
   .review-card__title {
