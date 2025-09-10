@@ -21,6 +21,26 @@
     "review_cards": {
       "type": "review-cards",
       "blocks": {
+        "review_bk8UUY": {
+          "type": "review",
+          "settings": {
+            "title": "Sleep+",
+            "name": "Karin S",
+            "rating": 5,
+            "video": "https://cdn.shopify.com/videos/c/o/v/d106bf6e72b14bbaa7d2ae9e586b72d9.mp4",
+            "text": "<p>This product exceeded my expectations. The quality is outstanding and I would definitely recommend it to others.</p>"
+          }
+        },
+        "review_gfJ4JC": {
+          "type": "review",
+          "settings": {
+            "title": "Sleep+ and Energy+",
+            "name": "Nick S",
+            "rating": 5,
+            "video": "https://cdn.shopify.com/videos/c/o/v/48df62a828a04194ba24ec6747a723b7.mp4",
+            "text": "<p>This product exceeded my expectations. The quality is outstanding and I would definitely recommend it to others.</p>"
+          }
+        },
         "review_energy_edward_v": {
           "type": "review",
           "settings": {
@@ -455,6 +475,8 @@
         }
       },
       "block_order": [
+        "review_bk8UUY",
+        "review_gfJ4JC",
         "review_energy_edward_v",
         "review_sleep_clare",
         "review_sleep_megan",
