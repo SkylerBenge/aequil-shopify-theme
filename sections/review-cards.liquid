@@ -91,6 +91,13 @@
     margin: 0;
   }
 
+  .review-card__video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 300px;
+  }
+
   .review-cards__heading {
     text-align: center;
     margin-bottom: 3rem;
@@ -169,7 +176,14 @@
           {%- endif -%}
         </div>
 
-        {%- if block.settings.text != blank -%}
+        {%- if block.settings.video != blank -%}
+          <div class="review-card__content">
+            <video class="review-card__video" controls>
+              <source src="{{ block.settings.video }}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        {%- elsif block.settings.text != blank -%}
           <div class="review-card__content">
             {{ block.settings.text }}
           </div>
@@ -274,6 +288,12 @@
           "step": 1,
           "label": "Star Rating",
           "default": 5
+        },
+        {
+          "type": "url",
+          "id": "video",
+          "label": "Video Review (MP4 URL)",
+          "info": "Optional: Add a video review instead of text"
         },
         {
           "type": "richtext",
