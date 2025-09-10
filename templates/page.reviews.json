@@ -85,8 +85,5 @@
       }
     }
   },
-  "order": [
-    "main",
-    "review_cards_yt3iUE"
-  ]
+  "order": ["main", "review_cards_yt3iUE"]
 }
