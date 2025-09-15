@@ -98,6 +98,29 @@
     max-height: 300px;
   }
 
+  .review-card__text--desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .review-card__content {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .review-card__video {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .review-card__text--desktop {
+      display: block;
+      flex: 1;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
   .review-cards__heading {
     text-align: center;
     margin-bottom: 3rem;
@@ -182,6 +205,11 @@
               <source src="{{ block.settings.video }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
+            {%- if block.settings.text != blank -%}
+              <div class="review-card__text review-card__text--desktop">
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
           </div>
         {%- elsif block.settings.text != blank -%}
           <div class="review-card__content">
