@@ -24,32 +24,36 @@
         "press_PpwFE3": {
           "type": "press",
           "settings": {
-            "title": "Revolutionary New Product",
-            "publication": "Tech Weekly",
-            "link": "https://example.com/article1",
-            "quote": "<p>\"This innovative product is changing the industry. We've never seen anything quite like it.\"</p>"
+            "title": "Skin Deep: Are Transdermal Vitamin Patches the Future?",
+            "publication": "HIP AND HEALTHY .COM",
+            "link": "https://hipandhealthy.com/skin-deep-are-transdermal-vitamin-patches-the-future-hip-and-healthy/?fbclid=PAQ0xDSwMr3dRleHRuA2FlbQIxMQABp8X9VX2uHTGKQ7EcsP4S301zxDY-vwyiBPXE7zW01AogtHEu-v0vFLovPkel_aem_raCXD2H7f_ES_EQXePZSaQ",
+            "quote": "<p>“The vision for AEQUIL began with a question: how can we help the body return to its natural rhythm in a world that constantly disrupts it?” the founder, Frederic Roscop shares. “The patches were designed for specific needs – travel, jet lag, overstimulation, exam stress – when the body needs support to stay regulated.”</p>"
           }
         },
         "press_Xifpz6": {
           "type": "press",
           "settings": {
-            "title": "Game Changer in the Market",
-            "publication": "Business Today",
-            "link": "https://example.com/article2",
-            "quote": "<p>\"The company has truly outdone themselves with this latest release. It's a must-have for consumers.\"</p>"
+            "title": "Divine intervention: What happened when Tatler’s Travel Editor visited the world’s best osteopath?",
+            "publication": "TATLER",
+            "link": "https://www.tatler.com/article/spiritual-transformation-osteopathy-living-travel",
+            "quote": "<p>\"But Frédéric is far more than an osteopath (although he did recently win a global award for being the best) – he’s also a research scientist and has, over the past 10 years, developed a patented Liquid Intelligence supplement called Aequil\"</p>"
           }
         },
         "press_md6f4M": {
           "type": "press",
           "settings": {
-            "title": "Outstanding Quality Review",
-            "publication": "Product Review Daily",
-            "link": "https://example.com/article3",
-            "quote": "<p>\"After extensive testing, we can confidently say this is one of the best products we've reviewed this year.\"</p>"
+            "title": "Do You Need A September Reset?",
+            "publication": "COUNTRY AND TOWNHOUSE",
+            "link": "",
+            "quote": ""
           }
         }
       },
-      "block_order": ["press_PpwFE3", "press_Xifpz6", "press_md6f4M"],
+      "block_order": [
+        "press_PpwFE3",
+        "press_Xifpz6",
+        "press_md6f4M"
+      ],
       "name": "Press Cards",
       "settings": {
         "heading": "Press Coverage",
@@ -61,5 +65,8 @@
       }
     }
   },
-  "order": ["main", "press_cards_nH6ePm"]
+  "order": [
+    "main",
+    "press_cards_nH6ePm"
+  ]
 }
