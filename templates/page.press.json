@@ -47,12 +47,52 @@
             "link": "",
             "quote": ""
           }
+        },
+        "press_UQ9RNC": {
+          "type": "press",
+          "settings": {
+            "title": "The great reset: Tatler reveals the ultimate treatments for body and mind transformations this spring",
+            "publication": "TATLER",
+            "link": "https://www.tatler.com/article/the-great-reset-tatler-reveals-the-ultimate-treatments-body-mind-transformations-this-spring",
+            "quote": "<p>\"So to help you on your healing journey at home, Frédéric has launched a range of miraculous products, which are at the cutting edge of mind/body/energetic medicine. The range, called Aequil, is based on a technology that’s backed by science and guarantees results. \"</p>"
+          }
+        },
+        "press_bC97Qi": {
+          "type": "press",
+          "settings": {
+            "title": "Why do so many celebrities have Lyme disease? Plus the symptoms to watch out for",
+            "publication": "HELLO MAGAZINE",
+            "link": "https://www.hellomagazine.com/healthandbeauty/health-and-fitness/848515/so-many-celebrities-lyme-disease-know-if-i-have-it/",
+            "quote": "<p>\"Roscop explains that in the past, the symptoms of Lyme disease were often confused with other illnesses, noting that Lyme disease can mimic conditions such as chronic fatigue, anxiety, or autoimmune disorders – also often common among hardworking celebrities.\"</p>"
+          }
+        },
+        "press_MwVUxA": {
+          "type": "press",
+          "settings": {
+            "title": "From healthcare to business: Recognising global leaders changing the world",
+            "publication": "FORBES INDIA",
+            "link": "https://www.forbesindia.com/article/brand-connect/from-healthcare-to-business-recognising-global-leaders-changing-the-world/94867/1",
+            "quote": "<p>\"Frederic Roscop, a renowned London-based osteopath with over 25 years of experience and an international clientele, including many celebrity clients, is a leading figure in the health and wellness industry\"</p>"
+          }
+        },
+        "press_JCMXMT": {
+          "type": "press",
+          "settings": {
+            "title": "Celebrating Global Excellence: Forttuna Awards 2024 Honors Trailblazers Redefining Industries and Transforming Lives",
+            "publication": "BUSINESS STANDARD",
+            "link": "https://www.business-standard.com/content/specials/celebrating-global-excellence-forttuna-awards-2024-honors-trailblazers-redefining-industries-and-transforming-lives-125021701291_1.html",
+            "quote": "<p>\"AEQUIL’s supplements and patches, enriched with vitamins, minerals, and plant extracts, work at the cellular level to help manage stress. Integrating science-backed solutions with holistic approaches such as osteopathy, sound healing, and affirmations, AEQUIL empowers individuals to enhance their well-being from home.\"</p>"
+          }
         }
       },
       "block_order": [
         "press_PpwFE3",
         "press_Xifpz6",
-        "press_md6f4M"
+        "press_md6f4M",
+        "press_UQ9RNC",
+        "press_bC97Qi",
+        "press_MwVUxA",
+        "press_JCMXMT"
       ],
       "name": "Press Cards",
       "settings": {
