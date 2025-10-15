@@ -21,13 +21,24 @@
     "review_cards": {
       "type": "review-cards",
       "blocks": {
-        "review_sleep_suzie_v": {
+        "review_bk8UUY": {
           "type": "review",
           "settings": {
             "title": "Sleep+",
-            "name": "Suzie V",
+            "name": "Karin S",
             "rating": 5,
-            "text": "<p>I have recently been introduced by a family member to the wonderful Aequil product range. I have had rheumatoid athritis for 30 years and the associated pain, joint changes, and inflammation have resulted in a very long struggle with worsening sleep difficulties and insomnia. I have been forced to take sleeping pills on a nightly basis for the past 4 years in order to get any sleep, which has obviously been of great concern to me. I began using the Aequil ‘Sleep’ liquid remedy in tandem with the ‘Sleep’ patches and immediately had my first night of sleeping-tablet-free sleep. The quality and amount of sleep has improved over these past few weeks, and I now wake up rested, revived, and clear headed, ready for a good day. My energy levels during the day are also improving, and this is obviously of huge benefit on every level. Some decrease in inflammation levels is being noticed , and I honestly couldn’t recommend these products more highly. I am very grateful to my niece for introducing me to them. Susan Vincent-female-64 years old.</p>"
+            "video": "https://cdn.shopify.com/videos/c/o/v/d106bf6e72b14bbaa7d2ae9e586b72d9.mp4",
+            "text": "<p>Aequil products that I have been introduced to have been quite remarkable. I was rather unprepared for the post menopausal challenges I would face, most notably sleep related issues, so sleep disruptions, difficulty falling asleep, and frequent awakenings at night. That of course, was then also compounded by tiredness and lack of energy.</p><p>It was difficult to deal with these challenges and what, um, the best way forward would be without, um, taking a whole lot of other medications and unnecessary medications at this Stage of my life.</p><p>So I must say that the two Aequil products that I have been introduced to have been quite remarkable. The, uh, Sleep Plus as well as the Energy Plus. In addition to the, the patches that supports each one of those supplements, the sleep pattern seems to have normalised.</p><p>If I do wake up, l am certainly able to get back to sleep very easily. The energy supplement is great to give one added, uh, focus and energy, certainly two products that I would highly recommend</p>"
+          }
+        },
+        "review_gfJ4JC": {
+          "type": "review",
+          "settings": {
+            "title": "Sleep+ and Energy+",
+            "name": "Nick S",
+            "rating": 5,
+            "video": "https://cdn.shopify.com/videos/c/o/v/48df62a828a04194ba24ec6747a723b7.mp4",
+            "text": "<p>It has made such a difference in my life. I don't have a hangover like I would have if I took sleeping pills. I'm Nick from South Africa and I wanted to tell you about the success I've been having with Aequil Sleep Plus and their patches.</p><p>I develop bad sleeping patterns as a result of nerve pain that resulted in neck surgery.</p><p>However, despite the neck surgery being successful, I really struggled to sleep for long, restful periods thereafter.</p><p>Friends and family living in the UK had suggested to me that I watch Fred's podcasts and then try his products. And I'm so pleased I have, because what happens now is l'm able to fall asleep quickly. Even if I have to get up during the night to relieve myself, I still can then fall asleep again.</p><p>So I'm really thrilled to report that I am having really long, good restful sleep and it has made such a difference in my life.</p><p>I don't have a hangover like I would have if I took sleeping pills or THC or any of those other things that I was so desperate that I tried. And this is the one thing that I wake up feeling well rested and with no terrible and long lasting side effects thereafter. So | can highly recommend it</p>"
           }
         },
         "review_energy_edward_v": {
@@ -36,6 +47,7 @@
             "title": "Energy+",
             "name": "Edward V",
             "rating": 5,
+            "video": "",
             "text": "<p>The demands of running a global tech scale up often left me feeling burnt out and low in energy. I have tried a number of Energy and Focus related products on the market but none compare to AEQUIL’s Energy + supplement. The impact of the supplement was noticed immediately. I am more focussed and energised than ever before and the results both in the workplace and socially speak volumes</p>"
           }
         },
@@ -45,6 +57,7 @@
             "title": "Sleep+",
             "name": "Clare",
             "rating": 5,
+            "video": "",
             "text": "<p>“As someone who struggles with insomnia, I’ve used the sleep patches for the last few days now and am FINALLY getting my 8 hours of sleep! Life changing product”</p>"
           }
         },
@@ -54,7 +67,18 @@
             "title": "Sleep+",
             "name": "Megan",
             "rating": 5,
+            "video": "",
             "text": "<p>“I’ve never been a good sleeper. I used to struggle falling asleep, staying asleep, and actually resting. I’m a new person now. That pre-bed dread is gone. I wake up rested.”</p>"
+          }
+        },
+        "review_sleep_suzie_v": {
+          "type": "review",
+          "settings": {
+            "title": "Sleep+",
+            "name": "Suzie V",
+            "rating": 5,
+            "video": "",
+            "text": "<p>I have recently been introduced by a family member to the wonderful Aequil product range. I have had rheumatoid athritis for 30 years and the associated pain, joint changes, and inflammation have resulted in a very long struggle with worsening sleep difficulties and insomnia. I have been forced to take sleeping pills on a nightly basis for the past 4 years in order to get any sleep, which has obviously been of great concern to me. I began using the Aequil ‘Sleep’ liquid remedy in tandem with the ‘Sleep’ patches and immediately had my first night of sleeping-tablet-free sleep. The quality and amount of sleep has improved over these past few weeks, and I now wake up rested, revived, and clear headed, ready for a good day. My energy levels during the day are also improving, and this is obviously of huge benefit on every level. Some decrease in inflammation levels is being noticed , and I honestly couldn’t recommend these products more highly. I am very grateful to my niece for introducing me to them. Susan Vincent-female-64 years old.</p>"
           }
         },
         "review_daily_reset_laura_m": {
@@ -63,6 +87,7 @@
             "title": "Daily Reset",
             "name": "Laura M",
             "rating": 5,
+            "video": "",
             "text": "<p>“Since starting the Daily Reset I finally feel like myself again.”</p>"
           }
         },
@@ -72,6 +97,7 @@
             "title": "Deep Reset",
             "name": "James T",
             "rating": 5,
+            "video": "",
             "text": "<p>\"the only way I can describe it by saying, imagine always being homesick or longing for who you sued to be, the energy you sued to have, the life you used to live, the things you used to do. Thinking and believing you would never have that again, mourning who you were before you had longterm fatigue, constant co-infections and many other debilitating side effects. Then being able to be that person again. Being able to be the person you know you are. To do the things you used to do. It was like coming home\"</p>"
           }
         },
@@ -81,6 +107,7 @@
             "title": "Mood+",
             "name": "Emma L",
             "rating": 5,
+            "video": "",
             "text": "<p>“I used to wake up anxious every day. Hearing my alarm clock filled me with dread. It wasn't a heavy dread like others feel, more like a constant feeling of unsettled and nervous all day, beginning as I woke up.  Mood+ has made me steadier and more at ease, the shot in the morning followed by the patch has changed my day and my life. 10/10”</p>"
           }
         },
@@ -90,6 +117,7 @@
             "title": "Energy+",
             "name": "David H",
             "rating": 5,
+            "video": "",
             "text": "<p>“Afternoon crashes post lunch were the norm for me. Countless cups of coffee, the post coffee high and then the crash, I was a jittery mess from 12 oclock onwards. With Energy+ I feel balanced right through the day. I now look forward to my evening spinning classes and can actually focus throughout my day”</p>"
           }
         },
@@ -99,6 +127,7 @@
             "title": "Sleep+",
             "name": "Hannah R",
             "rating": 5,
+            "video": "",
             "text": "<p>SLEEP REVIEW</p>"
           }
         },
@@ -108,6 +137,7 @@
             "title": "Airways+",
             "name": "Tom W",
             "rating": 5,
+            "video": "",
             "text": "<p>“As someone who always had a sniffle and like problems breathing from the tube etc, this has changed my life.”</p>"
           }
         },
@@ -117,6 +147,7 @@
             "title": "PLUS Pack",
             "name": "Sarah J",
             "rating": 5,
+            "video": "",
             "text": "<p>“Having all four Plus products together is a lifesaver. I feel covered no matter what comes up.”</p>"
           }
         },
@@ -126,6 +157,7 @@
             "title": "Welcome Pack: Daily Reset + Sleep+",
             "name": "Mark C",
             "rating": 5,
+            "video": "",
             "text": "<p>“The Welcome Pack made it simple to get started. Daily Reset and Sleep+ together are perfect for me.Knowing I was able to be covered and supported now with sleep+ and hten know the reset was wroking to help solve the root cause of my like \\\"lifestyle\\\" sleep issues as I called them is great. I never took sedatives or other sleep aids as they made me feel even worse the next day, like I had a sleep hangover, this was the complete opposite, I felt tired at bed time and woke up rested.”</p>"
           }
         },
@@ -135,6 +167,7 @@
             "title": "Welcome Pack: Deep Reset + Energy+",
             "name": "Rachel B",
             "rating": 5,
+            "video": "",
             "text": "<p>“After months of never-ending fatigue where even small tasks felt impossible, the Deep Reset with Energy+ gave me back my spark. I can finally get through the day without crashing and I feel like myself again.”</p>"
           }
         },
@@ -144,6 +177,7 @@
             "title": "Daily Reset",
             "name": "Francesca T",
             "rating": 5,
+            "video": "",
             "text": "<p>“Since starting the Daily Reset I’ve slowly regained a sense of myself. The constant fog I used to live with has lifted. I wake with energy, have calmer moods, and feel like I have my life back.”</p>"
           }
         },
@@ -153,6 +187,7 @@
             "title": "Daily Reset",
             "name": "Britt G",
             "rating": 5,
+            "video": "",
             "text": "<p>“Every morning feels clearer and calmer since I began the Daily Reset. I notice the difference in my focus at work and my patience at home.”</p>"
           }
         },
@@ -162,6 +197,7 @@
             "title": "Daily Reset",
             "name": "Murray Mc",
             "rating": 5,
+            "video": "",
             "text": "<p>“The Daily Reset gave me the structure I was missing. Instead of lurching between highs and lows, I feel steady and grounded every day.”</p>"
           }
         },
@@ -171,6 +207,7 @@
             "title": "Daily Reset",
             "name": "James CJ",
             "rating": 5,
+            "video": "",
             "text": "<p>“Balancing a demanding job and young children had left me on edge. The Daily Reset has been the only thing that helps me keep going without burning out.”</p>"
           }
         },
@@ -180,6 +217,7 @@
             "title": "Daily Reset",
             "name": "Julia S",
             "rating": 5,
+            "video": "",
             "text": "<p>“My energy and mood have both shifted since starting the Daily Reset. It feels like something deep in me has reset, like a full reboot.”</p>"
           }
         },
@@ -189,6 +227,7 @@
             "title": "Deep Reset",
             "name": "Nick E",
             "rating": 5,
+            "video": "",
             "text": "<p>“As a father and partner trying to keep up with a stressful London job, I thought constant tension was normal. The Deep Reset brought me clarity and calm I didn’t think was possible.”</p>"
           }
         },
@@ -198,6 +237,7 @@
             "title": "Deep Reset",
             "name": "Cath K",
             "rating": 5,
+            "video": "",
             "text": "<p>“Finishing the Deep Reset felt like my whole system had been taken back to \\\"default settings\\\". After COVID in 2021, I have never shaken the worse of my symtpoms. The long-term exhaustion and inability to focus and be myself was all taking a toll.  I feel like I felt before 2021.”</p>"
           }
         },
@@ -207,6 +247,7 @@
             "title": "Deep Reset",
             "name": "Nick T",
             "rating": 5,
+            "video": "",
             "text": "<p>“I was stuck in old patterns of over exhaustion and unbelievable stress. Deep Reset helped me break free of this vicious cycle I had trapped myself in and find balance again.”</p>"
           }
         },
@@ -216,6 +257,7 @@
             "title": "Deep Reset",
             "name": "Charlotte H",
             "rating": 5,
+            "video": "",
             "text": "<p>“I haven’t felt this great in years. The Deep Reset lifted a weight off me that I didn’t realise I was carrying. I just knew I was always feeling off but not anymore! WOOHOO”</p>"
           }
         },
@@ -225,6 +267,7 @@
             "title": "Deep Reset",
             "name": "Becca T",
             "rating": 5,
+            "video": "",
             "text": "<p>“The Deep Reset really was the reset button my body had been begging for, I tried EVERYTHING before, you name it, I did it and none of it stuck or worked. There would be periods of relief but then the 'offness' would come back tem-fold. After completing the Deep Reset, I feel incredible. It gave me space to restore and restart.”</p>"
           }
         },
@@ -234,6 +277,7 @@
             "title": "Mood+",
             "name": "Stephanie R",
             "rating": 5,
+            "video": "",
             "text": "<p>“I used to live with this constant ticking of stress, anxiety and dread. A never ending to do list, always feeling like I was missing something or not doing enough, it trapped me . With Mood+ I finally feel steady and more at ease. It’s changed my day-to-day life.”</p>"
           }
         },
@@ -243,6 +287,7 @@
             "title": "Mood+",
             "name": "Gregory B",
             "rating": 5,
+            "video": "",
             "text": "<p>“Long meetings and constant deadlines used to overwhelm me. Mood+ helps me stay calm and balanced, even under pressure.”</p>"
           }
         },
@@ -252,6 +297,7 @@
             "title": "Mood+",
             "name": "Pat A",
             "rating": 5,
+            "video": "",
             "text": "<p>“Since starting Mood+ I can actually handle stress without spiralling. I feel more grounded and myself again.”</p>"
           }
         },
@@ -261,6 +307,7 @@
             "title": "Mood+",
             "name": "Yvonne R",
             "rating": 5,
+            "video": "",
             "text": "<p>“Mood+ gave me a calm I never thought was possible. The nervous feeling I lived with has finally eased.”</p>"
           }
         },
@@ -270,6 +317,7 @@
             "title": "Mood+",
             "name": "Liezel R",
             "rating": 5,
+            "video": "",
             "text": "<p>“Life feels lighter and I feel more resilient since taking Mood+. It’s a quiet but powerful support.”</p>"
           }
         },
@@ -279,6 +327,7 @@
             "title": "Energy+",
             "name": "David M",
             "rating": 5,
+            "video": "",
             "text": "<p>“Afternoon crashes were part of my life for years. With Energy+ I now stay balanced and alert through the whole day.”</p>"
           }
         },
@@ -288,6 +337,7 @@
             "title": "Energy+",
             "name": "Jen C",
             "rating": 5,
+            "video": "",
             "text": "<p>“Coffee used to help me tfor a few hours but hten I would be back to swaure one. Energy+ keeps me steady without the ups and downs.”</p>"
           }
         },
@@ -297,6 +347,7 @@
             "title": "Energy+",
             "name": "Jenna S",
             "rating": 5,
+            "video": "",
             "text": "<p>“I notice the difference most at work. My focus in meetings is sharper and I don’t feel drained by the afternoon.”</p>"
           }
         },
@@ -306,6 +357,7 @@
             "title": "Energy+",
             "name": "Graham J",
             "rating": 5,
+            "video": "",
             "text": "<p>“Energy+ has become my daily support. It helps me keep steady during long days without reaching for endless cups of tea.”</p>"
           }
         },
@@ -315,6 +367,7 @@
             "title": "Energy+",
             "name": "Jax WDM",
             "rating": 5,
+            "video": "",
             "text": "<p>“For the first time I have consistent energy without the crashes. It’s such a relief.”</p>"
           }
         },
@@ -324,6 +377,7 @@
             "title": "Sleep+",
             "name": "Edward V",
             "rating": 5,
+            "video": "",
             "text": "<p>“After years of poor sleep I’m finally waking up rested. Sleep+ has transformed my nights.”</p>"
           }
         },
@@ -333,6 +387,7 @@
             "title": "Sleep+",
             "name": "Lorena",
             "rating": 5,
+            "video": "",
             "text": "<p>“Falling asleep used to take hours. With Sleep+ I fall asleep quickly and actually stay asleep.”</p>"
           }
         },
@@ -342,6 +397,7 @@
             "title": "Sleep+",
             "name": "Jocelyn Q",
             "rating": 5,
+            "video": "",
             "text": "<p>“I no longer wake at 3am staring at the ceiling. Sleep+ has given me full nights of rest.”</p>"
           }
         },
@@ -351,6 +407,7 @@
             "title": "Sleep+",
             "name": "Patrick",
             "rating": 5,
+            "video": "",
             "text": "<p>“Deep, refreshing sleep had become a distant memory. Thanks to Sleep+ I wake up feeling human again.”</p>"
           }
         },
@@ -360,6 +417,7 @@
             "title": "Sleep+",
             "name": "Clare J",
             "rating": 5,
+            "video": "",
             "text": "<p>“The dread before bedtime has gone. I actually look forward to rest because I know I’ll sleep.”</p>"
           }
         },
@@ -369,6 +427,7 @@
             "title": "Airways+",
             "name": "Elizabeth S",
             "rating": 5,
+            "video": "",
             "text": "<p>“Breathing clearly has made such a difference. Airways+ helps me feel at ease throughout the day.”</p>"
           }
         },
@@ -378,6 +437,7 @@
             "title": "Airways+",
             "name": "Olivia C",
             "rating": 5,
+            "video": "",
             "text": "<p>“Days are easier now. Airways+ helps me start the day feeling open and clear.”</p>"
           }
         },
@@ -387,6 +447,7 @@
             "title": "Airways+",
             "name": "Matthew S",
             "rating": 5,
+            "video": "",
             "text": "<p>“I didn’t realise how much blocked breathing was affecting me. Airways+ has lifted that weight.”</p>"
           }
         },
@@ -396,6 +457,7 @@
             "title": "Airways+",
             "name": "Rebecca J",
             "rating": 5,
+            "video": "",
             "text": "<p>“With Airways+ I can get through my day without feeling restricted. It’s a huge relief.”</p>"
           }
         },
@@ -405,6 +467,7 @@
             "title": "Airways+",
             "name": "Daniel K",
             "rating": 5,
+            "video": "",
             "text": "<p>“Since using Airways+ I feel lighter, calmer, and more comfortable with my breathing.”</p>"
           }
         },
@@ -414,6 +477,7 @@
             "title": "Welcome Pack: Daily Reset + Sleep+",
             "name": "Mark C",
             "rating": 5,
+            "video": "",
             "text": "<p>“Getting started with the Welcome Pack was simple. The Daily Reset and Sleep+ together gave me routine and proper rest.”</p>"
           }
         },
@@ -423,6 +487,7 @@
             "title": "Welcome Pack: Deep Reset + Energy+",
             "name": "Rachel B",
             "rating": 5,
+            "video": "",
             "text": "<p>“Deep Reset with Energy+ gave me back a level of strength I hadn’t felt in years. Fatigue no longer controls me.”</p>"
           }
         },
@@ -432,6 +497,7 @@
             "title": "Welcome Pack: Daily Reset + Mood+",
             "name": "Henry L",
             "rating": 5,
+            "video": "",
             "text": "<p>“Daily Reset and Mood+ together gave me a new sense of calm and focus. I feel ready for whatever the day brings.”</p>"
           }
         },
@@ -441,6 +507,7 @@
             "title": "Welcome Pack: Deep Reset + Sleep+",
             "name": "Sophie K",
             "rating": 5,
+            "video": "",
             "text": "<p>“Pairing the Deep Reset with Sleep+ was the breakthrough I needed. I haven’t slept this well in years.”</p>"
           }
         },
@@ -450,15 +517,18 @@
             "title": "Welcome Pack: Daily Reset + Energy+",
             "name": "Andrew J",
             "rating": 5,
+            "video": "",
             "text": "<p>“Daily Reset with Energy+ keeps me steady through work and family life. I no longer crash mid-afternoon.”</p>"
           }
         }
       },
       "block_order": [
-        "review_sleep_suzie_v",
+        "review_bk8UUY",
+        "review_gfJ4JC",
         "review_energy_edward_v",
         "review_sleep_clare",
         "review_sleep_megan",
+        "review_sleep_suzie_v",
         "review_daily_reset_laura_m",
         "review_deep_reset_james_t",
         "review_mood_emma_l",
@@ -515,6 +585,8 @@
       }
     }
   },
-  "order": ["main", "review_cards"]
+  "order": [
+    "main",
+    "review_cards"
+  ]
 }
-
