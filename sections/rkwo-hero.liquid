@@ -2,6 +2,7 @@
   assign heading = section.settings.heading
   assign content = section.settings.content
   assign highlight = section.settings.highlight
+  assign logo = section.settings.logo
   assign image = section.settings.image
   assign background_type = section.settings.background_type
   assign video = section.settings.video
@@ -63,6 +64,11 @@
       </div>
     {%- endif -%}
     <div class="rkwo-hero-content">
+      {%- if logo != blank -%}
+        <div class="rkwo-hero-content-logo">
+          <img src="{{ logo | img_url: '400x200' }}" alt="{{ logo.alt | default: 'Logo' }}" class="rkwo-hero-logo">
+        </div>
+      {%- endif -%}
       {%- if highlight != blank -%}
         <div class="rkwo-hero-content-highlight">
           <span><img src="https://cdn.shopify.com/s/files/1/0652/1860/9385/files/Stars-white.png" alt="Stars" width="100" height="20" /></span><span>{{ highlight }}</span>
@@ -149,6 +155,18 @@
     font-size: 48px;
     margin-top: 0;
     margin-bottom: 35px;}
+
+  .rkwo-hero-content-logo {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .rkwo-hero-logo {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
   .rkwo-hero-content-highlight {
     border: 1px solid #ffffff;
@@ -346,6 +364,12 @@
       "id": "content",
       "label": "Content",
       "default": "<p>Content</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "Optional: Upload a logo to display above the highlight"
     },
     {
       "type": "richtext",
