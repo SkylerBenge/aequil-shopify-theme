@@ -15,6 +15,7 @@
       "settings": {
         "heading": "Everything is connected",
         "content": "<p>Your gut, your brain, your immune system, your emotions - when one part is out of sync, the whole body feels it. AEQUIL is a biotech health system that helps you reset the foundation of your wellbeing - restoring rhythm, energy, and coherence between body, mind, energy.</p>",
+        "logo": "shopify://shop_images/Aequil_-_A_world_of_Wellbeing-03.png",
         "highlight": "<p><strong>Trusted by +10,000 customers</strong></p>",
         "background_type": "video",
         "video": "shopify://files/videos/Banner 03_Animated Bubbles_01_Loop_Colour Corrected.mp4",
@@ -75,7 +76,10 @@
           }
         }
       },
-      "block_order": ["svg_text_overlay_Aq6x94", "text_button_f7axMa"],
+      "block_order": [
+        "svg_text_overlay_Aq6x94",
+        "text_button_f7axMa"
+      ],
       "custom_css": [
         "@media (max-width: 750px) {.featured-content__mobile-overlay h3 {text-align: left; } .featured-content__mobile-image {height: 500px; background-color: #ecebe8; background-position: top; }}"
       ],
@@ -213,7 +217,12 @@
           }
         }
       },
-      "block_order": ["row_ixwJ3M", "row_EPmpgp", "row_BBMyNR", "row_kdXtER"],
+      "block_order": [
+        "row_ixwJ3M",
+        "row_EPmpgp",
+        "row_BBMyNR",
+        "row_kdXtER"
+      ],
       "name": "t:sections.multirow.presets.name",
       "settings": {
         "image_height": "medium",
@@ -352,7 +361,9 @@
           }
         }
       },
-      "block_order": ["text_button_4R3Tj7"],
+      "block_order": [
+        "text_button_4R3Tj7"
+      ],
       "name": "Featured Content",
       "settings": {
         "heading": "<h3>ABOUT FRÉDÉRIC</h3><h2>Meet the <strong>Founder</strong></h2>",
@@ -533,7 +544,9 @@
           }
         }
       },
-      "block_order": ["slide_JhQ3K3"],
+      "block_order": [
+        "slide_JhQ3K3"
+      ],
       "disabled": true,
       "name": "t:sections.slideshow.presets.name",
       "settings": {
@@ -632,8 +645,12 @@
           }
         }
       },
-      "block_order": ["instafeed_app_block_j498A7"],
-      "custom_css": [".insta-feed {margin-top: 0; padding-top: 0;}"],
+      "block_order": [
+        "instafeed_app_block_j498A7"
+      ],
+      "custom_css": [
+        ".insta-feed {margin-top: 0; padding-top: 0;}"
+      ],
       "settings": {
         "include_margins": false
       }
