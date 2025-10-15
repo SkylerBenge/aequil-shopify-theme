@@ -134,6 +134,11 @@
                     price_class: 'price--large'
                   -%}
                 </div>
+                {%- if product.title == 'PLUS Pack' -%}
+                  <div class="discount-note" style="color: #6f9fcf; font-size: 1.5rem; font-weight: 500;">
+                    Discount added automatically at checkout
+                  </div>
+                {%- endif -%}
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
