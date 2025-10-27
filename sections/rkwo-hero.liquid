@@ -63,7 +63,7 @@
         {%- endif -%}
       </div>
     {%- endif -%}
-    <div class="rkwo-hero-content">
+    <div class="rkwo-hero-content{% if section.settings.mobile_alignment_enabled %} rkwo-hero-content--mobile-{{ section.settings.mobile_alignment }}{% endif %}">
       {%- if logo != blank -%}
         <div class="rkwo-hero-content-logo">
           <img src="{{ logo | img_url: '800x' }}" alt="{{ logo.alt | default: 'Logo' }}" class="rkwo-hero-logo">
@@ -166,6 +166,27 @@
       height: auto;
       display: block;
       margin: 0 auto;
+    }
+
+    /* Mobile alignment options */
+    .rkwo-hero-content--mobile-left {
+      text-align: left;
+    }
+
+    .rkwo-hero-content--mobile-center {
+      text-align: center;
+    }
+
+    .rkwo-hero-content--mobile-right {
+      text-align: right;
+    }
+
+    .rkwo-hero-content--mobile-left .rkwo-hero-logo {
+      margin-left: 0;
+    }
+
+    .rkwo-hero-content--mobile-right .rkwo-hero-logo {
+      margin-right: 0;
     }
   }
 
@@ -370,6 +391,32 @@
       "type": "image_picker",
       "id": "logo",
       "label": "Logo"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_alignment_enabled",
+      "label": "Different alignment on mobile",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "mobile_alignment",
+      "label": "Mobile alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
     },
     {
       "type": "richtext",
