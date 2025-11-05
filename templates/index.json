@@ -356,7 +356,7 @@
           "settings": {
             "heading": "",
             "text": "",
-            "button_url": "shopify://pages/bio",
+            "button_url": "shopify://pages/bio-frederic-roscop",
             "button_text": "SEE FRÉDÉRIC'S STORY"
           }
         }
@@ -440,7 +440,7 @@
         "heading": "ABOUT FRÉDÉRIC",
         "content": "<h3>Meet the Founder</h3><p>Frédéric Roscop is a pioneering osteopath, researcher, and creator of AEQUIL Science. He has treated thousands of patients across decades in clinical practice, working at the intersection of body, mind, energy. </p><p>Frédéric's vision is simple: We all have the right to feel well, be free, and return to ourselves. </p><p>He is the author of multiple scientific publications on dynamised water, and an international speaker on topics like Lyme disease, biophysics, and human adaptability. </p><p>Through AEQUIL, he brings together clinical wisdom, biotech innovation, and a belief in human coherence.</p>",
         "cta_text": "Full Bio",
-        "cta_url": "shopify://pages/bio",
+        "cta_url": "shopify://pages/bio-frederic-roscop",
         "image": "shopify://shop_images/f.png"
       }
     },
